@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="queue_config" >
+  <resultMap id="QueueConfigResult" class="com.mbv.bp.common.vo.airtime.QueueConfig" >
+    <result column="queue_id" property="queueId" jdbcType="VARCHAR" />
+    <result column="max_size" property="maxSize" jdbcType="INTEGER" />
+    <result column="dequeue" property="dequeue" jdbcType="INTEGER" />
+    <result column="queue_table" property="queueTable" jdbcType="VARCHAR" />
+    <result column="max_retry" property="maxRetry" jdbcType="INTEGER" />
+  </resultMap>
+ <select id="QueueConfig_SelectAll" resultMap="QueueConfigResult" parameterClass="com.mbv.bp.common.vo.airtime.QueueConfig" >
+    select queue_id, max_size, dequeue, queue_table, max_retry
+    from queue_config
+   
+  </select>
+</sqlMap>

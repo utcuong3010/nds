@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:int="http://www.springframework.org/schema/integration"
+	xmlns:int-ip="http://www.springframework.org/schema/integration/ip"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:script="http://www.springframework.org/schema/integration/scripting"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:stream="http://www.springframework.org/schema/integration/stream"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd
+		http://www.springframework.org/schema/integration/ip http://www.springframework.org/schema/integration/ip/spring-integration-ip.xsd 
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
+		http://www.springframework.org/schema/integration/script http://www.springframework.org/schema/integration/script.xsd
+		http://www.springframework.org/schema/integration/scripting http://www.springframework.org/schema/integration/scripting/spring-integration-scripting.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+
+	<!-- Request/Response Serializer/Deserializer/Transformer -->
+	<bean id="RequestSerializer" class="com.mbv.airtime2.integration.RpcRequestSerializer" />
+	<bean id="ResponseSerializer" class="com.mbv.airtime2.integration.RpcResponseSerializer" />
+	<bean id="RpcTransformer" class="com.mbv.airtime2.integration.ProtoTransformer" />
+
+
+	<!-- Integration Service Gateway -->
+	<int-ip:tcp-connection-factory id="ServerConnectionFactory"
+		type="server" local-address="${integration.gateway.host}" port="${integration.gateway.port}"
+		single-use="false" using-nio="true" pool-size="32" serializer="ResponseSerializer"
+		deserializer="RequestSerializer" />
+
+	<int-ip:tcp-inbound-gateway
+		connection-factory="ServerConnectionFactory" request-channel="InboundRequestChannel"
+		reply-channel="InboundResponseChannel" error-channel="InboundErrorChannel" />
+
+	<int:channel id="InboundRequestChannel" />
+	<int:channel id="InboundResponseChannel" />
+	<int:channel id="InboundErrorChannel" />
+	<int:transformer input-channel="InboundErrorChannel"
+		output-channel="InboundResponseChannel" expression="@RpcTransformer.createRpcProtoResponse(false)" />
+
+
+	<!-- Request Routing -->
+	<util:map id="routingMap">
+		<entry key="MOBI_DELIVERY" value="MOBIFONE" />
+		<entry key="VNMOBILE" value="VNMOBILE" />
+		<entry key="GMOBILE" value="GMOBILE" />
+		<entry key="EPAY" value="EPAY" />
+		<entry key="XPAY" value="XPAY" />
+	</util:map>
+	<int:chain input-channel="InboundRequestChannel">
+		<int:header-enricher>
+			<int:header name="RPCServiceName" expression="payload.getServiceName()" />
+			<int:header name="RPCMethodName" expression="payload.getMethodName()" />
+		</int:header-enricher>
+		<int:transformer expression="@RpcTransformer.toIntegrationPayload(payload)" />
+		<int:router expression="@routingMap[payload['queue_id']]?: 'OTHERS'">
+			<int:mapping value="MOBIFONE" channel="MobifoneDeliveryChannel" />
+			<int:mapping value="VNMOBILE" channel="VnmobileDeliveryChannel" />
+			<int:mapping value="GMOBILE" channel="GmobileDeliveryChannel" />
+			<int:mapping value="EPAY" channel="EpayDeliveryChannel" />
+			<int:mapping value="XPAY" channel="XpayDeliveryChannel" />
+			<int:mapping value="OTHERS" channel="OldDeliveryChannel" />
+		</int:router>
+	</int:chain>
+
+	<!-- Mobifone Channel -->
+	<int:chain input-channel="MobifoneDeliveryChannel"
+		output-channel="InboundResponseChannel">
+		<int:service-activator expression="@MobifoneService.process(payload)?:'DONE'" />
+		<int:transformer expression="@RpcTransformer.createRpcProtoResponse(true)" />
+	</int:chain>
+
+	<!-- VietnamMobile Channel -->
+	<int:chain input-channel="VnmobileDeliveryChannel"
+		output-channel="InboundResponseChannel">
+		<int:service-activator
+			expression="@VietnamMobileService.process(payload)?:'DONE'" />
+		<int:transformer expression="@RpcTransformer.createRpcProtoResponse(true)" />
+	</int:chain>
+
+	<!-- GtelMobile Channel -->
+	<int:chain input-channel="GmobileDeliveryChannel"
+		output-channel="InboundResponseChannel">
+		<int:service-activator expression="@GtelMobileService.process(payload)?:'DONE'" />
+		<int:transformer expression="@RpcTransformer.createRpcProtoResponse(true)" />
+	</int:chain>
+
+	<!-- Epay Channel -->
+	<int:chain input-channel="EpayDeliveryChannel"
+		output-channel="InboundResponseChannel">
+		<int:service-activator expression="@EpayService.process(payload)?:'DONE'" />
+		<int:transformer expression="@RpcTransformer.createRpcProtoResponse(true)" />
+	</int:chain>
+	
+	<!-- Xpay Channel -->
+	<int:chain input-channel="XpayDeliveryChannel"
+		output-channel="InboundResponseChannel">
+		<int:service-activator expression="@XpayService.process(payload)?:'DONE'" />
+		<int:transformer expression="@RpcTransformer.createRpcProtoResponse(true)" />
+	</int:chain>
+
+	<!-- Old-Airtime Channel -->
+	<int-ip:tcp-connection-factory id="ClientConnectionFactory"
+		type="client" host="${integration.airtime.host}" port="${integration.airtime.port}"
+		single-use="false" using-nio="true" pool-size="32" serializer="RequestSerializer"
+		deserializer="ResponseSerializer" />
+
+	<int:transformer input-channel="OldDeliveryChannel"
+		output-channel="OutboundRequestChannel"
+		expression="@RpcTransformer.toRpcProtoRequest(headers.RPCServiceName, headers.RPCMethodName, payload)" />
+
+	<int-ip:tcp-outbound-gateway
+		request-channel="OutboundRequestChannel" reply-channel="InboundResponseChannel"
+		connection-factory="ClientConnectionFactory" request-timeout="1000"
+		reply-timeout="1000" />
+
+	<!-- Logging -->
+	<int:wire-tap
+		pattern="XpayDeliveryChannel,EpayDeliveryChannel,MobifoneDeliveryChannel,VnmobileDeliveryChannel, GmobileDeliveryChannel, OldDeliveryChannel, InboundResponseChannel, InboundErrorChannel"
+		channel="logger" />
+	<int:message-history />
+	<int:logging-channel-adapter id="logger"
+		level="INFO" expression="headers.history + '   ' + payload" />
+</beans>
+

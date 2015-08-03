@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<app>
+	<integation>
+		<client>
+			<gateway>
+				<module>AirTimeGateWay</module>
+				<local-enable>false</local-enable>
+				<name>WorkFlowConnection</name>
+				<host>localhost</host>
+				<port>5002</port>
+				<pool-size>10</pool-size>
+			</gateway>
+			<gateway>
+				<module>Application</module>
+				<name>QueueConnection</name>
+				<local-enable>true</local-enable>
+				<class>com.mbv.bp.queue.integration.QueueLocalExecutor</class>
+				<host>localhost</host>
+				<port>5001</port>
+				<pool-size>50</pool-size>
+			</gateway>
+			<gateway>
+				<module>Application</module>
+				<local-enable>false</local-enable>
+				<name>VNPAY</name>
+				<host>210.245.12.221</host>
+				<port>19001</port>  
+				<pool-size>1</pool-size>
+			</gateway>
+			<gateway>
+				<module>Application</module>
+				<name>WorkFlowConnection</name>
+				<local-enable>true</local-enable>
+				<class>com.mbv.bp.core.integration.WfpLocalExecutor</class>
+				<host>localhost</host>
+				<port>5002</port>
+				<pool-size>50</pool-size>
+			</gateway>
+		</client>
+	</integation>
+	<app-context-loader>
+		<airtime-launcher>
+			common-context.xml,workflow-context.xml,queue-context.xml,scheduler-context.xml
+		</airtime-launcher>
+	</app-context-loader>
+	<business-cachers>
+		<msisdn-prefix-cacher>MISIDN_PREFIX_CACHER</msisdn-prefix-cacher>
+		<business-cacher>
+			<cacher id="MISIDN_PREFIX_CACHER" class="com.mbv.bp.common.cacher.MsisdnPrefixCacher" />
+		</business-cacher>
+		
+		<module-cacher>
+			<module id="WorkFlowCoreServer">
+				<cacher>MISIDN_PREFIX_CACHER</cacher>
+			</module>
+			<module id="Application">
+				<cacher>MISIDN_PREFIX_CACHER</cacher>
+			</module>
+		</module-cacher>
+	</business-cachers>
+</app>
+

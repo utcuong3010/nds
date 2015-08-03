@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="queueSvc" class="com.digi.sdp.queue.service.FEServiceFacade" />
+	<bean id="serviceExporter" class="org.springframework.remoting.rmi.RmiServiceExporter">
+		<property name="serviceName" value="QueueSvc" />
+		<property name="service" ref="queueSvc" />
+		<property name="serviceInterface" value="com.digi.sdp.common.integration.IIntegration" />
+	</bean>
+	
+	<bean id="queueSvcClient" class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
+		<property name="serviceUrl" value="rmi://localhost:1099/QueueSvc"></property>
+		<property name="serviceInterface" value="com.digi.sdp.common.integration.IIntegration"></property>
+	</bean>
+	 
+	<bean id="queueClient" class="test.queue.QueueSvcClient">
+		<property name="queueSvc" ref="queueSvcClient" />
+	</bean>
+	 
+</beans>

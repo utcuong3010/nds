@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- Appenders -->
+	<appender name="FILE" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="/tmp/airtime2.log"/>
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <param name="Append" value="true"/>
+        <param name="Threshold" value="DEBUG"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{HH:mm:ss.SSS} %-5p [%t] %m%n"/>
+        </layout>
+    </appender>
+    
+    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out"/>
+        <param name="Threshold" value="DEBUG"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d | %5p | %x[%C{1}:%L %M | %t] - %m%n"/>
+        </layout>
+    </appender>
+
+	<!-- Loggers -->
+	<logger name="org.springframework">
+		<level value="info" />
+	</logger>
+
+ 	<logger name="org.springframework.integration">
+		<level value="info" />
+	</logger> 
+
+ 	<logger name="com.mbv.airtime2">
+		<level value="debug" />
+	</logger> 
+
+	<!-- Root Logger -->
+	<root>
+		<priority value="warn" />
+		<appender-ref ref="FILE" />
+		<appender-ref ref="CONSOLE" />
+	</root>
+
+</log4j:configuration>

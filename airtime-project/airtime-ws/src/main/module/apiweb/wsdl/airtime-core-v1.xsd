@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="https://airtime.mobivi.vn/v1"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:airtime="https://airtime.mobivi.vn/v1">
+	<xsd:include schemaLocation=""></xsd:include>
+	<xsd:complexType name="BaseObjectType">
+		<xsd:sequence>
+			<xsd:element name="Id" type="xsd:string" minOccurs="0"
+				nillable="true"></xsd:element>
+			<xsd:element name="CreatedAt" type="xsd:dateTime"
+				minOccurs="0" nillable="true"></xsd:element>
+			<xsd:element name="ModifiedAt" type="xsd:dateTime"
+				minOccurs="0" nillable="true"></xsd:element>
+			<xsd:element name="Meta" type="airtime:MapType"
+				minOccurs="0" nillable="true"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="UserType">
+		<xsd:complexContent>
+			<xsd:extension base="airtime:BaseObjectType">
+				<xsd:sequence>
+					<xsd:element name="UserId" type="xsd:string" minOccurs="0"
+						nillable="true">
+					</xsd:element>
+					<xsd:element name="GivenName" type="xsd:string"
+						minOccurs="0" nillable="true">
+					</xsd:element>
+					<xsd:element name="FamilyName" type="xsd:string"
+						minOccurs="0" nillable="true">
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="MapType">
+		<xsd:sequence>
+			<xsd:element name="Entry" type="airtime:MapEntryType"
+				nillable="false" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="MapEntryType">
+		<xsd:sequence>
+			<xsd:any></xsd:any>
+		</xsd:sequence>
+		<xsd:attribute name="Name" type="xsd:string"></xsd:attribute>
+		<xsd:attribute name="Type" type="airtime:PrimitiveTypeEnum"></xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:simpleType name="PrimitiveTypeEnum">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="null"></xsd:enumeration>
+			<xsd:enumeration value="string"></xsd:enumeration>
+			<xsd:enumeration value="integer"></xsd:enumeration>
+			<xsd:enumeration value="float"></xsd:enumeration>
+			<xsd:enumeration value="date"></xsd:enumeration>
+			<xsd:enumeration value="date-time"></xsd:enumeration>
+			<xsd:enumeration value="bytes"></xsd:enumeration>
+			<xsd:enumeration value="map"></xsd:enumeration>
+			<xsd:enumeration value="list"></xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:element name="AirtimeFault">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Message" type="xsd:string" minOccurs="0"
+					nillable="true">
+				</xsd:element>
+				<xsd:element name="Detail" type="xsd:string" minOccurs="0"
+					nillable="true">
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

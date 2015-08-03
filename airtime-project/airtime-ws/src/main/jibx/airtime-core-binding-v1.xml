@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<binding force-classes="true" add-constructors="true"
+	xmlns:mca="https://airtime.mobivi.vn/v1" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+	<namespace uri="https://airtime.mobivi.vn/v1" prefix="airtime" />
+	  
+	<!-- XDataObject -->
+	<mapping abstract="true" type-name="airtime:BaseDataObject" class="com.mbv.mca.ws.core.v1.McaDataObject" ordered="false">
+		<value style="element" name="Id" get-method="getId" set-method="setId" nillable="true" usage="optional" />
+		<value style="element" name="CreatedAt" get-method="getCreatedAt" set-method="setCreatedAt" nillable="true" usage="optional" />
+		<value style="element" name="ModifiedAt" get-method="getModifiedAt" set-method="setModifiedAt" nillable="true" usage="optional" />
+		<structure name="Meta" get-method="getProperties" set-method="setProperties" nillable="true" usage="optional"
+			marshaller="com.mbv.mca.ws.JiBXMapMapper" unmarshaller="com.mbv.mca.ws.JiBXMapMapper" />
+	</mapping>
+	
+	<mapping abstract="true" type-name="mca:FilterType" class="com.mbv.mca.ws.core.v1.McaDataFilter"
+		ordered="false">
+		<value style="element" name="Query" get-method="getQuery" set-method="setQuery" nillable="true" usage="optional" />
+		<value style="element" name="PageNumber" get-method="getPageNumber" set-method="setPageNumber" nillable="true" usage="optional" />
+		<value style="element" name="PageSize" get-method="getPageSize" set-method="setPageSize" nillable="true" usage="optional" />
+		<structure name="Meta" get-method="getProperties" set-method="setProperties" nillable="true" usage="optional"
+			marshaller="com.mbv.mca.ws.JiBXMapMapper" unmarshaller="com.mbv.mca.ws.JiBXMapMapper" />
+	</mapping>
+	 
+	<mapping name="McaFault" ns="https://mca.mobivi.vn/v1" class="com.mbv.mca.ws.core.v1.McaError"
+		ordered="false">
+		<value style="element" name="Message" get-method="getMessage" set-method="setMessage" nillable="true" usage="optional" />
+		<value style="element" name="Detail" get-method="getDetail" set-method="setDetail" nillable="true" usage="optional" />
+	</mapping>
+	 
+	<mapping abstract="true" type-name="mca:UserType" class="com.mbv.mca.ws.core.v1.McaUser"
+		ordered="false">
+		<value style="element" name="Id" get-method="getId" set-method="setId" nillable="true" usage="optional" />
+		<value style="element" name="CreatedAt" nillable="true" get-method="getCreatedAt" set-method="setCreatedAt" usage="optional" />
+		<value style="element" name="ModifiedAt" nillable="true" get-method="getModifiedAt" set-method="setModifiedAt" usage="optional" />
+		<structure name="Meta" get-method="getProperties" set-method="setProperties" nillable="true"  usage="optional"
+			marshaller="com.mbv.mca.ws.JiBXMapMapper" unmarshaller="com.mbv.mca.ws.JiBXMapMapper" />
+		
+		<value style="element" name="UserId" get-method="getUserId" set-method="setUserId" nillable="true" usage="optional" />
+		
+		<value style="element" name="OrgId" get-method="getOrgId" set-method="setOrgId" nillable="true" usage="optional" />
+		<value style="element" name="OrgPosition" get-method="getOrgPosition" set-method="setOrgPosition" nillable="true" usage="optional" />
+		<value style="element" name="OrgStartDate" get-method="getOrgStartDate" set-method="setOrgStartDate" nillable="true" usage="optional" />
+		<value style="element" name="OrgEndDate" get-method="getOrgEndDate" set-method="setOrgEndDate" nillable="true" usage="optional" />
+		
+		<value style="element" name="GivenName" get-method="getGivenName" set-method="setGivenName" nillable="true" usage="optional" />
+		<value style="element" name="FamilyName" get-method="getFamilyName" set-method="setFamilyName" nillable="true" usage="optional" />
+		<value style="element" name="Sex" get-method="getSex" set-method="setSex" nillable="true" usage="optional" />
+		<value style="element" name="MaritalStatus" get-method="getMaritalStatus" set-method="setMaritalStatus" nillable="true" usage="optional" />
+		<value style="element" name="DoB" get-method="getDoB" set-method="setDoB" nillable="true" usage="optional" />
+		
+		<value style="element" name="PhysicalId" get-method="getPhysicalId" set-method="setPhysicalId" nillable="true" usage="optional" />
+		<value style="element" name="Nationality" get-method="getNationality" set-method="setNationality" nillable="true" usage="optional" />
+		
+		
+		<value style="element" name="Email" get-method="getEmail" set-method="setEmail" nillable="true" usage="optional" />
+		<value style="element" name="Mobile" get-method="getMobile" set-method="setMobile" nillable="true" usage="optional" />
+		<value style="element" name="Telephone" get-method="getPhone" set-method="setPhone" nillable="true" usage="optional" />
+		<value style="element" name="Address" get-method="getAddress" set-method="setAddress" nillable="true" usage="optional" />
+		
+		<value style="element" name="IssuerId" get-method="getIssuerId" set-method="setIssuerId" nillable="true" usage="optional" />
+		<value style="element" name="Status" get-method="getStatus" set-method="setStatus" nillable="true" usage="optional" />
+		<value style="element" name="GroupId" get-method="getGroupId" set-method="setGroupId" nillable="true" usage="optional" />
+		<value style="element" name="LoginId" get-method="getLoginId" set-method="setLoginId" nillable="true" usage="optional" />
+		<value style="element" name="CreditLimit" get-method="getCreditLimit" set-method="setCreditLimit" nillable="true" usage="optional" />
+		<value style="element" name="XAccountId" get-method="getXAccountId" set-method="setXAccountId" nillable="true" usage="optional" />
+	</mapping>
+	 
+	<mapping abstract="true" type-name="mca:UserListType" class="com.mbv.mca.ws.core.v1.McaUserList">
+		<value style="attribute" name="Total" get-method="getTotal" set-method="setTotal" />
+		<collection get-method="getItems" set-method="setItems" usage="optional" factory="org.jibx.runtime.Utility.arrayListFactory">
+			<structure name="User" map-as="mca:UserType" />
+		</collection>
+	</mapping>
+	 
+	<mapping abstract="true" type-name="mca:GroupType" class="com.mbv.mca.ws.core.v1.McaGroup"
+		ordered="false">
+		<value style="element" name="Id" get-method="getId" set-method="setId" nillable="true" usage="optional" />
+		<value style="element" name="CreatedAt" nillable="true" get-method="getCreatedAt" set-method="setCreatedAt" usage="optional" />
+		<value style="element" name="ModifiedAt" nillable="true" get-method="getModifiedAt" set-method="setModifiedAt" usage="optional" />
+		<structure name="Meta" get-method="getProperties" set-method="setProperties" nillable="true"  usage="optional"
+			marshaller="com.mbv.mca.ws.JiBXMapMapper" unmarshaller="com.mbv.mca.ws.JiBXMapMapper" />
+		
+		<value style="element" name="GroupId" get-method="getGroupId" set-method="setGroupId" nillable="true" usage="optional" />
+		<value style="element" name="ParentId" get-method="getParentId" set-method="setParentId" nillable="true" usage="optional" />
+		<value style="element" name="OwnerId" get-method="getOwnerId" set-method="setOwnerId" nillable="true" usage="optional" />
+		<value style="element" name="Name" get-method="getName" set-method="setName" nillable="true" usage="optional" />
+		<value style="element" name="Description" get-method="getDescription" set-method="setDescription" nillable="true" usage="optional" />
+		<value style="element" name="CreditLimit" get-method="getCreditLimit" set-method="setCreditLimit" nillable="true" usage="optional" />
+	</mapping>
+	 
+	<mapping abstract="true" type-name="mca:GroupListType" class="com.mbv.mca.ws.core.v1.McaGroupList">
+		<value style="attribute" name="Total" get-method="getTotal" set-method="setTotal" />
+		<collection get-method="getItems" set-method="setItems" usage="optional" factory="org.jibx.runtime.Utility.arrayListFactory">
+			<structure name="Group" map-as="mca:GroupType" />
+		</collection>
+	</mapping>
+	 
+	<mapping abstract="true" type-name="mca:OrgType" class="com.mbv.mca.ws.core.v1.McaOrg"
+		ordered="false">
+		<value style="element" name="Id" get-method="getId" set-method="setId" nillable="true" usage="optional" />
+		<value style="element" name="CreatedAt" nillable="true" get-method="getCreatedAt" set-method="setCreatedAt" usage="optional" />
+		<value style="element" name="ModifiedAt" nillable="true" get-method="getModifiedAt" set-method="setModifiedAt" usage="optional" />
+		<structure name="Meta" get-method="getProperties" set-method="setProperties" nillable="true"  usage="optional"
+			marshaller="com.mbv.mca.ws.JiBXMapMapper" unmarshaller="com.mbv.mca.ws.JiBXMapMapper" />
+		
+		<value style="element" name="ShortName" get-method="getShortName" set-method="setShortName" nillable="true" usage="optional" />
+		<value style="element" name="LongName" get-method="getLongName" set-method="setLongName" nillable="true" usage="optional" />
+		<value style="element" name="ChargeLimit" get-method="getChargeLimit" set-method="setChargeLimit" nillable="true" usage="optional" />
+		<value style="element" name="UsagePeriodStart" get-method="getUsagePeriodStart" set-method="setUsagePeriodStart" nillable="true" usage="optional" />
+		<value style="element" name="UsagePeriodEnd" get-method="getUsagePeriodEnd" set-method="setUsagePeriodEnd" nillable="true" usage="optional" />
+		<value style="element" name="Type" get-method="getType" set-method="setType" nillable="true" usage="optional" />
+		<value style="element" name="Status" get-method="getStatus" set-method="setStatus" nillable="true" usage="optional" />
+		<value style="element" name="GroupId" get-method="getGroupId" set-method="setGroupId" nillable="true" usage="optional" />
+		<value style="element" name="XAccountId" get-method="getXAccountId" set-method="setXAccountId" nillable="true" usage="optional" />
+	</mapping>
+	 
+	<mapping abstract="true" type-name="mca:OrgListType" class="com.mbv.mca.ws.core.v1.McaOrgList">
+		<value style="attribute" name="Total" get-method="getTotal" set-method="setTotal" />
+		<collection get-method="getItems" set-method="setItems" usage="optional" factory="org.jibx.runtime.Utility.arrayListFactory">
+			<structure name="Org" map-as="mca:OrgType" />
+		</collection>
+	</mapping>
+	
+	 
+	<mapping abstract="true" type-name="mca:EventType" class="com.mbv.mca.ws.core.v1.McaEvent"
+		ordered="false">
+		<value style="element" name="Id" get-method="getId" set-method="setId" nillable="true" usage="optional" />
+		<value style="element" name="CreatedAt" nillable="true" get-method="getCreatedAt" set-method="setCreatedAt" usage="optional" />
+		<value style="element" name="ModifiedAt" nillable="true" get-method="getModifiedAt" set-method="setModifiedAt" usage="optional" />
+		<structure name="Meta" get-method="getProperties" set-method="setProperties" nillable="true"  usage="optional"
+			marshaller="com.mbv.mca.ws.JiBXMapMapper" unmarshaller="com.mbv.mca.ws.JiBXMapMapper" />
+		
+		<value style="element" name="OwnerId" get-method="getOwnerId" set-method="setOwnerId" nillable="true" usage="optional" />
+		<value style="element" name="ScheduledAt" get-method="getScheduledAt" set-method="setScheduledAt" nillable="true" usage="optional" />
+		<value style="element" name="Type" get-method="getType" set-method="setType" nillable="true" usage="optional" />
+		<value style="element" name="Status" get-method="getStatus" set-method="setStatus" nillable="true" usage="optional" />
+		<value style="element" name="Memo" get-method="getMemo" set-method="setMemo" nillable="true" usage="optional" />
+		
+		<value style="element" name="SystemLock" get-method="getSystemLock" set-method="setSystemLock" nillable="true" usage="optional" />
+		<value style="element" name="SystemLockedAt" get-method="getSystemLockedAt" set-method="setSystemLockedAt" nillable="true" usage="optional" />
+	</mapping>
+	
+	<mapping abstract="true" type-name="mca:EventListType" class="com.mbv.mca.ws.core.v1.McaEventList">
+		<value style="attribute" name="Total" get-method="getTotal" set-method="setTotal" />
+		<collection get-method="getItems" set-method="setItems" usage="optional" factory="org.jibx.runtime.Utility.arrayListFactory">
+			<structure name="Event" map-as="mca:EventType" />
+		</collection>
+	</mapping>
+
+	<mapping abstract="true" type-name="mca:IssuerType" class="com.mbv.mca.ws.core.v1.McaIssuer"
+		ordered="false">
+		 
+		<value style="element" name="Id" get-method="getId" set-method="setId"  nillable="true" usage="optional" />
+		<value style="element" name="CreatedAt" get-method="getCreatedAt" set-method="setCreatedAt" nillable="true"  usage="optional" />
+		<value style="element" name="ModifiedAt" get-method="getModifiedAt" set-method="setModifiedAt" nillable="true"  usage="optional" />
+		<structure name="Meta" get-method="getProperties" set-method="setProperties" nillable="true"  usage="optional"
+			marshaller="com.mbv.mca.ws.JiBXMapMapper" unmarshaller="com.mbv.mca.ws.JiBXMapMapper" />
+		
+		<value style="element" name="issuerId" get-method="getIssuerId" set-method="setIssuerId" nillable="true" usage="optional" />
+		<value style="element" name="issuerName" get-method="getIssuerName" set-method="setIssuerName" nillable="true" usage="optional" />
+		<value style="element" name="type" get-method="getType" set-method="setType" nillable="true" usage="optional" />
+		<value style="element" name="status" get-method="getStatus" set-method="setStatus" nillable="true" usage="optional" />
+		<value style="element" name="xaccountId" get-method="getXaccountId" set-method="setXaccountId" nillable="true" usage="optional" />
+	</mapping>
+	 
+	<mapping abstract="true" type-name="mca:IssuerListType" class="com.mbv.mca.ws.core.v1.McaIssuerList">
+		<value style="attribute" name="Total" get-method="getTotal" set-method="setTotal" />
+		<collection get-method="getItems" set-method="setItems" usage="optional" factory="org.jibx.runtime.Utility.arrayListFactory">
+			<structure name="Issuer" map-as="mca:IssuerType" />
+		</collection>
+	</mapping>
+	 
+</binding>

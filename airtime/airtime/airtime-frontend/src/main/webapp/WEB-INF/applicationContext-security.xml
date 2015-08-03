@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+    http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-2.0.xsd">
+	
+	<bean id="filterInvocationInterceptor" 
+        class="org.springframework.security.intercept.web.FilterSecurityInterceptor">
+        <property name="authenticationManager"><ref bean="authenticationprovider"/></property>       
+        <property name="accessDecisionManager"><ref local="accessDecisionManager"/></property>
+        <property name="objectDefinitionSource">
+            <security:filter-invocation-definition-source>
+            	<security:intercept-url pattern="/login.jsp*" access="ROLE_ANONYMOUS"/>
+            	<security:intercept-url pattern="/logout.jsp*" access="ROLE_ANONYMOUS"/>
+            	<security:intercept-url pattern="/access_denied*" access="ROLE_ANONYMOUS"/>
+                <security:intercept-url pattern="/error.jsp*" access="ROLE_ANONYMOUS"/>
+                <security:intercept-url pattern="/success.jsp" access="ROLE_MOBIVI_ADMIN"/>
+                <security:intercept-url pattern="/*.mbv*" access="ROLE_MOBIVI_ADMIN"/>
+                <security:intercept-url pattern="*/*.mbv*" access="ROLE_MOBIVI_ADMIN"/>
+            </security:filter-invocation-definition-source>  
+        </property>
+    </bean>
+ 	
+	<bean id="accessDecisionManager"
+        class="org.springframework.security.vote.AffirmativeBased">
+        <property name="decisionVoters">
+            <list>
+                <ref bean="roleVoter" />
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="roleVoter" class="org.springframework.security.vote.RoleVoter">
+        <property name="rolePrefix">
+            <value>ROLE_</value>
+        </property>
+    </bean>
+    <bean id="authenticationProcessingFilter" class="com.mbv.security.authentication.AuthenticationProcessingFilter">
+  		<property name="usernameParameter" value="username" />
+  		<property name="passwordParameter" value="password" />
+  		<property name="authenticationManager"><ref bean="authenticationprovider"/></property>
+  		<property name="filterProcessesUrl" value="/login.action"/>
+  		<property name="authenticationUrl" value="/login.jsp"/>
+  		<property name="authenticationDetailsSource">
+  			<bean class="com.mbv.security.authentication.EWalletAuthenticationDetailsSource">
+  			</bean>
+  		</property>
+  		<property name="authenticationFailureUrl" value="/login.jsp?login_error=1" />
+  		<property name="defaultTargetUrl">
+			<value>/success.jsp</value>
+  		</property>
+  		<property name="exceptionMappings">
+  			<props>
+	  				<prop key="org.springframework.security.InsufficientAuthenticationException">/login.jsp?error=2</prop>
+	  				<prop key="com.mbv.security.authentication.BadCredentialsException">/login.jsp?error=3</prop>
+	  				<prop key="com.mbv.security.authentication.UnactivatedAccountException">/login.jsp?error=4</prop>
+	  				<prop key="com.mbv.security.authentication.AuthenticationServiceException">/login.jsp?error=5</prop>
+	  		</props>
+  		</property>
+	</bean>
+	<bean id="keepAliveAuthenticationFilter" class="com.mbv.security.authentication.KeepAliveAuthenticationFilter">
+		<property name="keepAliveAuthenticationProvider">
+  			<ref bean="xsecdAuthenticationProvider" />
+  		</property>
+  		<property name="ignoredServletPaths">
+  			<list>
+  				<value>/css/(.*)</value>
+  				<value>/decorators/(.*)</value>
+  				<value>/images/(.*)</value>
+  				<value>/js/(.*)</value>
+  				<value>/jsp/(.*)</value>
+  				<value>/rpt_temp/(.*)</value>
+  				<value>/WEB-INF/(.*)</value>
+  			</list>
+  		</property>
+	</bean>  
+	<bean id="accessControlFilter" class="com.mbv.security.authentication.AccessControlFilter">
+		<property name="authorizationCheck" ref="authorizationCheck"/>
+		<property name="accessDeniedUrl" value="/access_denied.jsp"/>
+	</bean>  
+	<bean id="httpSessionContextIntegrationFilter"
+		class="org.springframework.security.context.HttpSessionContextIntegrationFilter">
+		<property name="contextClass"
+			value="org.springframework.security.context.SecurityContextImpl" />
+		<property name="allowSessionCreation" value="true" />
+		<property name="forceEagerSessionCreation" value="true" />
+		<security:custom-filter position="SESSION_CONTEXT_INTEGRATION_FILTER" />
+	</bean>   
+	<bean id="securityContextHolderAwareRequestFilter" 
+        class="org.springframework.security.wrapper.SecurityContextHolderAwareRequestFilter" >
+    </bean>  
+    <bean id="filterChainProxy"
+        class="org.springframework.security.util.FilterChainProxy">
+        <security:filter-chain-map path-type="ant">
+            <security:filter-chain pattern="/**" 
+                filters="httpSessionContextIntegrationFilter,authenticationProcessingFilter,securityContextHolderAwareRequestFilter,anonymousProcessingFilter,keepAliveAuthenticationFilter,filterInvocationInterceptor,accessControlFilter"/>
+                <!-- filters="httpSessionContextIntegrationFilter,authenticationProcessingFilter,securityContextHolderAwareRequestFilter,anonymousProcessingFilter,keepAliveAuthenticationFilter,filterInvocationInterceptor"/-->
+        </security:filter-chain-map>
+    </bean>	
+    	
+    <bean id="authenticationprovider"
+        class="org.springframework.security.providers.ProviderManager">
+        <property name="providers">
+            <list>
+           		<ref local="anonymousAuthenticationProvider" />
+                <ref local="xsecdAuthenticationProvider" />
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="anonymousAuthenticationProvider" 
+       class="org.springframework.security.providers.anonymous.AnonymousAuthenticationProvider">
+       <property name="key" value="Mobivi Console, VietPhu Corp, 2008" /><!-- must match with filter key -->
+    </bean>	
+    <bean id="anonymousProcessingFilter" 
+        class="org.springframework.security.providers.anonymous.AnonymousProcessingFilter" >
+        <property name="key" value="Mobivi Console, VietPhu Corp, 2008" />
+        <property name="userAttribute" value="anonymousUser,ROLE_ANONYMOUS" />
+        <property name="removeAfterRequest" value="true" />
+    </bean> 
+    
+   <bean id="xsecdAuthenticationProvider" class="com.mbv.security.authentication.XsecdAuthenticationProvider">
+        <property name="xsecdPool" ref="xsecdPool" />
+        <property name="rolePrefix" value="ROLE_" />
+    </bean> 
+    
+    <bean id="authorizationCheck" class="com.mbv.security.authentication.AuthorizationCheck">
+    	<constructor-arg index="0"> 
+		      <map>
+		      	<entry>
+		            <key>
+		                <value>LockAccountView</value>
+		            </key>
+		             <list>
+		                    <value>reserved_account_lv</value>
+		                    <value>reserved_txn_lv</value>
+		             </list>
+		        </entry>
+		        <entry>
+		            <key>
+		                <value>ProviderAccountView</value>
+		                <!-- value>ProviderAccountView</value-->
+		            </key>
+		             <list>
+		                    <value>provider_account_load_money_lv</value>
+		                    <value>provider_account_load_money_rpt</value>
+		                    <value>check_rpt</value>
+		                    <value>anypay_sim_load_money_lv</value>
+		             </list>
+		        </entry>
+		        <entry>
+		            <key>
+		                <value>ProviderAccountUpDate</value>
+		                <!-- value>ProviderAccountUpDate</value-->
+		            </key>
+		             <list>
+		             		<value>provider_account_load_money_nv</value>
+		             		<value>provider_account_load_money_s</value>
+		                    <value>provider_account_load_money_uv</value>
+		                    <value>provider_account_load_money_u</value>
+		                    <value>provider_account_load_money_lv</value>
+		                    <value>provider_account_load_money_d</value>
+		                    <value>provider_account_load_money_rpt</value>
+		                    <value>check_rpt</value>
+		                    <value>anypay_sim_load_money_lv</value>
+		                    <value>anypay_sim_load_money_s</value>
+		                    <value>anypay_sim_load_money_d</value>
+		                    <value>anypay_sim_load_money_nv</value>
+		                    <value>anypay_transaction_lv</value>
+		                    <value>export_anypay_transaction</value>
+		                    <value>anypay_transfer_nv</value>
+		                    <value>anypay_transfer_s</value>
+		             </list>
+		        </entry>
+		        
+		        <entry>
+		            <key>
+		                <value>ProviderAccountSummaryView</value>
+		                <!-- value>ProviderAccountSummaryView</value-->
+		            </key>
+		             <list>
+		                    <value>provider_account_summary_lv</value>
+		                    <value>provider_account_summary_rpt</value>
+		                    <value>check_rpt</value>
+		             </list>
+		        </entry>
+		        
+		        <entry>
+		            <key>
+		                <value>ProviderTxnSummaryView</value>
+		                <!-- value>ProviderTxnSummaryView</value-->
+		            </key>
+		             <list>
+		                    <value>provider_txn_summary_lv</value>
+		                    <value>provider_txn_summary_rpt</value>
+		                    <value>check_rpt</value>
+		             </list>
+		        </entry>
+		        <entry>
+		            <key>
+		                <value>TxnView</value>
+		                <!-- value>TxnView</value-->
+		            </key>
+		             <list>
+		                    <value>airtime_transaction_lv</value>
+		                    <value>airtime_transaction_rpt</value>
+		                    <value>check_rpt</value>
+		                    <value>check_txn</value>
+		                    <value>vietpay_view</value>
+		                    <value>vietpay_txn_inquiry</value>
+		                    <value>anypay_transaction_lv</value>
+		                    <value>export_anypay_transaction</value>
+		                    <value>export_sms_content</value>
+		                    <value>sms_content_lv</value>
+		             </list>
+		        </entry>
+		        <entry>
+		            <key>
+		                <value>TxnUpdate</value>
+		                <!-- value>TxnUpdate</value-->
+		            </key>
+		             <list>
+		                    <value>airtime_transaction_uv</value>
+		                    <value>airtime_transaction_u</value>
+		                    <value>airtime_transaction_lv</value>
+		                    <value>airtime_transaction_rpt</value>
+		                    <value>check_rpt</value>
+		                    <value>anypay_transaction_uv</value>
+		                    <value>anypay_transaction_u</value>
+		                    <value>anypay_transaction_lv</value>
+		                    <value>export_anypay_transaction</value>
+		                    <value>export_sms_content</value>
+		                    <value>sms_content_lv</value>
+		             </list>
+		        </entry>
+		         <entry>
+		            <key>
+		                <value>RecacheCore</value>
+		            </key>
+		             <list>
+		                    <value>recache_v</value>
+		                    <value>recache_mobi_property</value>
+		                    <value>recache_viettel_property</value>
+		                    <value>recache_telco_provider</value>
+		                    <value>recache_notif_template</value>
+		             </list>
+		        </entry>
+		        <entry>
+		            <key>
+		                <value>MobiChangePass</value>
+		                <!-- value>TxnUpdate</value-->
+		            </key>
+		             <list>
+		                    <value>mobi_change_pwd_v</value>
+		                    <value>mobi_change_pwd</value>
+		                    <value>check_txn</value>
+		             </list>
+		        </entry>
+		        <entry>
+		            <key>
+		                <value>MobiBalQuery</value>
+		            </key>
+		             <list>
+		                    <value>mobi_balance_lv</value>
+		                    <value>mobi_update_balance</value>
+		                    <value>check_txn</value>
+		             </list>
+		        </entry>
+		        <entry>
+		            <key>
+		                <value>CdrCompare</value>
+		             </key>
+		             <list>
+		                    <value>comparison_cdr_lv</value>
+		                    <value>export_cdr_comparison</value>
+		             </list>
+		        </entry>
+		    </map> 
+       </constructor-arg> 
+       <property name="servicePool" ref="coIssuedPool"/>
+       <property name="objectType" value="${access.control.target.type}"/>
+       
+    </bean> 	    
+</beans>

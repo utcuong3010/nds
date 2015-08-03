@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="at_summary" >
+  <resultMap id="AtSummaryResult" class="com.mbv.bp.common.vo.airtime.AtSummary" >
+    <result column="provider_id" property="providerId" jdbcType="VARCHAR" />
+    <result column="txn_date" property="txnDate" jdbcType="DATE" />
+    <result column="total_amount" property="totalAmount" jdbcType="BIGINT" />
+    <result column="total_input_amount" property="totalInputAmount" jdbcType="BIGINT" />
+    <result column="used_amount" property="usedAmount" jdbcType="BIGINT" />
+    <result column="total_txn" property="totalTxn" jdbcType="INTEGER" />
+  </resultMap>
+  <insert id="AtSummary_Insert" parameterClass="com.mbv.bp.common.vo.airtime.AtSummary" >
+    insert into at_summary (provider_id, txn_date, total_amount, total_input_amount, used_amount,
+      total_txn)
+    values (#providerId:VARCHAR#, Date(#txnDate:DATE#), #totalAmount:BIGINT#, #totalInputAmount:BIGINT#,
+      #usedAmount:BIGINT#, #totalTxn:INTEGER#)
+  </insert>
+  
+   <update id="AtSummary_Update" parameterClass="com.mbv.bp.common.vo.airtime.AtSummary" >
+    update at_summary
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="totalAmount" >
+        total_amount = #totalAmount:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="totalInputAmount" >
+        total_input_amount = #totalInputAmount:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="usedAmount" >
+        used_amount = #usedAmount:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="totalTxn" >
+        total_txn = #totalTxn:INTEGER#
+      </isNotNull>
+    </dynamic>
+    where provider_id = #providerId:VARCHAR#
+      and txn_date = Date(#txnDate:DATE#)
+  </update>
+  <select id="AtSummary_Select" resultMap="AtSummaryResult" parameterClass="com.mbv.bp.common.vo.airtime.AtSummary" >
+    select provider_id, txn_date, IFNULL(total_amount,0) as total_amount, IFNULL(total_input_amount,0) as total_input_amount, IFNULL(used_amount,0) as used_amount, IFNULL(total_txn,0) as total_txn 
+    from at_summary
+    where provider_id = #providerId:VARCHAR#
+      and txn_date = Date(#txnDate:DATE#)
+  </select>
+  
+  <select id="AtSummary_SelectEndDateByProviderId" resultClass="Date" parameterClass="com.mbv.bp.common.vo.airtime.AtSummary">
+		select max(Date(txn_date)) from at_summary where provider_id = #providerId:VARCHAR#
+  </select>
+  
+  <select id="AtSummary_SearchByFilter" resultMap="AtSummaryResult" parameterClass="com.mbv.bp.common.vo.airtime.AtSummary" >
+	
+		select  provider_id, txn_date, IFNULL(total_amount,0) as total_amount, IFNULL(total_input_amount,0) as total_input_amount, IFNULL(used_amount,0) as used_amount, IFNULL(total_txn,0) as total_txn
+		from at_summary where ('1'='1')
+		<isNotNull prepend=" and " property="providerId" >
+       		provider_id = #providerId:VARCHAR#
+        </isNotNull>
+        <isNotNull  prepend=" and " property="fromDate" >
+        	<![CDATA[
+      		( 
+      			txn_date>=Date(#fromDate:TIMESTAMP#) and
+        	  	txn_date<Date(date_add(#toDate:TIMESTAMP#,interval 1 day))
+        	)
+      		]]>
+      		<!--   
+        	DATE(txn_date) between DATE(#fromDate:TIMESTAMP#)
+			and DATE(#toDate:TIMESTAMP#)
+			 -->
+        </isNotNull>
+       order by txn_date desc,provider_id desc limit $startRecord$,$recordSize$
+   </select>
+	
+   <select id="AtSummary_SearchByFilterCount" resultClass="int" parameterClass="com.mbv.bp.common.vo.airtime.AtSummary" >
+
+		select count(txn_date) from at_summary where ('1'='1')
+		<isNotNull prepend=" and " property="providerId" >
+       		provider_id = #providerId:VARCHAR#
+        </isNotNull>
+        <isNotNull  prepend=" and " property="fromDate" >
+        	<![CDATA[
+      		( 
+      			txn_date>=Date(#fromDate:TIMESTAMP#) and
+        	  	txn_date<Date(date_add(#toDate:TIMESTAMP#,interval 1 day))
+        	)
+      		]]>
+      		<!--   
+        	DATE(txn_date) between DATE(#fromDate:TIMESTAMP#)
+			and DATE(#toDate:TIMESTAMP#)
+			 -->
+        </isNotNull>
+	</select>
+	<select id="AtSummary_BeginAmount" resultClass="long" parameterClass="com.mbv.bp.common.vo.airtime.AtSummary" >
+		<![CDATA[
+		   select  IFNULL(sum(IFNULL(total_amount,0) -IFNULL(used_amount,0)),0)  from at_summary where provider_id = #providerId:VARCHAR# and txn_date<Date(#txnDate:DATE#)
+		]]>
+	</select>
+</sqlMap>

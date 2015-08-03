@@ -1,0 +1,33 @@
+===================================================
+Version : 0.1.0
+Date	: 2014 Feb 28
+Authors	: Tuan Nguyen, Hieu Nguyen
+===================================================
+
+1. Sabre Daemon with functions Search, Book, Pay, Void
+
+2. Deploy on EC2 with Rabbit, Mongo
+
+3. Automatically check and reconnect VPN connection
+
+===================================================
+Version : 0.1.1
+Date	: 2014 Mar 12
+Authors	: Hieu Nguyen
+===================================================
+
+1. Bug fixes:
+- Stop agent actor as receive timeout
+- No combinable pricing
+
+2. Move log file to folder log
+
+===================================================
+Version : 0.1.2
+Date	: 2014 Mar 13
+Authors	: Hieu Nguyen
+===================================================
+
+1. Bug fixes
+- Designate printer as a booking paid
+- Add command end in void ticket

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="at_transaction_history" >
+  <resultMap id="AtTransactionHistoryResult" class="com.mbv.bp.common.vo.airtime.AtTransaction" >
+    <result column="at_txn_id" property="atTxnId" jdbcType="BIGINT" />
+    <result column="deleted" property="deleted" jdbcType="BIGINT" />
+    <result column="txn_id" property="txnId" jdbcType="VARCHAR" />
+    <result column="channel_id" property="channelId" jdbcType="VARCHAR" />
+    <result column="txn_date" property="txnDate" jdbcType="TIMESTAMP" />
+    <result column="delivery_date" property="deliveryDate" jdbcType="TIMESTAMP" />
+    <result column="amount" property="amount" jdbcType="INTEGER" />
+    <result column="message_id" property="messageId" jdbcType="VARCHAR" />
+    <result column="msg_type" property="msgType" jdbcType="CHAR" />
+    <result column="msisdn" property="msisdn" jdbcType="VARCHAR" />
+    <result column="telco_id" property="telcoId" jdbcType="VARCHAR" />
+    <result column="conn_type" property="connType" jdbcType="VARCHAR" />
+    <result column="time_out" property="timeOut" jdbcType="INTEGER" />
+    <result column="network_code" property="networkCode" jdbcType="CHAR" />
+    <result column="status" property="status" jdbcType="CHAR" />
+    <result column="error_code" property="errorCode" jdbcType="VARCHAR" />
+    <result column="created_by" property="createdBy" jdbcType="VARCHAR" />
+    <result column="created_date" property="createdDate" jdbcType="TIMESTAMP" />
+    <result column="updated_by" property="updatedBy" jdbcType="VARCHAR" />
+    <result column="updated_date" property="updatedDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <select id="AtTransactionHistory_SelectByAtTnxIds" resultMap="AtTransactionHistoryResult" parameterClass="com.mbv.bp.common.vo.airtime.AtTransaction">
+  	select * from at_transaction_history 
+		where deleted=0  
+        at_txn_id in
+        	<iterate property="atTxnIdList"
+             open="(" close=")"
+             conjunction=",">
+      			#atTxnIdList[]#
+    		</iterate>
+  		
+  </select>
+</sqlMap>

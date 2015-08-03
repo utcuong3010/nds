@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       	http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-2.5.xsd
+		http://www.springframework.org/schema/util
+		http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<!-- Properties -->
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="ignoreUnresolvablePlaceholders" value="false" />
+		<property name="locations">
+			<list>
+				<value>airtime2.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- Properties -->
+	<import resource="IntegrationContext.xml" />
+
+	<!-- Properties -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="${datasource.driver}" />
+		<property name="jdbcUrl" value="${datasource.url}" />
+		<property name="user" value="${datasource.username}" />
+		<property name="password" value="${datasource.password}" />
+		<property name="acquireIncrement" value="10" />
+		<property name="idleConnectionTestPeriod" value="60" />
+		<property name="maxPoolSize" value="100" />
+		<property name="maxStatements" value="50" />
+		<property name="minPoolSize" value="10" />
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<!-- Epay Service Provider -->
+	<bean id="EpayService" class="com.mbv.airtime2.epay.EpayService"
+		init-method="start" destroy-method="stop">
+		<property name="config">
+			<bean class="com.mbv.airtime2.epay.EpayConfig">
+				<property name="webservice_url" value="${epay.url}" />
+				<property name="partnerName" value="${epay.partnerName}" />
+				<property name="numberOfChildren" value="${epay.numberOfChildren}" />
+				<property name="numberOfConsicutiveRequests" value="${epay.numberOfConsicutiveRequests}" />
+				<property name="pendingTransactionCheckingInterval" value="${epay.pendingTransactionCheckingInterval}" />
+				<property name="serviceTimeOut" value="${epay.serviceTimeOut}"/>
+				<property name="providerTypeMap">
+					<map>
+						<entry key="${epay.viettelPreEntry}">
+							<list>
+								<value>${epay.viettelPreProvider}</value>
+								<value>${epay.viettelPreType}</value>
+							</list>
+						</entry>
+						<entry key="${epay.viettelPosEntry}">
+							<list>
+								<value>${epay.viettelPosProvider}</value>
+								<value>${epay.viettelPosType}</value>
+							</list>
+						</entry>
+						<entry key="${epay.vinaPreEntry}">
+							<list>
+								<value>${epay.vinaPreProvider}</value>
+								<value>${epay.vinaPreType}</value>
+							</list>
+						</entry>
+						<entry key="${epay.vinaPosEntry}">
+							<list>
+								<value>${epay.vinaPosProvider}</value>
+								<value>${epay.vinaPosType}</value>
+							</list>
+						</entry>
+
+
+						<entry key="${epay.mobiPreEntry}">
+							<list>
+								<value>${epay.mobiPreProvider}</value>
+								<value>${epay.mobiPreType}</value>
+							</list>
+						</entry>
+						<entry key="${epay.mobiPosEntry}">
+							<list>
+								<value>${epay.mobiPosProvider}</value>
+								<value>${epay.mobiPosType}</value>
+							</list>
+						</entry>
+					</map>
+				</property>
+				<property name="successCodes" value = "${epay.successCodes}" />
+				<property name="pendingCodes" value = "${epay.pendingCodes}" />
+				<property name="signer">
+					<bean class="com.mbv.airtime2.epay.Encrypt">
+						<constructor-arg value="${epay.privateKeyPath}"/>
+					</bean>
+				</property>				
+			</bean>
+		</property>
+		<property name="mapper">
+			<bean class="org.mybatis.spring.mapper.MapperFactoryBean">
+				<property name="mapperInterface" value="com.mbv.airtime2.epay.domain.Mapper" />
+				<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+			</bean>
+		</property>
+	</bean>
+
+	<!-- Mobifone Service Provider -->
+	<bean id="MobifoneService" class="com.mbv.airtime2.mobifone.MobifoneService"
+		init-method="start" destroy-method="stop"> 
+		<property name="config">
+			<bean class="com.mbv.airtime2.mobifone.MobifoneConfig">
+				<property name="url" value="${mobifone.url}" />
+				<property name="login" value="${mobifone.login}" />
+				<property name="password" value="${mobifone.password}" />
+				<property name="queueWorkers" value="${mobifone.queueWorkers}" />
+				<property name="queueFactor" value="${mobifone.queueFactor}" />
+				<property name="prepaidAmounts" value="${mobifone.prepaidAmounts}" />
+			</bean>
+		</property>
+		<property name="mapper">
+			<bean class="org.mybatis.spring.mapper.MapperFactoryBean">
+				<property name="mapperInterface" value="com.mbv.airtime2.mobifone.domain.Mapper" />
+				<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+			</bean>
+		</property>
+	</bean> 
+	<!-- VietnamMobile Service Provider -->
+	<bean id="VietnamMobileService" class="com.mbv.airtime2.vngmobile.Service"
+		init-method="start" destroy-method="stop"> 
+		<property name="config">
+			<bean class="com.mbv.airtime2.vngmobile.Config">
+				<property name="serviceId" value="VNMOBILE" />
+				<property name="host" value="${vnmobile.host}" />
+				<property name="port" value="${vnmobile.port}" />
+				<property name="evourcherLogin" value="${vnmobile.evourcher.login}" />
+				<property name="evourcherPassword" value="${vnmobile.evourcher.password}" />
+				<property name="evourcherMpin" value="${vnmobile.evourcher.mpin}" />
+				<property name="evourcherMsisdn" value="${vnmobile.evourcher.msisdn}" />
+				<property name="evourcherServiceCode" value="${vnmobile.evourcher.serviceCode}" />
+				<property name="pgLogin" value="${vnmobile.paymentgateway.login}" />
+				<property name="pgPassword" value="${vnmobile.paymentgateway.password}" />
+				<property name="pgTokenKey" value="${vnmobile.paymentgateway.tokenKey}" />
+			</bean>
+		</property>
+		<property name="mapper">
+			<bean class="org.mybatis.spring.mapper.MapperFactoryBean">
+				<property name="mapperInterface" value="com.mbv.airtime2.vngmobile.domain.Mapper" />
+				<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+			</bean>
+		</property>
+	</bean>
+	<!-- GtelMobile Service Provider -->
+	<bean id="GtelMobileService" class="com.mbv.airtime2.vngmobile.Service"
+		init-method="start" destroy-method="stop"> 
+		<property name="config">
+			<bean class="com.mbv.airtime2.vngmobile.Config">
+				<property name="serviceId" value="GMOBILE" />
+				<property name="host" value="${gmobile.host}" />
+				<property name="port" value="${gmobile.port}" />
+				<property name="evourcherLogin" value="${gmobile.evourcher.login}" />
+				<property name="evourcherPassword" value="${gmobile.evourcher.password}" />
+				<property name="evourcherMpin" value="${gmobile.evourcher.mpin}" />
+				<property name="evourcherMsisdn" value="${gmobile.evourcher.msisdn}" />
+				<property name="evourcherServiceCode" value="${gmobile.evourcher.serviceCode}" />
+				<property name="pgLogin" value="${gmobile.paymentgateway.login}" />
+				<property name="pgPassword" value="${gmobile.paymentgateway.password}" />
+				<property name="pgTokenKey" value="${gmobile.paymentgateway.tokenKey}" />
+			</bean>
+		</property>
+		<property name="mapper">
+			<bean class="org.mybatis.spring.mapper.MapperFactoryBean">
+				<property name="mapperInterface" value="com.mbv.airtime2.vngmobile.domain.Mapper" />
+				<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+			</bean>
+		</property>
+	</bean>
+	
+	<!-- Xpay Service Provider -->
+	<bean id="XpayService" class="com.mbv.airtime2.xpay.XpayService"
+		init-method="start" destroy-method="stop">
+		<property name="config">
+			<bean class="com.mbv.airtime2.xpay.XpayConfig">
+				<property name="webservice_url" value="${xpay.url}" />
+				<property name="partner_code" value="${xpay.partner_code}" />
+				<property name="username" value="${xpay.username}" />
+				<property name="password" value="${xpay.password}" />
+				<property name="version" value="${xpay.version}" />
+				<property name="appid" value="${xpay.appid}" />
+				<property name="numberOfChildren" value="${xpay.numberOfChildren}" />
+				<property name="balanceCheckingInterval" value="${xpay.balanceCheckingInterval}" />
+				<property name="numberOfConsicutiveRequests" value="${xpay.numberOfConsicutiveRequests}" />
+				<property name="pendingTransactionCheckingInterval" value="${xpay.pendingTransactionCheckingInterval}" />
+				<property name="successCodes" value = "${xpay.successCodes}" />
+				<property name="pendingCodes" value = "${xpay.pendingCodes}" />
+				<property name="unknownCodes" value = "${xpay.unknownCodes}" />
+			</bean>
+		</property>
+		<property name="mapper">
+			<bean class="org.mybatis.spring.mapper.MapperFactoryBean">
+				<property name="mapperInterface" value="com.mbv.airtime2.xpay.domain.Mapper" />
+				<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+			</bean>
+		</property>
+	</bean>	
+	
+</beans>

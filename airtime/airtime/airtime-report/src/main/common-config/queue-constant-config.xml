@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<app>
+	<queue>
+		<constant>
+			<queue-config>
+				<queue id="VNPAY_DELIVERY">
+					<max-queue-size>1000</max-queue-size>
+					<dequeue-size>1</dequeue-size>
+					<max-dequeue-retry>0</max-dequeue-retry>
+					<terminable>true</terminable>
+					<queue-table></queue-table>
+				</queue>
+				<queue id="AT_DN_PROCESSSOR">
+					<max-queue-size>10000</max-queue-size>
+					<dequeue-size>20</dequeue-size>
+					<max-dequeue-retry>0</max-dequeue-retry>
+					<terminable>false</terminable>
+					<queue-table></queue-table>
+				</queue>
+			</queue-config>
+		</constant>
+	</queue>
+</app>
+

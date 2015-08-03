@@ -1,0 +1,11 @@
+Hardcopy Printer Address: 	4CB4B6
+Ticket Printer Address:		4CB4B7
+	Type of Ticket Print Routine:	GF
+	Station Number:					37982254
+	
+
+[YQRY 4CB4B6]
+[W*GF4CB4B737982254]	- W*<Ticket Print Routine><LNIATA><8-digit station number> == designate ticket printer and createATAC record 
+[WJ*37982254*]			-  
+[PTR/4CB4B6*]			- Assign Hardcopy Printer; all work areas
+

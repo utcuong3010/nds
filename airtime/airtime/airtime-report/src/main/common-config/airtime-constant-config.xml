@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<app>
+	<airtime>
+		<constant>
+		    <inquiry-max-timeout>600000</inquiry-max-timeout>
+			<scheduler-housekeeping-module>SCHEDULER</scheduler-housekeeping-module>
+			<scheduler-housekeeping-type>AT_TXN_HOUSEKEPPING</scheduler-housekeeping-type>
+			<scheduler-housekeeping-key>LAST_RUN</scheduler-housekeeping-key>
+			<dn-processor-queue>AT_DN_PROCESSSOR</dn-processor-queue>
+			<wfp-dn-processor>wfpAirTimeDnProcessor</wfp-dn-processor>
+			<wfp-inquiry-processor>wfpAirTimeInquiryTransaction</wfp-inquiry-processor>
+			<wfp-topup-request-before-queue>wfpAirTimeRequestPushToQueue</wfp-topup-request-before-queue>
+			<wfp-topup-request-after-queue>wfpAirTimeRequestAfterQueue</wfp-topup-request-after-queue>
+			<wfp-network-request-before-queue>wfpVnpayNetworkCheckPushToQueue</wfp-network-request-before-queue>
+			<wfp-network-request-after-queue>wfpVnpayNetworkCheckAfterQueue</wfp-network-request-after-queue>
+
+			<telco-provider>
+				<provider id="VTEL" name="Viettel">
+					<connection-id>VNPAY</connection-id>
+				</provider>
+				<provider id="MOBI" name="MobiFone">
+					<connection-id>VNPAY</connection-id>
+				</provider>
+				<provider id="VINA" name="VinaPhone">
+					<connection-id>VNPAY</connection-id>
+				</provider>
+				<provider id="BLVN" name="Beeline VietNam">
+					<connection-id>VNPAY</connection-id>
+				</provider>
+				<provider id="SFON" name="S-Fone">
+					<connection-id>VNPAY</connection-id>
+				</provider>
+				<provider id="EVNT" name="EVN Telecom">
+					<connection-id>VNPAY</connection-id>
+				</provider>
+				<provider id="VNMB" name="Vietnam Mobile">
+					<connection-id>VNPAY</connection-id>
+				</provider>
+			</telco-provider>
+
+			<airtime-provider>
+				<provider id="VNPAY" name="VnPay">
+					<connection-id>VNPAY</connection-id>
+					<success-code>00</success-code>
+					<success-status>DELIVERED</success-status>
+				</provider>
+			</airtime-provider>
+		</constant>
+	</airtime>
+</app>
+

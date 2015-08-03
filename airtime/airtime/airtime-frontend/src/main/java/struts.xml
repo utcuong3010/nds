@@ -1,0 +1,267 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation"
+		value="false" />
+	<constant name="struts.devMode" value="false" />
+
+	<package name="default" extends="struts-default" namespace="/">
+		<result-types>
+			<result-type name="dispatcher" default="true"
+				class="org.apache.struts2.dispatcher.ServletDispatcherResult" />
+		</result-types>
+		
+		<global-results>
+			<result name="error">/error.jsp</result>
+		</global-results>
+
+			<global-exception-mappings>
+				<exception-mapping exception="java.lang.Exception"	result="error">
+				</exception-mapping>
+			</global-exception-mappings>
+
+		<action name="login" class="authenticationController">
+			<result name="success">/success.jsp</result>
+		</action>
+		<action name="check_rpt" class="reportController" method="checkRpt">
+			<result name="success">/jsp/json_result.jsp</result>
+		</action>
+		
+<!-- 	=================Quan ly tai khoan tong=======================	 -->
+<!--  VietPay -->
+
+		<action name="vietpay_view" class="vietPayController" method="view">
+			<result name="success">/jsp/vietpay_view.jsp</result>
+		</action>
+		
+		<action name="vietpay_txn_inquiry" class="vietPayController" method="txnInquiry">
+			<result name="success">/jsp/json_result.jsp</result>
+		</action>
+		
+		<action name="vietpay_bal_inquiry" class="vietPayController" method="balInquiry">
+			<result name="success">/jsp/json_result.jsp</result>
+		</action>
+		
+<!-- Mobifone -->		
+		<action name="mobi_change_pwd_v" class="mobiFoneController" method="changePwdView">
+			<result name="success">/jsp/mobi_change_pwd_view.jsp</result>
+		</action>
+		
+		<action name="mobi_change_pwd" class="mobiFoneController" method="changePwd">
+			<result name="success">/jsp/json_result.jsp</result>
+		</action>
+		
+		<action name="mobi_update_balance" class="mobiFoneController" method="updateBalance">
+			<result name="success">/jsp/json_result.jsp</result>
+		</action>
+		
+		<action name="check_txn_test" class="mobiFoneController" method="checkTxnTest">
+			<result name="success">/jsp/json_result.jsp</result>
+		</action>
+		
+		<action name="check_txn" class="mobiFoneController" method="checkTxn">
+			<result name="success">/jsp/json_result.jsp</result>
+		</action>
+		
+		<action name="mobi_balance_lv" class="mobiFoneController" method="balanceListView">
+			<result name="success">/jsp/mobi_balance_lv.jsp</result>
+		</action>
+		
+		<action name="provider_account_summary_lv" class="providerAccountController" method="listAccountSummaryView">
+			<result name="success">/jsp/provider_account_summary_lv.jsp</result>
+		</action>
+		
+		<action name="provider_account_summary_rpt" class="providerAccountController" method="listAccountSummaryViewRpt">
+			<result name="success">/jsp/json_result.jsp</result>
+		</action>
+		
+		
+		<action name="provider_txn_summary_lv" class="providerAccountController" method="listTxnSummaryView">
+			<result name="success">/jsp/provider_txn_summary_lv.jsp</result>
+		</action>
+		
+		<action name="provider_txn_summary_rpt" class="providerAccountController" method="listTxnSummaryViewRpt">
+			<result name="success">/jsp/json_result.jsp</result>
+		</action>
+		
+		
+		<action name="provider_account_load_money_lv" class="providerAccountController" method="listView">
+			<result name="success">/jsp/provider_account_load_money_lv.jsp</result>
+		</action>
+		
+		<action name="provider_account_load_money_rpt" class="providerAccountController" method="listViewRpt">
+			<result name="success">/jsp/json_result.jsp</result>
+		</action>
+		
+		<action name="provider_account_load_money_nv" class="providerAccountController" method="addView">
+			<result name="success">/jsp/provider_account_load_money_nv.jsp</result>
+		</action>
+		<action name="provider_account_load_money_uv" class="providerAccountController" method="updateView">
+			<result name="success">/jsp/provider_account_load_money_uv.jsp</result>
+			<result name="error">/jsp/error.jsp</result>
+		</action>
+		<action name="provider_account_load_money_u" class="providerAccountController" method="update">
+			<result name="failure">/jsp/provider_account_load_money_uv.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">provider_account_load_money_lv</param>
+				<param name="proAcc.txnId">${proAcc.txnId}</param>
+			</result>
+		</action>
+		<action name="provider_account_load_money_s" class="providerAccountController" method="save">
+			<result name="failure">/jsp/provider_account_load_money_nv.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">provider_account_load_money_lv</param>
+				<param name="proAcc.txnId">${proAcc.txnId}</param>
+			</result>
+		</action>
+		<action name="provider_account_load_money_d" class="providerAccountController" method="delete">
+			<result name="failure">/jsp/error.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">provider_account_load_money_lv</param>
+				<param name="proAcc.txnId">${proAcc.txnId}</param>
+			</result>
+		</action>
+
+<!--  CdrComparison  -->	
+		<action name="comparison_cdr_lv" class="cdrController" method="compareListView">
+			<result name="success">/jsp/comparison_cdr_lv.jsp</result>
+		</action>
+		
+		<action name="export_cdr_comparison" class="cdrController" method="compareExportData">
+			<result name="success">/jsp/json_result.jsp</result>
+		</action>
+<!-- Anypay Sim Amount -->		
+		<action name="anypay_sim_load_money_lv" class="anypayAccountController" method="listView">
+			<result name="success">/jsp/anypay_sim_load_money_lv.jsp</result>
+		</action>
+		<action name="anypay_sim_load_money_nv" class="anypayAccountController" method="addView">
+			<result name="success">/jsp/anypay_sim_load_money_nv.jsp</result>
+		</action> 
+		<action name="anypay_sim_load_money_s" class="anypayAccountController" method="save">
+			<result name="failure">/jsp/anypay_sim_load_money_nv.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">anypay_sim_load_money_lv</param>
+				<param name="proAcc.txnId">${proAcc.txnId}</param>
+			</result>
+		</action>
+		<action name="anypay_sim_load_money_d" class="anypayAccountController" method="delete">
+			<result name="failure">/jsp/error.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">anypay_sim_load_money_lv</param>
+				<param name="proAcc.txnId">${proAcc.txnId}</param>
+			</result>
+		</action>
+<!-- Anypay Txn -->		
+		
+		<action name="anypay_transaction_uv" class="anypayTxnController" method="updateView">
+			<result name="success">/jsp/anypay_transaction_uv.jsp</result>
+			<result name="error">/jsp/error.jsp</result>
+		</action>
+		
+		<action name="anypay_transaction_u" class="anypayTxnController" method="update">
+			<result name="failure">/jsp/anypay_transaction_uv.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">anypay_transaction_lv</param>
+				<param name="txnModel.txnId">${txnModel.txnId}</param>
+			</result>
+		</action>
+		
+		<action name="anypay_transfer_nv" class="anypayTxnController" method="addTransferTxnView">
+			<result name="success">/jsp/anypay_transfer_nv.jsp</result>
+			<result name="error">/jsp/error.jsp</result>
+		</action>
+		
+		<action name="anypay_transfer_s" class="anypayTxnController" method="saveTransferTxn">
+			<result name="failure">/jsp/anypay_transfer_nv.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">anypay_transaction_lv</param>
+				<param name="txnModel.txnId">${txnModel.txnId}</param>
+			</result>
+		</action>
+		
+		<action name="anypay_transaction_lv" class="anypayTxnController" method="listView">
+			<result name="success">/jsp/anypay_transaction_lv.jsp</result>
+		</action>
+		
+		<action name="export_anypay_transaction" class="anypayTxnController" method="anypayTxnExportCsv">
+			<result name="success">/jsp/json_result.jsp</result>
+		</action>
+		
+		<action name="export_sms_content" class="anypaySmsController" method="anypaySmsExportCsv">
+			<result name="success">/jsp/json_result.jsp</result>
+		</action>
+		<action name="sms_content_lv" class="anypaySmsController" method="listView">
+			<result name="success">/jsp/sms_content_lv.jsp</result>
+		</action>
+		
+		
+<!--  At Txn -->		
+		<action name="airtime_transaction_lv" class="airtimeTxnController" method="listView">
+			<result name="success">/jsp/airtime_transaction_lv.jsp</result>
+		</action>
+		
+		<!-- action name="mobifone_transaction_lv" class="airtimeTxnController" method="mobifoneListView">
+			<result name="success">/jsp/mobi_transaction_lv.jsp</result>
+		</action>
+		
+		<action name="export_mobi_cdr" class="airtimeTxnController" method="exportMobiCdr">
+			<result name="success">/jsp/json_result.jsp</result>
+		</action-->
+		
+		<action name="airtime_transaction_rpt" class="airtimeTxnController" method="listViewRpt">
+			<result name="success">/jsp/json_result.jsp</result>
+		</action>
+		
+		
+		<action name="airtime_transaction_uv" class="airtimeTxnController" method="updateView">
+			<result name="success">/jsp/airtime_transaction_uv.jsp</result>
+			<result name="error">/jsp/error.jsp</result>
+		</action>
+		
+		<action name="airtime_transaction_u" class="airtimeTxnController" method="update">
+			<result name="failure">/jsp/airtime_transaction_uv.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">airtime_transaction_lv</param>
+				<param name="txnModel.atTxnId">${txnModel.atTxnId}</param>
+			</result>
+		</action>
+		
+		<!--action name="mobifone_transaction_lv" class="mobifoneTxnController" method="mobifoneListView">
+			<result name="success">/jsp/mobi_transaction_lv.jsp</result>
+		</action-->
+		
+		<action name="export_mobi_cdr" class="mobifoneTxnController" method="exportMobiCdr">
+			<result name="success">/jsp/json_result.jsp</result>
+		</action>
+<!--  recache -->
+		<action name="recache_v" class="recacheController" method="recacheView">
+			<result name="success">/jsp/recache.jsp</result>
+		</action>
+			
+		<action name="recache_mobi_property" class="recacheController" method="recacheMobiPropery">
+			<result name="success">/jsp/recache.jsp</result>
+		</action>
+		
+		<action name="recache_viettel_property" class="recacheController" method="recacheViettelPropery">
+			<result name="success">/jsp/recache.jsp</result>
+		</action>
+		
+		<action name="recache_telco_provider" class="recacheController" method="recacheTelcoProvider">
+			<result name="success">/jsp/recache.jsp</result>
+		</action>
+		
+		<action name="recache_notif_template" class="recacheController" method="recacheNotifTemplate">
+			<result name="success">/jsp/recache.jsp</result>
+		</action>
+<!-- ReservedAccount -->	
+		<action name="reserved_account_lv" class="reservedAccountController" method="reservedAccountView">
+			<result name="success">/jsp/reserved_account_lv.jsp</result>
+		</action>	
+		<action name="reserved_txn_lv" class="reservedAccountController" method="reservedTxnView">
+			<result name="success">/jsp/reserved_txn_lv.jsp</result>
+		</action>	
+	</package>
+
+</struts>

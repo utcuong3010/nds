@@ -1,0 +1,4 @@
+URL: 
+	http://localhost:8181/AirService/itinerary/id
+DATA:
+	{"command" : "BUY"}

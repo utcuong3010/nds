@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/decorators">
+    <decorator name="main" page="main.jsp">
+        <pattern>/jsp/**</pattern>
+        <pattern>/success.jsp</pattern>
+        <pattern>/error.jsp</pattern>
+        <pattern>/logout.jsp</pattern>
+        <pattern>/access_denied.jsp</pattern>
+    </decorator>
+    <excludes>
+        <pattern>/jsp/json_result.jsp</pattern>
+    </excludes>
+</decorators>

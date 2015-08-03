@@ -1,0 +1,112 @@
+DROP DATABASE IF EXISTS `airtime`;
+CREATE DATABASE `airtime`;
+
+DROP TABLE IF EXISTS `airtime_config`;
+CREATE TABLE `airtime_config` (
+  `module` varchar(50) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `param_key` varchar(255) NOT NULL,
+  `param_value` varchar(4000) CHARACTER SET utf8 DEFAULT NULL,
+  `value_type` varchar(50) DEFAULT 'prop',
+  `remote_key` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`module`,`type`,`param_key`)
+) ENGINE=InnoDB DEFAULT CHARSET=ascii;
+
+DROP TABLE IF EXISTS `async_req_temp`;
+CREATE TABLE `async_req_temp` (
+  `at_txn_id` bigint(20) NOT NULL,
+  `operator_type` varchar(100) DEFAULT NULL,
+  `value` varchar(2000) DEFAULT NULL,
+  `status` varchar(100) DEFAULT NULL,
+  `txn_date` datetime DEFAULT NULL,
+  `error_code` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`at_txn_id`),
+  KEY `operator_type_index` (`operator_type`),
+  KEY `txn_date_index` (`txn_date`),
+  KEY `status_index` (`status`)
+) ENGINE=InnoDB DEFAULT CHARSET=ascii;
+
+
+
+DROP TABLE IF EXISTS `at_transaction`;
+CREATE TABLE `at_transaction` (
+  `txn_id` varchar(100) NOT NULL,
+  `channel_id` varchar(50) NOT NULL,
+  `deleted` bigint(20) unsigned NOT NULL,
+  `txn_date` datetime NOT NULL COMMENT '''Original''''',
+  `at_txn_id` bigint(20) unsigned DEFAULT NULL,
+  `delivery_date` datetime DEFAULT NULL,
+  `response_date` datetime DEFAULT NULL,
+  `amount` int(12) unsigned DEFAULT NULL COMMENT '''Original''''',
+  `message_id` varchar(20) DEFAULT NULL,
+  `msg_type` varchar(50) NOT NULL,
+  `msisdn` varchar(20) DEFAULT NULL,
+  `telco_id` varchar(20) DEFAULT NULL,
+  `conn_type` varchar(50) DEFAULT NULL,
+  `time_out` int(11) DEFAULT NULL,
+  `status` varchar(50) NOT NULL DEFAULT 'PENDING',
+  `error_code` varchar(100) NOT NULL,
+  `txn_status` varchar(50) DEFAULT 'PENDING',
+  `created_by` varchar(50) NOT NULL,
+  `created_date` datetime NOT NULL,
+  `updated_by` varchar(50) DEFAULT NULL,
+  `updated_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`txn_id`,`channel_id`,`deleted`),
+  KEY `at_txn_index` (`at_txn_id`),
+  KEY `conn_type_index` (`conn_type`),
+  KEY `telco_id_index` (`telco_id`),
+  KEY `status_error_code_index` (`status`,`error_code`),
+  KEY `channel_id_index` (`channel_id`),
+  KEY `txt_date_index` (`txn_date`) ,
+  KEY `message_id_index` (`message_id`),
+  KEY `msisdn_index` (`msisdn`),
+  KEY `txn_summary_index` (`status`,`error_code`,`conn_type`,`txn_date`),
+  KEY `txn_status_del_index` (`deleted`,`txn_status`),
+  KEY `txn_status_index` (`txn_status`)
+) ENGINE=InnoDB DEFAULT CHARSET=ascii;
+
+
+DROP TABLE IF EXISTS `provider_account`;
+CREATE TABLE `provider_account` (
+  `txn_id` varchar(100) NOT NULL,
+  `deleted` bigint(20) unsigned NOT NULL,
+  `txn_date` datetime DEFAULT NULL,
+  `provider_id` varchar(50) DEFAULT NULL,
+  `discount` varchar(10) DEFAULT NULL,
+  `total_amount` bigint(20) unsigned DEFAULT NULL,
+  `input_amount` bigint(20) unsigned DEFAULT NULL,
+  `employee` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `description` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  `created_by` varchar(100) NOT NULL,
+  `created_date` datetime NOT NULL,
+  `updated_by` varchar(100) DEFAULT NULL,
+  `updated_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`txn_id`,`deleted`),
+  KEY `employee_index` (`employee`),
+  KEY `provider_index` (`provider_id`),
+  KEY `txn_date` (`txn_date`)
+) ENGINE=InnoDB DEFAULT CHARSET=ascii;
+
+
+DROP TABLE IF EXISTS `queue_request`;
+CREATE TABLE `queue_request` (
+  `queue_id` varchar(50) NOT NULL,
+  `request_id` bigint(20) NOT NULL,
+  `content` varchar(2500) CHARACTER SET utf8 DEFAULT NULL,
+  `status` varchar(50) NOT NULL,
+  `error_code` varchar(100) DEFAULT NULL,
+  `created_date` datetime DEFAULT NULL,
+  `updated_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`queue_id`,`request_id`),
+  KEY `status_index` (`status`)
+) ENGINE=InnoDB DEFAULT CHARSET=ascii;
+
+
+
+DROP TABLE IF EXISTS `sequenced_ids`;
+CREATE TABLE `sequenced_ids` (
+  `type` varchar(128) NOT NULL,
+  `counter` bigint(20) unsigned NOT NULL,
+  `running` bit(1) NOT NULL,
+  PRIMARY KEY (`type`)
+) ENGINE=InnoDB DEFAULT CHARSET=ascii;

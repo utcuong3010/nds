@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" >
+<Worksheet ss:Name="sheet" >
+<ss:Table>
+<ss:Row>
+<ss:Cell><ss:Data ss:Type='String'>script</ss:Data></ss:Cell>
+</ss:Row>
+<ss:Row>
+<ss:Cell><ss:Data ss:Type='String'>report.airtime.provider.account.loadmoney</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type='String'>source /opt/mobivi/bin/reportfunc.sh&#10;#useDbases airtime&#10;reportId=report.airtime.provider.account.loadmoney&#10;CURRENT_REPORT_ID=$REPORT_ID&#10;export REPORT_ID=$reportId&#10;&#10;if [ -z &quot;$REPORT_NAME&quot; ]; then&#10;   export REPORT_NAME=NapTienTKTong_Rpt.$cretime.xls  &#10;fi&#10; &#10;/opt/airtime-report-0.1.0/bin/airtime_report.sh&#10;export REPORT_ID=$CURRENT_REPORT_ID&#10;reportname=$REPORT_NAME&#10;storeReport</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type='String'></ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type='String'>Báo cáo giao dịch nạp tiền vào TKT</ss:Data></ss:Cell>
+</ss:Row>
+</ss:Table>
+</Worksheet>
+</Workbook>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="provider_amount" >
+  <resultMap id="ProviderAmountResult" class="com.mbv.bp.common.vo.airtime.ProviderAmount" >
+    <result column="provider_id" property="providerId" jdbcType="VARCHAR" />
+    <result column="total_loaded" property="totalLoaded" jdbcType="BIGINT" />
+    <result column="total_used" property="totalUsed" jdbcType="BIGINT" />
+    <result column="notif_amount" property="notifAmount" jdbcType="BIGINT" />
+    <result column="notif_sent" property="notifSent" jdbcType="BIT" />
+  </resultMap>
+  
+  <select id="ProviderAmount_Select" resultMap="ProviderAmountResult" parameterClass="com.mbv.bp.common.vo.airtime.ProviderAmount" >
+    select provider_id, IFNULL(total_loaded,0) as total_loaded, IFNULL(total_used,0) as total_used, notif_amount, notif_sent
+    from provider_amount
+    where provider_id = #providerId:VARCHAR#
+  </select>
+ 
+ <select id="ProviderAmount_SelectLock" resultMap="ProviderAmountResult" parameterClass="com.mbv.bp.common.vo.airtime.ProviderAmount" >
+    select provider_id, IFNULL(total_loaded,0) as total_loaded, IFNULL(total_used,0) as total_used, notif_amount, notif_sent
+    from provider_amount
+    where provider_id = #providerId:VARCHAR# for update
+  </select>
+ 
+ <select id="ProviderAmount_SelectAll" resultMap="ProviderAmountResult" parameterClass="com.mbv.bp.common.vo.airtime.ProviderAmount" >
+    select provider_id, IFNULL(total_loaded,0) as total_loaded , IFNULL(total_used,0) as total_used, notif_amount, notif_sent
+    from provider_amount
+  </select>
+ 
+ <insert id="ProviderAmount_Insert" parameterClass="com.mbv.bp.common.vo.airtime.ProviderAmount" >
+    insert into provider_amount (provider_id, total_loaded, total_used, notif_amount, notif_sent)
+    values (#providerId:VARCHAR#, #totalLoaded:BIGINT#, #totalUsed:BIGINT#, #notifAmount:BIGINT#,
+      #notifSent:BIT#)
+  </insert>
+ 
+  <update id="ProviderAmount_Update" parameterClass="com.mbv.bp.common.vo.airtime.ProviderAmount" >
+    update provider_amount
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="providerId" >
+        provider_id = #providerId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="totalLoaded" >
+        total_loaded = #totalLoaded:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="totalUsed" >
+        total_used = #totalUsed:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="notifAmount" >
+        notif_amount = #notifAmount:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="notifSent" >
+        notif_sent = #notifSent:BIT#
+      </isNotNull>
+    </dynamic>
+    where provider_id = #providerId:VARCHAR#
+  </update>
+  
+  <update id="ProviderAmount_UpdateUsedAmount" parameterClass="com.mbv.bp.common.vo.airtime.ProviderAmount" >
+    update provider_amount set total_used=(total_used+#totalUsed:BIGINT#) where provider_id = #providerId:VARCHAR#
+  </update>
+  
+  <update id="ProviderAmount_UpdateLoadedAmount" parameterClass="com.mbv.bp.common.vo.airtime.ProviderAmount" >
+    update provider_amount set total_loaded=(total_loaded+#totalLoaded:BIGINT#) where provider_id = #providerId:VARCHAR#
+  </update>
+  
+</sqlMap>

@@ -1,0 +1,92 @@
+package com.mbv.bp.common.util;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+import org.apache.commons.lang.StringUtils;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import com.mbv.bp.common.constants.AppConstants;
+import com.mbv.bp.common.dao.airtime.AtTransactionDao;
+import com.mbv.bp.common.dao.airtime.CdrDataDao;
+import com.mbv.bp.common.util.DateUtils.Operation;
+import com.mbv.bp.common.util.DateUtils.Type;
+import com.mbv.bp.common.vo.airtime.CdrData;
+import com.mbv.bp.common.vo.airtime.CdrDataFilter;
+
+public class MobifoneUtils {
+	private static Log log = LogFactory.getLog(MobifoneUtils.class);
+	private static String dateFormat="dd/MM/yyyy HH:mm:ss";
+	public static boolean exportCdrFile(CdrDataFilter filter, String fileName) throws Exception {
+		boolean result =true;
+		log.info("Going to generate Mobifone Cdr file| Filter: " +filter+"| FileName:"+fileName);
+		CdrDataDao txnDao=new CdrDataDao();
+		List<CdrData> txnList; 
+		FileWriter outFile;
+		PrintWriter out;
+		boolean hasResult=false;
+		try{
+			outFile= new FileWriter(fileName);
+			out = new PrintWriter(outFile);
+		}catch (IOException e) {
+			log.error("Error while generating Mobifone Cdr file | Fail to open FileWriter. | FileName-"+fileName);
+			throw e;
+		}
+		try{
+			int startReccord=0;
+			filter.setRecordSize(50);
+			StringBuffer stringBuffer;
+			do{
+				filter.setStartRecord(startReccord);
+				txnList= txnDao.search(filter);
+				if (txnList==null) txnList=new ArrayList<CdrData>();
+				String agentName=AppConstants.MOBIFONE_SETTINGS.getUserName();
+				String txnCode;
+				for(int i=0;i<txnList.size();i++){
+					CdrData cdrData=txnList.get(i);
+					if ("0".endsWith(cdrData.getErrorCode()))
+						txnCode="2";
+					else
+						txnCode="6";
+					
+					stringBuffer=new StringBuffer("");
+					stringBuffer.append(cdrData.getMessageId()).append(",")
+									.append(DateUtils.convertDatetoString(DateUtils.dateAdd(cdrData.getTxnDate(),7,Type.BY_HOUR,Operation.PLUS),dateFormat)).append(",")
+									.append("buy").append(",")
+									.append("4").append(",")
+									.append(txnCode).append(",")
+									.append(agentName).append(",")
+									.append(cdrData.getMsisdn()).append(",")
+									.append(cdrData.getAmount()).append(",")
+									.append(cdrData.getErrorCode()).append(",")
+									.append(cdrData.getAtTxnId());
+					out.println(stringBuffer.toString());
+					hasResult=true;
+					
+				}
+				startReccord+=txnList.size();
+			}while (txnList.size()==filter.getRecordSize());
+			out.close();
+			out=null;
+			log.info("File created. | Total record: "+startReccord+"| FileName: "+fileName);
+		}catch (Exception e) {
+			log.error("Error while generate Mobifone Cdr file.",e);
+			throw e;
+		}finally{
+			try{
+				if (out!=null)
+					out.close();
+			}catch (Exception e) {
+				log.error("Fail to close FileWriter",e);
+			}
+		}
+		if (!hasResult){
+			log.info("No transaction | Filter: "+filter);
+			return false;
+		}
+		
+		return result;
+	}
+}

@@ -1,0 +1,159 @@
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.mbv.airtime2</groupId>
+    <artifactId>project</artifactId>
+    <version>0.0.1</version>
+    <relativePath>../pom.xml</relativePath>	
+  </parent>
+
+
+  <artifactId>release</artifactId>
+  <packaging>pom</packaging>
+  <name>Copying :: Release</name>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.mbv.airtime2</groupId>
+      <artifactId>launcher</artifactId>
+      <version>0.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.mbv.airtime2</groupId>
+      <artifactId>integration</artifactId>
+      <version>0.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.mbv.airtime2</groupId>
+      <artifactId>mobifone</artifactId>
+      <version>0.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.mbv.airtime2</groupId>
+      <artifactId>vngmobile</artifactId>
+      <version>0.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.mbv.airtime2</groupId>
+      <artifactId>epay</artifactId>
+      <version>0.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.mbv.airtime2</groupId>
+      <artifactId>xpay</artifactId>
+      <version>0.0.1</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+   <plugins>
+     <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy-dependencies</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+              <excludeArtifactIds>launcher,integration,mobifone,vngmobile,epay,xpay</excludeArtifactIds>
+              <outputDirectory>./lib</outputDirectory>
+              <overWriteReleases>false</overWriteReleases>
+              <overWriteSnapshots>false</overWriteSnapshots>
+              <overWriteIfNewer>true</overWriteIfNewer>
+            </configuration>
+          </execution>
+          <execution>
+            <id>copy-bundle</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <configuration>
+               <artifactItems>
+                <artifactItem>
+                  <groupId>com.mbv.airtime2</groupId>
+                  <artifactId>launcher</artifactId>
+                  <version>0.0.1</version>
+                  <type>jar</type>
+                  <overWrite>true</overWrite>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>com.mbv.airtime2</groupId>
+                  <artifactId>integration</artifactId>
+                  <version>0.0.1</version>
+                  <type>jar</type>
+                  <overWrite>true</overWrite>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>com.mbv.airtime2</groupId>
+                  <artifactId>mobifone</artifactId>
+                  <version>0.0.1</version>
+                  <type>jar</type>
+                  <overWrite>true</overWrite>
+                </artifactItem>
+				 <artifactItem>
+                  <groupId>com.mbv.airtime2</groupId>
+                  <artifactId>vngmobile</artifactId>
+                  <version>0.0.1</version>
+                  <type>jar</type>
+                  <overWrite>true</overWrite>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>com.mbv.airtime2</groupId>
+                  <artifactId>epay</artifactId>
+                  <version>0.0.1</version>
+                  <type>jar</type>
+                  <overWrite>true</overWrite>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>com.mbv.airtime2</groupId>
+                  <artifactId>xpay</artifactId>
+                  <version>0.0.1</version>
+                  <type>jar</type>
+                  <overWrite>true</overWrite>
+                </artifactItem>
+              </artifactItems>
+              <outputDirectory>./bin</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    
+
+
+	<plugin>
+		<artifactId>maven-resources-plugin</artifactId>
+		<executions>
+			<execution>
+				<id>copy-resources</id>
+				<phase>package</phase>
+				<goals>
+					<goal>copy-resources</goal>
+				</goals>
+				<configuration>
+					<outputDirectory>./</outputDirectory>
+					<resources>          
+						<resource>
+							<directory>../configs</directory>
+							<targetPath>configs</targetPath>
+                		</resource>
+						<resource>
+							<directory>../jsvc</directory>
+							<targetPath>jsvc</targetPath>
+                		</resource>
+              		</resources>              
+            	</configuration>            
+          	</execution>
+		</executions>
+	</plugin>
+</plugins>
+</build>
+</project>

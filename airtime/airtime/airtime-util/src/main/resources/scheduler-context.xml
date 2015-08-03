@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:sec="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+       http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-2.5.xsd">
+	 <bean id="propertyConfigurer"
+        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="ignoreUnresolvablePlaceholders" value="true"></property>
+        <property name="locations">
+        	<list>
+	            <value>airtime_util.properties</value>
+            </list>
+        </property>
+    </bean>   
+	<!-- Mobifone ftp download job -->
+	<bean id="mobifoneFptJob" class="com.mbv.bp.core.scheduler.MobifoneFptJob" >
+		<property name="enable" value="${scheduler.mobifone.ftp.download.enable}"/>
+	</bean>
+
+	<bean id="mobifoneFptJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="mobifoneFptJob" />
+		<property name="targetMethod" value="execute" />
+		<property name="concurrent" value="false" />
+	</bean>
+	
+	<bean id="mobifoneFptJobTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="mobifoneFptJobDetail" />
+		<property name="startDelay" value="${scheduler.mobifone.ftp.download.startdelay}" />
+		<property name="repeatInterval" value="${scheduler.mobifone.ftp.download.repeatinterval}" />
+	</bean>    
+	<!-- Mobifone import cdr file job -->	
+	<bean id="mobifoneCdrSyncJob" class="com.mbv.bp.core.scheduler.MobifoneCdrSyncJob" >
+		<property name="enable" value="${scheduler.mobifone.cdr.import.enable}"/>
+	</bean>
+	<bean id="mobifoneCdrSyncJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="mobifoneCdrSyncJob" />
+		<property name="targetMethod" value="execute" />
+		<property name="concurrent" value="false" />
+	</bean>
+		
+	<bean id="mobifoneCdrSyncJobTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="mobifoneCdrSyncJobDetail" />
+		<property name="startDelay" value="${scheduler.mobifone.cdr.import.startdelay}" />
+		<property name="repeatInterval" value="${scheduler.mobifone.cdr.import.repeatinterval}" />
+	</bean>	
+<!-- VietPay ftp topup mobile download job -->		
+	<bean id="vietPayFtpJob" class="com.mbv.bp.core.scheduler.VietPayFtpJob" >
+		<property name="enable" value="${scheduler.vietpay.ftp.airtime.download.enable}"/>
+	</bean>
+
+	<bean id="vietPayFtpJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="vietPayFtpJob" />
+		<property name="targetMethod" value="execute" />
+		<property name="concurrent" value="false" />
+	</bean>
+	
+	<bean id="vietPayFtpJobTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="vietPayFtpJobDetail" />
+		<property name="startDelay" value="${scheduler.vietpay.ftp.airtime.download.startdelay}" />
+		<property name="repeatInterval" value="${scheduler.vietpay.ftp.airtime.download.repeatinterval}" />
+	</bean>		
+<!-- VietPay ftp topup game download job -->		
+	<bean id="vietPayGameFtpJob" class="com.mbv.bp.core.scheduler.VietPayGameFtpJob" >
+		<property name="enable" value="${scheduler.vietpay.ftp.game.download.enable}"/>
+	</bean>
+
+	<bean id="vietPayGameFtpJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="vietPayGameFtpJob" />
+		<property name="targetMethod" value="execute" />
+		<property name="concurrent" value="false" />
+	</bean>
+	
+	<bean id="vietPayGameFtpJobTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="vietPayGameFtpJobDetail" />
+		<property name="startDelay" value="${scheduler.vietpay.ftp.game.download.startdelay}" />
+		<property name="repeatInterval" value="${scheduler.vietpay.ftp.game.download.repeatinterval}" />
+	</bean>			
+<!-- VietPay CDR Import job -->		
+	<bean id="vietPayCdrSyncJob" class="com.mbv.bp.core.scheduler.VietPayCdrSyncJob" >
+		<property name="enable" value="${scheduler.vietpay.cdr.import.enable}"/>
+	</bean>
+
+	<bean id="vietPayCdrSyncJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="vietPayCdrSyncJob" />
+		<property name="targetMethod" value="execute" />
+		<property name="concurrent" value="false" />
+	</bean>
+	
+	<bean id="vietPayCdrSyncJobTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="vietPayCdrSyncJobDetail" />
+		<property name="startDelay" value="${scheduler.vietpay.cdr.import.startdelay}" />
+		<property name="repeatInterval" value="${scheduler.vietpay.cdr.import.repeatinterval}" />
+	</bean>		
+<!-- Provider Amount Check -->		
+	<bean id="providerAmountCheckJob" class="com.mbv.bp.core.scheduler.ProviderAmountCheckJob" >
+		<property name="enable" value="${scheduler.provider.amount.check.enable}"/>
+	</bean>
+
+	<bean id="providerAmountCheckJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="providerAmountCheckJob" />
+		<property name="targetMethod" value="execute" />
+		<property name="concurrent" value="false" />
+	</bean>
+	
+	<bean id="providerAmountCheckJobTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="providerAmountCheckJobDetail" />
+		<property name="startDelay" value="${scheduler.provider.amount.check.startdelay}" />
+		<property name="repeatInterval" value="${scheduler.provider.amount.check.repeatinterval}" />
+	</bean>				
+<!-- Jobs scheduler -->
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="vietPayGameFtpJobTrigger"/>
+				<ref bean="vietPayFtpJobTrigger"/>
+				<ref bean="vietPayCdrSyncJobTrigger"/>
+				<ref bean="mobifoneFptJobTrigger"/>
+				<ref bean="mobifoneCdrSyncJobTrigger"/>
+				<ref bean="providerAmountCheckJobTrigger"/>
+			</list>
+		</property>
+	</bean>
+</beans>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       	http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-2.5.xsd
+		http://www.springframework.org/schema/util
+		http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="com.mysql.jdbc.Driver" />
+		<property name="jdbcUrl" value="jdbc:mysql://localhost/airtime" />
+		<property name="user" value="root" />
+		<property name="password" value="Aesx5099" />
+		<property name="acquireIncrement" value="10" />
+		<property name="idleConnectionTestPeriod" value="60" />
+		<property name="maxPoolSize" value="100" />
+		<property name="maxStatements" value="50" />
+		<property name="minPoolSize" value="10" />
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+
+<bean id="VietnamMobileService" 
+		class="com.mbv.airtime2.vngmobile.Service" 
+		init-method="start"
+		destroy-method="stop">
+		<property name="config">
+			<bean class="com.mbv.airtime2.vngmobile.Config">
+				<property name="serviceId" value="VNMOBILE"/>
+				<property name="host" value="192.168.254.63"/>
+				<property name="port" value="1510"/>
+				<property name="evourcherLogin" value="TD023SR01"/>	
+				<property name="evourcherPassword" value="TD023SR014321"/> 
+				<property name="evourcherMpin" value="110414"/> 
+				<property name="evourcherMsisdn" value="01993992996"/>
+				<property name="pgLogin" value="paylink"/>
+				<property name="pgPassword" value="paylinkzxcv"/>
+				<property name="pgTokenKey" value="123456789123456789657777"/>
+			</bean>	
+		</property>
+		<property name="mapper">
+			<bean id="mapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+				<property name="mapperInterface" value="com.mbv.airtime2.vngmobile.domain.Mapper" />
+				<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+			</bean>
+		</property>
+	</bean>
+</beans>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="airtime_config" >
+  <resultMap id="AirtimeConfigResult" class="com.mbv.bp.common.vo.airtime.AirtimeConfig" >
+    <result column="module" property="module" jdbcType="VARCHAR" />
+    <result column="param_key" property="paramKey" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+    <result column="param_value" property="paramValue" jdbcType="VARCHAR" />
+    <result column="value_type" property="valueType" jdbcType="VARCHAR" />
+    <result column="remote_key" property="remoteKey" jdbcType="VARCHAR" />
+  </resultMap>
+  <select id="AirtimeConfig_Select" resultMap="AirtimeConfigResult" parameterClass="com.mbv.bp.common.vo.airtime.AirtimeConfig">
+  	select *
+    from airtime_config
+    where module = #module:VARCHAR#
+      and param_key = #paramKey:VARCHAR#
+      and type = #type:VARCHAR# 
+  </select>
+  <select id="AirtimeConfig_SelectByModuleAndType" resultMap="AirtimeConfigResult" parameterClass="com.mbv.bp.common.vo.airtime.AirtimeConfig">
+  	select *
+    from airtime_config
+    where module = #module:VARCHAR#
+      and type = #type:VARCHAR#
+  </select>
+  <update id="AirtimeConfig_Update" parameterClass="com.mbv.bp.common.vo.airtime.AirtimeConfig" >
+    update airtime_config
+    set param_value = #paramValue:VARCHAR#
+    where module = #module:VARCHAR#
+      and param_key = #paramKey:VARCHAR#
+      and type = #type:VARCHAR#
+  </update>
+  
+  <insert id="AirtimeConfig_Insert" parameterClass="com.mbv.bp.common.vo.airtime.AirtimeConfig" >
+    insert into airtime_config (module, param_key, type, param_value)
+    values (#module:VARCHAR#, #paramKey:VARCHAR#, #type:VARCHAR#, #paramValue:VARCHAR#)
+  </insert>
+</sqlMap>

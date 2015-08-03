@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="reserved_account" >
+  <resultMap id="ReservedAccountResult" class="com.mbv.bp.common.vo.airtime.ReservedAccount" >
+    <result column="account_id" property="accountId" jdbcType="VARCHAR" />
+    <result column="total_debit" property="totalDebit" jdbcType="BIGINT" />
+    <result column="total_credit" property="totalCredit" jdbcType="BIGINT" />
+    <result column="system_id" property="systemId" jdbcType="VARCHAR" />
+    <result column="telco_ids" property="telcoIds" jdbcType="VARCHAR" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="created_date" property="createdDate" jdbcType="TIMESTAMP" />
+    <result column="updated_date" property="updatedDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  
+  <insert id="ReservedAccount_Insert" parameterClass="com.mbv.bp.common.vo.airtime.ReservedAccount" >
+    insert into reserved_account (account_id, total_debit, total_credit, system_id, telco_ids,
+      description, created_date, updated_date)
+    values (#accountId:VARCHAR#, #totalDebit:BIGINT#, #totalCredit:BIGINT#, #systemId:VARCHAR#,
+      #telcoIds:VARCHAR#, #description:VARCHAR#, #createdDate:TIMESTAMP#, #updatedDate:TIMESTAMP#)
+  </insert>
+  
+  <select id="ReservedAccount_Select_Lock" resultMap="ReservedAccountResult" parameterClass="com.mbv.bp.common.vo.airtime.ReservedAccount" >
+	    select account_id, IFNULL(total_debit,0) as total_debit, IFNULL(total_credit,0) as total_credit, system_id, telco_ids, description, created_date,
+	      updated_date
+	    from reserved_account
+	    where account_id = #accountId:VARCHAR# for update
+  </select>
+  
+  <select id="ReservedAccount_Select" resultMap="ReservedAccountResult" parameterClass="com.mbv.bp.common.vo.airtime.ReservedAccount" >
+	   select account_id, IFNULL(total_debit,0) as total_debit, IFNULL(total_credit,0) as total_credit, system_id, telco_ids, description, created_date,
+	      updated_date
+	    from reserved_account
+	    where account_id = #accountId:VARCHAR#
+  </select>
+  
+  <update id="ReservedAccount_Update_Debit_Amount" parameterClass="com.mbv.bp.common.vo.airtime.ReservedAccount" >
+    update reserved_account
+    set 
+      	total_debit = IFNULL(total_debit,0)+#totalDebit:BIGINT#,
+      	updated_date = #updatedDate:TIMESTAMP#
+    where 
+    	account_id = #accountId:VARCHAR#
+  </update>
+  
+   <update id="ReservedAccount_Update_Credit_Amount" parameterClass="com.mbv.bp.common.vo.airtime.ReservedAccount" >
+    update reserved_account
+    set 
+      	total_credit = IFNULL(total_credit,0)+#totalCredit:BIGINT#,
+      	updated_date = #updatedDate:TIMESTAMP#
+    where 
+    	account_id = #accountId:VARCHAR#
+  </update>
+  
+  <select id="ReservedAccount_SearchByFilter" resultMap="ReservedAccountResult" parameterClass="com.mbv.bp.common.vo.airtime.ReservedAccountFilter" >
+  		select account_id, IFNULL(total_debit,0) as total_debit, IFNULL(total_credit,0) as total_credit, system_id, telco_ids, description, created_date,
+	      updated_date
+	    from reserved_account where 1=1
+  	  	
+  	  <isNotNull prepend=" and " property="systemId"  >
+        system_id = #systemId:VARCHAR#
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="accountId"  >
+        account_id = #accountId:VARCHAR#
+      </isNotNull> 
+      
+      <isNotNull  prepend=" and " property="fromDate" >
+      <![CDATA[
+      		( 
+      			created_date>=#fromDate:TIMESTAMP# and
+        	  	created_date<=#toDate:TIMESTAMP#
+        	)
+      ]]>   	  
+       </isNotNull> 	
+      	
+      order by created_date desc limit $startRecord$,$recordSize$	
+      	
+  </select>
+  
+  <select id="ReservedAccount_SearchByFilterCount" resultClass="int" parameterClass="com.mbv.bp.common.vo.airtime.ReservedAccountFilter" >
+  	select count(account_id) from  reserved_account where 1=1
+  	  	
+  	   <isNotNull prepend=" and " property="systemId"  >
+        system_id = #systemId:VARCHAR#
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="accountId"  >
+        account_id = #accountId:VARCHAR#
+      </isNotNull> 
+      
+      <isNotNull  prepend=" and " property="fromDate" >
+      <![CDATA[
+      		( 
+      			created_date>=#fromDate:TIMESTAMP# and
+        	  	created_date<=#toDate:TIMESTAMP#
+        	)
+      ]]>   	  
+       </isNotNull> 	
+  </select>
+  
+</sqlMap>

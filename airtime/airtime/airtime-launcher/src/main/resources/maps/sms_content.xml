@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="sms_content" >
+  <resultMap id="SmsContentResult" class="com.mbv.bp.common.vo.airtime.SmsContent" >
+    <result column="message_id" property="messageId" jdbcType="VARCHAR" />
+    <result column="processed" property="processed" jdbcType="VARCHAR" />
+    <result column="msg_date" property="msgDate" jdbcType="TIMESTAMP" />
+    <result column="txt_content" property="txtContent" jdbcType="VARCHAR" />
+    <result column="org_content" property="orgContent" jdbcType="VARCHAR" />
+    <result column="sender" property="sender" jdbcType="VARCHAR" />
+    <result column="txn_date" property="txnDate" jdbcType="TIMESTAMP" />
+    <result column="txn_type" property="txnType" jdbcType="VARCHAR" />
+    <result column="txn_amount" property="txnAmount" jdbcType="VARCHAR" />
+    <result column="txn_status" property="txnStatus" jdbcType="VARCHAR" />
+    <result column="sms_amount" property="smsAmount" jdbcType="VARCHAR" />
+    <result column="total_part" property="totalPart" jdbcType="INTEGER" />
+    <result column="part_no" property="partNo" jdbcType="INTEGER" />
+    <result column="part_id" property="partId" jdbcType="VARCHAR" />
+    <result column="fraud_status" property="fraudStatus" jdbcType="VARCHAR" />
+    <result column="msisdn" property="msisdn" jdbcType="VARCHAR" />
+    <result column="sim_id" property="simId" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <insert id="SmsContent_Insert"  parameterClass="com.mbv.bp.common.vo.airtime.SmsContent" >
+    insert into sms_content (message_id, processed, msg_date, txt_content, org_content, sender,
+      txn_date, txn_type, txn_amount, txn_status, sms_amount, total_part, part_no, part_id,
+      fraud_status, msisdn,sim_id)
+    values (#messageId:VARCHAR#, #processed:VARCHAR#, #msgDate:TIMESTAMP#, #txtContent:VARCHAR#,
+      #orgContent:VARCHAR#, #sender:VARCHAR#, #txnDate:TIMESTAMP#, #txnType:VARCHAR#,
+      #txnAmount:VARCHAR#, #txnStatus:VARCHAR#, #smsAmount:VARCHAR#, #totalPart:INTEGER#,
+      #partNo:INTEGER#, #partId:VARCHAR#, #fraudStatus:VARCHAR#, #msisdn:VARCHAR#,#simId:VARCHAR#)
+  </insert>
+
+   <select id="SmsContent_SearchByFilter" resultMap="SmsContentResult" parameterClass="com.mbv.bp.common.vo.airtime.SmsContentFilter" >
+  	select * from  sms_content where 1 = 1
+  	  	
+  	  <isNotNull prepend=" and " property="processed"  >
+        	processed = #processed:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend=" and " property="txnType"  >
+        	txn_type = #txnType:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend=" and " property="msisdn"  >
+        	msisdn = #msisdn:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend=" and " property="messageId"  >
+       		message_id = #messageId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend=" and " property="partId"  >
+      		part_id = #partId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend=" and " property="fraudStatus"  >
+      		fraud_status = #fraudStatus:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend=" and " property="simId"  >
+      		sim_id = #simId:VARCHAR#
+      </isNotNull>
+      <isNotNull  prepend=" and " property="fromDate" >
+      <![CDATA[
+      		( 
+      			msg_date>=#fromDate:TIMESTAMP# and
+        	  	msg_date<=#toDate:TIMESTAMP#
+        	)
+      ]]>   	  
+       </isNotNull> 	
+      	
+      order by msg_date desc ,part_id desc ,part_no asc limit $startRecord$,$recordSize$	
+      	
+  </select>
+  
+  <select id="SmsContent_SearchByFilterCount" resultClass="int" parameterClass="com.mbv.bp.common.vo.airtime.SmsContentFilter" >
+  	select count(message_id) from sms_content where 1 = 1
+  	  	
+  	  <isNotNull prepend=" and " property="processed"  >
+        	processed = #processed:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend=" and " property="txnType"  >
+        	txn_type = #txnType:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend=" and " property="msisdn"  >
+        	msisdn = #msisdn:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend=" and " property="messageId"  >
+       		message_id = #messageId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend=" and " property="partId"  >
+      		part_id = #partId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend=" and " property="fraudStatus"  >
+      		fraud_status = #fraudStatus:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend=" and " property="simId"  >
+      		sim_id = #simId:VARCHAR#
+      </isNotNull>
+      <isNotNull  prepend=" and " property="fromDate" >
+      <![CDATA[
+      		( 
+      			msg_date>=#fromDate:TIMESTAMP# and
+        	  	msg_date<=#toDate:TIMESTAMP#
+        	)
+      ]]>   	  
+       </isNotNull> 
+      		
+  </select>
+</sqlMap>

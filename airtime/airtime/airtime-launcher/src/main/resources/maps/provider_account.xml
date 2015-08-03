@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="provider_account" >
+  <resultMap id="ProviderAccountResult" class="com.mbv.bp.common.vo.airtime.ProviderAccount" >
+    <result column="deleted" property="deleted" jdbcType="BIGINT" />
+    <result column="txn_id" property="txnId" jdbcType="VARCHAR" />
+    <result column="txn_date" property="txnDate" jdbcType="TIMESTAMP" />
+    <result column="provider_id" property="providerId" jdbcType="VARCHAR" />
+    <result column="discount" property="discount" jdbcType="VARCHAR" />
+    <result column="total_amount" property="totalAmount" jdbcType="BIGINT" />
+    <result column="input_amount" property="inputAmount" jdbcType="BIGINT" />
+    <result column="employee" property="employee" jdbcType="VARCHAR" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="created_by" property="createdBy" jdbcType="VARCHAR" />
+    <result column="created_date" property="createdDate" jdbcType="TIMESTAMP" />
+    <result column="updated_by" property="updatedBy" jdbcType="VARCHAR" />
+    <result column="updated_date" property="updatedDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <resultMap id="ProviderAccountSummaryResult" class="com.mbv.bp.common.vo.airtime.ProviderAccount">
+    <result column="total_amount" property="totalAmount" jdbcType="BIGINT" />
+    <result column="total_input_amount" property="inputAmount" jdbcType="BIGINT" />
+  </resultMap>	
+
+
+  	<select id="ProviderAccount_SelectAll" resultMap="ProviderAccountResult" parameterClass="com.mbv.bp.common.vo.airtime.ProviderAccount">
+		select *
+    	from provider_account
+    	where deleted = 0 and txn_id = #txnId:VARCHAR#
+  	</select>
+
+  	<select id="ProviderAccount_Select" resultMap="ProviderAccountResult" parameterClass="com.mbv.bp.common.vo.airtime.ProviderAccount">
+		select *
+    	from provider_account
+    	where deleted = 0 and txn_id = #txnId:VARCHAR#
+  	</select>
+
+	<insert id="ProviderAccount_Insert" parameterClass="com.mbv.bp.common.vo.airtime.ProviderAccount">
+		insert into provider_account (deleted, txn_id, txn_date, provider_id, discount, total_amount,
+      									input_amount, employee, description, created_by, created_date, updated_by, updated_date)
+   		 			values (0, #txnId:VARCHAR#, #txnDate:TIMESTAMP#, #providerId:VARCHAR#,
+      						#discount:VARCHAR#, #totalAmount:BIGINT#, #inputAmount:BIGINT#, #employee:VARCHAR#,
+     						#description:VARCHAR#, #createdBy:VARCHAR#, #createdDate:TIMESTAMP#, #updatedBy:VARCHAR#,
+      						#updatedDate:TIMESTAMP#)
+	</insert>
+
+	<update id="ProviderAccount_DynamicUpdate" parameterClass="com.mbv.bp.common.vo.airtime.ProviderAccount">
+		update provider_account
+	    <dynamic prepend="set" >
+	      <isNotNull prepend="," property="txnDate" >
+	        txn_date = #txnDate:TIMESTAMP#
+	      </isNotNull>
+	      <isNotNull prepend="," property="providerId" >
+	        provider_id = #providerId:VARCHAR#
+	      </isNotNull>
+	      <isNotNull prepend="," property="discount" >
+	        discount = #discount:VARCHAR#
+	      </isNotNull>
+	      <isNotNull prepend="," property="totalAmount" >
+	        total_amount = #totalAmount:BIGINT#
+	      </isNotNull>
+	      <isNotNull prepend="," property="inputAmount" >
+	        input_amount = #inputAmount:BIGINT#
+	      </isNotNull>
+	      <isNotNull prepend="," property="employee" >
+	        employee = #employee:VARCHAR#
+	      </isNotNull>
+	      <isNotNull prepend="," property="description" >
+	        description = #description:VARCHAR#
+	      </isNotNull>
+	      <isNotNull prepend="," property="createdBy" >
+	        created_by = #createdBy:VARCHAR#
+	      </isNotNull>
+	      <isNotNull prepend="," property="createdDate" >
+	        created_date = #createdDate:TIMESTAMP#
+	      </isNotNull>
+	      <isNotNull prepend="," property="updatedBy" >
+	        updated_by = #updatedBy:VARCHAR#
+	      </isNotNull>
+	      <isNotNull prepend="," property="updatedDate" >
+	        updated_date = #updatedDate:TIMESTAMP#
+	      </isNotNull>
+	    </dynamic>
+	    where deleted = #deleted:BIGINT#
+	      and txn_id = #txnId:VARCHAR#
+	</update>
+
+	<update id="ProviderAccount_UpdateDeleted" parameterClass="com.mbv.bp.common.vo.airtime.ProviderAccount">
+		update provider_account set
+	    		deleted = #deleted:BIGINT#,
+	    		updated_by = #updatedBy:VARCHAR#,
+	   			updated_date = #updatedDate:TIMESTAMP#
+	     where deleted = 0
+	      and txn_id = #txnId:VARCHAR#
+	</update>
+
+	<select id="ProviderAccount_SearchByFilter" resultMap="ProviderAccountResult" parameterClass="com.mbv.bp.common.vo.airtime.ProviderAccountFilter" >
+	
+		select * from provider_account where deleted = 0
+		<isNotNull prepend=" and " property="txnId" >
+       		txn_id = #txnId:VARCHAR#
+        </isNotNull>
+        <isNotNull prepend=" and " property="employee" >
+       		employee =  #employee:VARCHAR#
+        </isNotNull>
+        <isNotNull prepend=" and " property="providerId" >
+        	provider_id = #providerId:VARCHAR#
+       </isNotNull>
+       <isNotNull  prepend=" and " property="fromDate" >
+       		<![CDATA[
+      		( 
+      			txn_date>=#fromDate:TIMESTAMP# and
+        	  	txn_date<=#toDate:TIMESTAMP#
+        	)
+      		]]>   	
+       <!-- 
+        	DATE(txn_date) between DATE(#fromDate:TIMESTAMP#)
+			and DATE(#toDate:TIMESTAMP#)
+	 -->		
+       </isNotNull>
+       
+       order by txn_date desc limit $startRecord$,$recordSize$
+	</select>
+	
+	<select id="ProviderAccount_SearchByFilterCount" resultClass="int" parameterClass="com.mbv.bp.common.vo.airtime.ProviderAccountFilter" >
+		select count(txn_id) from provider_account where deleted = 0
+		<isNotNull prepend=" and " property="txnId" >
+       		txn_id = #txnId:VARCHAR#
+        </isNotNull>
+        <isNotNull prepend=" and " property="employee" >
+       		employee =  #employee:VARCHAR#
+        </isNotNull>
+        <isNotNull prepend=" and " property="providerId" >
+        	provider_id = #providerId:VARCHAR#
+       </isNotNull>
+       <isNotNull  prepend=" and " property="fromDate" >
+       		<![CDATA[
+      		( 
+      			txn_date>=#fromDate:TIMESTAMP# and
+        	  	txn_date<=#toDate:TIMESTAMP#
+        	)
+      		]]>   	
+      	<!-- 
+        	DATE(txn_date) between DATE(#fromDate:TIMESTAMP#)
+			and DATE(#toDate:TIMESTAMP#)
+		 -->		
+       </isNotNull>
+	</select>
+	
+	<select id="ProviderAccount_SelectStartDateByProviderId" resultClass="Date" parameterClass="com.mbv.bp.common.vo.airtime.ProviderAccount">
+		select min(Date(txn_date)) from provider_account where deleted = 0 and provider_id = #providerId:VARCHAR#
+	</select> 
+	
+	<select id="ProviderAccount_SelectMaxDateByProviderId" resultClass="Date" parameterClass="com.mbv.bp.common.vo.airtime.ProviderAccount">
+		select max(Date(txn_date)) from provider_account where deleted = 0 and provider_id = #providerId:VARCHAR#
+	</select>
+	
+	<select id="ProviderAccount_ProviderSummaryByDate" resultMap="ProviderAccountSummaryResult"  parameterClass="com.mbv.bp.common.vo.airtime.ProviderAccount">
+	    select IFNULL(sum(total_amount),0) as total_amount, IFNULL(sum(input_amount),0) as total_input_amount  from provider_account  
+	    where deleted = 0 and 
+	    
+	    <!-- Date(txn_date)=Date(#txnDate:TIMESTAMP#) --> 
+	    	<![CDATA[
+      		( 
+      			txn_date>=Date(#txnDate:TIMESTAMP#) and
+        	  	txn_date<Date(date_add(#txnDate:TIMESTAMP#,interval 1 day))
+        	)
+      		]]>  
+	    and provider_id = #providerId:VARCHAR#
+	</select> 
+	
+	<select id="ProviderAccount_SelectTotalAmountByProviderId" resultClass="long" parameterClass="com.mbv.bp.common.vo.airtime.ProviderAccount" >
+		select ifnull(sum(total_amount),0) from provider_account where provider_id = #providerId:VARCHAR# and deleted=0
+	</select>
+	
+	<select id="ProviderAccount_SelectTotalAmountAll" resultMap="ProviderAccountResult"  parameterClass="com.mbv.bp.common.vo.airtime.ProviderAccount" >
+		select provider_id,ifnull(sum(total_amount),0) as total_amount from provider_account where deleted='0' group by provider_id;
+	</select>
+	
+</sqlMap>

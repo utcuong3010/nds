@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="anypay_account_txn" >
+  <resultMap id="AnypayAccountTxnResult" class="com.mbv.bp.common.vo.airtime.AnypayAccountTxn" >
+    <result column="deleted" property="deleted" jdbcType="BIGINT" />
+    <result column="txn_id" property="txnId" jdbcType="VARCHAR" />
+    <result column="txn_date" property="txnDate" jdbcType="TIMESTAMP" />
+    <result column="sim_id" property="simId" jdbcType="VARCHAR" />
+    <result column="amount" property="amount" jdbcType="BIGINT" />
+    <result column="employee" property="employee" jdbcType="VARCHAR" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="created_by" property="createdBy" jdbcType="VARCHAR" />
+    <result column="created_date" property="createdDate" jdbcType="TIMESTAMP" />
+    <result column="updated_by" property="updatedBy" jdbcType="VARCHAR" />
+    <result column="updated_date" property="updatedDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  
+	  <select id="AnypayAccountTxn_Select" resultMap="AnypayAccountTxnResult" parameterClass="com.mbv.bp.common.vo.airtime.AnypayAccountTxn" >
+	    select *
+	    from anypay_account_txn
+	    where deleted = 0
+	      and txn_id = #txnId:VARCHAR#
+	  </select>
+	  
+	  <insert id="AnypayAccountTxn_Insert" parameterClass="com.mbv.bp.common.vo.airtime.AnypayAccountTxn" >
+	    insert into anypay_account_txn (deleted, txn_id, txn_date, sim_id, amount, employee,
+	      description, created_by, created_date, updated_by, updated_date)
+	    values (0, #txnId:VARCHAR#, #txnDate:TIMESTAMP#, #simId:VARCHAR#,
+	      #amount:BIGINT#, #employee:VARCHAR#, #description:VARCHAR#, #createdBy:VARCHAR#,
+	      #createdDate:TIMESTAMP#, #updatedBy:VARCHAR#, #updatedDate:TIMESTAMP#)
+	  </insert>
+	  
+	  <update id="AnypayAccountTxn_UpdateDeleted" parameterClass="com.mbv.bp.common.vo.airtime.AnypayAccountTxn">
+		update anypay_account_txn set
+	    		deleted = #deleted:BIGINT#,
+	    		updated_by = #updatedBy:VARCHAR#,
+	   			updated_date = #updatedDate:TIMESTAMP#
+	     where 
+	     	deleted = 0
+	      and 
+	      	txn_id = #txnId:VARCHAR#
+	  </update>
+	  	
+	  <update id="AnypayAccountTxn_Update" parameterClass="com.mbv.bp.common.vo.airtime.AnypayAccountTxn" >
+	    update anypay_account_txn
+	    <dynamic prepend="set" >
+	      <isNotNull prepend="," property="txnDate" >
+	        txn_date = #txnDate:TIMESTAMP#
+	      </isNotNull>
+	      <isNotNull prepend="," property="simId" >
+	        sim_id = #simId:VARCHAR#
+	      </isNotNull>
+	      <isNotNull prepend="," property="amount" >
+	        amount = #amount:BIGINT#
+	      </isNotNull>
+	      <isNotNull prepend="," property="employee" >
+	        employee = #employee:VARCHAR#
+	      </isNotNull>
+	      <isNotNull prepend="," property="description" >
+	        description = #description:VARCHAR#
+	      </isNotNull>
+	      <isNotNull prepend="," property="createdBy" >
+	        created_by = #createdBy:VARCHAR#
+	      </isNotNull>
+	      <isNotNull prepend="," property="createdDate" >
+	        created_date = #createdDate:TIMESTAMP#
+	      </isNotNull>
+	      <isNotNull prepend="," property="updatedBy" >
+	        updated_by = #updatedBy:VARCHAR#
+	      </isNotNull>
+	      <isNotNull prepend="," property="updatedDate" >
+	        updated_date = #updatedDate:TIMESTAMP#
+	      </isNotNull>
+	    </dynamic>
+	    where deleted = #deleted:BIGINT#
+	      and txn_id = #txnId:VARCHAR#
+	  </update>
+	  <select id="AnypayAccountTxn_SearchByFilter" resultMap="AnypayAccountTxnResult" parameterClass="com.mbv.bp.common.vo.airtime.AnypayAccountTxnFilter" >
+	    select * from anypay_account_txn where deleted = 0
+		   <isNotNull prepend=" and " property="txnId" >
+	      		txn_id = #txnId:VARCHAR#
+	       </isNotNull>
+	       <isNotNull prepend=" and " property="employee" >
+	      		employee =  #employee:VARCHAR#
+	       </isNotNull>
+	       <isNotNull prepend=" and " property="simId" >
+	       		sim_id = #simId:VARCHAR#
+	      </isNotNull>
+	      <isNotNull  prepend=" and " property="fromDate" >
+	      		<![CDATA[
+	     		( 
+	     			txn_date>=#fromDate:TIMESTAMP# and
+	       	  		txn_date<=#toDate:TIMESTAMP#
+	       		)
+	     		]]>   	
+	      </isNotNull>
+	       order by txn_date desc limit $startRecord$,$recordSize$
+	</select>
+		
+	<select id="AnypayAccountTxn_SearchByFilterCount" resultClass="int" parameterClass="com.mbv.bp.common.vo.airtime.AnypayAccountTxnFilter" >
+		select count(txn_id) from anypay_account_txn where deleted = 0
+		<isNotNull prepend=" and " property="txnId" >
+	      		txn_id = #txnId:VARCHAR#
+	       </isNotNull>
+	       <isNotNull prepend=" and " property="employee" >
+	      		employee =  #employee:VARCHAR#
+	       </isNotNull>
+	       <isNotNull prepend=" and " property="simId" >
+	       		sim_id = #simId:VARCHAR#
+	      </isNotNull>
+	      <isNotNull  prepend=" and " property="fromDate" >
+	      		<![CDATA[
+	     		( 
+	     			txn_date>=#fromDate:TIMESTAMP# and
+	       	  		txn_date<=#toDate:TIMESTAMP#
+	       		)
+	     		]]>   	
+	      </isNotNull>
+	</select>
+</sqlMap>

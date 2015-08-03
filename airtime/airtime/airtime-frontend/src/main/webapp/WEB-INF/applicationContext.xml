@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:sec="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+    http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-2.5.xsd">
+	
+	
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="WEB-INF/airtime-frontend.properties" />
+		<property name="placeholderPrefix" value="${" />
+		<property name="placeholderSuffix" value="}" />
+	</bean>
+	
+	<bean id="sslContextInitializer" class="com.mbv.initializer.SSLContextInitializer" init-method="initialize">
+        <property name="inputStreamFactory">
+            <bean class="com.mbv.security.ResourceInputStreamFactory" />
+        </property>
+        <property name="keyTrustPropertiesFile" value="WEB-INF/key-trust.properties" />
+    </bean>
+
+    <bean id="httpConnectionManager" class="org.apache.commons.httpclient.MultiThreadedHttpConnectionManager" destroy-method="shutdown">
+
+    </bean>
+
+    <bean id="messageIdGuidGenerator" class="com.mbv.data.GuidGenerator">
+        <property name="idTypeName" value="MBV-OtpCmd-Message-Id" />
+    </bean>
+    
+	<bean id="xsecd" class="com.mbv.services.xsecd.XsecdService" scope="prototype">
+        <constructor-arg>
+            <value>${xsecd.url}</value><!-- server address and port -->
+        </constructor-arg>
+        <constructor-arg>
+            <value>${xsecd.timeout}</value><!-- 10s timeout millisecond -->
+        </constructor-arg>
+        <property name="httpConnectionManager">
+            <ref bean="httpConnectionManager" />
+        </property>
+    </bean>
+
+
+    <bean id="xsecdPool" class="com.mbv.services.ServicePool">
+        <property name="beanId" value="xsecd" />
+        <property name="initialInstances" value="${xsecd.pool.initSize}" />
+        <property name="maximumInstances" value="${xsecd.pool.maxSize}" />
+    </bean>
+	
+	<bean id="coissued" class="com.mbv.ewallet.coissue.protobuf.CoIssueClientImpl" scope="prototype">
+        <property name="hostName" value="${coIssued.connection.host}" />
+        <property name="hostPort" value="${coIssued.connection.port}" />
+    </bean>
+
+    <bean id="coIssuedPool" class="com.mbv.services.ServicePool">
+        <property name="beanId" value="coissued" />
+        <property name="initialInstances" value="${coIssued.pool.initSize}" />
+        <property name="maximumInstances" value="${coIssued.pool.maxSize}" />
+    </bean>
+     
+    <bean id="authenticationController" class="com.mbv.frontend.controller.AuthenticationController" scope="request"/>
+
+   	<bean id="providerAccountController" class="com.mbv.frontend.controller.ProviderAccountController" scope="request"/>
+   	
+   	<bean id="airtimeTxnController" class="com.mbv.frontend.controller.AirtimeTxnController" scope="request"/>
+   	
+   	<bean id="anypaySmsController" class="com.mbv.frontend.controller.AnypaySmsController" scope="request"/>
+   	
+   	<bean id="anypayTxnController" class="com.mbv.frontend.controller.AnypayTxnController" scope="request"/>
+   	
+   	<bean id="anypayAccountController" class="com.mbv.frontend.controller.AnypayAccountController" scope="request"/>
+   	
+   	<bean id="reportController" class="com.mbv.frontend.controller.ReportController" scope="request"/>
+	
+	<bean id="mobiFoneController" class="com.mbv.frontend.controller.MobiFoneController" scope="request"/>
+	
+	<bean id="vietPayController" class="com.mbv.frontend.controller.VietPayController" scope="request"/>
+	
+	<bean id="cdrController" class="com.mbv.frontend.controller.CdrController" scope="request"/>
+	
+	<bean id="mobifoneTxnController" class="com.mbv.frontend.controller.MobifoneTxnController" scope="request"/>
+	
+	<bean id="recacheController" class="com.mbv.frontend.controller.RecacheController" scope="request"/>
+	
+	<bean id="reservedAccountController" class="com.mbv.frontend.controller.ReservedAccountController" scope="request"/>
+   		
+	<bean id="reportTempCleanJob" class="com.mbv.frontend.util.ReportTempCleanJob" />
+
+	<bean id="reportTempCleanJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="reportTempCleanJob" />
+		<property name="targetMethod" value="execute" />
+		<property name="concurrent" value="false" />
+	</bean>
+	
+	<bean id="reportTempCleanJobCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+  		<property name="jobDetail" ref="reportTempCleanJobDetail"/>
+			<!-- run every morning at 2 AM -->
+		<!-- property name="cronExpression" value="0/5 * * * * ?" /-->
+  		<property name="cronExpression" value="0 0 2 * * ?"/>
+	</bean>
+
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="reportTempCleanJobCronTrigger" />
+			</list>
+		</property>
+	</bean>
+</beans>
+
+

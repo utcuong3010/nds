@@ -1,0 +1,54 @@
+/* create index for at_transaction */
+CREATE INDEX txn_id_index
+    ON at_transaction(txn_id);
+
+CREATE INDEX message_id_index
+    ON at_transaction(message_id);
+
+CREATE INDEX msisdn_index
+    ON at_transaction(msisdn);
+
+CREATE INDEX txt_date_index
+    ON at_transaction(txn_date);
+
+CREATE INDEX status_error_code_index
+    ON at_transaction(status, error_code);
+
+CREATE INDEX telco_id_index
+    ON at_transaction(telco_id);
+
+CREATE INDEX txn_summary_index
+    ON at_transaction(status, error_code, conn_type, txn_date);
+
+CREATE INDEX at_txn_index
+    ON at_transaction(at_txn_id);
+
+CREATE INDEX channel_id_index
+    ON at_transaction(channel_id);
+
+CREATE INDEX conn_type_index
+    ON at_transaction(conn_type);
+
+
+/* create index for at_summary */
+CREATE INDEX provider_id_index
+    ON at_summary(provider_id);
+
+CREATE INDEX txn_date
+    ON at_summary(txn_date);
+
+/* create index for provider_account */
+
+CREATE INDEX employee_index
+    ON provider_account(employee);
+
+CREATE INDEX txn_date
+    ON provider_account(txn_date);
+
+CREATE INDEX provider_index
+    ON provider_account(provider_id);
+
+/* create index for queue_request */
+
+CREATE INDEX status_index
+    ON queue_request(status);

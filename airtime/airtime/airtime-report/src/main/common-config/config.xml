@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<configuration>
+	<xml fileName="app-config.xml"/>
+	<xml fileName="airtime-constant-config.xml"/>
+	<xml fileName="airtime-vnpay-settings.xml"/>
+	<xml fileName="queue-constant-config.xml"/>
+	<xml fileName="gateway-constant-config.xml"/>
+</configuration>

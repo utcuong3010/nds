@@ -1,0 +1,158 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+		<groupId>com.mobivi.airtime</groupId>
+		<artifactId>airtime</artifactId>
+		<version>0.1.0</version>
+	</parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>airtime-report</groupId>
+  <artifactId>airtime-report</artifactId>
+  <version>0.1.0</version>
+  <dependencies>
+  		<dependency>
+            <groupId>com.mobivi.airtime</groupId>
+            <artifactId>airtime-common</artifactId>
+            <version>0.1.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+		    <groupId>net.sourceforge.jexcelapi</groupId>
+		    <artifactId>jxl</artifactId>
+		    <version>2.6.12</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.freemarker</groupId>
+		  <artifactId>freemarker</artifactId>
+		  <!-- Latest 2.3.x (not 2.4.x), at least 2.3.18 -->
+		  <version>2.3.18</version>
+		</dependency>
+  </dependencies>
+  
+  <build>
+		<finalName>${final.jar.name}</finalName>
+		<resources>
+			<resource>
+				<filtering>true</filtering>
+				<directory>src/main/java</directory>
+				<excludes>
+					<exclude>**.java</exclude>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+			<resource>
+				<filtering>false</filtering>
+				<directory>src/main/common-config</directory>
+				<includes>
+					<include>**</include>
+					<include>*/**</include>
+				</includes>
+			</resource>
+		</resources>
+
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.0.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>src/main/assembly/directory.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id> <!-- this is used for inheritance merges -->
+						<phase>package</phase> <!-- append to the packaging phase. -->
+						<goals>
+							<goal>assembly</goal> <!-- goals == mojos -->
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		
+	</build>
+
+	<repositories>
+		<repository>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<id>internal</id>
+			<url>${archiva.internal}</url>
+		</repository>
+		<repository>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<id>snapshots</id>
+			<url>${archiva.snapshots}</url>
+		</repository>
+	</repositories>
+
+
+
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<property>
+					<name>!env</name>
+				</property>
+			</activation>
+			<properties>
+				<archiva.internal>http://10.120.8.10:8080/archiva/repository/internal/</archiva.internal>
+				<archiva.snapshots>http://10.120.8.10:8080/archiva/repository/snapshots/</archiva.snapshots>
+				<maven.test.skip>true</maven.test.skip>
+				<jdk.version>1.6</jdk.version>
+				<final.jar.name>${project.artifactId}-${project.version}</final.jar.name>
+			</properties>
+			<distributionManagement>
+				<repository>
+					<id>archiva.internal</id>
+					<name>Internal Release Repository</name>
+					<url>${archiva.snapshots}</url>
+				</repository>
+				<snapshotRepository>
+					<id>archiva.snapshots</id>
+					<name>Internal Snapshot Repository</name>
+					<url>${archiva.snapshots}</url>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+
+		<profile>
+			<id>pro</id>
+			<activation>
+				<property>
+					<name>env</name>
+				</property>
+			</activation>
+			<properties>
+				<archiva.internal>http://10.120.8.10:8080/archiva/repository/internal/</archiva.internal>
+				<archiva.snapshots>http://10.120.8.10:8080/archiva/repository/snapshots/</archiva.snapshots>
+				<maven.test.skip>true</maven.test.skip>
+				<jdk.version>1.6</jdk.version>
+				<final.jar.name>${project.artifactId}-${project.version}</final.jar.name>
+			</properties>
+			<distributionManagement>
+				<repository>
+					<id>archiva.internal</id>
+					<name>Internal Release Repository</name>
+					<url>${archiva.internal}</url>
+				</repository>
+				<snapshotRepository>
+					<id>archiva.snapshots</id>
+					<name>Internal Snapshot Repository</name>
+					<url>${archiva.internal}</url>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+	</profiles>
+</project>

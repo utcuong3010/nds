@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="sim_info" >
+  <resultMap id="SimInfoResult" class="com.mbv.bp.common.vo.airtime.SimInfo" >
+    <result column="msisdn" property="msisdn" jdbcType="VARCHAR" />
+    <result column="sim_status" property="simStatus" jdbcType="VARCHAR" />
+    <result column="com_id" property="comId" jdbcType="VARCHAR" />
+    <result column="sim_type" property="simType" jdbcType="VARCHAR" />
+    <result column="current_amount" property="currentAmount" jdbcType="BIGINT" />
+    <result column="lock_amount" property="lockAmount" jdbcType="BIGINT" />
+    <result column="ip" property="ip" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <select id="SimInfo_Select" resultMap="SimInfoResult" parameterClass="com.mbv.bp.common.vo.airtime.SimInfo" >
+    select *
+    from sim_info
+    where msisdn = #msisdn:VARCHAR#
+      
+  </select>
+  
+  <select id="SimInfo_SelectByMsisdn" resultMap="SimInfoResult" parameterClass="com.mbv.bp.common.vo.airtime.SimInfo" >
+    select *
+    from sim_info
+    where msisdn = #msisdn:VARCHAR#
+      
+  </select>
+  
+  <select id="SimInfo_SelectByComId" resultMap="SimInfoResult" parameterClass="com.mbv.bp.common.vo.airtime.SimInfo" >
+    select *
+    from sim_info
+    where com_id = #comId:VARCHAR#
+      
+  </select>
+  
+  <select id="SimInfo_SelectAll" resultMap="SimInfoResult" parameterClass="com.mbv.bp.common.vo.airtime.SimInfo" >
+    select *
+    from sim_info
+  </select>
+  
+  <update id="SimInfo_UpdateByKey" parameterClass="com.mbv.bp.common.vo.airtime.SimInfo" >
+    update sim_info
+    set com_id = #comId:VARCHAR#,
+      sim_type = #simType:VARCHAR#,
+      current_amount = #currentAmount:BIGINT#,
+      lock_amount = #lockAmount:BIGINT#,
+      ip = #ip:VARCHAR#
+    where msisdn = #msisdn:VARCHAR#
+      and sim_status = #simStatus:VARCHAR#
+  </update>
+  
+  <update id="SimInfo_UpdateCurrentLockAmountByMsisdn" parameterClass="com.mbv.bp.common.vo.airtime.SimInfo" >
+    update sim_info
+    set lock_amount = (lock_amount+#lockAmount:BIGINT#),
+    	current_amount = (current_amount+#currentAmount:BIGINT#)
+    where msisdn = #msisdn:VARCHAR#
+  </update>
+  
+</sqlMap>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="reserved_telco" >
+  <resultMap id="ReservedTelcoResult" class="com.mbv.bp.common.vo.airtime.ReservedTelco" >
+    <result column="telco_id" property="telcoId" jdbcType="VARCHAR" />
+    <result column="reserved_amount" property="reservedAmount" jdbcType="BIGINT" />
+    <result column="percent" property="percent" jdbcType="INTEGER" />
+  </resultMap>
+  
+  <select id="ReservedTelco_Select_All" resultMap="ReservedTelcoResult" parameterClass="com.mbv.bp.common.vo.airtime.ReservedTelco" >
+    select telco_id, IFNULL(reserved_amount,0) as reserved_amount, percent
+    from reserved_telco
+  </select>
+
+  <update id="ReservedTelco_Update_Lock_Telco" parameterClass="com.mbv.bp.common.vo.airtime.ReservedTelco" >
+    update reserved_telco
+    set 
+    	reserved_amount = IFNULL(reserved_amount,0)+#reservedAmount:BIGINT#
+    <dynamic prepend="WHERE telco_id IN ">
+	    <iterate property="telcoids"
+	             open="(" close=")"
+	             conjunction=",">
+	    </iterate>
+  </dynamic>
+  </update>
+  
+</sqlMap>

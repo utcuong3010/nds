@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       	http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-2.5.xsd
+		http://www.springframework.org/schema/util
+		http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<!-- Properties -->
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="ignoreUnresolvablePlaceholders" value="false" />
+		<property name="locations">
+			<list>
+				<value>airtime2.properties</value>
+			</list>
+		</property>
+	</bean>
+
+
+	<!-- Properties -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="${datasource.driver}" />
+		<property name="jdbcUrl" value="${datasource.url}" />
+		<property name="user" value="${datasource.username}" />
+		<property name="password" value="${datasource.password}" />
+		<property name="acquireIncrement" value="10" />
+		<property name="idleConnectionTestPeriod" value="60" />
+		<property name="maxPoolSize" value="100" />
+		<property name="maxStatements" value="50" />
+		<property name="minPoolSize" value="10" />
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- Xpay Service Provider -->
+	<bean id="XpayService" class="com.mbv.airtime2.xpay.XpayService"
+		init-method="start" destroy-method="stop">
+		<property name="config">
+			<bean class="com.mbv.airtime2.xpay.XpayConfig">
+				<property name="webservice_url" value="${xpay.url}" />
+				<property name="partner_code" value="${xpay.partner_code}" />
+				<property name="username" value="${xpay.username}" />
+				<property name="password" value="${xpay.password}" />
+				<property name="version" value="${xpay.version}" />
+				<property name="appid" value="${xpay.appid}" />
+				<property name="numberOfChildren" value="${xpay.numberOfChildren}" />
+				<property name="balanceCheckingInterval" value="${xpay.balanceCheckingInterval}" />
+				<property name="numberOfConsicutiveRequests" value="${xpay.numberOfConsicutiveRequests}" />
+				<property name="pendingTransactionCheckingInterval" value="${xpay.pendingTransactionCheckingInterval}" />
+				<property name="successCodes" value = "${xpay.successCodes}" />
+				<property name="pendingCodes" value = "${xpay.pendingCodes}" />
+				<property name="unknownCodes" value = "${xpay.unknownCodes}" />
+			</bean>
+		</property>
+		<property name="mapper">
+			<bean class="org.mybatis.spring.mapper.MapperFactoryBean">
+				<property name="mapperInterface" value="com.mbv.airtime2.xpay.domain.Mapper" />
+				<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+			</bean>
+		</property>
+	</bean>	
+	
+</beans>

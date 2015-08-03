@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="at_summary_view" >
+  <resultMap id="AtSummaryViewResult" class="com.mbv.bp.common.vo.airtime.AtSummaryView" >
+    <result column="begin_amount" property="beginAmount" jdbcType="DECIMAL" />
+    <result column="txn_date" property="txnDate" jdbcType="DATE" />
+    <result column="provider_id" property="providerId" jdbcType="VARCHAR" />
+    <result column="used_amount" property="usedAmount" jdbcType="DECIMAL" />
+    <result column="total_txn" property="totalTxn" jdbcType="BIGINT" />
+    <result column="total_amount" property="totalAmount" jdbcType="DECIMAL" />
+    <result column="total_input_amount" property="totalInputAmount" jdbcType="DECIMAL" />
+    <result column="end_amount" property="endAmount" jdbcType="DECIMAL" />
+  </resultMap>
+   
+  <select id="AtSummaryView_SearchProviderAccountInfo" resultMap="AtSummaryViewResult">
+  	select txn_date , provider_id, end_amount,begin_amount,used_amount,total_txn,total_input_amount,total_amount from at_summary_view a where txn_date=(select max(txn_date) from at_summary_view b where a.provider_id=b.provider_id) order by a.provider_id
+  </select>
+  
+  <select id="AtSummaryView_SearchProviderAccountInfoByProviderId" resultMap="AtSummaryViewResult" parameterClass="com.mbv.bp.common.vo.airtime.AtSummaryView" >
+  	select 
+  			txn_date , provider_id, end_amount,begin_amount,used_amount,total_txn,total_input_amount,total_amount 
+  	from 
+  			at_summary_view a 
+  	where 
+  			txn_date=(select max(txn_date) from at_summary_view b where a.provider_id=b.provider_id) 
+  			and  a.provider_id=#providerId:VARCHAR#
+  	order by a.provider_id
+  </select>
+  <select id="AtSummaryView_SearchByFilter" resultMap="AtSummaryViewResult" parameterClass="com.mbv.bp.common.vo.airtime.AtSummaryViewFilter" >
+	
+		select  *
+		from at_summary_view where ('1'='1')
+		<isNotNull prepend=" and " property="providerId" >
+       		provider_id = #providerId:VARCHAR#
+        </isNotNull>
+        <isNotNull  prepend=" and " property="fromDate" >
+        	<![CDATA[
+      		( 
+      			txn_date>=Date(date_add(#fromDate:TIMESTAMP#, interval '7:00:00' hour_second)) and
+        	  	txn_date<=Date(date_add(#toDate:TIMESTAMP#, interval '7:00:00' hour_second))
+        	)
+      		]]>
+      		<!--   
+        	DATE(txn_date) between DATE(#fromDate:TIMESTAMP#)
+			and DATE(#toDate:TIMESTAMP#)
+			 -->
+        </isNotNull>
+       order by txn_date desc,provider_id desc limit $startRecord$,$recordSize$
+   </select>
+	
+   <select id="AtSummaryView_SearchByFilterCount" resultClass="int" parameterClass="com.mbv.bp.common.vo.airtime.AtSummaryViewFilter" >
+
+		select count(txn_date) from at_summary_view where ('1'='1')
+		<isNotNull prepend=" and " property="providerId" >
+       		provider_id = #providerId:VARCHAR#
+        </isNotNull>
+        <isNotNull  prepend=" and " property="fromDate" >
+        	<![CDATA[
+      		(  
+      			txn_date>=Date(date_add(#fromDate:TIMESTAMP#, interval '7:00:00' hour_second)) and
+        	  	txn_date<=Date(date_add(#toDate:TIMESTAMP#, interval '7:00:00' hour_second))
+        	)
+      		]]>
+        </isNotNull>
+	</select>
+  <select id="AtSummaryView_SelectEndDateByProviderId" resultClass="Date" parameterClass="com.mbv.bp.common.vo.airtime.AtSummaryView">
+		select max(Date(txn_date)) from at_summary_view where provider_id = #providerId:VARCHAR#
+  </select>
+</sqlMap>

@@ -1,0 +1,131 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xmlns:rabbit="http://www.springframework.org/schema/rabbit"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/data/mongo
+          http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd
+          http://www.springframework.org/schema/rabbit 
+          http://www.springframework.org/schema/rabbit/spring-rabbit-1.0.xsd
+          http://www.springframework.org/schema/context
+          http://www.springframework.org/schema/context/spring-context-4.0.xsd
+          http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<context:component-scan base-package="com.mbv.airline.sabre.jms" />
+ 	<context:component-scan base-package="com.mbv.airline.sabre.common" />
+ 	<context:component-scan base-package="com.mbv.airline.common.support" />
+ 	<context:component-scan base-package="com.mbv.airline.common.email" />
+
+	<bean id="propertyPlaceholderConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>file:${sabre.configuration}</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- MongoDb -->
+	<mongo:db-factory id="mongoDbFactory" host="${mongodb.host}"
+		port="${mongodb.port}" dbname="${mongodb.database}" username="${mongodb.username}"
+		password="${mongodb.password}" />
+
+	<bean id="mongoMappingConverter"
+		class="org.springframework.data.mongodb.core.convert.MappingMongoConverter">
+		<constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
+		<constructor-arg name="mappingContext">
+			<bean
+				class="org.springframework.data.mongodb.core.mapping.MongoMappingContext" />
+		</constructor-arg>
+		<property name="typeMapper">
+			<bean
+				class="org.springframework.data.mongodb.core.convert.DefaultMongoTypeMapper">
+				<constructor-arg name="typeKey">
+					<null />
+				</constructor-arg>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+		<property name="writeResultChecking" value="EXCEPTION" />
+		<property name="writeConcern" value="FSYNC_SAFE" />
+		<constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
+		<constructor-arg name="mongoConverter" ref="mongoMappingConverter" />
+	</bean>
+
+	<!-- RabbitMQ -->
+	<rabbit:connection-factory id="rabbitMqFactory"
+		host="${rabbit.host}" virtual-host="${rabbit.virtualhost}" username="${rabbit.username}"
+		password="${rabbit.password}" />
+
+	<rabbit:listener-container id="rabbitListenerContainer"
+		connection-factory="rabbitMqFactory">
+		<rabbit:listener ref="rabbitListener" queue-names="${rabbit.queue}" />
+	</rabbit:listener-container>
+
+	<rabbit:template id="rabbitTemplate"
+		connection-factory="rabbitMqFactory" />
+
+	<bean id="jsonConverter"
+		class="org.springframework.amqp.support.converter.JsonMessageConverter">
+		<property name="classMapper">
+			<bean class="org.springframework.amqp.support.converter.DefaultClassMapper">
+				<property name="idClassMapping" ref="idClassMapping" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="idClassMapping" class="java.util.LinkedHashMap">
+		<constructor-arg>
+			<map>
+				<entry key="com.mbv.airline.common.cmd.SearchItineraryCmd"
+					value="com.mbv.airline.common.cmd.SearchItineraryCmd" />
+
+				<entry key="com.mbv.airline.common.cmd.CreateBookingCmd"
+					value="com.mbv.airline.common.cmd.CreateBookingCmd" />
+
+				<entry key="com.mbv.airline.common.cmd.PayBookingCmd"
+					value="com.mbv.airline.common.cmd.PayBookingCmd" />
+					
+				<entry key="com.mbv.airline.common.cmd.VerifyPaymentCmd"
+					value="com.mbv.airline.common.cmd.VerifyPaymentCmd" />
+
+			</map>
+		</constructor-arg>
+	</bean>
+
+	<bean id="closeReportAgent" class="com.mbv.airline.sabre.actors.agent.CloseReportAgent">
+		<property name="closeReportInfo" ref="configInfo" />
+		<property name="terminalConfig">
+			<bean id="terminalConfig" class="com.mbv.airline.sabre.TerminalConfig">
+				<property name="username" value="${close.report.username.master}" />
+				<property name="password" value="${close.report.password.master}" />
+				<property name="airlineCode" value="${close.report.airlinecode.master}" />
+				<property name="stationNumber" value="${close.report.stationnumber.master}" />
+			</bean>
+		</property>
+		<property name="senderManager" ref="senderManager" />
+	</bean>
+
+	<bean id="sabreservice" class="com.mbv.airline.sabre.Main">
+		<property name="closeReportAgent" ref="closeReportAgent" />
+		<property name="attachConfig">
+			<bean id="attachConfig" class="com.mbv.airline.sabre.actors.TerminalPool.Attach">
+				<property name="username" value="${attach.username}" />
+				<property name="password" value="${attach.password}" />
+				<property name="airlineCode" value="${attach.airlinecode}" />
+				<property name="stationNumber" value="${attach.stationnumber}" />
+				<property name="pseudoCityCode" value="ouf"/>
+				<property name="hardcopyPrinter" value="4CB4BE"/>
+				<property name="ticketPrinter" value="4CB4BF"/>
+				<property name="printRoutine" value="GF"/>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="rabbitListener" class="com.mbv.airline.sabre.RabbitListener">
+		<property name="actorSystem" ref="actorSystem" />
+		<property name="jsonConverter" ref="jsonConverter" />
+	</bean>
+</beans>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" >
+<Worksheet ss:Name="sheet" >
+<ss:Table>
+<ss:Row>
+<ss:Cell><ss:Data ss:Type='String'>script</ss:Data></ss:Cell>
+</ss:Row>
+<ss:Row>
+<ss:Cell><ss:Data ss:Type='String'>script.system.airtime.unknown.txn</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type='String'>#useDBases airtime&#10;source /opt/mobivi/bin/reportfunc.sh&#10;export ALERT_FILE_PATH=/tmp/airtime.unknown.txn.status.$cretime.xml &#10;#export ALERT_TEMPLATE_DIR=&#10;export ALERT_TEMPLATE_FILE=unknownTxnAlert.ftl&#10;export AIRTIME_ALERT_ID=system.airtime.unknown.txn&#10;/opt/airtime-report-0.1.0/bin/airtime_alert.sh&#10;if [ -f $ALERT_FILE_PATH ] &#10;then &#10;  /opt/mobivi/bin/admnotify &lt;$ALERT_FILE_PATH&#10;  rm -rf $ALERT_FILE_PATH&#10;fi&#10;&#10;&#10;</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type='String'></ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type='String'>airtime unknown transaction status</ss:Data></ss:Cell>
+</ss:Row>
+</ss:Table>
+</Worksheet>
+</Workbook>

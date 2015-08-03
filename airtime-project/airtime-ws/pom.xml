@@ -1,0 +1,151 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.mbv.airtime</groupId>
+		<artifactId>airtime-project</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>airtime-ws</artifactId>
+	<name>airtime-ws</name>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.jibx</groupId>
+			<artifactId>jibx-run</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.jibx</groupId>
+			<artifactId>jibx-bind</artifactId>
+		</dependency>
+
+
+	</dependencies>
+	<profiles>
+		<profile>
+			<id>jibx-builder</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.jibx</groupId>
+						<artifactId>maven-jibx-plugin</artifactId>
+						<version>${jibx.version}</version>
+						<executions>
+							<execution>
+								<id>jibx-binding</id>
+								<configuration>
+									<directory>src/main/jibx</directory>
+									<includes>
+										<include>airtime-core-binding-v1.xml</include>
+									</includes>
+									<verbose>true</verbose>
+								</configuration>
+								<phase>compile</phase>
+								<goals>
+									<goal>bind</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<!-- mvn clean generate-sources -P axis2-codegen -->
+			<id>axis2-codegen</id>
+			<properties>
+				<code.generation>true</code.generation>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.axis2</groupId>
+						<artifactId>axis2-wsdl2code-maven-plugin</artifactId>
+						<version>${axis2.version}</version>
+						<dependencies>
+							<dependency>
+								<groupId>org.apache.axis2</groupId>
+								<artifactId>axis2-jibx</artifactId>
+								<version>${axis2.version}</version>
+							</dependency>
+						</dependencies>
+						<executions>
+							<execution>
+								<id>wsdl2code-airtime-core</id>
+								<goals>
+									<goal>wsdl2code</goal>
+								</goals>
+								<configuration>
+									<generateServicesXml>true</generateServicesXml>
+									<generateServerSideInterface>true</generateServerSideInterface>
+									<generateServerSide>true</generateServerSide>
+									<generateAllClasses>true</generateAllClasses>
+									<outputDirectory>target/generated/axis2/airtime-core</outputDirectory>
+									<syncMode>sync</syncMode>
+									<unwrap>true</unwrap>
+									<packageName>com.mbv.airtime.ws.core.v1</packageName>
+									<wsdlFile>${basedir}/src/main/module/apiweb/wsdl/airtime-core-v1.wsdl</wsdlFile>
+									<databindingName>jibx</databindingName>
+									<options>
+										<property>
+											<name>bindingfile</name>
+											<value>${basedir}/src/main/jibx/airtime-core-binding-v1.xml</value>
+										</property>
+									</options>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+
+			</build>
+
+		</profile>
+	</profiles>
+
+
+
+
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.jibx</groupId>
+										<artifactId>
+											maven-jibx-plugin
+										</artifactId>
+										<versionRange>
+											[1.2.5,)
+										</versionRange>
+										<goals>
+											<goal>bind</goal>
+											<goal>schema-codegen</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

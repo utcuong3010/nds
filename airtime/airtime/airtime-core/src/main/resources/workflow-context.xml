@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:sec="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+       http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-2.5.xsd">
+    
+    
+	<bean id="wfpServer" class="com.mbv.bp.core.integration.WfpRemoteExecutor">
+	</bean>
+	<bean id="tcpListener" class="com.googlecode.protobuf.socketrpc.TCPListener">
+		<property name="address" value="${workflow.server.host}" />
+		<property name="port" value="${workflow.server.port}" />
+		<property name="backLog" value="${workflow.server.backlog}" />
+		<property name="threadPoolSize" value="${workflow.server.poolsize}" />
+		<property name="serviceInstances">
+			<list>
+				<ref local="wfpServer" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="jmsFactory" class="org.apache.activemq.pool.PooledConnectionFactory" destroy-method="stop">
+	    <property name="connectionFactory">
+	      <bean class="org.apache.activemq.ActiveMQConnectionFactory">
+	        <property name="brokerURL">
+	          <value>tcp://localhost:61616</value>
+	        </property>
+	      </bean>
+	    </property>
+  	</bean>
+  <!-- Spring JMS Template -->
+  	<bean id="myJmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+	    <property name="connectionFactory">
+	      <ref local="jmsFactory"/>
+	    </property>
+  	</bean>
+  	
+  	<!-- Workflow Scheduler config -->
+  	<bean id="vnpayNetworkCheckJob" class="com.mbv.bp.core.scheduler.VnPayNetworkCheckJob">
+		<property name="enable" value="${scheduler.vnpay.networkjob.enable}"/>
+	</bean>	
+
+	<bean id="vnpayNetworkCheckJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="vnpayNetworkCheckJob" />
+		<property name="targetMethod" value="execute" />
+		<property name="concurrent" value="false" />
+	</bean>
+	
+	<bean id="vnpayNetworkCheckJobTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="vnpayNetworkCheckJobDetail" />
+		<property name="startDelay" value="${scheduler.vnpay.networkjob.startdelay}" />
+		<property name="repeatInterval" value="${scheduler.vnpay.networkjob.repeatinterval}" />
+	</bean>
+
+<!-- Mobifone balance inquiry check job -->		
+	<bean id="mobifoneUpdateBalanceJob" class="com.mbv.bp.core.scheduler.MobifoneUpdateBalanceJob" >
+		<property name="enable" value="${scheduler.mobifone.balance.update.enable}"/>
+	</bean>
+
+	<bean id="mobifoneUpdateBalanceJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="mobifoneUpdateBalanceJob" />
+		<property name="targetMethod" value="execute" />
+		<property name="concurrent" value="false" />
+	</bean>
+	
+	<bean id="mobifoneUpdateBalanceJobTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="mobifoneUpdateBalanceJobDetail" />
+		<property name="startDelay" value="${scheduler.mobifone.balance.update.startdelay}" />
+		<property name="repeatInterval" value="${scheduler.mobifone.balance.update.repeatinterval}" />
+	</bean>
+<!-- Jobs scheduler -->
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="vnpayNetworkCheckJobTrigger" />
+				<ref bean="mobifoneUpdateBalanceJobTrigger" />
+			</list>
+		</property>
+	</bean>
+</beans>

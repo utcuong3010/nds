@@ -1,0 +1,52 @@
+PNR has 5 mandatory fields:
+	Phone			9
+	Received		6
+	Itinerary		0
+	Name			-
+	Ticketing		7 (8)
+	Remarks			5
+	
+Phone:
+	9<><Phone>-M
+	[9OPK09820430443-M]
+
+Received:
+	[6QQ]
+
+Itinerary:
+	0<carrier code><flight number><class of service><date><city pair>NN<number of seats>
+	
+	0QF481Y22MAYMELSYDNN1
+Name:
+	-<Family name>/<Given name or Initial> <Title>
+	
+	<Title>:
+		- MR	: Male, 13 years or older
+		- MS	: Female, 13 years or older
+		- MSTR	: Male, 12 years or younger
+		- MISS	: Female, 12 years or younger
+	
+	Infant:
+		[4INFT1/NGUYEN/QUANG HUY MSTR/15MAR13-1.1Σ4INFT2/NGUYEN/QUANG HUY MSTR/15MAR13-1.1]
+	Example:
+		[-NGUYEN/MINH TUAN MR]
+		
+	
+Ticketing:
+	8TL30
+	
+Remarks:
+	[5H-MBV] 	Historical remark, this will add the remark to PNR history
+	
+	
+	
+Flow:
+	1. long sell, long sell
+	2. adt, chd
+	3. inf
+	4. phone, received, ticketing, remarks
+	5. get
+	6. check (itinerary, adt, chd, inf)
+	6'. wp ????
+	7. er
+	8.  get

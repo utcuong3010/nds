@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="alert_contact" >
+  <resultMap id="AlertContactResult" class="com.mbv.bp.common.vo.airtime.AlertContact" >
+    <result column="alert_id" property="alertId" jdbcType="VARCHAR" />
+    <result column="contact_address" property="contactAddress" jdbcType="VARCHAR" />
+    <result column="contact_type" property="contactType" jdbcType="VARCHAR" />
+    <result column="contact_name" property="contactName" jdbcType="VARCHAR" />
+  </resultMap>
+  <select id="AlertContact_SelectByAlertId" resultMap="AlertContactResult" parameterClass="com.mbv.bp.common.vo.airtime.AlertContact">
+  	select *
+    from alert_contact
+    where alert_id = #alertId:VARCHAR#
+      
+  </select>
+  
+  <select id="AlertContact_Select" resultMap="AlertContactResult" parameterClass="com.mbv.bp.common.vo.airtime.AlertContact" >
+    select *
+    from alert_contact
+    where alert_id = #alertId:VARCHAR#
+      and contact_address = #contactAddress:VARCHAR#
+      and contact_type = #contactType:VARCHAR#
+  </select>
+  
+  <insert id="AlertContact_Insert" parameterClass="com.mbv.bp.common.vo.airtime.AlertContact" >
+    insert into alert_contact (alert_id, contact_address, contact_type, contact_name)
+    values (#alertId:VARCHAR#, #contactAddress:VARCHAR#, #contactType:VARCHAR#,
+      #contactName:VARCHAR#)
+  </insert>
+  
+   <delete id="AlertContact_Delete" parameterClass="com.mbv.bp.common.vo.airtime.AlertContact" >
+    delete from alert_contact
+    where alert_id = #alertId:VARCHAR#
+      and contact_address = #contactAddress:VARCHAR#
+      and contact_type = #contactType:VARCHAR#
+  </delete>
+</sqlMap>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="queue_request" >
+  <resultMap id="QueueRequestResult" class="com.mbv.bp.common.vo.airtime.QueueRequest" >
+    <result column="queue_id" property="queueId" jdbcType="VARCHAR" />
+    <result column="request_id" property="requestId" jdbcType="BIGINT" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="error_code" property="errorCode" jdbcType="VARCHAR" />
+    <result column="created_date" property="createdDate" jdbcType="TIMESTAMP" />
+    <result column="updated_date" property="updatedDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <insert id="QueueRequest_Insert" parameterClass="com.mbv.bp.common.vo.airtime.QueueRequest">
+  	insert into queue_request (queue_id, request_id, content, status, error_code, created_date,
+      updated_date)
+    values (#queueId:VARCHAR#, #requestId:BIGINT#, #content:VARCHAR#, #status:VARCHAR#,
+      #errorCode:VARCHAR#, #createdDate:TIMESTAMP#, #updatedDate:TIMESTAMP#)
+  </insert>
+  
+  <update id="QueueRequest_Update" parameterClass="com.mbv.bp.common.vo.airtime.QueueRequest" >
+     update queue_request
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="content" >
+        content = #content:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="status" >
+        status = #status:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="errorCode" >
+        error_code = #errorCode:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="createdDate" >
+        created_date = #createdDate:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="updatedDate" >
+        updated_date = #updatedDate:TIMESTAMP#
+      </isNotNull>
+    </dynamic>
+    where queue_id = #queueId:VARCHAR#
+      and request_id = #requestId:BIGINT#
+  </update>
+  <delete id="QueueRequest_Delete" parameterClass="com.mbv.bp.common.vo.airtime.QueueRequest">
+  	delete from  queue_request  where queue_id = #queueId:VARCHAR#
+      and request_id = #requestId:BIGINT#
+  </delete>
+  <select id="QueueRequest_SelectByStatus" resultMap="QueueRequestResult" parameterClass="com.mbv.bp.common.vo.airtime.QueueRequest">
+  	select * from queue_request where  status = #status:VARCHAR#
+  </select>
+  <select id="QueueRequest_SelectByQueueIdStatus" resultMap="QueueRequestResult" parameterClass="com.mbv.bp.common.vo.airtime.QueueRequest">
+  	select * from queue_request where  status = #status:VARCHAR# and queue_id = #queueId:VARCHAR#
+  </select>
+  
+</sqlMap>

@@ -1,0 +1,172 @@
+<ManagerPrivilege>
+	<Title>Airtime Admin</Title>
+	<Description>
+		Only applicable for Airtime authorization
+	</Description>
+	<HtmlInfoDescription>
+		<![CDATA[
+			<p>This system manages SMS message, HTTP Notification, and Email message.
+			</p>
+			
+			<br/>
+			<h2>Roles of a manager</h2>
+			<p>In general, a manager can perform the following tasks</p>
+			<ul style="padding-left:20pt;">
+				<li><strong>List Message</strong> list all messages that were queued to process.</li>
+				
+				<li><strong>View Message</strong>  provide details information
+				about the message. Some messages contain sensitive content that require
+				<strong>View Sensitive Content</strong> privilege to view its content.</li>
+				
+				<li><strong>Retry Outgoing Message</strong> allows a manager to re-execute a failed message.</li>
+			</ul>
+			<br/>
+			<h2>If you are a new manager</h2>
+			<p>Make sure that you see your name in the <strong>Managers</strong> list. Otherwise, inform your
+			supervisor/leader that you are not authorized to perform your task.
+			</p>			
+			<br/>
+			<h2>If you are a supervisor/leader</h2>
+			<p>Your task is basically monitoring others and you need to grant/revoke privileges for other managers.
+			You will need a privilege with <strong>Grant</strong> option. If you don't see that in the manager list,
+			please ask your Division Manager who has access to <strong>root</strong> account to do that for you.</p>
+			<br/>
+			<h2>If you have a problem that no one can help</h2>
+			<p>Again, please inform your Devision Manager or <strong>root</strong> user, because that user does not 
+			need any privilege to access the system.</p>	
+		]]>
+	</HtmlInfoDescription>
+	<HtmlGrantDescription>
+		<![CDATA[
+			
+		]]>
+	</HtmlGrantDescription>
+	<TargetType>AirtimeAdmin</TargetType>
+	<TargetName>Service</TargetName>
+	<Actions>
+		<Action>
+			<ID /> <!-- null means GRANT action -->
+			<Name>Manager can grant and revoke other's privileges</Name>
+			<Description></Description>
+			<CategoryID>Supervisor</CategoryID>
+		</Action>
+		<Action>
+			<ID>LockAccountView</ID>
+			<Name>View information for reserved account</Name>
+			<Description>
+			</Description>
+			<CategoryID>AirtimeReservation</CategoryID>
+		</Action>
+		<Action>
+			<ID>ProviderAccountView</ID>
+			<Name>View information for provider account load money </Name>
+			<Description>
+			</Description>
+			<CategoryID>ProviderAccount</CategoryID>
+		</Action>
+		<Action>
+			<ID>ProviderAccountUpDate</ID>
+			<Name>Add/Modify/Delete for provider account load money transaction</Name>
+			<Description>
+				(High level manager)
+			</Description>
+			<Dependencies>
+			</Dependencies>
+			<CategoryID>ProviderAccount</CategoryID>
+		</Action>
+		<Action>
+			<ID>ProviderAccountSummaryView</ID>
+			<Name>List summary of Provider account</Name>
+			<Description></Description>
+			<Dependencies>
+			</Dependencies>
+			<CategoryID>ProviderAccount</CategoryID>
+		</Action>
+		<Action>
+			<ID>MobiBalQuery</ID>
+			<Name>Update Or Query Mobifone Account Balance</Name>
+			<Description>
+			</Description>
+			<Dependencies>
+			</Dependencies>
+			<CategoryID>ProviderAccount</CategoryID>
+		</Action>	
+		<Action>
+			<ID>CdrCompare</ID>
+			<Name>Query Comparison result between MobiVi and Provider </Name>
+			<Description>
+			</Description>
+			<Dependencies>
+			</Dependencies>
+			<CategoryID>ProviderAccount</CategoryID>
+		</Action>	
+		<Action>
+			<ID>ProviderTxnSummaryView</ID>
+			<Name>List Airtime transaction summary</Name>
+			<Description></Description>
+			<Dependencies>
+			</Dependencies>
+			<CategoryID>AirtimeTxn</CategoryID>
+		</Action>		
+		<Action>
+			<ID>TxnView</ID>
+			<Name>List Airtime transaction details</Name>
+			<Description></Description>
+			<Dependencies>
+			</Dependencies>
+			<CategoryID>AirtimeTxn</CategoryID>
+		</Action>
+		<Action>
+			<ID>TxnUpdate</ID>
+			<Name>Update status of Airtime transaction</Name>
+			<Description>
+				(High level manager)
+			</Description>
+			<Dependencies>
+			</Dependencies>
+			<CategoryID>AirtimeTxn</CategoryID>
+		</Action>
+		<Action>
+			<ID>RecacheCore</ID>
+			<Name>Re-cache Airtime Core (Vtel, Mobi, Notification, Telco Provider )</Name>
+			<Description>
+				(For System Manager Only)
+			</Description>
+			<Dependencies>
+			</Dependencies>
+			<CategoryID>SystemManager</CategoryID>
+		</Action>
+		<Action>
+			<ID>MobiChangePass</ID>
+			<Name>Change mobifone connection password</Name>
+			<Description>
+				(For System Manager Only)
+			</Description>
+			<Dependencies>
+			</Dependencies>
+			<CategoryID>SystemManager</CategoryID>
+		</Action>
+	</Actions>
+	<Categories>
+		<Category>
+			<ID>AirtimeTxn</ID>
+			<Name>Airtime Transaction</Name>
+		</Category>
+		<Category>
+			<ID>ProviderAccount</ID>
+			<Name>Provider Account</Name>
+		</Category>
+		<Category>
+			<ID>Supervisor</ID>
+			<Name>Supervisor</Name>
+		</Category>
+		<Category>
+			<ID>SystemManager</ID>
+			<Name>System Manager</Name>
+		</Category>
+		<Category>
+			<ID>AirtimeReservation</ID>
+			<Name>Airtime Reservation</Name>
+		</Category>
+	</Categories>
+</ManagerPrivilege>

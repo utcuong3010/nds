@@ -1,0 +1,82 @@
+CREATE DATABASE  IF NOT EXISTS `airtime` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `airtime`;
+-- MySQL dump 10.13  Distrib 5.5.9, for Win32 (x86)
+--
+-- Host: localhost    Database: airtime
+-- ------------------------------------------------------
+-- Server version	5.5.13
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `at_transaction`
+--
+
+DROP TABLE IF EXISTS `at_transaction`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `at_transaction` (
+  `txn_id` varchar(100) NOT NULL,
+  `channel_id` varchar(50) NOT NULL,
+  `deleted` bigint(20) unsigned NOT NULL,
+  `txn_date` datetime NOT NULL COMMENT '''Original''''',
+  `at_txn_id` bigint(20) unsigned DEFAULT NULL,
+  `delivery_date` datetime DEFAULT NULL,
+  `response_date` datetime DEFAULT NULL,
+  `amount` int(12) unsigned DEFAULT NULL COMMENT '''Original''''',
+  `message_id` varchar(20) DEFAULT NULL,
+  `msg_type` varchar(50) NOT NULL,
+  `msisdn` varchar(20) DEFAULT NULL,
+  `telco_id` varchar(20) DEFAULT NULL,
+  `conn_type` varchar(50) DEFAULT NULL,
+  `time_out` int(11) DEFAULT NULL,
+  `status` varchar(50) NOT NULL DEFAULT 'PENDING',
+  `error_code` varchar(100) NOT NULL,
+  `txn_status` varchar(50) DEFAULT 'PENDING',
+  `created_by` varchar(50) NOT NULL,
+  `created_date` datetime NOT NULL,
+  `updated_by` varchar(50) DEFAULT NULL,
+  `updated_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`txn_id`,`channel_id`,`deleted`),
+  KEY `at_txn_index` (`at_txn_id`),
+  KEY `conn_type_index` (`conn_type`),
+  KEY `telco_id_index` (`telco_id`),
+  KEY `status_error_code_index` (`status`,`error_code`),
+  KEY `channel_id_index` (`channel_id`),
+  KEY `txt_date_index` (`txn_date`),
+  KEY `message_id_index` (`message_id`),
+  KEY `msisdn_index` (`msisdn`),
+  KEY `txn_summary_index` (`status`,`error_code`,`conn_type`,`txn_date`),
+  KEY `txn_status_del_index` (`deleted`,`txn_status`),
+  KEY `txn_status_index` (`txn_status`)
+) ENGINE=InnoDB DEFAULT CHARSET=ascii;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `at_transaction`
+--
+
+LOCK TABLES `at_transaction` WRITE;
+/*!40000 ALTER TABLE `at_transaction` DISABLE KEYS */;
+/*!40000 ALTER TABLE `at_transaction` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2011-09-21 13:40:27

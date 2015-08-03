@@ -1,0 +1,2 @@
+UPDATE `coissue`.`privileges` set AllowedActions='ProviderAccountView,ProviderAccountUpDate,ProviderAccountSummaryView,ProviderTxnSummaryView,TxnView,TxnUpdate,MobiBalQuery,CdrCompare,RecacheCore,MobiChangePass,LockAccountView'
+WHERE OwnerType='mobivi' and OwnerId='root' and ObjectType='AirtimeAdmin' and Grantable='1' and Static='1'

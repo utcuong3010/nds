@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:sec="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+       http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-2.5.xsd">
+       
+	<bean id="anypayServer" class="com.mbv.anypay.queue.integration.QueueRemoteExecutor" init-method="startUp">
+    </bean>
+    
+    <bean id="anypayQueueTcpListener" class="com.googlecode.protobuf.socketrpc.TCPListener">
+        <property name="address" value="${anypay.server.host}" />
+		<property name="port" value="${anypay.server.port}" />
+		<property name="backLog" value="${anypay.server.backlog}" />
+		<property name="threadPoolSize" value="${anypay.server.poolsize}" />
+        <property name="serviceInstances">
+            <list>
+                <ref local="anypayServer" /> 
+            </list>
+        </property>
+    </bean>
+</beans>

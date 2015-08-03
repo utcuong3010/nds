@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://gateway.airtime.mbv.com"
+	xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+	targetNamespace="http://gateway.airtime.mbv.com">
+	<wsdl:types>
+		<xs:schema attributeFormDefault="qualified"
+			elementFormDefault="qualified" targetNamespace="http://gateway.airtime.mbv.com">
+
+			<xs:complexType name="ArrayOfTxnInfo">
+				<xs:sequence>
+					<xs:element name="txnInfo" type="ns:AtTxnInfo" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+				</xs:sequence>
+			</xs:complexType>
+			
+			<xs:complexType name="KeyValuePairs">
+				<xs:sequence>
+					<xs:element name="keyValuePair" type="ns:KeyValuePair" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+				</xs:sequence>
+			</xs:complexType>
+			
+			<xs:complexType name="KeyValuePair">
+				<xs:sequence>
+					<xs:element name="key" nillable="true"	type="xs:string" />
+					<xs:element name="value" nillable="true"	type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			
+			<xs:complexType name="AtTxnInfo">
+				<xs:sequence>
+					<xs:element name="atTxnId" nillable="true"	type="xs:string" />
+					<xs:element name="txnStatus" nillable="true"	type="xs:string" />
+					<xs:element name="txnErrorCode" nillable="true"	type="xs:string" />
+					<xs:element name="providerId" nillable="true"	type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			
+			<xs:complexType name="LockAccountInfo">
+				<xs:sequence>
+					<xs:element name="systemId" nillable="true" type="xs:string" />
+					<xs:element name="accountId" nillable="true" type="xs:string" />
+					<xs:element name="totalDebit" nillable="true" type="xs:long" />
+					<xs:element name="totalCredit" nillable="true" type="xs:long" />
+					<xs:element name="telcoIds" nillable="true" type="xs:string" />
+					<xs:element name="description" nillable="true" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			
+			<xs:complexType name="LockTxnInfo">
+				<xs:sequence>
+					<xs:element name="systemId" nillable="false" type="xs:string" />
+					<xs:element name="txnId" nillable="false" type="xs:string" />
+					<xs:element name="accountId" nillable="false" type="xs:string" />
+					<xs:element name="referenceId" nillable="true" type="xs:string" />
+					<xs:element name="amount" nillable="false" type="xs:long" />
+					<xs:element name="operation" nillable="true" type="xs:string" />					
+					<xs:element name="description" nillable="true" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			
+			<xs:element name="createLockAccount">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="systemId" nillable="false" type="xs:string" />
+						<xs:element name="accountId" nillable="false" type="xs:string" />
+						<xs:element name="amount" nillable="false" type="xs:long" />
+						<xs:element name="telcoIds" nillable="true" type="xs:string" />
+						<xs:element name="description" nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="lockAccountResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<!--xs:element name="lockAccountInfo" nillable="true" type="ns:LockAccountInfo" /-->
+						<xs:element name="errorCode" nillable="false" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="debitLockAccount">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="lockTxnInfo" nillable="false" type="ns:LockTxnInfo" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="creditLockAccount">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="lockTxnInfo" nillable="false" type="ns:LockTxnInfo" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="lockTxnResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<!-- xs:element name="lockTxnInfo" nillable="true" type="ns:LockTxnInfo" /-->
+						<xs:element name="errorCode" nillable="false" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="lockAccountTxnQuery">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="txnId" nillable="false" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="lockAccountTxnQueryResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="lockTxnInfo" nillable="true" type="ns:LockTxnInfo" />
+						<xs:element name="txnStatus" nillable="true" type="xs:string" />
+						<xs:element name="errorCode" nillable="false" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="lockAccountQuery">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="accountId" nillable="false" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="lockAccountQueryResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="lockAccountInfo" nillable="true" type="ns:LockAccountInfo" />
+						<xs:element name="txnStatus" nillable="true" type="xs:string" />
+						<xs:element name="errorCode" nillable="false" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="createTxnId">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="systemId" nillable="false" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="createTxnIdResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="txnId" nillable="true" type="xs:string" />
+						<xs:element name="errorCode" nillable="false" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="reservedTopup">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="txnId" nillable="false"	type="xs:string" />
+						<xs:element name="channelId" nillable="false" type="xs:string" />
+						<xs:element name="timeOut" nillable="false" type="xs:int" />
+						<xs:element name="telcoId" nillable="false" type="xs:string" />
+						<xs:element name="msisdn" nillable="false" type="xs:string" />
+						<xs:element name="amount" nillable="false" type="xs:int" />
+						<xs:element name="lockId" nillable="false" type="xs:string" />
+						<xs:element name="description" nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+						
+			<xs:element name="topup">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="txnId" nillable="false"	type="xs:string" />
+						<xs:element name="channelId" nillable="false" type="xs:string" />
+						<xs:element name="timeOut" nillable="false" type="xs:int" />
+						<xs:element name="telcoId" nillable="false" type="xs:string" />
+						<xs:element name="msisdn" nillable="false" type="xs:string" />
+						<xs:element name="amount" nillable="false" type="xs:int" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:element name="topupResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="txnInfo" nillable="true"	type="ns:AtTxnInfo"/>
+						<xs:element name="errorCode" nillable="false" type="xs:string" />
+						<xs:element name="errorMessage" nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="inquiry">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="atTxnIds" nillable="false" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:element name="inquiryResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="txnInfos" nillable="true"	type="ns:ArrayOfTxnInfo"/>
+						<xs:element name="txnErrorList" nillable="true" type="xs:string" />
+						<xs:element name="errorCode" nillable="false" type="xs:string" />
+						<xs:element name="errorMessage" nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+<!--  =====================  Airtime-Txn =====================  -->		
+			<xs:element name="txnRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="keyValuePairs" nillable="true"	type="ns:KeyValuePairs"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:element name="txnResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="keyValuePairs" type="ns:KeyValuePair" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+						<xs:element name="errorCode" nillable="false" type="xs:string" />
+						<xs:element name="errorMessage" nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+<!--  =====================  Airtime-Txn  =====================  -->		
+		</xs:schema>
+	</wsdl:types>
+	<!-- createLockAmount  -->
+	<wsdl:message name="createLockAccountRequest">
+		<wsdl:part name="parameters" element="ns:createLockAccount" />
+	</wsdl:message>
+	<wsdl:message name="createLockAccountResponse">
+		<wsdl:part name="parameters" element="ns:lockAccountResponse" />
+	</wsdl:message>
+	<!-- debitLockAccount  -->
+	<wsdl:message name="debitLockAccountRequest">
+		<wsdl:part name="parameters" element="ns:debitLockAccount" />
+	</wsdl:message>
+	<wsdl:message name="debitLockAccountResponse">
+		<wsdl:part name="parameters" element="ns:lockTxnResponse" />
+	</wsdl:message>
+	<!-- creditLockAccount -->
+	<wsdl:message name="creditLockAccountRequest">
+		<wsdl:part name="parameters" element="ns:creditLockAccount" />
+	</wsdl:message>
+	<wsdl:message name="creditLockAccountResponse">
+		<wsdl:part name="parameters" element="ns:lockTxnResponse" />
+	</wsdl:message>
+	<!-- lockAccountTxnQuery -->
+	<wsdl:message name="lockAccountTxnQueryRequest">
+		<wsdl:part name="parameters" element="ns:lockAccountTxnQuery" />
+	</wsdl:message>
+	<wsdl:message name="lockAccountTxnQueryResponse">
+		<wsdl:part name="parameters" element="ns:lockAccountTxnQueryResponse" />
+	</wsdl:message>
+	<!-- lockAccountQuery -->
+	<wsdl:message name="lockAccountQueryRequest">
+		<wsdl:part name="parameters" element="ns:lockAccountQuery" />
+	</wsdl:message>
+	<wsdl:message name="lockAccountQueryResponse">
+		<wsdl:part name="parameters" element="ns:lockAccountQueryResponse" />
+	</wsdl:message>
+	<!-- createTxnId -->
+	<wsdl:message name="createTxnIdRequest">
+		<wsdl:part name="parameters" element="ns:createTxnId" />
+	</wsdl:message>
+	<wsdl:message name="createTxnIdResponse">
+		<wsdl:part name="parameters" element="ns:createTxnIdResponse" />
+	</wsdl:message>
+	<!-- reservedTopup  -->
+	<wsdl:message name="reservedTopupRequest">
+		<wsdl:part name="parameters" element="ns:reservedTopup" />
+	</wsdl:message>
+	<wsdl:message name="reservedTopupResponse">
+		<wsdl:part name="parameters" element="ns:topupResponse" />
+	</wsdl:message>
+	<!-- topup  -->
+	<wsdl:message name="topupRequest">
+		<wsdl:part name="parameters" element="ns:topup" />
+	</wsdl:message>
+	<wsdl:message name="topupResponse">
+		<wsdl:part name="parameters" element="ns:topupResponse" />
+	</wsdl:message>
+	<!-- inquiry  -->
+	<wsdl:message name="inquiryRequest">
+		<wsdl:part name="parameters" element="ns:inquiry" />
+	</wsdl:message>
+	<wsdl:message name="inquiryResponse">
+		<wsdl:part name="parameters" element="ns:inquiryResponse" />
+	</wsdl:message>
+	<!--  txn request-->
+	<wsdl:message name="txnRequest">
+		<wsdl:part name="parameters" element="ns:txnRequest" />
+	</wsdl:message>
+	<wsdl:message name="txnResponse">
+		<wsdl:part name="parameters" element="ns:txnResponse" />
+	</wsdl:message>
+	
+ 	<wsdl:portType name="AirTimeServicesPortType">
+		
+		<wsdl:operation name="topup">
+			<wsdl:input message="ns:topupRequest" wsaw:Action="urn:topup" />
+			<wsdl:output message="ns:topupResponse" wsaw:Action="urn:topupResponse" />
+		</wsdl:operation>
+		
+		<wsdl:operation name="inquiry">
+			<wsdl:input message="ns:inquiryRequest" wsaw:Action="urn:inquiry" />
+			<wsdl:output message="ns:inquiryResponse" wsaw:Action="urn:inquiryResponse" />
+		</wsdl:operation>
+		
+		<wsdl:operation name="createLockAccount">
+			<wsdl:input message="ns:createLockAccountRequest" wsaw:Action="urn:createLockAccount" />
+			<wsdl:output message="ns:createLockAccountResponse" wsaw:Action="urn:createLockAccountResponse" />
+		</wsdl:operation>
+		
+		<wsdl:operation name="debitLockAccount">
+			<wsdl:input message="ns:debitLockAccountRequest" wsaw:Action="urn:debitLockAccount" />
+			<wsdl:output message="ns:debitLockAccountResponse" wsaw:Action="urn:debitLockAccountResponse" />
+		</wsdl:operation>
+		
+		<wsdl:operation name="creditLockAccount">
+			<wsdl:input message="ns:creditLockAccountRequest" wsaw:Action="urn:creditLockAccount" />
+			<wsdl:output message="ns:creditLockAccountResponse" wsaw:Action="urn:creditLockAccountResponse" />
+		</wsdl:operation>
+		
+		<wsdl:operation name="lockAccountTxnQuery">
+			<wsdl:input message="ns:lockAccountTxnQueryRequest" wsaw:Action="urn:lockAccountTxnQuery" />
+			<wsdl:output message="ns:lockAccountTxnQueryResponse" wsaw:Action="urn:lockAccountTxnQueryResponse" />
+		</wsdl:operation>
+		
+		<wsdl:operation name="lockAccountQuery">
+			<wsdl:input message="ns:lockAccountQueryRequest" wsaw:Action="urn:lockAccountQuery" />
+			<wsdl:output message="ns:lockAccountQueryResponse" wsaw:Action="urn:lockAccountQueryResponse" />
+		</wsdl:operation>
+		
+		<wsdl:operation name="createTxnId">
+			<wsdl:input message="ns:createTxnIdRequest" wsaw:Action="urn:createTxnId" />
+			<wsdl:output message="ns:createTxnIdResponse" wsaw:Action="urn:createTxnIdResponse" />
+		</wsdl:operation>
+		
+		<wsdl:operation name="reservedTopup">
+			<wsdl:input message="ns:reservedTopupRequest" wsaw:Action="urn:reservedTopup" />
+			<wsdl:output message="ns:reservedTopupResponse" wsaw:Action="urn:reservedTopupResponse" />
+		</wsdl:operation>
+		
+		<wsdl:operation name="txnRequest">
+			<wsdl:input message="ns:txnRequest" wsaw:Action="urn:txnRequest" />
+			<wsdl:output message="ns:txnResponse" wsaw:Action="urn:txnResponse" />
+		</wsdl:operation>
+	</wsdl:portType>
+	
+	<wsdl:binding name="AirTimeServicesSoap11Binding" type="ns:AirTimeServicesPortType">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http"	style="document" />
+		<wsdl:operation name="topup">
+			<soap:operation soapAction="urn:topup" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="inquiry">
+			<soap:operation soapAction="urn:inquiry" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="createLockAccount">
+			<soap:operation soapAction="urn:createLockAccount" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="debitLockAccount">
+			<soap:operation soapAction="urn:debitLockAccount" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="creditLockAccount">
+			<soap:operation soapAction="urn:creditLockAccount" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="lockAccountTxnQuery">
+			<soap:operation soapAction="urn:lockAccountTxnQuery" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="lockAccountQuery">
+			<soap:operation soapAction="urn:lockAccountQuery" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="createTxnId">
+			<soap:operation soapAction="urn:createTxnId" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="reservedTopup">
+			<soap:operation soapAction="urn:reservedTopup" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="txnRequest">
+			<soap:operation soapAction="urn:txnRequest" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	
+	<wsdl:binding name="AirTimeServicesSoap12Binding" type="ns:AirTimeServicesPortType">
+		<soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+		<wsdl:operation name="topup">
+			<soap12:operation soapAction="urn:topup" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="inquiry">
+			<soap12:operation soapAction="urn:inquiry" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="createLockAccount">
+			<soap12:operation soapAction="urn:createLockAccount" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="debitLockAccount">
+			<soap12:operation soapAction="urn:debitLockAccount" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="creditLockAccount">
+			<soap12:operation soapAction="urn:creditLockAccount" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="lockAccountTxnQuery">
+			<soap12:operation soapAction="urn:lockAccountTxnQuery" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="lockAccountQuery">
+			<soap12:operation soapAction="urn:lockAccountQuery" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="createTxnId">
+			<soap12:operation soapAction="urn:createTxnId" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="reservedTopup">
+			<soap12:operation soapAction="urn:reservedTopup" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="txnRequest">
+			<soap12:operation soapAction="urn:txnRequest" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+	</wsdl:binding>
+	<wsdl:binding name="AirTimeServicesHttpBinding" type="ns:AirTimeServicesPortType">
+		<http:binding verb="POST" />
+		
+		<wsdl:operation name="topup">
+			<http:operation location="AirTimeServices/topup" />
+			<wsdl:input>
+				<mime:content type="text/xml" part="topup" />
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="text/xml" part="topup" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="inquiry">
+			<http:operation location="AirTimeServices/inquiry" />
+			<wsdl:input>
+				<mime:content type="text/xml" part="inquiry" />
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="text/xml" part="inquiry" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="createLockAccount">
+			<http:operation location="AirTimeServices/createLockAccount" />
+			<wsdl:input>
+				<mime:content type="text/xml" part="createLockAccount" />
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="text/xml" part="createLockAccount" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="debitLockAccount">
+			<http:operation location="AirTimeServices/debitLockAccount" />
+			<wsdl:input>
+				<mime:content type="text/xml" part="debitLockAccount" />
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="text/xml" part="debitLockAccount" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="creditLockAccount">
+			<http:operation location="AirTimeServices/creditLockAccount" />
+			<wsdl:input>
+				<mime:content type="text/xml" part="creditLockAccount" />
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="text/xml" part="creditLockAccount" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="lockAccountTxnQuery">
+			<http:operation location="AirTimeServices/lockAccountTxnQuery" />
+			<wsdl:input>
+				<mime:content type="text/xml" part="lockAccountTxnQuery" />
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="text/xml" part="lockAccountTxnQuery" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="lockAccountQuery">
+			<http:operation location="AirTimeServices/lockAccountQuery" />
+			<wsdl:input>
+				<mime:content type="text/xml" part="lockAccountQuery" />
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="text/xml" part="lockAccountQuery" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="createTxnId">
+			<http:operation location="AirTimeServices/createTxnId" />
+			<wsdl:input>
+				<mime:content type="text/xml" part="createTxnId" />
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="text/xml" part="createTxnId" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="reservedTopup">
+			<http:operation location="AirTimeServices/reservedTopup" />
+			<wsdl:input>
+				<mime:content type="text/xml" part="reservedTopup" />
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="text/xml" part="reservedTopup" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="txnRequest">
+			<http:operation location="AirTimeServices/txnRequest" />
+			<wsdl:input>
+				<mime:content type="text/xml" part="txnRequest" />
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="text/xml" part="txnRequest" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="AirTimeServices">
+		<wsdl:port name="AirTimeServicesHttpSoap11Endpoint" binding="ns:AirTimeServicesSoap11Binding">
+			<soap:address
+				location="http://localhost:8080/AirtimeGateWay/services/AirTimeServices" />
+		</wsdl:port>
+		<wsdl:port name="AirTimeServicesHttpSoap12Endpoint" binding="ns:AirTimeServicesSoap12Binding">
+			<soap12:address
+				location="http://localhost:8080/AirtimeGateWay/services/AirTimeServices" />
+		</wsdl:port>
+		<wsdl:port name="AirTimeServicesHttpEndpoint" binding="ns:AirTimeServicesHttpBinding">
+			<http:address
+				location="http://localhost:8080/AirtimeGateWay/services/AirTimeServices" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

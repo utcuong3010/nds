@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<aitime>
+	<settings>
+		<vnpay>
+			<queue-id>VNPAY_DELIVERY</queue-id>
+			<connection-type>VNPAY</connection-type>
+			<id-generator>
+				<initial-value>0</initial-value>
+				<max-value>100000</max-value>
+				<update-increment>1000</update-increment>
+				<sequence-name>VnPayID</sequence-name>
+			</id-generator>
+			<inquiry-time>180000</inquiry-time>
+			<response-time-out>60000</response-time-out>
+			<additional-info-prefix>01014</additional-info-prefix>
+			<network-login-code>001</network-login-code>
+			<network-logout-code>002</network-logout-code>
+			<network-check-code>301</network-check-code>
+			<system-trace>01</system-trace>
+			<merchant-type>6014</merchant-type>
+			<agent-code>101000000030</agent-code>
+			<secret-key>MBV553286</secret-key>
+			<topup-processing-code>000000</topup-processing-code>
+			<transaction-date-format>yyyyMMddHHmmss</transaction-date-format>
+			<trace-date-format>yyyyMMdd</trace-date-format>
+			<response-codes>
+				<response-code src="00" dest="SUCCESS">Successful transaction"</response-code>
+		        <response-code src="01" dest="TRANSACTION_FAILED">Topup error</response-code>
+		        <response-code src="08" dest="TRANSACTION_FAILED">VNPAY system does not response (timeout)</response-code>
+		        <response-code src="11" dest="MISISDN_NOT_EXISTED" >mobile phone number does not exist</response-code>
+		        <response-code src="12" dest="MISISDN_NOT_EXISTED" >Mobile phone number has not activated</response-code>
+		        <response-code src="51" dest="TRANSACTION_FAILED" >Transaction is not valid</response-code>
+		        <response-code src="61" dest="TRANSACTION_FAILED" >Topup amount is not valid</response-code>
+		        <response-code src="62" dest="SYS_NOT_ENOUGH_MONEY" >Topup amount is larger than the allowed amount</response-code>
+		        <response-code src="71" dest="TRANSACTION_FAILED" >Transaction date is not valid</response-code>
+		        <response-code src="81" dest="TRANSACTION_FAILED" >Transaction time is not valid</response-code>
+		        <response-code src="79" dest="TRANSACTION_FAILED" >MAC value is not valid</response-code>
+		        <response-code src="99" dest="TRANSACTION_FAILED" >VNPAY system is not on operation or on maintenance</response-code>
+		    </response-codes>
+		    
+			<messages>
+				<message type="0200">
+					<field num="1"    length="32"  lengthIndicator="0" name="bitmap">F0004001000100010000000000000001</field>
+					<field num="2"    length="0"   lengthIndicator="2" name="msisdn"></field>
+					<field num="3"    length="6"   lengthIndicator="0" name="processing code"></field>
+					<field num="4"    length="12"  lengthIndicator="0" name="transaction amount"></field>
+					<field num="18"   length="4"   lengthIndicator="0" name="merchant type"></field>
+					<field num="32"   length="0"   lengthIndicator="2" name="agent code"></field>
+					<field num="48"   length="0"   lengthIndicator="3" name="additional information"></field>
+					<field num="64"   length="16"  lengthIndicator="0" name="mac1"></field>
+					<field num="128"  length="16"  lengthIndicator="0" name="mac2"></field>
+				</message>
+				<message type="0210">
+					<field num="1"    length="32"  lengthIndicator="0" name="bitmap"></field>
+					<field num="2"    length="0"   lengthIndicator="2" name="msisdn"></field>
+					<field num="3"    length="6"   lengthIndicator="0" name="processing code"></field>
+					<field num="4"    length="12"  lengthIndicator="0" name="transaction amount"></field>
+					<field num="18"   length="4"   lengthIndicator="0" name="merchant type"></field>
+					<field num="32"   length="0"   lengthIndicator="2" name="agent code"></field>
+					<field num="39"   length="2"   lengthIndicator="0" name="response code"></field>
+					<field num="48"   length="0"   lengthIndicator="3" name="additional information"></field>
+					<field num="64"   length="16"  lengthIndicator="0" name="mac1"></field>
+					<field num="128"  length="16"  lengthIndicator="0" name="mac2"></field>
+				</message>
+				<message type="0800">
+					<field num="1"    length="32"  lengthIndicator="0" name="bitmap">82200001000000000400000000000000</field>
+					<field num="7"    length="10"  lengthIndicator="0" name="transaction date"></field>
+					<field num="11"   length="6"   lengthIndicator="0" name="transaction id"></field>
+					<field num="32"   length="0"   lengthIndicator="0" name="agent code"></field>
+					<field num="70"   length="3"   lengthIndicator="0" name="network code"></field>
+				</message>
+				<message type="0810">
+					<field num="1"    length="32"  lengthIndicator="0" name="bitmap"></field>
+					<field num="7"    length="10"  lengthIndicator="0" name="transaction date"></field>
+					<field num="11"   length="6"   lengthIndicator="0" name="transaction id"></field>
+					<field num="32"   length="0"   lengthIndicator="2" name="agent code"></field>
+					<field num="39"   length="2"   lengthIndicator="0" name="response code"></field>
+					<field num="70"   length="3"   lengthIndicator="0" name="network code"></field>
+				</message>
+				<message type="0210-48">
+					<field num="1"    length="0"   lengthIndicator="3" name="tag01"></field>
+					<field num="2"    length="0"   lengthIndicator="3" name="tag02"></field>
+					<field num="3"    length="0"   lengthIndicator="3" name="tag03"></field>
+					<field num="4"    length="0"   lengthIndicator="3" name="tag04"></field>
+				</message>
+			</messages>
+		</vnpay>	
+	</settings>
+</aitime>
+

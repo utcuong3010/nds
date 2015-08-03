@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="reserved_txn" >
+  <resultMap id="ReservedTxnResult" class="com.mbv.bp.common.vo.airtime.ReservedTxn" >
+    <result column="txn_id" property="txnId" jdbcType="VARCHAR" />
+    <result column="account_id" property="accountId" jdbcType="VARCHAR" />
+    <result column="system_id" property="systemId" jdbcType="VARCHAR" />
+    <result column="amount" property="amount" jdbcType="BIGINT" />
+    <result column="reference_id" property="referenceId" jdbcType="VARCHAR" />
+    <result column="operation" property="operation" jdbcType="VARCHAR" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="created_date" property="createdDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  
+  <insert id="ReservedTxn_Insert" parameterClass="com.mbv.bp.common.vo.airtime.ReservedTxn" >
+    insert into reserved_txn (txn_id, account_id, system_id, amount, reference_id, operation,
+      description, created_date)
+    values (#txnId:VARCHAR#, #accountId:VARCHAR#, #systemId:VARCHAR#, #amount:BIGINT#,
+      #referenceId:VARCHAR#, #operation:VARCHAR#, #description:VARCHAR#, #createdDate:TIMESTAMP#)
+  </insert>
+  
+  <select id="ReservedTxn_Select" resultMap="ReservedTxnResult" parameterClass="com.mbv.bp.common.vo.airtime.ReservedTxn" >
+    select txn_id, account_id, system_id, amount, reference_id, operation, description, created_date
+    from reserved_txn
+    where txn_id = #txnId:VARCHAR#
+  </select>
+
+  <select id="ReservedTxn_SearchByFilter" resultMap="ReservedTxnResult" parameterClass="com.mbv.bp.common.vo.airtime.ReservedTxnFilter" >
+  		select *
+	    from reserved_txn where 1=1
+  	  	
+  	  <isNotNull prepend=" and " property="systemId"  >
+        system_id = #systemId:VARCHAR#
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="accountId"  >
+        account_id = #accountId:VARCHAR#
+      </isNotNull> 
+      
+      <isNotNull prepend=" and " property="referenceId"  >
+       <![CDATA[
+        reference_id like '$referenceId$%'
+        ]]> 
+      </isNotNull> 
+      
+      <isNotNull prepend=" and " property="txnId"  >
+        txn_id = #txnId:VARCHAR#
+      </isNotNull> 
+      
+      <isNotNull  prepend=" and " property="fromDate" >
+      <![CDATA[
+      		( 
+      			created_date>=#fromDate:TIMESTAMP# and
+        	  	created_date<=#toDate:TIMESTAMP#
+        	)
+      ]]>   	  
+       </isNotNull> 	
+      	
+      order by created_date desc limit $startRecord$,$recordSize$	
+      	
+  </select>
+  
+  <select id="ReservedTxn_SearchByFilterCount" resultClass="int" parameterClass="com.mbv.bp.common.vo.airtime.ReservedTxnFilter" >
+  	select count(txn_id) 
+  	from reserved_txn where 1=1
+  	  	
+  	  <isNotNull prepend=" and " property="systemId"  >
+        system_id = #systemId:VARCHAR#
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="accountId"  >
+        account_id = #accountId:VARCHAR#
+      </isNotNull> 
+      
+      <isNotNull prepend=" and " property="referenceId"  >
+         <![CDATA[
+        	reference_id like '$referenceId$%'
+         ]]> 
+      </isNotNull> 
+      
+      <isNotNull prepend=" and " property="txnId"  >
+        txn_id = #txnId:VARCHAR#
+      </isNotNull> 
+      
+      <isNotNull  prepend=" and " property="fromDate" >
+      <![CDATA[
+      		( 
+      			created_date>=#fromDate:TIMESTAMP# and
+        	  	created_date<=#toDate:TIMESTAMP#
+        	)
+      ]]>   	  
+       </isNotNull> 
+  </select>	
+</sqlMap>
+  

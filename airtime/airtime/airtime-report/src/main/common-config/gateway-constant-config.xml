@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<app>
+	<gateway>
+		<airtime>
+			<error-convert>
+				<method id="topup">
+					<type id="sys-error">
+						<default-error>SYS_INTERNAL_ERROR</default-error>
+						<bypass-error>SUCCESS</bypass-error>
+						<bypass-error>INVALID_REQUEST</bypass-error>
+					</type>
+					<type id="txn-error">
+						<default-error>TRANSACTION_FAILED</default-error>
+						<bypass-error>SUCCESS</bypass-error>
+						<bypass-error>REQUEST_TIME_OUT</bypass-error>
+						<bypass-error>UNSUPPORTED_NUMBER</bypass-error>
+						<bypass-error>MISISDN_NOT_EXISTED</bypass-error>
+						<bypass-error>SYS_NOT_ENOUGH_MONEY</bypass-error>
+						<bypass-error>DELIVERY_RESPONSE_ERROR</bypass-error>
+						<bypass-error>INVALID_RESPONSE</bypass-error>
+					</type>
+				</method>
+				
+				<method id="inquiry">
+					<type id="sys-error">
+						<default-error>SYS_INTERNAL_ERROR</default-error>
+						<bypass-error>SUCCESS</bypass-error>
+						<bypass-error>TXN_NOT_EXISTED</bypass-error>
+					</type>
+					<type id="txn-error">
+						<default-error>TRANSACTION_FAILED</default-error>
+						<bypass-error>SUCCESS</bypass-error>
+						<bypass-error>REQUEST_TIME_OUT</bypass-error>
+						<bypass-error>UNSUPPORTED_NUMBER</bypass-error>
+						<bypass-error>MISISDN_NOT_EXISTED</bypass-error>
+						<bypass-error>SYS_NOT_ENOUGH_MONEY</bypass-error>
+						<bypass-error>DELIVERY_RESPONSE_ERROR</bypass-error>
+						<bypass-error>INVALID_RESPONSE</bypass-error>
+					</type>
+				</method>
+			</error-convert>
+		</airtime>
+	</gateway>
+</app>
+

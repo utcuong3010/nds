@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="DEBUG">
+        <appenders>
+                <Console name="Console" target="SYSTEM_OUT">
+                        <PatternLayout pattern="%d{yyMMdd HH:mm:ss.SSS} %-5level %logger{2} - %msg%n" />
+                </Console>
+
+                <Console name="ConsoleErr" target="SYSTEM_ERR">
+                        <PatternLayout
+                                pattern="%d{yyMMdd HH:mm:ss.SSS} [%t] %-5level %logger{2}:%L - %msg%n%ex{full}%n" />
+                </Console>
+
+                <RollingFile name="FileLog" fileName="logs/subscription.log"
+			filePattern="log/$${date:yyyy-MM}/subscription-%d{MM-dd-yyyy}-%i.log.gz">
+                        <PatternLayout>
+                                <pattern>%d{yyMMdd HH:mm:ss.SSS} %-5level %logger{2} - %msg%n</pattern>
+                        </PatternLayout>
+			<Policies>
+        			<TimeBasedTriggeringPolicy />
+        			<SizeBasedTriggeringPolicy size="100 MB"/>
+      			</Policies>
+			<DefaultRolloverStrategy max="20"/>
+                </RollingFile>
+
+                <RollingFile name="FileErr" fileName="logs/subscription.err"
+			filePattern="log/$${date:yyyy-MM}/order-process-%d{MM-dd-yyyy}-%i.err.gz">
+                        <PatternLayout>
+                                <pattern>%d{yyMMdd HH:mm:ss.SSS} [%t] %-5level %logger{2}:%L - %msg%n%ex{full}%n</pattern>
+                        </PatternLayout>
+			<Policies>
+                                <TimeBasedTriggeringPolicy />
+                                <SizeBasedTriggeringPolicy size="100 MB"/>
+                        </Policies>
+                        <DefaultRolloverStrategy max="20"/>
+                </RollingFile>
+
+        </appenders>
+        <loggers>
+		<logger name="vn.mobivi.mc" level="debug">
+			<appender-ref ref="FileLog" />
+		</logger>
+
+		<logger name="com.mbv.ac.log" level="info">
+			<!-- <appender-ref ref="eventLogger" />  -->
+			<appender-ref ref="Console" />
+		</logger>
+        <logger name="vn.mobivi.mc" level="trace">
+            <!-- <appender-ref ref="eventLogger" />  -->
+            <appender-ref ref="Console" />
+        </logger>
+        
+        <logger name="com.mbv.mca" level="debug">
+        	<ThresholdFilter level="DEBUG" onMatch="ACCEPT" onMismatch="DENY"/>
+        </logger>
+
+		<root level="info">
+			<appender-ref level="info" ref="Console" />
+			<appender-ref level="error" ref="ConsoleErr" />
+		</root>
+        </loggers>
+</configuration>

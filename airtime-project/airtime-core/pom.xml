@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.mbv.airtime</groupId>
+		<artifactId>airtime-project</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>airtime-core</artifactId>
+	<name>airtime-core</name>
+
+	<properties>
+		<airtime.main>true</airtime.main>
+	</properties>
+
+	<dependencies>
+		<!-- daemon -->
+		<dependency>
+			<groupId>com.mobivi</groupId>
+			<artifactId>daemonlib</artifactId>
+		</dependency>
+
+
+
+		<!-- test -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>		
+		</dependency>
+	</dependencies>
+
+</project>

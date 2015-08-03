@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="at_transaction">
+	<resultMap id="AtTransactionResult" class="com.mbv.bp.common.vo.airtime.AtTransaction">
+		<result column="channel_id" property="channelId" jdbcType="VARCHAR" />
+	    <result column="deleted" property="deleted" jdbcType="BIGINT" />
+	    <result column="txn_id" property="txnId" jdbcType="VARCHAR" />
+	    <result column="txn_date" property="txnDate" jdbcType="TIMESTAMP" />
+	    <result column="at_txn_id" property="atTxnId" jdbcType="BIGINT" />
+	    <result column="delivery_date" property="deliveryDate" jdbcType="TIMESTAMP" />
+	    <result column="response_date" property="responseDate" jdbcType="TIMESTAMP" />
+	    <result column="amount" property="amount" jdbcType="INTEGER" />
+	    <result column="message_id" property="messageId" jdbcType="VARCHAR" />
+	    <result column="msg_type" property="msgType" jdbcType="VARCHAR" />
+	    <result column="msisdn" property="msisdn" jdbcType="VARCHAR" />
+	    <result column="server_id" property="serverId" jdbcType="VARCHAR" />
+	    <result column="telco_id" property="telcoId" jdbcType="VARCHAR" />
+	    <result column="conn_type" property="connType" jdbcType="VARCHAR" />
+	    <result column="txn_type" property="txnType" jdbcType="VARCHAR" />
+	    <result column="time_out" property="timeOut" jdbcType="INTEGER" />
+	    <result column="status" property="status" jdbcType="VARCHAR" />
+	    <result column="error_code" property="errorCode" jdbcType="VARCHAR" />
+	    <result column="txn_status" property="txnStatus" jdbcType="VARCHAR" />
+	    <result column="created_by" property="createdBy" jdbcType="VARCHAR" />
+	    <result column="created_date" property="createdDate" jdbcType="TIMESTAMP" />
+	    <result column="updated_by" property="updatedBy" jdbcType="VARCHAR" />
+	    <result column="updated_date" property="updatedDate" jdbcType="TIMESTAMP" />
+	</resultMap>
+	
+	<resultMap id="TxnSummaryResult" class="com.mbv.bp.common.vo.airtime.AtTransaction" >
+		<result column="summary_amount" property="summaryAmount" jdbcType="BIGINT" />
+		<result column="txn_count" property="txnCount" jdbcType="INTEGER" />
+	</resultMap>
+	
+	<select id="AtTransaction_Select" resultMap="AtTransactionResult" parameterClass="com.mbv.bp.common.vo.airtime.AtTransaction">
+		select * from at_transaction 
+		where channel_id = #channelId:VARCHAR#
+      	and deleted = 0
+      	and txn_id = #txnId:VARCHAR#
+	</select>
+	
+	<select id="AtTransaction_SelectByAtTnxIds" parameterClass="com.mbv.bp.common.vo.airtime.AtTransaction"
+            resultMap="AtTransactionResult">
+        select * from at_transaction 
+		where   deleted = 0 and 
+        at_txn_id in
+        	<iterate property="atTxnIdList"
+             open="(" close=")"
+             conjunction=",">
+      			#atTxnIdList[]#
+    		</iterate>
+  		
+    </select>
+	
+	<select id="AtTransaction_SelectByAtTnxId" parameterClass="com.mbv.bp.common.vo.airtime.AtTransaction"
+            resultMap="AtTransactionResult">
+        select * from at_transaction 
+		where   deleted = 0 and at_txn_id = #atTxnId:BIGINT#
+    </select>
+	
+	<insert id="AtTransaction_Insert" parameterClass="com.mbv.bp.common.vo.airtime.AtTransaction">
+	 insert into at_transaction (channel_id, deleted, txn_id, txn_date, at_txn_id, delivery_date,
+      response_date, amount, message_id, msg_type, msisdn, server_id, telco_id, conn_type, txn_type,
+      time_out, status, error_code, txn_status, created_by, created_date, updated_by, updated_date)
+    values (#channelId:VARCHAR#, 0, #txnId:VARCHAR#, #txnDate:TIMESTAMP#,
+      #atTxnId:BIGINT#, #deliveryDate:TIMESTAMP#, #responseDate:TIMESTAMP#, #amount:INTEGER#,
+      #messageId:VARCHAR#, #msgType:VARCHAR#, #msisdn:VARCHAR#, #serverId:VARCHAR#,
+      #telcoId:VARCHAR#, #connType:VARCHAR#, #txnType:VARCHAR#, #timeOut:INTEGER#, #status:VARCHAR#,
+      #errorCode:VARCHAR#, #txnStatus:VARCHAR#, #createdBy:VARCHAR#, #createdDate:TIMESTAMP#,
+      #updatedBy:VARCHAR#, #updatedDate:TIMESTAMP#)
+	</insert>
+	
+	<update id="AtTransaction_Update" parameterClass="com.mbv.bp.common.vo.airtime.AtTransaction">
+	update at_transaction
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="txnDate" >
+        txn_date = #txnDate:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="atTxnId" >
+        at_txn_id = #atTxnId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="deliveryDate" >
+        delivery_date = #deliveryDate:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="responseDate" >
+        response_date = #responseDate:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="amount" >
+        amount = #amount:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="messageId" >
+        message_id = #messageId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="msgType" >
+        msg_type = #msgType:CHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="msisdn" >
+        msisdn = #msisdn:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="telcoId" >
+        telco_id = #telcoId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="connType" >
+        conn_type = #connType:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="timeOut" >
+        time_out = #timeOut:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="status" >
+        status = #status:CHAR#
+      </isNotNull>
+       <isNotNull prepend="," property="txnStatus" >
+        txn_status = #txnStatus:CHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="errorCode" >
+        error_code = #errorCode:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="createdBy" >
+        created_by = #createdBy:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="createdDate" >
+        created_date = #createdDate:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="updatedBy" >
+        updated_by = #updatedBy:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="updatedDate" >
+        updated_date = #updatedDate:TIMESTAMP#
+      </isNotNull>
+    </dynamic>
+    where 
+      channel_id = #channelId:VARCHAR#
+      and txn_id = #txnId:VARCHAR#
+      and deleted = 0
+  </update>
+  
+  <update id="AtTransaction_UpdateByAtTxnId" parameterClass="com.mbv.bp.common.vo.airtime.AtTransaction">
+	update at_transaction
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="txnDate" >
+        txn_date = #txnDate:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="deliveryDate" >
+        delivery_date = #deliveryDate:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="amount" >
+        amount = #amount:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="messageId" >
+        message_id = #messageId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="msgType" >
+        msg_type = #msgType:CHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="msisdn" >
+        msisdn = #msisdn:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="telcoId" >
+        telco_id = #telcoId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="connType" >
+        conn_type = #connType:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="timeOut" >
+        time_out = #timeOut:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="status" >
+        status = #status:CHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="responseDate" >
+        response_date = #responseDate:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="txnStatus" >
+        txn_status = #txnStatus:CHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="errorCode" >
+        error_code = #errorCode:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="createdBy" >
+        created_by = #createdBy:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="createdDate" >
+        created_date = #createdDate:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="updatedBy" >
+        updated_by = #updatedBy:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="updatedDate" >
+        updated_date = #updatedDate:TIMESTAMP#
+      </isNotNull>
+    </dynamic>
+    where 
+        at_txn_id = #atTxnId:BIGINT#
+      	and deleted = 0
+  </update>
+  
+  <select id="AtTransaction_SearchForCompare" resultMap="AtTransactionResult" parameterClass="com.mbv.bp.common.vo.airtime.AtTransactionFilter" >
+  	select * from  at_transaction where deleted = 0
+  	  <isNotNull prepend=" and " property="connType"  >
+        conn_type = #connType:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend=" and " property="status" >
+          status = #status:CHAR#
+      </isNotNull>
+      <isNotNull  prepend=" and " property="fromDate" >
+      <![CDATA[
+      		( 
+      			response_date>=#fromDate:TIMESTAMP# and
+        	  	response_date<=#toDate:TIMESTAMP#
+        	)
+      ]]>   	  
+       </isNotNull> 	
+      order by response_date asc limit $startRecord$,$recordSize$	
+  </select>
+  
+  <select id="AtTransaction_SearchByFilter" resultMap="AtTransactionResult" parameterClass="com.mbv.bp.common.vo.airtime.AtTransactionFilter" >
+  	select * from  at_transaction where deleted = 0
+  	  	
+  	  <isNotNull prepend=" and " property="connType"  >
+        conn_type = #connType:VARCHAR#
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="messageId"  >
+        message_id = #messageId:VARCHAR#
+      </isNotNull> 
+      
+      <isNotNull prepend=" and " property="channelId"  >
+        channel_id = #channelId:VARCHAR#
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="txnId"  >
+      <![CDATA[
+        txn_id like '$txnId$%'
+       ]]>
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="telcoId" >
+        telco_id = #telcoId:VARCHAR#
+      </isNotNull>
+      
+  	  <isNotNull prepend=" and " property="atTxnId" >
+        at_txn_id = #atTxnId:BIGINT#
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="msisdn" >
+        msisdn = #msisdn:VARCHAR#
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="amount" >
+        amount = #amount:INTEGER#
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="txnStatus" >
+      	txn_status = #txnStatus:CHAR# 
+      </isNotNull>
+      
+       <isNotNull prepend=" and " property="status" >
+          status = #status:CHAR#
+      </isNotNull>
+      
+      <isNotNull  prepend=" and " property="fromDate" >
+      <![CDATA[
+      		( 
+      			txn_date>=#fromDate:TIMESTAMP# and
+        	  	txn_date<=#toDate:TIMESTAMP#
+        	)
+      ]]>   	  
+       </isNotNull> 	
+      	
+      order by at_txn_id desc limit $startRecord$,$recordSize$	
+      	
+  </select>
+  
+  <select id="AtTransaction_SearchByFilterCount" resultClass="int" parameterClass="com.mbv.bp.common.vo.airtime.AtTransactionFilter" >
+  	select count(at_txn_id) from  at_transaction where deleted = 0
+  	  	
+  	   <isNotNull prepend=" and " property="connType"  >
+        conn_type = #connType:VARCHAR#
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="messageId"  >
+        message_id = #messageId:VARCHAR#
+      </isNotNull> 
+      
+      <isNotNull prepend=" and " property="channelId"  >
+        channel_id = #channelId:VARCHAR#
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="txnId"  >
+       <![CDATA[
+        txn_id like '$txnId$%'
+       ]]>
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="telcoId" >
+        telco_id = #telcoId:VARCHAR#
+      </isNotNull>
+      
+  	  <isNotNull prepend=" and " property="atTxnId" >
+        at_txn_id = #atTxnId:BIGINT#
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="msisdn" >
+        msisdn = #msisdn:VARCHAR#
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="amount" >
+        amount = #amount:INTEGER#
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="txnStatus" >
+        txn_status = #txnStatus:CHAR#
+      </isNotNull>
+      
+       <isNotNull prepend=" and " property="status" >
+          status = #status:CHAR#
+      </isNotNull>
+      
+      <isNotNull  prepend=" and " property="fromDate" >
+        	<![CDATA[
+      		( 
+      			txn_date>=#fromDate:TIMESTAMP# and
+        	  	txn_date<=#toDate:TIMESTAMP#
+        	)
+      		]]>   	  
+        </isNotNull> 
+      		
+  </select>
+  
+  
+  <select id="AtTransaction_SelectMaxTxnDate" resultClass="Date" >
+  	 select txn_date from at_transaction order by txn_date desc limit 1
+  </select> 
+ 
+  
+  <update id="AtTransaction_UpdateTerminate" parameterClass="com.mbv.bp.common.vo.airtime.AtTransaction">
+	update at_transaction set
+    	deleted = #deleted:BIGINT#
+     where   deleted = 0 and at_txn_id = #atTxnId:BIGINT#
+     
+  </update>
+</sqlMap>

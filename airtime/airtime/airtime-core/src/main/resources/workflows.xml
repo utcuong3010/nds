@@ -1,0 +1,220 @@
+<workflow>
+	<!--=============================== Airtime Before Queue Flow ==================================-->
+	<flow name="wfpAirTimeRequestPushToQueue">
+		<task type="task" className="com.mbv.bp.core.airtime.task.CheckSystemStatusTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.ValidateAirTimeRequest"/>
+		<task type="task" className="com.mbv.bp.core.workflow.task.GenerateTxnIdTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.DetermineProviderAndBillingTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.PreProcessTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.DbProcessTask"/>
+		<task type="task" className="com.mbv.bp.core.workflow.task.PushToQueueTask"/>
+		<task type="handler" className="com.mbv.bp.core.airtime.handler.RequestErrorHandler"/>
+	</flow>
+	
+	<!--=============================== VnPay Flow ==================================-->
+	
+	<flow name="wfpVnPayTopupRequestAfterQueue">
+		<task type="task" className="com.mbv.bp.core.airtime.task.VnPayPreprocessAfterQueueTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.VnPayDeliveryDbProcessTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.VnPayDeliveryRequestTask"/>
+		<task type="task" className="com.mbv.bp.core.workflow.task.PushToQueueTask"/>
+		<task type="handler" className="com.mbv.bp.core.airtime.handler.VnPayDeliveryErrorHandler"/>
+	</flow>
+	
+	<flow name="wfpVnPayDnProcessor">
+		<task type="task" className="com.mbv.bp.core.airtime.task.VnPayDnProcessorPreProcessTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.VnPayDnProcessorDbProcessTask"/>
+		<task type="handler" className="com.mbv.bp.core.airtime.handler.VnPayDnProcessorErrorHandler"/>
+	</flow>
+	
+	<flow name="wfpVnpayNetworkCheckPushToQueue">
+		<task type="task" className="com.mbv.bp.core.airtime.task.CheckSystemStatusTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.VnPayNwkPreprocessTask"/>
+		<task type="task" className="com.mbv.bp.core.workflow.task.PushToQueueTask"/>
+	</flow>
+	
+	<flow name="wfpVnpayNetworkCheckAfterQueue">
+		<task type="task" className="com.mbv.bp.core.airtime.task.VnPayNwkPreprocessAfterQueueTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.VnPayDeliveryRequestTask"/>
+	</flow>
+	<!--=============================== VASC Flow ==================================-->
+	
+	<flow name="wfpVascTopupGameRequestAfterQueue">
+		<task type="task" className="com.mbv.bp.core.airtime.task.vasc.VascPreprocessAfterQueueTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.vasc.VascDeliveryDbProcessTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.vasc.VascDeliveryTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.vasc.VascDbUpdateResultTask"/>
+		<task type="handler" className="com.mbv.bp.core.airtime.task.vasc.VascDnProcessorErrorHandler"/>
+	</flow>
+	<!--=============================== Vinaphone Flow ==================================-->
+	
+	<flow name="wfpVinaphoneTopupGameRequestAfterQueue">
+		<task type="task" className="com.mbv.bp.core.airtime.task.vinaphone.VinaphonePreprocessAfterQueueTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.vinaphone.VinaphoneDeliveryDbProcessTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.vinaphone.VinaphoneDeliveryTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.vinaphone.VinaphoneDbUpdateResultTask"/>
+		<task type="handler" className="com.mbv.bp.core.airtime.task.vinaphone.VinaphoneDnProcessorErrorHandler"/>
+	</flow>
+	<!--=============================== VTC Flow ==================================-->
+	
+	<flow name="wfpVtcTopupGameRequestAfterQueue">
+		<task type="task" className="com.mbv.bp.core.airtime.task.vtc.VtcPreprocessAfterQueueTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.vtc.VtcDeliveryDbProcessTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.vtc.VtcDeliveryTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.vtc.VtcDbUpdateResultTask"/>
+		<task type="handler" className="com.mbv.bp.core.airtime.task.vtc.VtcDnProcessorErrorHandler"/>
+	</flow>
+	
+	<!--=============================== VietPay Flow ==================================-->
+	
+	<flow name="wfpVietPayTopupRequestAfterQueue">
+		<task type="task" className="com.mbv.bp.core.airtime.task.vietpay.VietPayPreprocessAfterQueueTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.vietpay.VietPayDeliveryDbProcessTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.vietpay.VietPayDeliveryTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.vietpay.VietPayDbUpdateResultTask"/>
+		<task type="handler" className="com.mbv.bp.core.airtime.task.vietpay.VietPayDnProcessorErrorHandler"/>
+	</flow>
+	
+	<flow name="wfpVietPayTxnInquiryRequestPushToQueue">
+		<task type="task"    className="com.mbv.bp.core.airtime.task.CheckSystemStatusTask"/>
+		<task type="task"    className="com.mbv.bp.core.airtime.task.vietpay.VietPayTxnInquiryReqPreProcessTask"/>
+		<task type="task"    className="com.mbv.bp.core.workflow.task.PushToQueueTask"/>
+		<task type="handler" className="com.mbv.bp.core.airtime.task.vietpay.VietPayTxnInquiryReqErrorHandler"/>
+	</flow>
+	
+	<flow name="wfpVietPayTxnInquiryRequestAfterQueue">
+		<task type="task"    className="com.mbv.bp.core.airtime.task.vietpay.VietPayTxnInquiryReqDeliveryTask"/>
+		<task type="handler" className="com.mbv.bp.core.airtime.task.vietpay.VietPayTxnInquiryReqErrorHandler"/>
+	</flow>
+	
+	<!--=============================== Mobifone Flow ==================================-->
+	
+	<flow name="wfpMobiFoneTopupRequestAfterQueue">
+		<task type="task" className="com.mbv.bp.core.airtime.task.MobiFonePreprocessAfterQueueTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.MobiFoneDeliveryDbProcessTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.MobiFoneGetNextIdTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.MobiFoneDeliveryTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.MobiFoneDbUpdateResultTask"/>
+		<task type="handler" className="com.mbv.bp.core.airtime.handler.MobifoneDnProcessorErrorHandler"/>
+	</flow>
+	
+	<flow name="wfpMobiFoneBalanceRequestPushToQueue">
+		<task type="task" className="com.mbv.bp.core.airtime.task.CheckSystemStatusTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.MobiFoneBalReqPreProcessTask"/>
+		<task type="task" className="com.mbv.bp.core.workflow.task.PushToQueueTask"/>
+		<task type="handler" className="com.mbv.bp.core.airtime.handler.MobiFoneBalReqErrorHandler"/>
+	</flow>
+	
+	<flow name="wfpMobiFoneBalanceRequestAfterQueue">
+		<task type="task" className="com.mbv.bp.core.airtime.task.MobiFoneBalReqDeliveryTask"/>
+		<task type="handler" className="com.mbv.bp.core.airtime.handler.MobiFoneBalReqErrorHandler"/>
+	</flow>
+	
+	<flow name="wfpMobiFoneChangePwdRequestPushToQueue">
+		<task type="task" className="com.mbv.bp.core.airtime.task.CheckSystemStatusTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.MobiFoneChangePwdPreProcessTask"/>
+		<task type="task" className="com.mbv.bp.core.workflow.task.PushToQueueTask"/>
+		<task type="handler" className="com.mbv.bp.core.airtime.handler.MobiFoneBalReqErrorHandler"/>
+	</flow>
+	
+	<flow name="wfpMobiFoneChangePwdRequestAfterQueue">
+		<task type="task" className="com.mbv.bp.core.airtime.task.MobiFoneChangePwdDeliveryTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.MobiFoneResetSessionTask"/>
+		<task type="handler" className="com.mbv.bp.core.airtime.handler.MobiFoneBalReqErrorHandler"/>
+	</flow>
+	
+	<flow name="wfpMobiFoneNextIdCheckPushToQueue">
+		<task type="task" className="com.mbv.bp.core.airtime.task.CheckSystemStatusTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.MobifoneNextIdCheckPreprocessTask"/>
+		<task type="task" className="com.mbv.bp.core.workflow.task.PushToQueueTask"/>
+	</flow>
+	
+	<flow name="wfpMobiFoneNextIdCheckAfterQueue">
+		<task type="task" className="com.mbv.bp.core.airtime.task.MobifoneNextIdDeliveryTask"/>
+	</flow>
+	<!--=============================== AnyPay Flow ==================================-->
+	<flow name="wfpAnypayTransferRequest">
+		<task type="task" className="com.mbv.bp.core.workflow.task.GenerateTxnIdTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.anypay.AnypayTransferRequestTask"/>
+	</flow>
+	<!--=============================== Viettel Flow ==================================-->
+	
+	<flow name="wfpViettelTopupRequestAfterQueue">
+		<task type="task" className="com.mbv.bp.core.airtime.task.ViettelPreprocessAfterQueueTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.ViettelDeliveryDbProcessTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.ViettelDeliveryRequestTask"/>
+		<task type="handler" className="com.mbv.bp.core.airtime.handler.ViettelDeliveryErrorHandler"/>
+	</flow>
+	
+	<flow name="wfpViettelDnProcessor">
+		<task type="task" className="com.mbv.bp.core.airtime.task.ViettelDnProcessorTask"/>
+	</flow>
+	
+	<flow name="wfpViettelNetworkCheckPushToQueue">
+		<task type="task" className="com.mbv.bp.core.airtime.task.CheckSystemStatusTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.ViettelNwkPreprocessTask"/>
+		<task type="task" className="com.mbv.bp.core.workflow.task.PushToQueueTask"/>
+	</flow>
+	
+	<flow name="wfpViettelNetworkCheckAfterQueue">
+		<task type="task" className="com.mbv.bp.core.airtime.task.VnPayNwkPreprocessAfterQueueTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.ViettelDeliveryRequestTask"/>
+	</flow>
+	
+	<!--=============================== Inquiry Flow ==================================-->	
+	
+	<flow name="wfpAsyncReqInquiryTxn">
+		<task type="task" className="com.mbv.bp.core.airtime.task.CheckSystemStatusTask"/>
+		<task type="task" className="com.mbv.bp.core.airtime.task.AsynReqInquiryTxnTask"/>
+	</flow>
+	
+	<flow name="wfpAirTimeInquiryTransaction">
+		<task type="task" className="com.mbv.bp.core.airtime.task.TransactionInquiryTask"/>
+	</flow>
+	
+	<!--=============================== Cdr forward flow ==============================-->
+	<flow name="cdrProcessorWfp">
+		<task type="task" className="com.mbv.bp.core.airtime.task.MobiFoneProcessCdrTask"/>
+	</flow>
+	<!--===============================Recache properties ==============================-->
+	<flow name="recachePropertiesWfp">
+		<task type="task" className="com.mbv.bp.core.airtime.task.RecachePropertiesTask"/>
+	</flow>
+	
+	
+	<!--===============================create lock amount ==============================-->
+	<flow name="createLockAccountWfp">
+		<task type="task" className="com.mbv.bp.core.airtime.task.CheckSystemStatusTask"/>
+		<task type="task" className="com.mbv.bp.core.task.billing.CheckLockIdTask"/>
+		<task type="task" className="com.mbv.bp.core.workflow.task.GenerateTxnIdTask"/>
+		<task type="task" className="com.mbv.bp.core.task.billing.CreateLockAmountTask"/>
+	</flow>
+	<!--===============================credit amount ==============================-->
+	<flow name="creditLockAmountWfp">
+		<task type="task" className="com.mbv.bp.core.airtime.task.CheckSystemStatusTask"/>
+		<task type="task" className="com.mbv.bp.core.task.billing.CheckLockAccountTxnIdTask"/>
+		<task type="task" className="com.mbv.bp.core.task.billing.CreditAmountTask"/>
+	</flow>
+	<!--===============================debit amount ==============================-->
+	<flow name="debitLockAmountWfp">
+		<task type="task" className="com.mbv.bp.core.airtime.task.CheckSystemStatusTask"/>
+		<task type="task" className="com.mbv.bp.core.task.billing.CheckLockAccountTxnIdTask"/>
+		<task type="task" className="com.mbv.bp.core.task.billing.DebitAmountTask"/>
+	</flow>
+	<!--=============================== create txn id ==============================-->
+	<flow name="generateTxnIdWfp">
+		<task type="task" className="com.mbv.bp.core.airtime.task.CheckSystemStatusTask"/>
+		<task type="task" className="com.mbv.bp.core.workflow.task.GenerateTxnIdTask"/>
+		<task type="task" className="com.mbv.bp.core.task.billing.GenerateTxnIdResultTask"/>
+	</flow>
+	<!--=============================== lock account query ==============================-->
+	<flow name="lockAccountQueryWfp">
+		<task type="task" className="com.mbv.bp.core.airtime.task.CheckSystemStatusTask"/>
+		<task type="task" className="com.mbv.bp.core.task.billing.LockAccountQueryResultTask"/>
+	</flow>
+	<!--=============================== lock account txn query==============================-->
+	<flow name="lockAccountTxnQueryWfp">
+		<task type="task" className="com.mbv.bp.core.airtime.task.CheckSystemStatusTask"/>
+		<task type="task" className="com.mbv.bp.core.task.billing.LockAccountTxnQueryResultTask"/>
+	</flow>
+</workflow> 

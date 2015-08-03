@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://gateway.airtime.mbv.com"
+	xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+	targetNamespace="http://gateway.airtime.mbv.com">
+	<wsdl:types>
+		<xs:schema attributeFormDefault="qualified"
+			elementFormDefault="qualified" targetNamespace="http://gateway.airtime.mbv.com">
+			
+			<xs:element name="topup">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="txnId" nillable="false"	type="xs:string" />
+						<xs:element name="txnDate" nillable="false" type="xs:dateTime" />
+						<xs:element name="channelId" nillable="false" type="xs:string" />
+						<xs:element name="msisdn" nillable="false" type="xs:string" />
+						<xs:element name="amount" nillable="false" type="xs:int" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="topupResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="errorCode" nillable="false" type="xs:string" />
+						<xs:element name="errorMessage" nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="inquiry">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="txnId" nillable="false" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="inquiryResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="txnId" nillable="true"	type="xs:string" />
+						<xs:element name="txnDate" nillable="true" type="xs:dateTime" />
+						<xs:element name="txnStatus" nillable="true"	type="xs:string" />
+						<xs:element name="txnError" nillable="true"	type="xs:string" />
+						<xs:element name="errorCode" nillable="false" type="xs:string" />
+						<xs:element name="errorMessage" nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+		</xs:schema>
+	</wsdl:types>
+	<!-- topup  -->
+	<wsdl:message name="topupResquest">
+		<wsdl:part name="parameters" element="ns:topup" />
+	</wsdl:message>
+	<wsdl:message name="topupResponse">
+		<wsdl:part name="parameters" element="ns:topupResponse" />
+	</wsdl:message>
+	<!-- inquiry  -->
+	<wsdl:message name="inquiryResquest">
+		<wsdl:part name="parameters" element="ns:inquiry" />
+	</wsdl:message>
+	<wsdl:message name="inquiryResponse">
+		<wsdl:part name="parameters" element="ns:inquiryResponse" />
+	</wsdl:message>
+ 	<wsdl:portType name="AirTimeServicesPortType">
+		<wsdl:operation name="topup">
+			<wsdl:input message="ns:topupResquest" wsaw:Action="urn:topup" />
+			<wsdl:output message="ns:topupResponse" wsaw:Action="urn:topupResponse" />
+		</wsdl:operation>
+		<wsdl:operation name="inquiry">
+			<wsdl:input message="ns:inquiryResquest" wsaw:Action="urn:inquiry" />
+			<wsdl:output message="ns:inquiryResponse" wsaw:Action="urn:inquiryResponse" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="AirTimeServicesSoap11Binding" type="ns:AirTimeServicesPortType">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http"
+			style="document" />
+		<wsdl:operation name="topup">
+			<soap:operation soapAction="urn:topup" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="inquiry">
+			<soap:operation soapAction="urn:inquiry" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="AirTimeServicesSoap12Binding" type="ns:AirTimeServicesPortType">
+		<soap12:binding transport="http://schemas.xmlsoap.org/soap/http"
+			style="document" />
+		<wsdl:operation name="topup">
+			<soap12:operation soapAction="urn:topup" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="inquiry">
+			<soap12:operation soapAction="urn:inquiry" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="AirTimeServicesHttpBinding" type="ns:AirTimeServicesPortType">
+		<http:binding verb="POST" />
+		<wsdl:operation name="topup">
+			<http:operation location="AirTimeServices/topup" />
+			<wsdl:input>
+				<mime:content type="text/xml" part="topup" />
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="text/xml" part="topup" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="inquiry">
+			<http:operation location="AirTimeServices/inquiry" />
+			<wsdl:input>
+				<mime:content type="text/xml" part="inquiry" />
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="text/xml" part="inquiry" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="AirTimeServices">
+		<wsdl:port name="AirTimeServicesHttpSoap11Endpoint" binding="ns:AirTimeServicesSoap11Binding">
+			<soap:address
+				location="http://localhost:8080/AirtimeGateWay/services/AirTimeServices" />
+		</wsdl:port>
+		<wsdl:port name="AirTimeServicesHttpSoap12Endpoint" binding="ns:AirTimeServicesSoap12Binding">
+			<soap12:address
+				location="http://localhost:8080/AirtimeGateWay/services/AirTimeServices" />
+		</wsdl:port>
+		<wsdl:port name="AirTimeServicesHttpEndpoint" binding="ns:AirTimeServicesHttpBinding">
+			<http:address
+				location="http://localhost:8080/AirtimeGateWay/services/AirTimeServices" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

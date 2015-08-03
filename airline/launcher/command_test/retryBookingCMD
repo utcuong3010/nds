@@ -1,0 +1,22 @@
+URL: 
+	http://localhost:8181/AirService/getItinerary
+	
+DATA:
+	{
+	    "agentInfo": {
+	        "address": "104 Mai Thi Luu, Q1",
+	        "city": "TP Ho Chi Minh",
+	        "mobile": "0965292512",
+	        "email": "support@mobivi.com",
+	        "agentId": "mca",
+	        "userId": "admin-mca"
+	    },
+	    "fareInfos": [
+	        {
+	            "vendor": "BL"
+	        }
+	    ],
+	    "ticketingInfo": {
+	        "reservationCode": "DBNPVJ"
+	    }
+	}

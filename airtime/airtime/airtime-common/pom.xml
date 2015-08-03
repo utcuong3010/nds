@@ -1,0 +1,323 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.mobivi.airtime</groupId>
+		<artifactId>airtime</artifactId>
+		<version>0.1.0</version>
+		<relativePath>../airtime/pom.xml</relativePath>
+	</parent>
+	<artifactId>airtime-common</artifactId>
+	<name>airtime-common</name>
+	<version>0.1.0</version>
+	<packaging>jar</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.jibx</groupId>
+			<artifactId>jibx-run</artifactId>
+			<version>1.1.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jms</artifactId>
+			<version>2.5.6.SEC01</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-spring</artifactId>
+			<version>5.5.0</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-daemon</groupId>
+			<artifactId>commons-daemon</artifactId>
+			<version>1.0.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>2.5.6.SEC01</version>
+		</dependency>
+		<dependency>
+			<groupId>com.mobivi.sysmod</groupId>
+			<artifactId>common-module</artifactId>
+			<version>0.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.mobivi.sysmod</groupId>
+			<artifactId>id-generator</artifactId>
+			<version>0.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.6.2</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-validator</groupId>
+			<artifactId>commons-validator</artifactId>
+			<version>1.4.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-configuration</groupId>
+			<artifactId>commons-configuration</artifactId>
+			<version>1.4</version>
+			<scope>compile</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>xerces</groupId>
+					<artifactId>xerces</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.ibatis</groupId>
+			<artifactId>ibatis-sqlmap</artifactId>
+			<version>2.3.4.726</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>0.9.9-6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-asl</artifactId>
+			<version>0.9.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.protobuf</groupId>
+			<artifactId>protobuf-java</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>1.7.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>bcprov-jdk16</artifactId>
+			<version>1.46</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.axis</groupId>
+			<artifactId>axis</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.xml</groupId>
+			<artifactId>jaxrpc-api</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-discovery</groupId>
+			<artifactId>commons-discovery</artifactId>
+			<version>0.5</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<finalName>${final.jar.name}</finalName>
+		<resources>
+			<resource>
+				<filtering>false</filtering>
+				<directory>src/main/resources</directory>
+				<excludes>
+					<exclude>**</exclude>
+					<exclude>*/**</exclude>
+				</excludes>
+			</resource>
+		</resources>
+
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.0.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.jibx</groupId>
+				<artifactId>maven-jibx-plugin</artifactId>
+				<version>1.1.5</version>
+				<configuration>
+					<directory>src/main/jibx</directory>
+					<includes>
+						<includes>*-binding.xml</includes>
+					</includes>
+					<excludes>
+						<exclude>template-binding.xml</exclude>
+					</excludes>
+					<verbose>true</verbose>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>process-classes</phase>
+						<goals>
+							<goal>bind</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.1</version>
+				<executions>
+					<execution>
+						<id>copy-package</id>
+						<phase>integration-test</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<property name="deploy_path" value="${basedir}/../airtime-launcher" />
+								<copy todir="${deploy_path}/src/main/config" overwrite="true">
+									<fileset dir="src/main/resources" includes="**/*.*" />
+								</copy>
+								<property name="deploy_path_gateway" value="${basedir}/../airtime-gateway" />
+								<copy todir="${deploy_path_gateway}/src/main/config"
+									overwrite="true">
+									<fileset dir="src/main/resources" includes="**/*.*" />
+								</copy>
+								<property name="deploy_path_mobi_frontend" value="${basedir}/../airtime-mobi-frontend" />
+								<copy todir="${deploy_path_mobi_frontend}/src/main/config"
+									overwrite="true">
+									<fileset dir="src/main/resources" includes="**/*.*" />
+								</copy>
+								<property name="deploy_path_frontend" value="${basedir}/../airtime-frontend" />
+								<copy todir="${deploy_path_frontend}/src/main/config"
+									overwrite="true">
+									<fileset dir="src/main/resources" includes="**/*.*" />
+								</copy>
+								<property name="deploy_path_report" value="${basedir}/../airtime-report" />
+								<copy todir="${deploy_path_report}/src/main/common-config"
+									overwrite="true">
+									<fileset dir="src/main/resources" includes="**/*.*" />
+								</copy>
+								<property name="deploy_path_util" value="${basedir}/../airtime-util" />
+								<copy todir="${deploy_path_util}/src/main/config"
+									overwrite="true">
+									<fileset dir="src/main/resources" includes="**/*.*" />
+								</copy>
+								<!-- property name="deploy_path_anypay" value="${basedir}/../airtime-anypay"/> 
+									<copy todir="${deploy_path_anypay}/src/main/config" overwrite="true" > <fileset 
+									dir="src/main/resources" includes="**/*.*" /> </copy -->
+								<property name="deploy_path_sim_gateway" value="${basedir}/../sim-gateway" />
+								<copy todir="${deploy_path_sim_gateway}/src/main/config"
+									overwrite="true">
+									<fileset dir="src/main/resources" includes="**/*.*" />
+								</copy>
+
+							</tasks>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+	</build>
+
+	<repositories>
+		<repository>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<id>internal</id>
+			<url>${archiva.internal}</url>
+		</repository>
+		<repository>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<id>snapshots</id>
+			<url>${archiva.snapshots}</url>
+		</repository>
+	</repositories>
+
+
+
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<property>
+					<name>!env</name>
+				</property>
+			</activation>
+			<properties>
+				<archiva.internal>http://10.120.8.88:8080/nexus/content/repositories/releases/</archiva.internal>
+
+				<archiva.snapshots>http://10.120.8.88:8080/nexus/content/repositories/snapshots</archiva.snapshots>
+				<maven.test.skip>true</maven.test.skip>
+				<jdk.version>1.6</jdk.version>
+				<final.jar.name>${project.artifactId}-${project.version}</final.jar.name>
+			</properties>
+			<distributionManagement>
+				<repository>
+					<id>archiva.internal</id>
+					<name>Internal Release Repository</name>
+					<url>${archiva.snapshots}</url>
+				</repository>
+				<snapshotRepository>
+					<id>archiva.snapshots</id>
+					<name>Internal Snapshot Repository</name>
+					<url>${archiva.snapshots}</url>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+
+		<profile>
+			<id>pro</id>
+			<activation>
+				<property>
+					<name>env</name>
+				</property>
+			</activation>
+			<properties>
+				<archiva.internal>http://10.120.8.88:8080/nexus/content/repositories/releases/</archiva.internal>
+
+				<archiva.snapshots>http://10.120.8.88:8080/nexus/content/repositories/snapshots</archiva.snapshots>
+				<maven.test.skip>true</maven.test.skip>
+				<jdk.version>1.6</jdk.version>
+				<final.jar.name>${project.artifactId}-${project.version}</final.jar.name>
+			</properties>
+			<distributionManagement>
+				<repository>
+					<id>archiva.internal</id>
+					<name>Internal Release Repository</name>
+					<url>${archiva.internal}</url>
+				</repository>
+				<snapshotRepository>
+					<id>archiva.snapshots</id>
+					<name>Internal Snapshot Repository</name>
+					<url>${archiva.internal}</url>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+	</profiles>
+</project>

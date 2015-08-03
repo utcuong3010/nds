@@ -1,0 +1,626 @@
+{
+    "_id": "57cb8b8009cafacf017187fc5d16807a",
+    "created": {
+        "$date": "2014-01-21T09:18:23.075Z"
+    },
+    "priceInfos": [
+        {
+            "priceOptions": [
+                {
+                    "classCode": "J",
+                    "className": "Business Flex",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 4130000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 3083000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 407000
+                        }
+                    ]
+                },
+                {
+                    "classCode": "M",
+                    "className": "Eco Flex",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 2997000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 2234000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 294000
+                        }
+                    ]
+                },
+                {
+                    "classCode": "N",
+                    "className": "Saver Flex",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 2040000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 1515000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 198000
+                        }
+                    ]
+                },
+                {
+                    "classCode": "R",
+                    "className": "Saver",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 1765000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 1310000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 171000
+                        }
+                    ]
+                }
+            ],
+            "fareInfo": {
+                "departureDate": {
+                    "$date": "2014-02-27T03:45:00.000Z"
+                },
+                "arrivalDate": {
+                    "$date": "2014-02-27T05:40:00.000Z"
+                },
+                "originCode": "HPH",
+                "destinationCode": "SGN",
+                "vendor": "VN",
+                "flightCode": "VN1183"
+            }
+        },
+        {
+            "priceOptions": [
+                {
+                    "classCode": "J",
+                    "className": "Business Flex",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 4130000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 3083000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 407000
+                        }
+                    ]
+                },
+                {
+                    "classCode": "M",
+                    "className": "Eco Flex",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 2997000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 2234000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 294000
+                        }
+                    ]
+                },
+                {
+                    "classCode": "N",
+                    "className": "Saver Flex",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 2040000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 1515000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 198000
+                        }
+                    ]
+                },
+                {
+                    "classCode": "R",
+                    "className": "Saver",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 1765000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 1310000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 171000
+                        }
+                    ]
+                },
+                {
+                    "classCode": "E",
+                    "className": "Super Saver",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 1435000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 1062000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 138000
+                        }
+                    ]
+                }
+            ],
+            "fareInfo": {
+                "departureDate": {
+                    "$date": "2014-02-27T09:40:00.000Z"
+                },
+                "arrivalDate": {
+                    "$date": "2014-02-27T11:35:00.000Z"
+                },
+                "originCode": "HPH",
+                "destinationCode": "SGN",
+                "vendor": "VN",
+                "flightCode": "VN1187"
+            }
+        },
+        {
+            "priceOptions": [
+                {
+                    "classCode": "J",
+                    "className": "Business Flex",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 4130000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 3083000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 407000
+                        }
+                    ]
+                },
+                {
+                    "classCode": "M",
+                    "className": "Eco Flex",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 2997000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 2234000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 294000
+                        }
+                    ]
+                },
+                {
+                    "classCode": "N",
+                    "className": "Saver Flex",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 2040000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 1515000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 198000
+                        }
+                    ]
+                },
+                {
+                    "classCode": "R",
+                    "className": "Saver",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 1765000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 1310000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 171000
+                        }
+                    ]
+                },
+                {
+                    "classCode": "E",
+                    "className": "Super Saver",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 1435000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 1062000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 138000
+                        }
+                    ]
+                }
+            ],
+            "fareInfo": {
+                "departureDate": {
+                    "$date": "2014-02-27T11:30:00.000Z"
+                },
+                "arrivalDate": {
+                    "$date": "2014-02-27T13:25:00.000Z"
+                },
+                "originCode": "HPH",
+                "destinationCode": "SGN",
+                "vendor": "VN",
+                "flightCode": "VN1189"
+            }
+        },
+        {
+            "priceOptions": [
+                {
+                    "classCode": "J",
+                    "className": "Business Flex",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 4130000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 3083000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 407000
+                        }
+                    ]
+                },
+                {
+                    "classCode": "M",
+                    "className": "Eco Flex",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 2997000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 2234000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 294000
+                        }
+                    ]
+                },
+                {
+                    "classCode": "N",
+                    "className": "Saver Flex",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 2040000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 1515000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 198000
+                        }
+                    ]
+                },
+                {
+                    "classCode": "R",
+                    "className": "Saver",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 1765000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 1310000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 171000
+                        }
+                    ]
+                },
+                {
+                    "classCode": "E",
+                    "className": "Super Saver",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 1435000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 1062000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 138000
+                        }
+                    ]
+                }
+            ],
+            "fareInfo": {
+                "departureDate": {
+                    "$date": "2014-02-25T00:55:00.000Z"
+                },
+                "arrivalDate": {
+                    "$date": "2014-02-25T02:55:00.000Z"
+                },
+                "originCode": "SGN",
+                "destinationCode": "HPH",
+                "vendor": "VN",
+                "flightCode": "VN1182"
+            }
+        },
+        {
+            "priceOptions": [
+                {
+                    "classCode": "J",
+                    "className": "Business Flex",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 4130000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 3083000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 407000
+                        }
+                    ]
+                },
+                {
+                    "classCode": "M",
+                    "className": "Eco Flex",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 2997000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 2234000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 294000
+                        }
+                    ]
+                },
+                {
+                    "classCode": "N",
+                    "className": "Saver Flex",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 2040000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 1515000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 198000
+                        }
+                    ]
+                },
+                {
+                    "classCode": "R",
+                    "className": "Saver",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 1765000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 1310000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 171000
+                        }
+                    ]
+                },
+                {
+                    "classCode": "E",
+                    "className": "Super Saver",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 1435000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 1062000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 138000
+                        }
+                    ]
+                }
+            ],
+            "fareInfo": {
+                "departureDate": {
+                    "$date": "2014-02-25T06:50:00.000Z"
+                },
+                "arrivalDate": {
+                    "$date": "2014-02-25T08:50:00.000Z"
+                },
+                "originCode": "SGN",
+                "destinationCode": "HPH",
+                "vendor": "VN",
+                "flightCode": "VN1186"
+            }
+        },
+        {
+            "priceOptions": [
+                {
+                    "classCode": "J",
+                    "className": "Business Flex",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 4130000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 3083000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 407000
+                        }
+                    ]
+                },
+                {
+                    "classCode": "M",
+                    "className": "Eco Flex",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 2997000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 2234000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 294000
+                        }
+                    ]
+                },
+                {
+                    "classCode": "N",
+                    "className": "Saver Flex",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 2040000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 1515000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 198000
+                        }
+                    ]
+                },
+                {
+                    "classCode": "R",
+                    "className": "Saver",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 1765000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 1310000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 171000
+                        }
+                    ]
+                },
+                {
+                    "classCode": "E",
+                    "className": "Super Saver",
+                    "priceDetail": [
+                        {
+                            "passengerType": "ADT",
+                            "price": 1435000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "price": 1062000
+                        },
+                        {
+                            "passengerType": "INF",
+                            "price": 138000
+                        }
+                    ]
+                }
+            ],
+            "fareInfo": {
+                "departureDate": {
+                    "$date": "2014-02-25T08:40:00.000Z"
+                },
+                "arrivalDate": {
+                    "$date": "2014-02-25T10:40:00.000Z"
+                },
+                "originCode": "SGN",
+                "destinationCode": "HPH",
+                "vendor": "VN",
+                "flightCode": "VN1188"
+            }
+        }
+    ]
+}

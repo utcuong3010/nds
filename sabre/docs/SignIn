@@ -1,0 +1,101 @@
+===== SIGN-IN SCENARIOS =====
+
+I) Success
+SEND: 
+SI*142096
+RECEIVE:
+SI<                >
+
+RECEIVE:
+AGENT SIGN IN
+ 
+CURRENT PASSCODE<........>  ID  <142096>  SUF  <VN   >
+ 
+ DUTY CODE    <.> AREA   <*>   NEW PASSCODE <........>
+ 
+ 
+
+SEND: 
+AG<MBVSC746><142096><APK  ><.><A><........>
+RECEIVE:
+
+
+RECEIVE:
+OPK.OPK4AM1...A..VN
+ 
+* NOTICE - 5 DAYS UNTIL YOUR PASSCODE MUST BE CHANGED
+TO CHANGE YOUR PASSCODE
+SIGN-IN AGAIN, SUPPLY CURRENT AND NEW PASSCODE.
+03JAN
+**PHUBAI-HUI ARPT RE-OPEN FROM 20SEP13.PAX TO/FR DAD TRANSFER
+TO HUI SHALL BE FOLLOWED CIRCULAR 1893/TCTHK-TTBSP DATED 30JUL 
+**FR 06MAR13 TO 31JAN14,*THE FAMILY DEALS* APPLIED IN VIETNAM
+ONLY-BUY 1 ECO CLS ADL TICKET GET 1 FOC FOR OWN CHD/INF.*****
+TU 01/04/13 CODE-VCL-SE GAN VOI TP CHU-LAI THAY CHO TP TAM-KY.
+CITY CODE-VCL-BE IDENTIFIED AS CHULAI ISO TAMKY ON/AFT 01APR13 
+*CODE CXR WILL BE RPL FOR NHA IN RESERVATION FR 10MAY13. ****
+
+========================================================================================================
+II) Invalid username or password
+SEND:
+SI*11111AB
+RECEIVE:
+SI<                >
+
+RECEIVE:
+AGENT SIGN IN
+ 
+CURRENT PASSCODE<........>  ID  <001111>  SUF  <1AB  >
+ 
+ DUTY CODE    <.> AREA   <*>   NEW PASSCODE <........>
+ 
+ 
+
+SEND:
+AG<><11111AB><APK  ><.><A><........>
+RECEIVE:
+SI<                >
+
+RECEIVE:
+AGENT SIGN IN
+ 
+CURRENT PASSCODE<........>  ID  <000000>  SUF  <  >
+ 
+ DUTY CODE    <.> AREA   <A>   NEW PASSCODE <........>
+ 
+INVALID AGENT ID OR PASSCODE
+
+========================================================================================================
+
+III) Password Expired
+SEND:
+SI*142096
+RECEIVE:
+SI<                >
+
+RECEIVE: 
+AGENT SIGN IN
+ 
+CURRENT PASSCODE<........>  ID  <142096>  SUF  <VN   >
+ 
+ DUTY CODE    <.> AREA   <*>   NEW PASSCODE <........>
+ 
+ 
+
+SEND: 
+AG<MBVSC746><142096><APK  ><.><A><........>
+RECEIVE: 
+SI<                >
+
+RECEIVE:
+AGENT SIGN IN
+ 
+CURRENT PASSCODE<........>  ID  <142096>  SUF  <APK  >
+ 
+ DUTY CODE    <.> AREA   <A>   NEW PASSCODE <........>
+ 
+YOUR PASSCODE MUST BE CHANGED.
+TO CHANGE YOUR PASSCODE
+SIGN-IN AGAIN, SUPPLY CURRENT AND NEW PASSCODE.
+
+

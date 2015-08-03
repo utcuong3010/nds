@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	xmlns:rabbit="http://www.springframework.org/schema/rabbit"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/rabbit 
+		http://www.springframework.org/schema/rabbit/spring-rabbit-1.1.xsd">
+
+
+	<context:property-placeholder location="file:${airline.configuration}" />
+
+
+	<import resource="mongo-context.xml" />
+	<import resource="rabbit-context.xml" />
+
+	<!--scanning repository -->
+	<context:component-scan base-package="com.mbv.airline.common.support" />
+	
+	<!-- email -->
+	<context:component-scan base-package="com.mbv.airline.common.email" />
+
+	<!-- scanning actors system -->
+	<context:component-scan base-package="com.mbv.airline.actors" />
+
+	<!-- init application context for actor system -->
+	<bean class="com.mbv.airline.actors.AirlineServiceApplicationContext"
+		init-method="start" destroy-method="stop">
+		<property name="masterProps">
+			<bean factory-method="create"
+				class="com.mbv.airline.actors.ServiceMasterPropsFactory">
+				<constructor-arg>
+					<list>
+						<ref bean="jetstarWorkerFactory" />
+						<ref bean="vietjetWorkerFactory" />
+					</list>
+				</constructor-arg>
+				<constructor-arg ref="rabbitTemplate" />
+			</bean>
+		</property>
+	</bean>
+
+
+	<!-- checking tool context -->
+	<import resource="checking-tool-context.xml" />
+	
+
+</beans>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.mobivi.airtime</groupId>
+	<artifactId>airtime</artifactId>
+	<packaging>pom</packaging>
+	<name>mobivi-airtime</name>
+	<version>0.1.0</version>
+	<description>Mobivi Airtime</description>
+
+	<mailingLists>
+		<mailingList>
+			<name>Maven User List</name>
+			<subscribe>users-subscribe@maven.apache.org</subscribe>
+			<unsubscribe>users-unsubscribe@maven.apache.org</unsubscribe>
+			<post>users@maven.apache.org</post>
+			<archive>http://mail-archives.apache.org/mod_mbox/maven-users</archive>
+			<otherArchives>
+				<otherArchive>http://www.mail-archive.com/users@maven.apache.org/</otherArchive>
+				<otherArchive>http://www.nabble.com/Maven---Users-f178.html</otherArchive>
+			</otherArchives>
+		</mailingList>
+	</mailingLists>
+
+	<licenses>
+		<license>
+			<name>Licensed to Mobivi</name>
+			<url>http://www.mobivi.vn/</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.0.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+
+	</build>
+	<modules>
+		<module>../airtime-common</module>
+		<module>../airtime-core</module>
+		<module>../airtime-queue</module>
+		<module>../airtime-anypay</module>
+		<module>../airtime-frontend</module>
+		<module>../airtime-gateway</module>
+		<module>../airtime-launcher</module>
+	</modules>
+	<repositories>
+		<repository>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<id>internal</id>
+			<url>${archiva.internal}</url>
+		</repository>
+		<repository>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<id>snapshots</id>
+			<url>${archiva.snapshots}</url>
+		</repository>
+	</repositories>
+
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<property>
+					<name>!env</name>
+				</property>
+			</activation>
+			<properties>
+				<archiva.internal>http://10.120.8.88:8080/nexus/content/repositories/releases/</archiva.internal>
+				<archiva.snapshots>http://10.120.8.88:8080/nexus/content/repositories/snapshots/</archiva.snapshots>
+				<maven.test.skip>true</maven.test.skip>
+				<jdk.version>1.6</jdk.version>
+				<final.jar.name>${project.artifactId}-${project.version}</final.jar.name>
+			</properties>
+			<distributionManagement>
+				<repository>
+					<id>archiva.internal</id>
+					<name>Internal Release Repository</name>
+					<url>${archiva.snapshots}</url>
+				</repository>
+				<snapshotRepository>
+					<id>archiva.snapshots</id>
+					<name>Internal Snapshot Repository</name>
+					<url>${archiva.snapshots}</url>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+
+		<profile>
+			<id>pro</id>
+			<activation>
+				<property>
+					<name>env</name>
+				</property>
+			</activation>
+			<properties>
+				<archiva.internal>http://10.120.8.10:8080/archiva/repository/internal/</archiva.internal>
+				<archiva.snapshots>http://10.120.8.10:8080/archiva/repository/snapshots/</archiva.snapshots>
+				<maven.test.skip>true</maven.test.skip>
+				<jdk.version>1.6</jdk.version>
+				<final.jar.name>${project.artifactId}-${project.version}</final.jar.name>
+			</properties>
+			<distributionManagement>
+				<repository>
+					<id>archiva.internal</id>
+					<name>Internal Release Repository</name>
+					<url>${archiva.internal}</url>
+				</repository>
+				<snapshotRepository>
+					<id>archiva.snapshots</id>
+					<name>Internal Snapshot Repository</name>
+					<url>${archiva.internal}</url>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+	</profiles>
+</project>
+

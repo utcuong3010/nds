@@ -1,0 +1,1683 @@
+2015-03-07 03:08:15 INFO  payAgoda:40 - searchInfo
+2015-03-07 03:12:45 INFO  payAgoda:40 - searchInfo
+2015-03-07 03:13:48 INFO  payAgoda:42 - chooseRoom
+2015-03-07 03:14:04 INFO  payAgoda:44 - bookingInfo
+2015-03-07 03:14:14 INFO  payAgoda:46 - paymentDetails
+2015-03-07 03:20:35 INFO  payAgoda:40 - searchInfo
+2015-03-07 03:21:09 INFO  payAgoda:42 - chooseRoom
+2015-03-07 03:21:24 INFO  payAgoda:44 - bookingInfo
+2015-03-07 03:21:33 INFO  payAgoda:46 - paymentDetails
+2015-03-07 03:33:07 INFO  payAgoda:40 - searchInfo
+2015-03-07 03:43:48 INFO  payAgoda:40 - searchInfo
+2015-03-07 03:47:27 INFO  payAgoda:40 - searchInfo
+2015-03-07 03:50:09 INFO  payAgoda:40 - searchInfo
+2015-03-07 03:50:46 INFO  payAgoda:42 - chooseRoom
+2015-03-07 03:51:27 INFO  payAgoda:44 - bookingInfo
+2015-03-07 03:51:38 INFO  payAgoda:46 - paymentDetails
+2015-03-10 21:56:28 INFO  payAgoda:40 - initWebdriver
+2015-03-10 21:58:00 INFO  payAgoda:40 - initWebdriver
+2015-03-10 21:58:23 INFO  payAgoda:42 - searchInfo
+2015-03-11 04:44:56 INFO  payAgoda:40 - initWebdriver
+2015-03-11 04:45:10 INFO  payAgoda:42 - searchInfo
+2015-03-11 11:55:47 INFO  payAgoda:40 - initWebdriver
+2015-03-11 11:56:30 INFO  payAgoda:42 - searchInfo
+2015-03-11 13:40:53 INFO  payAgoda:40 - initWebdriver
+2015-03-11 14:28:42 INFO  payAgoda:40 - initWebdriver
+2015-03-11 14:29:12 INFO  payAgoda:42 - searchInfo
+2015-03-11 15:18:48 INFO  payAgoda:40 - initWebdriver
+2015-03-11 15:19:06 INFO  payAgoda:40 - initWebdriver
+2015-03-11 15:31:37 INFO  payAgoda:40 - initWebdriver
+2015-03-11 15:34:06 INFO  payAgoda:40 - initWebdriver
+2015-03-11 15:35:16 INFO  payAgoda:40 - initWebdriver
+2015-03-11 15:39:17 INFO  payAgoda:41 - initWebdriver
+2015-03-11 15:39:51 INFO  payAgoda:41 - initWebdriver
+2015-03-11 15:50:29 INFO  payAgoda:41 - initWebdriver
+2015-03-11 15:51:20 INFO  payAgoda:43 - searchInfo
+2015-03-11 15:51:53 INFO  payAgoda:41 - initWebdriver
+2015-03-11 15:52:14 INFO  payAgoda:43 - searchInfo
+2015-03-11 15:55:07 INFO  payAgoda:45 - chooseRoom
+2015-03-11 15:55:37 INFO  payAgoda:47 - bookingInfo
+2015-03-11 15:55:49 INFO  payAgoda:49 - get agoda.com again
+2015-03-11 15:56:18 INFO  payAgoda:61 - searchInfo
+2015-03-11 16:00:21 INFO  payAgoda:63 - chooseRoom
+2015-03-11 16:01:02 INFO  payAgoda:65 - bookingInfo
+2015-03-11 16:01:48 INFO  payAgoda:67 - get agoda.com again
+2015-03-11 16:31:20 INFO  payAgoda:41 - initWebdriver
+2015-03-11 16:32:23 INFO  payAgoda:41 - initWebdriver
+2015-03-11 16:39:06 INFO  payAgoda:41 - initWebdriver
+2015-03-11 16:40:03 INFO  payAgoda:41 - initWebdriver
+2015-03-11 16:41:06 INFO  payAgoda:43 - searchInfo
+2015-03-11 16:52:23 INFO  payAgoda:41 - initWebdriver
+2015-03-11 16:53:34 INFO  payAgoda:41 - initWebdriver
+2015-03-11 16:55:11 INFO  payAgoda:41 - initWebdriver
+2015-03-11 17:01:39 INFO  payAgoda:41 - initWebdriver
+2015-03-11 17:01:59 INFO  payAgoda:43 - searchInfo
+2015-03-11 17:20:59 INFO  payAgoda:41 - initWebdriver
+2015-03-11 17:21:18 INFO  payAgoda:43 - searchInfo
+2015-03-11 17:26:13 INFO  payAgoda:41 - initWebdriver
+2015-03-11 17:43:50 INFO  payAgoda:41 - initWebdriver
+2015-03-11 17:49:31 INFO  payAgoda:41 - initWebdriver
+2015-03-11 17:55:58 INFO  payAgoda:41 - initWebdriver
+2015-03-11 18:12:52 INFO  payAgoda:41 - initWebdriver
+2015-03-11 18:16:01 INFO  payAgoda:41 - initWebdriver
+2015-03-11 20:12:35 INFO  payAgoda:41 - initWebdriver
+2015-03-11 20:12:55 INFO  payAgoda:43 - searchInfo
+2015-03-11 20:17:06 INFO  payAgoda:45 - chooseRoom
+2015-03-11 20:17:21 INFO  payAgoda:47 - bookingInfo
+2015-03-11 20:17:33 INFO  payAgoda:49 - get agoda.com again
+2015-03-11 20:17:42 INFO  payAgoda:61 - searchInfo
+2015-03-11 20:21:48 INFO  payAgoda:63 - chooseRoom
+2015-03-11 20:22:04 INFO  payAgoda:65 - bookingInfo
+2015-03-11 20:22:16 INFO  payAgoda:67 - get agoda.com again
+2015-03-11 20:33:10 INFO  payAgoda:42 - initWebdriver
+2015-03-11 20:33:32 INFO  payAgoda:44 - searchInfo
+2015-03-11 20:36:27 INFO  payAgoda:42 - initWebdriver
+2015-03-11 20:36:45 INFO  payAgoda:44 - searchInfo
+2015-03-11 20:38:10 INFO  payAgoda:42 - initWebdriver
+2015-03-11 20:38:28 INFO  payAgoda:44 - searchInfo
+2015-03-11 20:42:09 INFO  payAgoda:42 - initWebdriver
+2015-03-11 20:42:36 INFO  payAgoda:44 - searchInfo
+2015-03-11 20:42:50 INFO  payAgoda:42 - initWebdriver
+2015-03-11 20:43:10 INFO  payAgoda:44 - searchInfo
+2015-03-11 20:44:04 INFO  payAgoda:42 - initWebdriver
+2015-03-11 20:44:22 INFO  payAgoda:44 - searchInfo
+2015-03-11 20:45:01 INFO  payAgoda:42 - initWebdriver
+2015-03-11 20:45:20 INFO  payAgoda:44 - searchInfo
+2015-03-11 20:47:42 INFO  payAgoda:42 - initWebdriver
+2015-03-11 20:48:02 INFO  payAgoda:44 - searchInfo
+2015-03-11 20:48:59 INFO  payAgoda:42 - initWebdriver
+2015-03-11 20:49:21 INFO  payAgoda:44 - searchInfo
+2015-03-11 20:50:22 INFO  payAgoda:46 - chooseRoom
+2015-03-11 20:50:38 INFO  payAgoda:48 - bookingInfo
+2015-03-11 20:50:50 INFO  payAgoda:50 - get agoda.com again
+2015-03-11 20:50:58 INFO  payAgoda:62 - searchInfo
+2015-03-11 20:51:23 INFO  payAgoda:64 - chooseRoom
+2015-03-11 20:51:39 INFO  payAgoda:66 - bookingInfo
+2015-03-11 20:51:50 INFO  payAgoda:68 - get agoda.com again
+2015-03-11 20:53:51 INFO  payAgoda:42 - initWebdriver
+2015-03-11 20:54:07 INFO  payAgoda:44 - searchInfo
+2015-03-11 20:55:15 INFO  payAgoda:46 - chooseRoom
+2015-03-11 20:55:29 INFO  payAgoda:48 - bookingInfo
+2015-03-11 20:55:41 INFO  payAgoda:50 - get agoda.com again
+2015-03-11 20:55:53 INFO  payAgoda:62 - searchInfo
+2015-03-11 20:56:13 INFO  payAgoda:64 - chooseRoom
+2015-03-11 20:56:30 INFO  payAgoda:66 - bookingInfo
+2015-03-11 20:56:41 INFO  payAgoda:68 - get agoda.com again
+2015-03-11 21:10:38 INFO  payAgoda:43 - initWebdriver
+2015-03-11 21:10:56 INFO  payAgoda:45 - searchInfo
+2015-03-11 21:12:19 INFO  payAgoda:47 - chooseRoom
+2015-03-11 21:12:33 INFO  payAgoda:49 - bookingInfo
+2015-03-11 21:12:44 INFO  payAgoda:51 - get agoda.com again
+2015-03-11 21:12:44 INFO  payAgoda:62 - begin :Wed Mar 11 21:12:44 ICT 2015
+2015-03-11 21:12:55 INFO  payAgoda:65 - searchInfo
+2015-03-11 21:14:01 INFO  payAgoda:67 - chooseRoom
+2015-03-11 21:14:26 INFO  payAgoda:69 - bookingInfo
+2015-03-11 21:14:37 INFO  payAgoda:72 - complete :Wed Mar 11 21:14:37 ICT 2015
+2015-03-11 21:19:34 INFO  payAgoda:43 - initWebdriver
+2015-03-11 21:19:58 INFO  payAgoda:45 - searchInfo
+2015-03-11 21:20:28 INFO  payAgoda:47 - chooseRoom
+2015-03-11 21:20:44 INFO  payAgoda:49 - bookingInfo
+2015-03-11 21:20:56 INFO  payAgoda:51 - get agoda.com again
+2015-03-11 21:21:06 INFO  payAgoda:64 - begin :Wed Mar 11 21:21:06 ICT 2015
+2015-03-11 21:21:06 INFO  payAgoda:65 - searchInfo
+2015-03-11 21:22:20 INFO  payAgoda:43 - initWebdriver
+2015-03-11 21:22:36 INFO  payAgoda:45 - searchInfo
+2015-03-11 21:23:01 INFO  payAgoda:47 - chooseRoom
+2015-03-11 21:37:54 INFO  payAgoda:43 - initWebdriver
+2015-03-11 21:38:11 INFO  payAgoda:45 - searchInfo
+2015-03-11 21:38:37 INFO  payAgoda:47 - chooseRoom
+2015-03-11 21:38:52 INFO  payAgoda:49 - bookingInfo
+2015-03-11 21:39:04 INFO  payAgoda:51 - get agoda.com again
+2015-03-11 21:39:28 INFO  payAgoda:65 - begin :Wed Mar 11 21:39:28 ICT 2015
+2015-03-11 21:39:28 INFO  payAgoda:66 - searchInfo
+2015-03-11 21:39:52 INFO  payAgoda:68 - chooseRoom
+2015-03-11 21:46:40 INFO  payAgoda:43 - initWebdriver
+2015-03-11 21:47:46 INFO  payAgoda:43 - initWebdriver
+2015-03-11 21:48:28 INFO  payAgoda:43 - initWebdriver
+2015-03-11 21:50:28 INFO  payAgoda:43 - initWebdriver
+2015-03-11 21:52:21 INFO  payAgoda:43 - initWebdriver
+2015-03-11 21:52:32 INFO  payAgoda:45 - searchInfo
+2015-03-11 21:52:34 INFO  payAgoda:47 - chooseRoom
+2015-03-11 21:52:45 INFO  payAgoda:49 - bookingInfo
+2015-03-11 21:53:08 INFO  payAgoda:51 - get agoda.com again
+2015-03-11 21:53:27 INFO  payAgoda:65 - begin :Wed Mar 11 21:53:27 ICT 2015
+2015-03-11 21:53:27 INFO  payAgoda:66 - searchInfo
+2015-03-11 21:53:29 INFO  payAgoda:68 - chooseRoom
+2015-03-11 21:53:44 INFO  payAgoda:70 - bookingInfo
+2015-03-11 21:54:00 INFO  payAgoda:73 - complete :Wed Mar 11 21:54:00 ICT 2015
+2015-03-11 21:55:50 INFO  payAgoda:43 - initWebdriver
+2015-03-11 21:56:02 INFO  payAgoda:45 - searchInfo
+2015-03-11 21:56:04 INFO  payAgoda:47 - chooseRoom
+2015-03-11 21:56:19 INFO  payAgoda:49 - bookingInfo
+2015-03-11 21:56:41 INFO  payAgoda:51 - get agoda.com again
+2015-03-11 21:57:18 INFO  payAgoda:65 - begin :Wed Mar 11 21:57:18 ICT 2015
+2015-03-11 21:57:18 INFO  payAgoda:66 - searchInfo
+2015-03-11 21:57:20 INFO  payAgoda:68 - chooseRoom
+2015-03-11 21:57:32 INFO  payAgoda:70 - bookingInfo
+2015-03-11 21:57:51 INFO  payAgoda:73 - complete :Wed Mar 11 21:57:51 ICT 2015
+2015-03-11 21:58:58 INFO  payAgoda:43 - initWebdriver
+2015-03-11 21:59:11 INFO  payAgoda:45 - searchInfo
+2015-03-11 21:59:13 INFO  payAgoda:47 - chooseRoom
+2015-03-11 21:59:27 INFO  payAgoda:49 - bookingInfo
+2015-03-11 21:59:48 INFO  payAgoda:51 - get agoda.com again
+2015-03-11 22:00:21 INFO  payAgoda:65 - begin :Wed Mar 11 22:00:21 ICT 2015
+2015-03-11 22:00:21 INFO  payAgoda:66 - searchInfo
+2015-03-11 22:00:23 INFO  payAgoda:68 - chooseRoom
+2015-03-11 22:00:34 INFO  payAgoda:70 - bookingInfo
+2015-03-11 22:00:50 INFO  payAgoda:73 - complete :Wed Mar 11 22:00:50 ICT 2015
+2015-03-11 22:02:37 INFO  payAgoda:43 - initWebdriver
+2015-03-11 22:02:48 INFO  payAgoda:45 - searchInfo
+2015-03-11 22:02:50 INFO  payAgoda:47 - chooseRoom
+2015-03-11 22:03:02 INFO  payAgoda:49 - bookingInfo
+2015-03-11 22:03:21 INFO  payAgoda:51 - get agoda.com again
+2015-03-11 22:03:56 INFO  payAgoda:65 - begin :Wed Mar 11 22:03:56 ICT 2015
+2015-03-11 22:03:56 INFO  payAgoda:66 - searchInfo
+2015-03-11 22:03:58 INFO  payAgoda:68 - chooseRoom
+2015-03-11 22:04:06 INFO  payAgoda:70 - bookingInfo
+2015-03-11 22:04:22 INFO  payAgoda:73 - complete :Wed Mar 11 22:04:22 ICT 2015
+2015-03-11 22:05:06 INFO  payAgoda:43 - initWebdriver
+2015-03-11 22:05:15 INFO  payAgoda:45 - searchInfo
+2015-03-11 22:05:17 INFO  payAgoda:47 - chooseRoom
+2015-03-11 22:05:28 INFO  payAgoda:49 - bookingInfo
+2015-03-11 22:05:48 INFO  payAgoda:51 - get agoda.com again
+2015-03-11 22:06:22 INFO  payAgoda:65 - begin :Wed Mar 11 22:06:22 ICT 2015
+2015-03-11 22:06:22 INFO  payAgoda:66 - searchInfo
+2015-03-11 22:06:25 INFO  payAgoda:68 - chooseRoom
+2015-03-11 22:06:35 INFO  payAgoda:70 - bookingInfo
+2015-03-11 22:06:49 INFO  payAgoda:73 - complete :Wed Mar 11 22:06:49 ICT 2015
+2015-03-11 22:13:02 INFO  payAgoda:43 - initWebdriver
+2015-03-11 22:13:17 INFO  payAgoda:45 - searchInfo
+2015-03-11 22:13:20 INFO  payAgoda:47 - chooseRoom
+2015-03-11 22:13:33 INFO  payAgoda:49 - bookingInfo
+2015-03-11 22:13:53 INFO  payAgoda:51 - get agoda.com again
+2015-03-11 22:14:29 INFO  payAgoda:65 - begin :Wed Mar 11 22:14:29 ICT 2015
+2015-03-11 22:14:29 INFO  payAgoda:66 - searchInfo
+2015-03-11 22:14:31 INFO  payAgoda:68 - chooseRoom
+2015-03-11 22:15:42 INFO  payAgoda:70 - bookingInfo
+2015-03-11 22:15:59 INFO  payAgoda:73 - complete :Wed Mar 11 22:15:59 ICT 2015
+2015-03-11 22:20:21 INFO  payAgoda:43 - initWebdriver
+2015-03-11 22:20:31 INFO  payAgoda:45 - searchInfo
+2015-03-11 22:20:33 INFO  payAgoda:47 - chooseRoom
+2015-03-11 22:20:40 INFO  payAgoda:49 - bookingInfo
+2015-03-11 22:20:59 INFO  payAgoda:51 - get agoda.com again
+2015-03-11 22:21:31 INFO  payAgoda:65 - begin :Wed Mar 11 22:21:31 ICT 2015
+2015-03-11 22:21:31 INFO  payAgoda:66 - searchInfo
+2015-03-11 22:21:33 INFO  payAgoda:68 - chooseRoom
+2015-03-11 22:21:43 INFO  payAgoda:70 - bookingInfo
+2015-03-11 22:21:59 INFO  payAgoda:73 - complete :Wed Mar 11 22:21:59 ICT 2015
+2015-03-11 23:02:54 INFO  payAgoda:43 - initWebdriver
+2015-03-11 23:03:03 INFO  payAgoda:45 - searchInfo
+2015-03-11 23:03:05 INFO  payAgoda:47 - chooseRoom
+2015-03-11 23:03:14 INFO  payAgoda:49 - bookingInfo
+2015-03-11 23:03:34 INFO  payAgoda:51 - get agoda.com again
+2015-03-11 23:04:06 INFO  payAgoda:65 - begin :Wed Mar 11 23:04:06 ICT 2015
+2015-03-11 23:04:06 INFO  payAgoda:66 - searchInfo
+2015-03-11 23:04:08 INFO  payAgoda:68 - chooseRoom
+2015-03-11 23:04:24 INFO  payAgoda:70 - bookingInfo
+2015-03-11 23:04:40 INFO  payAgoda:73 - complete :Wed Mar 11 23:04:40 ICT 2015
+2015-03-11 23:05:41 INFO  payAgoda:43 - initWebdriver
+2015-03-11 23:05:54 INFO  payAgoda:45 - searchInfo
+2015-03-11 23:06:13 INFO  payAgoda:47 - chooseRoom
+2015-03-11 23:06:26 INFO  payAgoda:49 - bookingInfo
+2015-03-11 23:06:38 INFO  payAgoda:51 - get agoda.com again
+2015-03-11 23:07:15 INFO  payAgoda:65 - begin :Wed Mar 11 23:07:15 ICT 2015
+2015-03-11 23:07:15 INFO  payAgoda:66 - searchInfo
+2015-03-11 23:07:31 INFO  payAgoda:68 - chooseRoom
+2015-03-11 23:07:49 INFO  payAgoda:70 - bookingInfo
+2015-03-11 23:08:00 INFO  payAgoda:73 - complete :Wed Mar 11 23:08:00 ICT 2015
+2015-03-11 23:09:53 INFO  payAgoda:44 - begin :Wed Mar 11 23:09:53 ICT 2015
+2015-03-11 23:09:53 INFO  payAgoda:45 - initWebdriver
+2015-03-11 23:10:14 INFO  payAgoda:47 - searchInfo
+2015-03-11 23:10:31 INFO  payAgoda:49 - chooseRoom
+2015-03-11 23:10:45 INFO  payAgoda:51 - bookingInfo
+2015-03-11 23:10:56 INFO  payAgoda:53 - get agoda.com again
+2015-03-11 23:10:56 INFO  payAgoda:55 - complete :Wed Mar 11 23:10:56 ICT 2015
+2015-03-11 23:11:33 INFO  payAgoda:69 - begin :Wed Mar 11 23:11:33 ICT 2015
+2015-03-11 23:11:33 INFO  payAgoda:70 - searchInfo
+2015-03-11 23:11:57 INFO  payAgoda:72 - chooseRoom
+2015-03-11 23:12:09 INFO  payAgoda:74 - bookingInfo
+2015-03-11 23:12:20 INFO  payAgoda:77 - complete :Wed Mar 11 23:12:20 ICT 2015
+2015-03-11 23:15:01 INFO  payAgoda:44 - begin :Wed Mar 11 23:15:01 ICT 2015
+2015-03-11 23:15:01 INFO  payAgoda:45 - initWebdriver
+2015-03-11 23:15:16 INFO  payAgoda:47 - searchInfo
+2015-03-11 23:15:32 INFO  payAgoda:49 - chooseRoom
+2015-03-11 23:15:45 INFO  payAgoda:51 - bookingInfo
+2015-03-11 23:15:57 INFO  payAgoda:53 - get agoda.com again
+2015-03-11 23:15:57 INFO  payAgoda:55 - complete :Wed Mar 11 23:15:57 ICT 2015
+2015-03-11 23:16:34 INFO  payAgoda:69 - begin :Wed Mar 11 23:16:34 ICT 2015
+2015-03-11 23:16:34 INFO  payAgoda:70 - searchInfo
+2015-03-11 23:16:45 INFO  payAgoda:72 - chooseRoom
+2015-03-11 23:19:38 INFO  payAgoda:44 - begin :Wed Mar 11 23:19:38 ICT 2015
+2015-03-11 23:19:38 INFO  payAgoda:45 - initWebdriver
+2015-03-11 23:19:53 INFO  payAgoda:47 - searchInfo
+2015-03-11 23:20:08 INFO  payAgoda:49 - chooseRoom
+2015-03-11 23:28:12 INFO  payAgoda:44 - begin :Wed Mar 11 23:28:12 ICT 2015
+2015-03-11 23:28:12 INFO  payAgoda:45 - initWebdriver
+2015-03-11 23:28:26 INFO  payAgoda:47 - searchInfo
+2015-03-11 23:28:40 INFO  payAgoda:49 - chooseRoom
+2015-03-11 23:28:54 INFO  payAgoda:51 - bookingInfo
+2015-03-11 23:29:06 INFO  payAgoda:53 - get agoda.com again
+2015-03-11 23:29:06 INFO  payAgoda:55 - complete :Wed Mar 11 23:29:06 ICT 2015
+2015-03-11 23:29:42 INFO  payAgoda:69 - begin :Wed Mar 11 23:29:42 ICT 2015
+2015-03-11 23:29:42 INFO  payAgoda:70 - searchInfo
+2015-03-11 23:29:55 INFO  payAgoda:72 - chooseRoom
+2015-03-11 23:30:07 INFO  payAgoda:74 - bookingInfo
+2015-03-11 23:30:18 INFO  payAgoda:77 - complete :Wed Mar 11 23:30:18 ICT 2015
+2015-03-11 23:30:56 INFO  payAgoda:44 - begin :Wed Mar 11 23:30:56 ICT 2015
+2015-03-11 23:30:56 INFO  payAgoda:45 - initWebdriver
+2015-03-11 23:31:04 INFO  payAgoda:47 - searchInfo
+2015-03-11 23:31:05 INFO  payAgoda:49 - chooseRoom
+2015-03-11 23:31:10 INFO  payAgoda:51 - bookingInfo
+2015-03-11 23:31:28 INFO  payAgoda:53 - get agoda.com again
+2015-03-11 23:31:28 INFO  payAgoda:55 - complete :Wed Mar 11 23:31:28 ICT 2015
+2015-03-11 23:32:01 INFO  payAgoda:69 - begin :Wed Mar 11 23:32:01 ICT 2015
+2015-03-11 23:32:01 INFO  payAgoda:70 - searchInfo
+2015-03-11 23:32:03 INFO  payAgoda:72 - chooseRoom
+2015-03-11 23:33:48 INFO  payAgoda:44 - begin :Wed Mar 11 23:33:48 ICT 2015
+2015-03-11 23:33:48 INFO  payAgoda:45 - initWebdriver
+2015-03-11 23:33:57 INFO  payAgoda:47 - searchInfo
+2015-03-11 23:33:59 INFO  payAgoda:49 - chooseRoom
+2015-03-11 23:34:09 INFO  payAgoda:51 - bookingInfo
+2015-03-11 23:34:26 INFO  payAgoda:53 - get agoda.com again
+2015-03-11 23:34:26 INFO  payAgoda:55 - complete :Wed Mar 11 23:34:26 ICT 2015
+2015-03-11 23:34:59 INFO  payAgoda:69 - begin :Wed Mar 11 23:34:59 ICT 2015
+2015-03-11 23:34:59 INFO  payAgoda:70 - searchInfo
+2015-03-11 23:35:01 INFO  payAgoda:72 - chooseRoom
+2015-03-11 23:35:08 INFO  payAgoda:74 - bookingInfo
+2015-03-11 23:35:25 INFO  payAgoda:77 - complete :Wed Mar 11 23:35:25 ICT 2015
+2015-03-12 00:00:53 INFO  payAgoda:44 - begin :Thu Mar 12 00:00:53 ICT 2015
+2015-03-12 00:00:53 INFO  payAgoda:45 - initWebdriver
+2015-03-12 00:01:02 INFO  payAgoda:47 - searchInfo
+2015-03-12 00:01:04 INFO  payAgoda:49 - chooseRoom
+2015-03-12 00:01:11 INFO  payAgoda:51 - bookingInfo
+2015-03-12 00:01:28 INFO  payAgoda:53 - get agoda.com again
+2015-03-12 00:01:28 INFO  payAgoda:55 - complete :Thu Mar 12 00:01:28 ICT 2015
+2015-03-12 00:02:00 INFO  payAgoda:69 - begin :Thu Mar 12 00:02:00 ICT 2015
+2015-03-12 00:02:00 INFO  payAgoda:70 - searchInfo
+2015-03-12 00:02:02 INFO  payAgoda:72 - chooseRoom
+2015-03-12 00:02:08 INFO  payAgoda:74 - bookingInfo
+2015-03-12 00:02:23 INFO  payAgoda:77 - complete :Thu Mar 12 00:02:23 ICT 2015
+2015-03-12 07:19:04 INFO  payAgoda:44 - begin :Thu Mar 12 07:19:04 ICT 2015
+2015-03-12 07:19:05 INFO  payAgoda:45 - initWebdriver
+2015-03-12 07:21:33 INFO  payAgoda:44 - begin :Thu Mar 12 07:21:33 ICT 2015
+2015-03-12 07:21:33 INFO  payAgoda:45 - initWebdriver
+2015-03-12 07:21:43 INFO  payAgoda:47 - searchInfo
+2015-03-12 07:21:45 INFO  payAgoda:49 - chooseRoom
+2015-03-12 07:21:52 INFO  payAgoda:51 - bookingInfo
+2015-03-12 07:22:34 INFO  payAgoda:44 - begin :Thu Mar 12 07:22:34 ICT 2015
+2015-03-12 07:22:34 INFO  payAgoda:45 - initWebdriver
+2015-03-12 07:22:48 INFO  payAgoda:47 - searchInfo
+2015-03-12 07:23:02 INFO  payAgoda:49 - chooseRoom
+2015-03-12 07:23:14 INFO  payAgoda:51 - bookingInfo
+2015-03-12 07:23:25 INFO  payAgoda:53 - get agoda.com again
+2015-03-12 07:23:25 INFO  payAgoda:55 - complete :Thu Mar 12 07:23:25 ICT 2015
+2015-03-12 07:24:02 INFO  payAgoda:69 - begin :Thu Mar 12 07:24:02 ICT 2015
+2015-03-12 07:24:02 INFO  payAgoda:70 - searchInfo
+2015-03-12 07:24:16 INFO  payAgoda:72 - chooseRoom
+2015-03-12 07:24:28 INFO  payAgoda:74 - bookingInfo
+2015-03-12 07:24:39 INFO  payAgoda:77 - complete :Thu Mar 12 07:24:39 ICT 2015
+2015-03-12 08:28:29 INFO  payAgoda:44 - begin :Thu Mar 12 08:28:29 ICT 2015
+2015-03-12 08:28:29 INFO  payAgoda:45 - initWebdriver
+2015-03-12 08:29:25 INFO  payAgoda:47 - searchInfo
+2015-03-12 08:35:52 INFO  payAgoda:44 - begin :Thu Mar 12 08:35:52 ICT 2015
+2015-03-12 08:35:52 INFO  payAgoda:45 - initWebdriver
+2015-03-12 08:36:18 INFO  payAgoda:47 - searchInfo
+2015-03-12 08:36:57 INFO  payAgoda:44 - begin :Thu Mar 12 08:36:57 ICT 2015
+2015-03-12 08:36:57 INFO  payAgoda:45 - initWebdriver
+2015-03-12 08:37:52 INFO  payAgoda:47 - searchInfo
+2015-03-12 08:39:14 INFO  payAgoda:44 - begin :Thu Mar 12 08:39:14 ICT 2015
+2015-03-12 08:39:14 INFO  payAgoda:45 - initWebdriver
+2015-03-12 08:40:11 INFO  payAgoda:47 - searchInfo
+2015-03-12 08:40:42 INFO  payAgoda:49 - chooseRoom
+2015-03-12 08:41:15 INFO  payAgoda:51 - bookingInfo
+2015-03-12 08:41:38 INFO  payAgoda:53 - get agoda.com again
+2015-03-12 08:41:38 INFO  payAgoda:55 - complete :Thu Mar 12 08:41:38 ICT 2015
+2015-03-12 08:42:16 INFO  payAgoda:69 - begin :Thu Mar 12 08:42:16 ICT 2015
+2015-03-12 08:42:16 INFO  payAgoda:70 - searchInfo
+2015-03-12 08:45:42 INFO  payAgoda:44 - begin :Thu Mar 12 08:45:42 ICT 2015
+2015-03-12 08:45:42 INFO  payAgoda:45 - initWebdriver
+2015-03-12 08:46:02 INFO  payAgoda:47 - searchInfo
+2015-03-12 08:47:40 INFO  payAgoda:44 - begin :Thu Mar 12 08:47:40 ICT 2015
+2015-03-12 08:47:40 INFO  payAgoda:45 - initWebdriver
+2015-03-12 08:47:58 INFO  payAgoda:47 - searchInfo
+2015-03-12 08:49:44 INFO  payAgoda:49 - chooseRoom
+2015-03-12 08:50:07 INFO  payAgoda:51 - bookingInfo
+2015-03-12 08:50:19 INFO  payAgoda:53 - get agoda.com again
+2015-03-12 08:50:19 INFO  payAgoda:55 - complete :Thu Mar 12 08:50:19 ICT 2015
+2015-03-12 09:07:51 INFO  payAgoda:44 - begin :Thu Mar 12 09:07:51 ICT 2015
+2015-03-12 09:07:51 INFO  payAgoda:45 - initWebdriver
+2015-03-12 09:09:28 INFO  payAgoda:44 - begin :Thu Mar 12 09:09:28 ICT 2015
+2015-03-12 09:09:28 INFO  payAgoda:45 - initWebdriver
+2015-03-12 09:11:52 INFO  payAgoda:44 - begin :Thu Mar 12 09:11:52 ICT 2015
+2015-03-12 09:11:52 INFO  payAgoda:45 - initWebdriver
+2015-03-12 09:12:10 INFO  payAgoda:47 - searchInfo
+2015-03-12 09:14:58 INFO  payAgoda:44 - begin :Thu Mar 12 09:14:58 ICT 2015
+2015-03-12 09:14:58 INFO  payAgoda:45 - initWebdriver
+2015-03-12 09:16:56 INFO  payAgoda:44 - begin :Thu Mar 12 09:16:56 ICT 2015
+2015-03-12 09:16:56 INFO  payAgoda:45 - initWebdriver
+2015-03-12 09:20:21 INFO  payAgoda:44 - begin :Thu Mar 12 09:20:21 ICT 2015
+2015-03-12 09:20:21 INFO  payAgoda:45 - initWebdriver
+2015-03-12 09:30:10 INFO  payAgoda:44 - begin :Thu Mar 12 09:30:10 ICT 2015
+2015-03-12 09:30:10 INFO  payAgoda:45 - initWebdriver
+2015-03-12 09:31:54 INFO  payAgoda:44 - begin :Thu Mar 12 09:31:54 ICT 2015
+2015-03-12 09:31:54 INFO  payAgoda:45 - initWebdriver
+2015-03-12 09:32:15 INFO  payAgoda:47 - searchInfo
+2015-03-12 09:35:10 INFO  payAgoda:44 - begin :Thu Mar 12 09:35:10 ICT 2015
+2015-03-12 09:35:10 INFO  payAgoda:45 - initWebdriver
+2015-03-12 09:35:32 INFO  payAgoda:47 - searchInfo
+2015-03-12 09:38:43 INFO  payAgoda:44 - begin :Thu Mar 12 09:38:43 ICT 2015
+2015-03-12 09:38:43 INFO  payAgoda:45 - initWebdriver
+2015-03-12 09:49:34 INFO  payAgoda:44 - begin :Thu Mar 12 09:49:34 ICT 2015
+2015-03-12 09:49:34 INFO  payAgoda:45 - initWebdriver
+2015-03-12 09:58:39 INFO  payAgoda:44 - begin :Thu Mar 12 09:58:38 ICT 2015
+2015-03-12 09:58:39 INFO  payAgoda:45 - initWebdriver
+2015-03-12 09:58:57 INFO  payAgoda:47 - searchInfo
+2015-03-12 10:00:59 INFO  payAgoda:49 - chooseRoom
+2015-03-12 10:01:21 INFO  payAgoda:51 - bookingInfo
+2015-03-12 10:01:34 INFO  payAgoda:53 - get agoda.com again
+2015-03-12 10:01:34 INFO  payAgoda:55 - complete :Thu Mar 12 10:01:34 ICT 2015
+2015-03-12 10:12:39 INFO  payAgoda:44 - begin :Thu Mar 12 10:12:39 ICT 2015
+2015-03-12 10:12:39 INFO  payAgoda:45 - initWebdriver
+2015-03-12 10:35:42 INFO  payAgoda:44 - begin :Thu Mar 12 10:35:42 ICT 2015
+2015-03-12 10:35:42 INFO  payAgoda:45 - initWebdriver
+2015-03-12 10:36:20 INFO  payAgoda:44 - begin :Thu Mar 12 10:36:20 ICT 2015
+2015-03-12 10:36:20 INFO  payAgoda:45 - initWebdriver
+2015-03-12 10:36:43 INFO  payAgoda:47 - searchInfo
+2015-03-12 10:40:34 INFO  payAgoda:49 - chooseRoom
+2015-03-12 10:42:03 INFO  payAgoda:51 - bookingInfo
+2015-03-12 10:42:14 INFO  payAgoda:53 - get agoda.com again
+2015-03-12 10:42:14 INFO  payAgoda:55 - complete :Thu Mar 12 10:42:14 ICT 2015
+2015-03-12 10:45:23 INFO  payAgoda:44 - begin :Thu Mar 12 10:45:23 ICT 2015
+2015-03-12 10:45:23 INFO  payAgoda:45 - initWebdriver
+2015-03-12 10:46:25 INFO  payAgoda:47 - searchInfo
+2015-03-12 10:47:49 INFO  payAgoda:44 - begin :Thu Mar 12 10:47:49 ICT 2015
+2015-03-12 10:47:49 INFO  payAgoda:45 - initWebdriver
+2015-03-12 11:08:25 INFO  payAgoda:44 - begin :Thu Mar 12 11:08:25 ICT 2015
+2015-03-12 11:08:25 INFO  payAgoda:45 - initWebdriver
+2015-03-12 11:17:33 INFO  payAgoda:44 - begin :Thu Mar 12 11:17:33 ICT 2015
+2015-03-12 11:17:33 INFO  payAgoda:45 - initWebdriver
+2015-03-12 11:17:50 INFO  payAgoda:47 - searchInfo
+2015-03-12 11:18:15 INFO  payAgoda:49 - chooseRoom
+2015-03-12 11:18:35 INFO  payAgoda:51 - bookingInfo
+2015-03-12 11:18:47 INFO  payAgoda:53 - get agoda.com again
+2015-03-12 11:18:47 INFO  payAgoda:55 - complete :Thu Mar 12 11:18:47 ICT 2015
+2015-03-12 11:21:16 INFO  payAgoda:44 - begin :Thu Mar 12 11:21:16 ICT 2015
+2015-03-12 11:21:16 INFO  payAgoda:45 - initWebdriver
+2015-03-12 11:25:57 INFO  payAgoda:44 - begin :Thu Mar 12 11:25:57 ICT 2015
+2015-03-12 11:25:57 INFO  payAgoda:45 - initWebdriver
+2015-03-12 11:25:57 INFO  payAgoda:44 - begin :Thu Mar 12 11:25:57 ICT 2015
+2015-03-12 11:25:57 INFO  payAgoda:45 - initWebdriver
+2015-03-12 11:44:25 INFO  payAgoda:44 - begin :Thu Mar 12 11:44:25 ICT 2015
+2015-03-12 11:44:25 INFO  payAgoda:45 - initWebdriver
+2015-03-12 11:44:42 INFO  payAgoda:47 - searchInfo
+2015-03-12 11:45:24 INFO  payAgoda:49 - chooseRoom
+2015-03-12 11:45:43 INFO  payAgoda:51 - bookingInfo
+2015-03-12 11:45:56 INFO  payAgoda:53 - get agoda.com again
+2015-03-12 11:45:56 INFO  payAgoda:55 - complete :Thu Mar 12 11:45:56 ICT 2015
+2015-03-12 11:46:34 INFO  payAgoda:69 - begin :Thu Mar 12 11:46:34 ICT 2015
+2015-03-12 11:46:34 INFO  payAgoda:70 - searchInfo
+2015-03-12 11:50:25 INFO  payAgoda:72 - chooseRoom
+2015-03-12 11:50:54 INFO  payAgoda:74 - bookingInfo
+2015-03-12 11:51:07 INFO  payAgoda:77 - complete :Thu Mar 12 11:51:07 ICT 2015
+2015-03-12 13:33:46 INFO  payAgoda:44 - begin :Thu Mar 12 13:33:46 ICT 2015
+2015-03-12 13:33:46 INFO  payAgoda:45 - initWebdriver
+2015-03-12 13:34:40 INFO  payAgoda:47 - searchInfo
+2015-03-12 14:01:43 INFO  payAgoda:44 - begin :Thu Mar 12 14:01:43 ICT 2015
+2015-03-12 14:01:43 INFO  payAgoda:45 - initWebdriver
+2015-03-12 14:02:46 INFO  payAgoda:44 - begin :Thu Mar 12 14:02:46 ICT 2015
+2015-03-12 14:02:46 INFO  payAgoda:45 - initWebdriver
+2015-03-12 14:03:20 INFO  payAgoda:44 - begin :Thu Mar 12 14:03:20 ICT 2015
+2015-03-12 14:03:20 INFO  payAgoda:45 - initWebdriver
+2015-03-12 14:36:54 INFO  payAgoda:44 - begin :Thu Mar 12 14:36:54 ICT 2015
+2015-03-12 14:36:54 INFO  payAgoda:45 - initWebdriver
+2015-03-12 14:47:39 INFO  payAgoda:44 - begin :Thu Mar 12 14:47:39 ICT 2015
+2015-03-12 14:47:39 INFO  payAgoda:45 - initWebdriver
+2015-03-12 14:48:02 INFO  payAgoda:47 - searchInfo
+2015-03-12 14:48:42 INFO  payAgoda:49 - chooseRoom
+2015-03-12 14:49:12 INFO  payAgoda:51 - bookingInfo
+2015-03-12 14:49:24 INFO  payAgoda:53 - get agoda.com again
+2015-03-12 14:49:24 INFO  payAgoda:55 - complete :Thu Mar 12 14:49:24 ICT 2015
+2015-03-12 14:50:04 INFO  payAgoda:69 - begin :Thu Mar 12 14:50:04 ICT 2015
+2015-03-12 14:50:04 INFO  payAgoda:70 - searchInfo
+2015-03-12 14:50:23 INFO  payAgoda:72 - chooseRoom
+2015-03-12 14:50:42 INFO  payAgoda:74 - bookingInfo
+2015-03-12 14:50:54 INFO  payAgoda:77 - complete :Thu Mar 12 14:50:54 ICT 2015
+2015-03-12 15:12:41 INFO  payAgoda:44 - begin :Thu Mar 12 15:12:41 ICT 2015
+2015-03-12 15:12:41 INFO  payAgoda:45 - initWebdriver
+2015-03-12 15:12:57 INFO  payAgoda:47 - searchInfo
+2015-03-12 15:28:53 INFO  payAgoda:44 - begin :Thu Mar 12 15:28:53 ICT 2015
+2015-03-12 15:28:53 INFO  payAgoda:45 - initWebdriver
+2015-03-12 15:29:11 INFO  payAgoda:47 - searchInfo
+2015-03-12 16:43:00 INFO  payAgoda:44 - begin :Thu Mar 12 16:43:00 ICT 2015
+2015-03-12 16:43:00 INFO  payAgoda:45 - initWebdriver
+2015-03-12 16:43:01 INFO  payAgoda:44 - begin :Thu Mar 12 16:43:01 ICT 2015
+2015-03-12 16:43:01 INFO  payAgoda:45 - initWebdriver
+2015-03-12 16:43:27 INFO  payAgoda:47 - searchInfo
+2015-03-12 16:43:56 INFO  payAgoda:47 - searchInfo
+2015-03-12 16:44:34 INFO  payAgoda:49 - chooseRoom
+2015-03-12 16:45:12 INFO  payAgoda:51 - bookingInfo
+2015-03-12 16:45:26 INFO  payAgoda:53 - get agoda.com again
+2015-03-12 16:45:26 INFO  payAgoda:55 - complete :Thu Mar 12 16:45:26 ICT 2015
+2015-03-12 16:46:14 INFO  payAgoda:69 - begin :Thu Mar 12 16:46:14 ICT 2015
+2015-03-12 16:46:14 INFO  payAgoda:70 - searchInfo
+2015-03-12 16:46:24 INFO  payAgoda:49 - chooseRoom
+2015-03-12 16:46:44 INFO  payAgoda:51 - bookingInfo
+2015-03-12 16:46:56 INFO  payAgoda:53 - get agoda.com again
+2015-03-12 16:46:56 INFO  payAgoda:55 - complete :Thu Mar 12 16:46:56 ICT 2015
+2015-03-12 16:50:37 INFO  payAgoda:69 - begin :Thu Mar 12 16:50:37 ICT 2015
+2015-03-12 16:50:37 INFO  payAgoda:70 - searchInfo
+2015-03-12 16:52:52 INFO  payAgoda:72 - chooseRoom
+2015-03-12 16:53:23 INFO  payAgoda:74 - bookingInfo
+2015-03-12 16:53:34 INFO  payAgoda:77 - complete :Thu Mar 12 16:53:34 ICT 2015
+2015-03-12 16:54:01 INFO  payAgoda:72 - chooseRoom
+2015-03-12 16:54:19 INFO  payAgoda:74 - bookingInfo
+2015-03-12 16:54:31 INFO  payAgoda:77 - complete :Thu Mar 12 16:54:31 ICT 2015
+2015-03-12 17:14:07 INFO  payAgoda:44 - begin :Thu Mar 12 17:14:07 ICT 2015
+2015-03-12 17:14:07 INFO  payAgoda:45 - initWebdriver
+2015-03-12 17:14:24 INFO  payAgoda:47 - searchInfo
+2015-03-12 17:16:11 INFO  payAgoda:49 - chooseRoom
+2015-03-12 17:16:30 INFO  payAgoda:51 - bookingInfo
+2015-03-12 17:16:42 INFO  payAgoda:53 - get agoda.com again
+2015-03-12 17:16:42 INFO  payAgoda:55 - complete :Thu Mar 12 17:16:42 ICT 2015
+2015-03-12 17:17:20 INFO  payAgoda:69 - begin :Thu Mar 12 17:17:20 ICT 2015
+2015-03-12 17:17:20 INFO  payAgoda:70 - searchInfo
+2015-03-12 17:19:44 INFO  payAgoda:72 - chooseRoom
+2015-03-12 17:20:02 INFO  payAgoda:74 - bookingInfo
+2015-03-12 17:20:14 INFO  payAgoda:77 - complete :Thu Mar 12 17:20:14 ICT 2015
+2015-03-12 17:24:39 INFO  payAgoda:44 - begin :Thu Mar 12 17:24:39 ICT 2015
+2015-03-12 17:24:39 INFO  payAgoda:45 - initWebdriver
+2015-03-12 17:25:01 INFO  payAgoda:47 - searchInfo
+2015-03-12 17:28:50 INFO  payAgoda:49 - chooseRoom
+2015-03-12 17:29:19 INFO  payAgoda:51 - bookingInfo
+2015-03-12 17:32:26 INFO  payAgoda:53 - get agoda.com again
+2015-03-12 17:32:26 INFO  payAgoda:55 - complete :Thu Mar 12 17:32:26 ICT 2015
+2015-03-12 17:33:39 INFO  payAgoda:69 - begin :Thu Mar 12 17:33:39 ICT 2015
+2015-03-12 17:33:39 INFO  payAgoda:70 - searchInfo
+2015-03-12 18:17:41 INFO  payAgoda:44 - begin :Thu Mar 12 18:17:41 ICT 2015
+2015-03-12 18:17:41 INFO  payAgoda:45 - initWebdriver
+2015-03-12 18:18:10 INFO  payAgoda:47 - searchInfo
+2015-03-12 18:23:03 INFO  payAgoda:49 - chooseRoom
+2015-03-12 18:23:21 INFO  payAgoda:51 - bookingInfo
+2015-03-12 18:23:34 INFO  payAgoda:53 - get agoda.com again
+2015-03-12 18:23:34 INFO  payAgoda:55 - complete :Thu Mar 12 18:23:34 ICT 2015
+2015-03-12 18:24:48 INFO  payAgoda:69 - begin :Thu Mar 12 18:24:48 ICT 2015
+2015-03-12 18:24:48 INFO  payAgoda:70 - searchInfo
+2015-03-12 20:27:28 INFO  payAgoda:44 - begin :Thu Mar 12 20:27:28 ICT 2015
+2015-03-12 20:27:28 INFO  payAgoda:45 - initWebdriver
+2015-03-12 20:27:47 INFO  payAgoda:47 - searchInfo
+2015-03-12 20:28:03 INFO  payAgoda:49 - chooseRoom
+2015-03-12 20:28:18 INFO  payAgoda:51 - bookingInfo
+2015-03-12 20:28:30 INFO  payAgoda:53 - get agoda.com again
+2015-03-12 20:28:30 INFO  payAgoda:55 - complete :Thu Mar 12 20:28:30 ICT 2015
+2015-03-12 20:29:08 INFO  payAgoda:69 - begin :Thu Mar 12 20:29:08 ICT 2015
+2015-03-12 20:29:08 INFO  payAgoda:70 - searchInfo
+2015-03-12 20:29:26 INFO  payAgoda:72 - chooseRoom
+2015-03-12 20:29:36 INFO  payAgoda:74 - bookingInfo
+2015-03-12 20:29:47 INFO  payAgoda:77 - complete :Thu Mar 12 20:29:47 ICT 2015
+2015-03-12 20:37:35 INFO  payAgoda:44 - begin :Thu Mar 12 20:37:35 ICT 2015
+2015-03-12 20:37:35 INFO  payAgoda:45 - initWebdriver
+2015-03-12 20:37:56 INFO  payAgoda:47 - searchInfo
+2015-03-12 20:38:19 INFO  payAgoda:49 - chooseRoom
+2015-03-12 20:38:32 INFO  payAgoda:51 - bookingInfo
+2015-03-12 20:38:43 INFO  payAgoda:53 - get agoda.com again
+2015-03-12 20:38:43 INFO  payAgoda:55 - complete :Thu Mar 12 20:38:43 ICT 2015
+2015-03-12 20:39:22 INFO  payAgoda:69 - begin :Thu Mar 12 20:39:22 ICT 2015
+2015-03-12 20:39:22 INFO  payAgoda:70 - searchInfo
+2015-03-12 20:39:48 INFO  payAgoda:72 - chooseRoom
+2015-03-12 20:40:04 INFO  payAgoda:74 - bookingInfo
+2015-03-12 20:40:15 INFO  payAgoda:77 - complete :Thu Mar 12 20:40:15 ICT 2015
+2015-03-13 09:06:01 INFO  payAgoda:44 - begin :Fri Mar 13 09:06:01 ICT 2015
+2015-03-13 09:06:01 INFO  payAgoda:45 - initWebdriver
+2015-03-13 09:06:19 INFO  payAgoda:47 - searchInfo
+2015-03-13 09:06:40 INFO  payAgoda:49 - chooseRoom
+2015-03-13 09:06:59 INFO  payAgoda:51 - bookingInfo
+2015-03-13 09:07:12 INFO  payAgoda:53 - get agoda.com again
+2015-03-13 09:07:12 INFO  payAgoda:55 - complete :Fri Mar 13 09:07:12 ICT 2015
+2015-03-13 09:07:49 INFO  payAgoda:69 - begin :Fri Mar 13 09:07:49 ICT 2015
+2015-03-13 09:07:49 INFO  payAgoda:70 - searchInfo
+2015-03-13 09:08:06 INFO  payAgoda:72 - chooseRoom
+2015-03-13 09:08:23 INFO  payAgoda:74 - bookingInfo
+2015-03-13 09:08:35 INFO  payAgoda:77 - complete :Fri Mar 13 09:08:35 ICT 2015
+2015-03-13 09:12:45 INFO  payAgoda:44 - begin :Fri Mar 13 09:12:45 ICT 2015
+2015-03-13 09:12:45 INFO  payAgoda:45 - initWebdriver
+2015-03-13 09:13:02 INFO  payAgoda:47 - searchInfo
+2015-03-13 09:14:57 INFO  payAgoda:49 - chooseRoom
+2015-03-13 09:15:21 INFO  payAgoda:51 - bookingInfo
+2015-03-13 09:15:36 INFO  payAgoda:53 - get agoda.com again
+2015-03-13 09:15:36 INFO  payAgoda:55 - complete :Fri Mar 13 09:15:36 ICT 2015
+2015-03-13 09:16:10 INFO  payAgoda:44 - begin :Fri Mar 13 09:16:10 ICT 2015
+2015-03-13 09:16:10 INFO  payAgoda:45 - initWebdriver
+2015-03-13 09:16:30 INFO  payAgoda:47 - searchInfo
+2015-03-13 09:20:13 INFO  payAgoda:49 - chooseRoom
+2015-03-13 09:20:37 INFO  payAgoda:51 - bookingInfo
+2015-03-13 09:20:49 INFO  payAgoda:53 - get agoda.com again
+2015-03-13 09:20:49 INFO  payAgoda:55 - complete :Fri Mar 13 09:20:49 ICT 2015
+2015-03-13 09:24:26 INFO  payAgoda:69 - begin :Fri Mar 13 09:24:26 ICT 2015
+2015-03-13 09:24:26 INFO  payAgoda:70 - searchInfo
+2015-03-13 09:28:16 INFO  payAgoda:72 - chooseRoom
+2015-03-13 09:28:51 INFO  payAgoda:74 - bookingInfo
+2015-03-13 09:29:04 INFO  payAgoda:77 - complete :Fri Mar 13 09:29:04 ICT 2015
+2015-03-13 09:36:45 INFO  payAgoda:44 - begin :Fri Mar 13 09:36:45 ICT 2015
+2015-03-13 09:36:45 INFO  payAgoda:45 - initWebdriver
+2015-03-13 09:37:13 INFO  payAgoda:47 - searchInfo
+2015-03-13 09:37:53 INFO  payAgoda:49 - chooseRoom
+2015-03-13 09:38:17 INFO  payAgoda:51 - bookingInfo
+2015-03-13 09:38:29 INFO  payAgoda:53 - get agoda.com again
+2015-03-13 09:38:29 INFO  payAgoda:55 - complete :Fri Mar 13 09:38:29 ICT 2015
+2015-03-13 09:41:24 INFO  payAgoda:69 - begin :Fri Mar 13 09:41:24 ICT 2015
+2015-03-13 09:41:24 INFO  payAgoda:70 - searchInfo
+2015-03-13 09:48:15 INFO  payAgoda:45 - begin :Fri Mar 13 09:48:15 ICT 2015
+2015-03-13 09:48:15 INFO  payAgoda:46 - initWebdriver
+2015-03-13 09:48:28 INFO  payAgoda:48 - searchInfo
+2015-03-13 09:56:44 INFO  payAgoda:50 - chooseRoom
+2015-03-13 13:32:35 INFO  payAgoda:45 - begin :Fri Mar 13 13:32:35 ICT 2015
+2015-03-13 13:32:35 INFO  payAgoda:46 - initWebdriver
+2015-03-13 13:32:54 INFO  payAgoda:48 - searchInfo
+2015-03-13 13:32:56 INFO  payAgoda:50 - chooseRoom
+2015-03-13 13:35:50 INFO  payAgoda:45 - begin :Fri Mar 13 13:35:50 ICT 2015
+2015-03-13 13:35:50 INFO  payAgoda:46 - initWebdriver
+2015-03-13 14:27:46 INFO  payAgoda:45 - begin :Fri Mar 13 14:27:46 ICT 2015
+2015-03-13 14:27:46 INFO  payAgoda:46 - initWebdriver
+2015-03-13 14:28:14 INFO  payAgoda:48 - searchInfo
+2015-03-13 14:28:16 INFO  payAgoda:50 - chooseRoom
+2015-03-13 15:05:10 INFO  payAgoda:45 - begin :Fri Mar 13 15:05:10 ICT 2015
+2015-03-13 15:05:10 INFO  payAgoda:46 - initWebdriver
+2015-03-13 15:06:51 INFO  payAgoda:48 - searchInfo
+2015-03-13 15:06:59 INFO  payAgoda:50 - chooseRoom
+2015-03-13 15:10:18 INFO  payAgoda:52 - bookingInfo
+2015-03-13 15:13:38 INFO  payAgoda:54 - get agoda.com again
+2015-03-13 15:13:38 INFO  payAgoda:56 - complete :Fri Mar 13 15:13:38 ICT 2015
+2015-03-13 15:15:42 INFO  payAgoda:70 - begin :Fri Mar 13 15:15:42 ICT 2015
+2015-03-13 15:15:42 INFO  payAgoda:71 - searchInfo
+2015-03-13 15:17:26 INFO  payAgoda:73 - chooseRoom
+2015-03-13 15:17:30 INFO  payAgoda:75 - bookingInfo
+2015-03-13 15:20:50 INFO  payAgoda:78 - complete :Fri Mar 13 15:20:50 ICT 2015
+2015-03-13 23:15:24 INFO  payAgoda:45 - begin :Fri Mar 13 23:15:24 ICT 2015
+2015-03-13 23:15:24 INFO  payAgoda:46 - initWebdriver
+2015-03-13 23:17:44 INFO  payAgoda:45 - begin :Fri Mar 13 23:17:44 ICT 2015
+2015-03-13 23:17:44 INFO  payAgoda:46 - initWebdriver
+2015-03-13 23:46:23 INFO  Test:18 - begin :Fri Mar 13 23:46:23 ICT 2015
+2015-03-13 23:46:52 INFO  Test:50 - complete :Fri Mar 13 23:46:52 ICT 2015
+2015-03-13 23:48:19 INFO  payAgoda:45 - begin :Fri Mar 13 23:48:19 ICT 2015
+2015-03-13 23:48:19 INFO  payAgoda:46 - initWebdriver
+2015-03-13 23:50:39 INFO  Test:18 - begin :Fri Mar 13 23:50:39 ICT 2015
+2015-03-13 23:52:00 INFO  Test:18 - begin :Fri Mar 13 23:52:00 ICT 2015
+2015-03-13 23:52:48 INFO  Test:18 - begin :Fri Mar 13 23:52:48 ICT 2015
+2015-03-13 23:53:24 INFO  Test:50 - complete :Fri Mar 13 23:53:24 ICT 2015
+2015-03-13 23:54:05 INFO  Test:18 - begin :Fri Mar 13 23:54:05 ICT 2015
+2015-03-13 23:54:35 INFO  Test:50 - complete :Fri Mar 13 23:54:35 ICT 2015
+2015-03-13 23:55:06 INFO  payAgoda:45 - begin :Fri Mar 13 23:55:06 ICT 2015
+2015-03-13 23:55:06 INFO  payAgoda:46 - initWebdriver
+2015-03-13 23:56:28 INFO  payAgoda:45 - begin :Fri Mar 13 23:56:28 ICT 2015
+2015-03-13 23:56:28 INFO  payAgoda:46 - initWebdriver
+2015-03-13 23:56:59 INFO  Test:18 - begin :Fri Mar 13 23:56:59 ICT 2015
+2015-03-14 00:06:27 INFO  Test:18 - begin :Sat Mar 14 00:06:27 ICT 2015
+2015-03-14 00:06:56 INFO  Test:50 - complete :Sat Mar 14 00:06:56 ICT 2015
+2015-03-14 00:07:15 INFO  Test:18 - begin :Sat Mar 14 00:07:15 ICT 2015
+2015-03-14 00:07:56 INFO  Test:50 - complete :Sat Mar 14 00:07:56 ICT 2015
+2015-03-14 00:09:13 INFO  Test:21 - begin :Sat Mar 14 00:09:13 ICT 2015
+2015-03-14 00:09:53 INFO  Test:53 - complete :Sat Mar 14 00:09:53 ICT 2015
+2015-03-14 00:10:04 INFO  Test:21 - begin :Sat Mar 14 00:10:04 ICT 2015
+2015-03-14 00:10:35 INFO  Test:53 - complete :Sat Mar 14 00:10:35 ICT 2015
+2015-03-14 00:10:45 INFO  Test:21 - begin :Sat Mar 14 00:10:45 ICT 2015
+2015-03-14 00:11:23 INFO  Test:53 - complete :Sat Mar 14 00:11:23 ICT 2015
+2015-03-14 00:13:10 INFO  Test:23 - begin :Sat Mar 14 00:13:10 ICT 2015
+2015-03-14 00:13:31 INFO  Test:53 - complete :Sat Mar 14 00:13:31 ICT 2015
+2015-03-14 00:13:56 INFO  payAgoda:45 - begin :Sat Mar 14 00:13:56 ICT 2015
+2015-03-14 00:13:56 INFO  payAgoda:46 - initWebdriver
+2015-03-14 00:16:14 INFO  Test:24 - begin :Sat Mar 14 00:16:14 ICT 2015
+2015-03-14 00:16:37 INFO  Test:54 - complete :Sat Mar 14 00:16:37 ICT 2015
+2015-03-14 00:17:10 INFO  Test:24 - begin :Sat Mar 14 00:17:10 ICT 2015
+2015-03-14 00:17:30 INFO  Test:54 - complete :Sat Mar 14 00:17:30 ICT 2015
+2015-03-14 00:23:05 INFO  Test:24 - begin :Sat Mar 14 00:23:05 ICT 2015
+2015-03-14 00:24:04 INFO  Test:54 - complete :Sat Mar 14 00:24:04 ICT 2015
+2015-03-14 00:27:10 INFO  Test:24 - begin :Sat Mar 14 00:27:10 ICT 2015
+2015-03-14 00:27:28 INFO  Test:54 - complete :Sat Mar 14 00:27:28 ICT 2015
+2015-03-14 00:27:58 INFO  Test:24 - begin :Sat Mar 14 00:27:58 ICT 2015
+2015-03-14 00:28:13 INFO  Test:54 - complete :Sat Mar 14 00:28:13 ICT 2015
+2015-03-14 00:28:52 INFO  Test:24 - begin :Sat Mar 14 00:28:52 ICT 2015
+2015-03-14 00:29:18 INFO  Test:54 - complete :Sat Mar 14 00:29:18 ICT 2015
+2015-03-14 00:29:48 INFO  payAgoda:45 - begin :Sat Mar 14 00:29:48 ICT 2015
+2015-03-14 00:29:48 INFO  payAgoda:46 - initWebdriver
+2015-03-14 00:32:42 INFO  payAgoda:45 - begin :Sat Mar 14 00:32:42 ICT 2015
+2015-03-14 00:32:42 INFO  payAgoda:46 - initWebdriver
+2015-03-14 00:34:49 INFO  payAgoda:48 - searchInfo
+2015-03-14 00:36:51 INFO  payAgoda:50 - chooseRoom
+2015-03-14 00:38:29 INFO  payAgoda:52 - bookingInfo
+2015-03-14 00:41:47 INFO  payAgoda:54 - get agoda.com again
+2015-03-14 00:41:47 INFO  payAgoda:56 - complete :Sat Mar 14 00:41:47 ICT 2015
+2015-03-14 01:15:14 INFO  Test:24 - begin :Sat Mar 14 01:15:14 ICT 2015
+2015-03-14 01:15:30 INFO  Test:54 - complete :Sat Mar 14 01:15:30 ICT 2015
+2015-03-14 01:17:08 INFO  Test:24 - begin :Sat Mar 14 01:17:08 ICT 2015
+2015-03-14 01:17:27 INFO  Test:59 - complete :Sat Mar 14 01:17:27 ICT 2015
+2015-03-14 01:17:41 INFO  payAgoda:45 - begin :Sat Mar 14 01:17:41 ICT 2015
+2015-03-14 01:17:41 INFO  payAgoda:46 - initWebdriver
+2015-03-14 01:19:12 INFO  Test:24 - begin :Sat Mar 14 01:19:12 ICT 2015
+2015-03-14 01:19:27 INFO  Test:59 - complete :Sat Mar 14 01:19:27 ICT 2015
+2015-03-14 01:20:16 INFO  Test:24 - begin :Sat Mar 14 01:20:16 ICT 2015
+2015-03-14 01:20:38 INFO  Test:59 - complete :Sat Mar 14 01:20:38 ICT 2015
+2015-03-14 01:21:27 INFO  Test:24 - begin :Sat Mar 14 01:21:27 ICT 2015
+2015-03-14 01:21:42 INFO  Test:59 - complete :Sat Mar 14 01:21:42 ICT 2015
+2015-03-14 01:27:33 INFO  Test:24 - begin :Sat Mar 14 01:27:33 ICT 2015
+2015-03-14 01:27:49 INFO  Test:59 - complete :Sat Mar 14 01:27:49 ICT 2015
+2015-03-14 01:28:53 INFO  payAgoda:45 - begin :Sat Mar 14 01:28:53 ICT 2015
+2015-03-14 01:28:53 INFO  payAgoda:46 - initWebdriver
+2015-03-14 01:36:22 INFO  payAgoda:45 - begin :Sat Mar 14 01:36:22 ICT 2015
+2015-03-14 01:36:22 INFO  payAgoda:46 - initWebdriver
+2015-03-14 01:38:02 INFO  payAgoda:48 - searchInfo
+2015-03-14 01:39:43 INFO  payAgoda:50 - chooseRoom
+2015-03-14 01:41:15 INFO  payAgoda:52 - bookingInfo
+2015-03-14 01:44:24 INFO  payAgoda:54 - get agoda.com again
+2015-03-14 01:44:24 INFO  payAgoda:56 - complete :Sat Mar 14 01:44:24 ICT 2015
+2015-03-14 01:46:33 INFO  payAgoda:70 - begin :Sat Mar 14 01:46:33 ICT 2015
+2015-03-14 01:46:33 INFO  payAgoda:71 - searchInfo
+2015-03-14 01:48:23 INFO  payAgoda:73 - chooseRoom
+2015-03-14 01:49:55 INFO  payAgoda:75 - bookingInfo
+2015-03-14 01:53:12 INFO  payAgoda:78 - complete :Sat Mar 14 01:53:12 ICT 2015
+2015-03-14 01:55:11 INFO  payAgoda:45 - begin :Sat Mar 14 01:55:11 ICT 2015
+2015-03-14 01:55:11 INFO  payAgoda:46 - initWebdriver
+2015-03-14 01:56:25 INFO  payAgoda:45 - begin :Sat Mar 14 01:56:25 ICT 2015
+2015-03-14 01:56:25 INFO  payAgoda:46 - initWebdriver
+2015-03-14 01:58:07 INFO  payAgoda:48 - searchInfo
+2015-03-14 01:59:57 INFO  payAgoda:50 - chooseRoom
+2015-03-14 02:01:29 INFO  payAgoda:52 - bookingInfo
+2015-03-14 02:04:54 INFO  payAgoda:54 - get agoda.com again
+2015-03-14 02:04:54 INFO  payAgoda:56 - complete :Sat Mar 14 02:04:54 ICT 2015
+2015-03-14 02:04:54 INFO  payAgoda:59 - paymentDetails
+2015-03-14 02:15:10 INFO  payAgoda:44 - begin :Sat Mar 14 02:15:10 ICT 2015
+2015-03-14 02:15:10 INFO  payAgoda:45 - initWebdriver
+2015-03-14 02:16:49 INFO  payAgoda:47 - searchInfo
+2015-03-14 10:22:58 INFO  Test:24 - begin :Sat Mar 14 10:22:58 ICT 2015
+2015-03-14 10:23:13 INFO  Test:59 - complete :Sat Mar 14 10:23:13 ICT 2015
+2015-03-14 10:23:25 INFO  payAgoda:44 - begin :Sat Mar 14 10:23:25 ICT 2015
+2015-03-14 10:23:25 INFO  payAgoda:45 - initWebdriver
+2015-03-14 10:24:57 INFO  Test:24 - begin :Sat Mar 14 10:24:57 ICT 2015
+2015-03-14 10:25:14 INFO  Test:59 - complete :Sat Mar 14 10:25:14 ICT 2015
+2015-03-14 10:26:15 INFO  Test:24 - begin :Sat Mar 14 10:26:15 ICT 2015
+2015-03-14 10:26:30 INFO  Test:59 - complete :Sat Mar 14 10:26:30 ICT 2015
+2015-03-14 10:31:03 INFO  Test:24 - begin :Sat Mar 14 10:31:03 ICT 2015
+2015-03-14 10:31:26 INFO  Test:59 - complete :Sat Mar 14 10:31:26 ICT 2015
+2015-03-14 10:32:06 INFO  payAgoda:44 - begin :Sat Mar 14 10:32:06 ICT 2015
+2015-03-14 10:32:06 INFO  payAgoda:45 - initWebdriver
+2015-03-14 10:32:31 INFO  Test:24 - begin :Sat Mar 14 10:32:31 ICT 2015
+2015-03-14 10:32:47 INFO  Test:59 - complete :Sat Mar 14 10:32:47 ICT 2015
+2015-03-14 10:33:16 INFO  Test:24 - begin :Sat Mar 14 10:33:16 ICT 2015
+2015-03-14 10:33:32 INFO  Test:59 - complete :Sat Mar 14 10:33:32 ICT 2015
+2015-03-14 10:36:20 INFO  payAgoda:45 - begin :Sat Mar 14 10:36:20 ICT 2015
+2015-03-14 10:36:20 INFO  payAgoda:46 - initWebdriver
+2015-03-14 10:38:17 INFO  payAgoda:45 - begin :Sat Mar 14 10:38:17 ICT 2015
+2015-03-14 10:38:17 INFO  payAgoda:46 - initWebdriver
+2015-03-14 10:39:45 INFO  Test:24 - begin :Sat Mar 14 10:39:45 ICT 2015
+2015-03-14 10:40:00 INFO  Test:59 - complete :Sat Mar 14 10:40:00 ICT 2015
+2015-03-14 10:40:45 INFO  Test:24 - begin :Sat Mar 14 10:40:45 ICT 2015
+2015-03-14 10:41:00 INFO  Test:59 - complete :Sat Mar 14 10:41:00 ICT 2015
+2015-03-14 10:41:31 INFO  Test:24 - begin :Sat Mar 14 10:41:31 ICT 2015
+2015-03-14 10:41:46 INFO  Test:59 - complete :Sat Mar 14 10:41:46 ICT 2015
+2015-03-14 10:42:39 INFO  Test:24 - begin :Sat Mar 14 10:42:39 ICT 2015
+2015-03-14 10:42:55 INFO  Test:59 - complete :Sat Mar 14 10:42:55 ICT 2015
+2015-03-14 10:43:27 INFO  Test:24 - begin :Sat Mar 14 10:43:27 ICT 2015
+2015-03-14 10:43:43 INFO  Test:59 - complete :Sat Mar 14 10:43:43 ICT 2015
+2015-03-14 10:44:28 INFO  Test:24 - begin :Sat Mar 14 10:44:28 ICT 2015
+2015-03-14 10:44:43 INFO  Test:59 - complete :Sat Mar 14 10:44:43 ICT 2015
+2015-03-14 10:52:55 INFO  Test:24 - begin :Sat Mar 14 10:52:55 ICT 2015
+2015-03-14 10:53:11 INFO  Test:66 - complete :Sat Mar 14 10:53:11 ICT 2015
+2015-03-14 10:53:18 INFO  Test:31 - begin :Sat Mar 14 10:53:18 ICT 2015
+2015-03-14 10:54:08 INFO  Test:24 - begin :Sat Mar 14 10:54:08 ICT 2015
+2015-03-14 10:54:24 INFO  Test:66 - complete :Sat Mar 14 10:54:24 ICT 2015
+2015-03-14 10:54:31 INFO  Test:31 - begin :Sat Mar 14 10:54:31 ICT 2015
+2015-03-14 10:56:27 INFO  Test:24 - begin :Sat Mar 14 10:56:27 ICT 2015
+2015-03-14 10:56:43 INFO  Test:69 - complete :Sat Mar 14 10:56:43 ICT 2015
+2015-03-14 10:56:51 INFO  Test:34 - begin :Sat Mar 14 10:56:51 ICT 2015
+2015-03-14 10:59:37 INFO  Test:24 - begin :Sat Mar 14 10:59:37 ICT 2015
+2015-03-14 10:59:54 INFO  Test:69 - complete :Sat Mar 14 10:59:54 ICT 2015
+2015-03-14 11:00:08 INFO  Test:34 - begin :Sat Mar 14 11:00:08 ICT 2015
+2015-03-14 11:00:24 INFO  Test:69 - complete :Sat Mar 14 11:00:24 ICT 2015
+2015-03-14 11:01:58 INFO  Test:24 - begin :Sat Mar 14 11:01:58 ICT 2015
+2015-03-14 11:02:14 INFO  Test:69 - complete :Sat Mar 14 11:02:14 ICT 2015
+2015-03-14 11:02:23 INFO  Test:34 - begin :Sat Mar 14 11:02:23 ICT 2015
+2015-03-14 11:04:02 INFO  Test:24 - begin :Sat Mar 14 11:04:02 ICT 2015
+2015-03-14 11:04:19 INFO  Test:69 - complete :Sat Mar 14 11:04:19 ICT 2015
+2015-03-14 11:04:28 INFO  Test:34 - begin :Sat Mar 14 11:04:28 ICT 2015
+2015-03-14 11:04:43 INFO  Test:69 - complete :Sat Mar 14 11:04:43 ICT 2015
+2015-03-14 11:15:14 INFO  payAgoda:45 - begin :Sat Mar 14 11:15:14 ICT 2015
+2015-03-14 11:15:14 INFO  payAgoda:46 - initWebdriver
+2015-03-14 11:24:12 INFO  payAgoda:45 - begin :Sat Mar 14 11:24:12 ICT 2015
+2015-03-14 11:24:12 INFO  payAgoda:46 - initWebdriver
+2015-03-14 11:32:31 INFO  Test:24 - begin :Sat Mar 14 11:32:30 ICT 2015
+2015-03-14 11:32:46 INFO  Test:69 - complete :Sat Mar 14 11:32:46 ICT 2015
+2015-03-14 11:32:55 INFO  Test:34 - begin :Sat Mar 14 11:32:55 ICT 2015
+2015-03-14 11:33:12 INFO  Test:69 - complete :Sat Mar 14 11:33:12 ICT 2015
+2015-03-14 11:52:57 INFO  Test:24 - begin :Sat Mar 14 11:52:57 ICT 2015
+2015-03-14 11:53:25 INFO  Test:69 - complete :Sat Mar 14 11:53:25 ICT 2015
+2015-03-14 11:53:36 INFO  Test:34 - begin :Sat Mar 14 11:53:36 ICT 2015
+2015-03-14 11:53:57 INFO  Test:69 - complete :Sat Mar 14 11:53:57 ICT 2015
+2015-03-14 14:19:17 INFO  payAgoda:45 - begin :Sat Mar 14 14:19:17 ICT 2015
+2015-03-14 14:19:17 INFO  payAgoda:46 - initWebdriver
+2015-03-14 14:50:22 INFO  payAgoda:45 - begin :Sat Mar 14 14:50:22 ICT 2015
+2015-03-14 14:50:22 INFO  payAgoda:46 - initWebdriver
+2015-03-14 14:51:34 INFO  payAgoda:45 - begin :Sat Mar 14 14:51:34 ICT 2015
+2015-03-14 14:51:34 INFO  payAgoda:46 - initWebdriver
+2015-03-14 14:54:03 INFO  Test:24 - begin :Sat Mar 14 14:54:03 ICT 2015
+2015-03-14 14:54:13 INFO  Test:69 - complete :Sat Mar 14 14:54:13 ICT 2015
+2015-03-14 14:54:22 INFO  Test:34 - begin :Sat Mar 14 14:54:22 ICT 2015
+2015-03-14 14:54:31 INFO  Test:69 - complete :Sat Mar 14 14:54:31 ICT 2015
+2015-03-14 14:56:03 INFO  Test:24 - begin :Sat Mar 14 14:56:03 ICT 2015
+2015-03-14 14:56:11 INFO  Test:69 - complete :Sat Mar 14 14:56:11 ICT 2015
+2015-03-14 14:56:19 INFO  Test:34 - begin :Sat Mar 14 14:56:19 ICT 2015
+2015-03-14 14:58:10 INFO  Test:24 - begin :Sat Mar 14 14:58:10 ICT 2015
+2015-03-14 14:58:19 INFO  Test:69 - complete :Sat Mar 14 14:58:19 ICT 2015
+2015-03-14 14:58:26 INFO  Test:34 - begin :Sat Mar 14 14:58:26 ICT 2015
+2015-03-14 15:00:03 INFO  Test:24 - begin :Sat Mar 14 15:00:03 ICT 2015
+2015-03-14 15:00:12 INFO  Test:69 - complete :Sat Mar 14 15:00:12 ICT 2015
+2015-03-14 15:00:26 INFO  Test:34 - begin :Sat Mar 14 15:00:19 ICT 2015
+2015-03-14 15:01:53 INFO  Test:24 - begin :Sat Mar 14 15:01:53 ICT 2015
+2015-03-14 15:02:04 INFO  Test:69 - complete :Sat Mar 14 15:02:04 ICT 2015
+2015-03-14 15:02:13 INFO  Test:34 - begin :Sat Mar 14 15:02:13 ICT 2015
+2015-03-14 15:02:23 INFO  Test:69 - complete :Sat Mar 14 15:02:23 ICT 2015
+2015-03-14 15:02:48 INFO  payAgoda:45 - begin :Sat Mar 14 15:02:48 ICT 2015
+2015-03-14 15:02:48 INFO  payAgoda:46 - initWebdriver
+2015-03-14 16:07:17 INFO  Test:24 - begin :Sat Mar 14 16:07:17 ICT 2015
+2015-03-14 16:08:54 INFO  Test:24 - begin :Sat Mar 14 16:08:54 ICT 2015
+2015-03-14 16:09:05 INFO  Test:69 - complete :Sat Mar 14 16:09:05 ICT 2015
+2015-03-14 16:09:14 INFO  Test:34 - begin :Sat Mar 14 16:09:14 ICT 2015
+2015-03-14 16:09:23 INFO  Test:69 - complete :Sat Mar 14 16:09:23 ICT 2015
+2015-03-14 19:51:38 INFO  Test:24 - begin :Sat Mar 14 19:51:38 ICT 2015
+2015-03-14 19:52:09 INFO  Test:69 - complete :Sat Mar 14 19:52:09 ICT 2015
+2015-03-14 19:52:25 INFO  Test:34 - begin :Sat Mar 14 19:52:25 ICT 2015
+2015-03-14 19:53:02 INFO  Test:69 - complete :Sat Mar 14 19:53:02 ICT 2015
+2015-03-14 20:19:26 INFO  Test:25 - begin :Sat Mar 14 20:19:26 ICT 2015
+2015-03-14 20:19:48 INFO  Test:70 - complete :Sat Mar 14 20:19:48 ICT 2015
+2015-03-14 20:19:58 INFO  Test:35 - begin :Sat Mar 14 20:19:58 ICT 2015
+2015-03-14 20:25:18 INFO  Test:26 - begin :Sat Mar 14 20:25:18 ICT 2015
+2015-03-14 20:27:00 INFO  Test:26 - begin :Sat Mar 14 20:27:00 ICT 2015
+2015-03-14 20:27:16 INFO  Test:71 - complete :Sat Mar 14 20:27:16 ICT 2015
+2015-03-14 20:27:31 INFO  Test:36 - begin :Sat Mar 14 20:27:31 ICT 2015
+2015-03-14 20:27:48 INFO  Test:71 - complete :Sat Mar 14 20:27:48 ICT 2015
+2015-03-14 20:29:33 INFO  Test:26 - begin :Sat Mar 14 20:29:33 ICT 2015
+2015-03-14 20:29:47 INFO  Test:71 - complete :Sat Mar 14 20:29:47 ICT 2015
+2015-03-14 20:29:59 INFO  Test:36 - begin :Sat Mar 14 20:29:59 ICT 2015
+2015-03-14 20:30:17 INFO  Test:71 - complete :Sat Mar 14 20:30:17 ICT 2015
+2015-03-14 20:37:56 INFO  Test:26 - begin :Sat Mar 14 20:37:56 ICT 2015
+2015-03-14 20:38:39 INFO  Test:26 - begin :Sat Mar 14 20:38:39 ICT 2015
+2015-03-14 20:38:53 INFO  Test:71 - complete :Sat Mar 14 20:38:53 ICT 2015
+2015-03-14 20:39:02 INFO  Test:36 - begin :Sat Mar 14 20:39:02 ICT 2015
+2015-03-14 20:39:22 INFO  Test:71 - complete :Sat Mar 14 20:39:22 ICT 2015
+2015-03-14 20:42:13 INFO  Test:26 - begin :Sat Mar 14 20:42:13 ICT 2015
+2015-03-14 20:42:29 INFO  Test:71 - complete :Sat Mar 14 20:42:29 ICT 2015
+2015-03-14 21:12:42 INFO  Test:26 - begin :Sat Mar 14 21:12:42 ICT 2015
+2015-03-14 21:12:55 INFO  Test:71 - complete :Sat Mar 14 21:12:55 ICT 2015
+2015-03-14 21:13:03 INFO  Test:36 - begin :Sat Mar 14 21:13:03 ICT 2015
+2015-03-14 21:16:02 INFO  Test:26 - begin :Sat Mar 14 21:16:02 ICT 2015
+2015-03-14 21:18:31 INFO  Test:26 - begin :Sat Mar 14 21:18:31 ICT 2015
+2015-03-14 21:18:48 INFO  Test:71 - complete :Sat Mar 14 21:18:48 ICT 2015
+2015-03-14 21:19:09 INFO  Test:26 - begin :Sat Mar 14 21:19:09 ICT 2015
+2015-03-14 21:20:43 INFO  Test:26 - begin :Sat Mar 14 21:20:43 ICT 2015
+2015-03-14 21:21:02 INFO  Test:71 - complete :Sat Mar 14 21:21:02 ICT 2015
+2015-03-14 21:21:10 INFO  Test:36 - begin :Sat Mar 14 21:21:10 ICT 2015
+2015-03-14 21:23:59 INFO  Test:26 - begin :Sat Mar 14 21:23:59 ICT 2015
+2015-03-14 21:24:12 INFO  Test:71 - complete :Sat Mar 14 21:24:12 ICT 2015
+2015-03-14 21:24:28 INFO  Test:36 - begin :Sat Mar 14 21:24:19 ICT 2015
+2015-03-14 21:39:28 INFO  Test:26 - begin :Sat Mar 14 21:39:28 ICT 2015
+2015-03-14 21:39:49 INFO  Test:72 - complete :Sat Mar 14 21:39:49 ICT 2015
+2015-03-14 21:40:42 INFO  Test:26 - begin :Sat Mar 14 21:40:42 ICT 2015
+2015-03-14 21:41:01 INFO  Test:72 - complete :Sat Mar 14 21:41:01 ICT 2015
+2015-03-14 21:42:36 INFO  Test:26 - begin :Sat Mar 14 21:42:36 ICT 2015
+2015-03-14 21:42:56 INFO  Test:72 - complete :Sat Mar 14 21:42:56 ICT 2015
+2015-03-14 21:43:28 INFO  Test:26 - begin :Sat Mar 14 21:43:28 ICT 2015
+2015-03-14 21:44:00 INFO  Test:72 - complete :Sat Mar 14 21:44:00 ICT 2015
+2015-03-14 21:46:37 INFO  Test:27 - begin :Sat Mar 14 21:46:37 ICT 2015
+2015-03-14 21:46:53 INFO  Test:73 - complete :Sat Mar 14 21:46:53 ICT 2015
+2015-03-14 21:47:23 INFO  Test:27 - begin :Sat Mar 14 21:47:23 ICT 2015
+2015-03-14 21:52:04 INFO  Test:27 - begin :Sat Mar 14 21:52:04 ICT 2015
+2015-03-14 21:52:25 INFO  Test:73 - complete :Sat Mar 14 21:52:25 ICT 2015
+2015-03-14 21:56:29 INFO  Test:27 - begin :Sat Mar 14 21:56:29 ICT 2015
+2015-03-14 21:56:47 INFO  Test:73 - complete :Sat Mar 14 21:56:47 ICT 2015
+2015-03-14 21:57:23 INFO  Test:27 - begin :Sat Mar 14 21:57:23 ICT 2015
+2015-03-14 21:57:42 INFO  Test:73 - complete :Sat Mar 14 21:57:42 ICT 2015
+2015-03-14 21:59:26 INFO  Test:27 - begin :Sat Mar 14 21:59:26 ICT 2015
+2015-03-14 21:59:45 INFO  Test:73 - complete :Sat Mar 14 21:59:45 ICT 2015
+2015-03-14 22:03:56 INFO  Test:27 - begin :Sat Mar 14 22:03:56 ICT 2015
+2015-03-14 22:04:13 INFO  Test:73 - complete :Sat Mar 14 22:04:13 ICT 2015
+2015-03-14 22:19:42 INFO  Test:28 - begin :Sat Mar 14 22:19:42 ICT 2015
+2015-03-14 22:20:00 INFO  Test:74 - complete :Sat Mar 14 22:20:00 ICT 2015
+2015-03-14 22:33:31 INFO  Test:28 - begin :Sat Mar 14 22:33:31 ICT 2015
+2015-03-14 22:33:44 INFO  Test:74 - complete :Sat Mar 14 22:33:44 ICT 2015
+2015-03-15 00:49:39 INFO  payAgoda:45 - begin :Sun Mar 15 00:49:39 ICT 2015
+2015-03-15 00:49:39 INFO  payAgoda:46 - initWebdriver
+2015-03-15 00:51:01 INFO  Test:28 - begin :Sun Mar 15 00:51:01 ICT 2015
+2015-03-15 00:51:13 INFO  Test:74 - complete :Sun Mar 15 00:51:13 ICT 2015
+2015-03-15 00:51:21 INFO  payAgoda:45 - begin :Sun Mar 15 00:51:21 ICT 2015
+2015-03-15 00:51:21 INFO  payAgoda:46 - initWebdriver
+2015-03-15 00:53:35 INFO  payAgoda:45 - begin :Sun Mar 15 00:53:35 ICT 2015
+2015-03-15 00:53:35 INFO  payAgoda:46 - initWebdriver
+2015-03-15 00:55:03 INFO  payAgoda:45 - begin :Sun Mar 15 00:55:03 ICT 2015
+2015-03-15 00:55:03 INFO  payAgoda:46 - initWebdriver
+2015-03-15 00:56:42 INFO  payAgoda:48 - searchInfo
+2015-03-15 00:58:19 INFO  payAgoda:50 - chooseRoom
+2015-03-15 00:59:51 INFO  payAgoda:52 - bookingInfo
+2015-03-15 01:03:07 INFO  payAgoda:54 - get agoda.com again
+2015-03-15 01:03:07 INFO  payAgoda:56 - complete :Sun Mar 15 01:03:07 ICT 2015
+2015-03-15 01:03:07 INFO  payAgoda:59 - paymentDetails
+2015-03-15 01:04:32 INFO  payAgoda:45 - begin :Sun Mar 15 01:04:32 ICT 2015
+2015-03-15 01:04:32 INFO  payAgoda:46 - initWebdriver
+2015-03-15 01:06:11 INFO  payAgoda:48 - searchInfo
+2015-03-15 01:07:48 INFO  payAgoda:50 - chooseRoom
+2015-03-15 01:09:21 INFO  payAgoda:52 - bookingInfo
+2015-03-15 01:12:36 INFO  payAgoda:54 - get agoda.com again
+2015-03-15 01:12:36 INFO  payAgoda:56 - complete :Sun Mar 15 01:12:36 ICT 2015
+2015-03-15 01:12:36 INFO  payAgoda:59 - paymentDetails
+2015-03-15 01:58:22 INFO  payAgoda:45 - begin :Sun Mar 15 01:58:22 ICT 2015
+2015-03-15 01:58:22 INFO  payAgoda:46 - initWebdriver
+2015-03-15 01:58:45 INFO  Test:28 - begin :Sun Mar 15 01:58:45 ICT 2015
+2015-03-15 01:58:57 INFO  Test:74 - complete :Sun Mar 15 01:58:57 ICT 2015
+2015-03-15 22:29:38 INFO  payAgoda:45 - begin :Sun Mar 15 22:29:38 ICT 2015
+2015-03-15 22:29:38 INFO  payAgoda:46 - initWebdriver
+2015-03-15 22:30:50 INFO  Test:28 - begin :Sun Mar 15 22:30:50 ICT 2015
+2015-03-15 22:31:07 INFO  Test:74 - complete :Sun Mar 15 22:31:07 ICT 2015
+2015-03-15 23:28:30 INFO  Test:28 - begin :Sun Mar 15 23:28:30 ICT 2015
+2015-03-15 23:28:49 INFO  Test:74 - complete :Sun Mar 15 23:28:49 ICT 2015
+2015-03-16 09:26:29 INFO  payAgoda:45 - begin :Mon Mar 16 09:26:29 ICT 2015
+2015-03-16 09:26:29 INFO  payAgoda:46 - initWebdriver
+2015-03-16 09:43:18 INFO  payAgoda:45 - begin :Mon Mar 16 09:43:18 ICT 2015
+2015-03-16 09:43:18 INFO  payAgoda:46 - initWebdriver
+2015-03-16 09:43:19 INFO  payAgoda:255 - get agoda
+2015-03-16 09:56:08 INFO  payAgoda:45 - begin :Mon Mar 16 09:56:08 ICT 2015
+2015-03-16 09:56:08 INFO  payAgoda:46 - initWebdriver
+2015-03-16 09:56:09 INFO  payAgoda:255 - get agoda
+2015-03-16 09:56:27 INFO  payAgoda:257 - get finish agoda
+2015-03-16 09:56:27 INFO  payAgoda:48 - searchInfo
+2015-03-16 09:56:28 INFO  payAgoda:282 - finish: 1
+2015-03-16 09:56:28 INFO  payAgoda:285 - finish: 2
+2015-03-16 09:56:28 INFO  payAgoda:287 - finish: 3
+2015-03-16 09:56:28 INFO  payAgoda:298 - finish: 4
+2015-03-16 10:39:34 INFO  Test:29 - begin :Mon Mar 16 10:39:34 ICT 2015
+2015-03-16 10:41:23 INFO  Test:29 - begin :Mon Mar 16 10:41:23 ICT 2015
+2015-03-16 10:57:25 INFO  Test:29 - begin :Mon Mar 16 10:57:25 ICT 2015
+2015-03-16 10:59:07 INFO  Test:29 - begin :Mon Mar 16 10:59:07 ICT 2015
+2015-03-16 14:47:26 INFO  payAgoda:45 - begin :Mon Mar 16 14:47:26 ICT 2015
+2015-03-16 14:47:26 INFO  payAgoda:46 - initWebdriver
+2015-03-16 14:47:27 INFO  payAgoda:255 - get agoda
+2015-03-16 14:47:48 INFO  payAgoda:257 - get finish agoda
+2015-03-16 14:47:48 INFO  payAgoda:48 - searchInfo
+2015-03-16 14:47:49 INFO  payAgoda:282 - finish: 1
+2015-03-16 14:47:49 INFO  payAgoda:285 - finish: 2
+2015-03-16 14:47:49 INFO  payAgoda:287 - finish: 3
+2015-03-16 14:47:49 INFO  payAgoda:298 - finish: 4
+2015-03-16 14:48:06 INFO  payAgoda:300 - finish: 5
+2015-03-16 14:48:06 INFO  payAgoda:50 - chooseRoom
+2015-03-16 14:48:06 INFO  payAgoda:308 - Choose Room
+2015-03-16 14:48:06 INFO  payAgoda:323 - ChooseRoom: 1
+2015-03-16 14:48:06 INFO  payAgoda:329 - finish: 6
+2015-03-16 14:48:21 INFO  payAgoda:332 - finish: 7
+2015-03-16 14:48:21 INFO  payAgoda:52 - bookingInfo
+2015-03-16 14:48:29 INFO  payAgoda:218 - fName: agFullName f_firstname valid
+2015-03-16 14:48:29 INFO  payAgoda:220 - fName: agFullName f_lastname valid
+2015-03-16 14:48:29 INFO  payAgoda:222 - Mail: f_email valid
+2015-03-16 14:48:29 INFO  payAgoda:224 - Cmail: f_emailconfirm
+2015-03-16 14:48:29 INFO  payAgoda:226 - Phone: f_phone valid
+2015-03-16 14:48:29 INFO  payAgoda:228 - Country: agSelectCountryOne required f_passport valid
+2015-03-16 14:48:29 INFO  payAgoda:231 - secondstep: step-active
+2015-03-16 14:48:33 INFO  payAgoda:218 - fName: agFullName f_firstname valid
+2015-03-16 14:48:33 INFO  payAgoda:220 - fName: agFullName f_lastname valid
+2015-03-16 14:48:33 INFO  payAgoda:222 - Mail: f_email valid
+2015-03-16 14:48:33 INFO  payAgoda:224 - Cmail: f_emailconfirm valid
+2015-03-16 14:48:33 INFO  payAgoda:226 - Phone: f_phone valid
+2015-03-16 14:48:33 INFO  payAgoda:228 - Country: agSelectCountryOne required f_passport valid
+2015-03-16 14:48:33 INFO  payAgoda:231 - secondstep: step-success
+2015-03-16 14:48:33 INFO  payAgoda:54 - get agoda.com again
+2015-03-16 14:48:33 INFO  payAgoda:56 - complete :Mon Mar 16 14:48:33 ICT 2015
+2015-03-16 15:13:05 INFO  payAgoda:45 - begin :Mon Mar 16 15:13:05 ICT 2015
+2015-03-16 15:13:05 INFO  payAgoda:46 - initWebdriver
+2015-03-16 15:13:07 INFO  payAgoda:256 - get agoda
+2015-03-16 15:13:30 INFO  payAgoda:258 - get finish agoda
+2015-03-16 15:13:30 INFO  payAgoda:48 - searchInfo
+2015-03-16 15:13:31 INFO  payAgoda:283 - finish: 1
+2015-03-16 15:13:31 INFO  payAgoda:286 - finish: 2
+2015-03-16 15:13:31 INFO  payAgoda:288 - finish: 3
+2015-03-16 15:13:31 INFO  payAgoda:299 - finish: 4
+2015-03-17 15:14:37 INFO  payAgoda:44 - begin :Tue Mar 17 15:14:36 ICT 2015
+2015-03-17 15:14:37 INFO  payAgoda:45 - initWebdriver
+2015-03-17 15:14:38 INFO  payAgoda:255 - get agoda
+2015-03-17 15:18:11 INFO  payAgoda:257 - get finish agoda
+2015-03-17 15:18:11 INFO  payAgoda:47 - searchInfo
+2015-03-17 15:18:12 INFO  payAgoda:282 - finish: 1
+2015-03-17 15:18:12 INFO  payAgoda:285 - finish: 2
+2015-03-17 15:18:12 INFO  payAgoda:287 - finish: 3
+2015-03-17 15:18:12 INFO  payAgoda:298 - finish: 4
+2015-03-17 15:21:48 INFO  payAgoda:300 - finish: 5
+2015-03-17 15:21:48 INFO  payAgoda:49 - chooseRoom
+2015-03-17 15:21:48 INFO  payAgoda:308 - Choose Room
+2015-03-17 15:21:48 INFO  payAgoda:323 - ChooseRoom: 0
+2015-03-17 15:21:48 INFO  payAgoda:329 - finish: 6
+2015-03-17 15:23:13 INFO  payAgoda:332 - finish: 7
+2015-03-17 15:23:13 INFO  payAgoda:51 - bookingInfo
+2015-03-17 15:23:26 INFO  payAgoda:217 - fName: agFullName f_firstname valid
+2015-03-17 15:23:26 INFO  payAgoda:219 - fName: agFullName f_lastname valid
+2015-03-17 15:23:26 INFO  payAgoda:221 - Mail: f_email valid
+2015-03-17 15:23:26 INFO  payAgoda:223 - Cmail: f_emailconfirm
+2015-03-17 15:23:26 INFO  payAgoda:225 - Phone: f_phone valid
+2015-03-17 15:23:26 INFO  payAgoda:227 - Country: agSelectCountryOne required f_passport valid
+2015-03-17 15:23:26 INFO  payAgoda:230 - secondstep: step-active
+2015-03-17 15:23:29 INFO  payAgoda:217 - fName: agFullName f_firstname valid
+2015-03-17 15:23:29 INFO  payAgoda:219 - fName: agFullName f_lastname valid
+2015-03-17 15:23:29 INFO  payAgoda:221 - Mail: f_email valid
+2015-03-17 15:23:29 INFO  payAgoda:223 - Cmail: f_emailconfirm valid
+2015-03-17 15:23:29 INFO  payAgoda:225 - Phone: f_phone valid
+2015-03-17 15:23:29 INFO  payAgoda:227 - Country: agSelectCountryOne required f_passport valid
+2015-03-17 15:23:29 INFO  payAgoda:230 - secondstep: step-active
+2015-03-17 15:23:29 INFO  payAgoda:53 - get agoda.com again
+2015-03-17 15:23:29 INFO  payAgoda:55 - complete :Tue Mar 17 15:23:29 ICT 2015
+2015-03-17 15:26:51 INFO  webMain:17 - 123
+2015-03-17 15:27:10 INFO  webMain:20 - 123
+2015-03-17 15:33:18 INFO  webMain:17 - 123
+2015-03-17 15:34:14 INFO  webMain:20 - 123
+2015-03-18 00:19:02 INFO  payAgoda:44 - begin :Wed Mar 18 00:19:02 ICT 2015
+2015-03-18 00:19:02 INFO  payAgoda:45 - initWebdriver
+2015-03-18 00:19:04 INFO  payAgoda:255 - get agoda
+2015-03-18 00:19:24 INFO  payAgoda:257 - get finish agoda
+2015-03-18 01:20:37 INFO  payAgoda:44 - begin :Wed Mar 18 01:20:37 ICT 2015
+2015-03-18 01:20:37 INFO  payAgoda:45 - initWebdriver
+2015-03-18 01:20:38 INFO  payAgoda:255 - get agoda
+2015-03-18 01:20:51 INFO  payAgoda:257 - get finish agoda
+2015-03-18 01:20:51 INFO  payAgoda:47 - searchInfo
+2015-03-18 01:20:52 INFO  payAgoda:282 - finish: 1
+2015-03-18 01:20:52 INFO  payAgoda:285 - finish: 2
+2015-03-18 01:20:53 INFO  payAgoda:287 - finish: 3
+2015-03-18 01:20:53 INFO  payAgoda:298 - finish: 4
+2015-03-18 01:21:05 INFO  payAgoda:300 - finish: 5
+2015-03-18 01:21:05 INFO  payAgoda:49 - chooseRoom
+2015-03-18 01:21:05 INFO  payAgoda:308 - Choose Room
+2015-03-18 01:21:05 INFO  payAgoda:323 - ChooseRoom: 0
+2015-03-18 01:21:05 INFO  payAgoda:329 - finish: 6
+2015-03-18 01:21:13 INFO  payAgoda:332 - finish: 7
+2015-03-18 01:21:13 INFO  payAgoda:51 - bookingInfo
+2015-03-18 01:21:20 INFO  payAgoda:217 - fName: agFullName f_firstname valid
+2015-03-18 01:21:20 INFO  payAgoda:219 - fName: agFullName f_lastname valid
+2015-03-18 01:21:20 INFO  payAgoda:221 - Mail: f_email valid
+2015-03-18 01:21:20 INFO  payAgoda:223 - Cmail: f_emailconfirm
+2015-03-18 01:21:20 INFO  payAgoda:225 - Phone: f_phone valid
+2015-03-18 01:21:20 INFO  payAgoda:227 - Country: agSelectCountryOne required f_passport valid
+2015-03-18 01:21:20 INFO  payAgoda:230 - secondstep: step-active
+2015-03-18 01:21:24 INFO  payAgoda:217 - fName: agFullName f_firstname valid
+2015-03-18 01:21:24 INFO  payAgoda:219 - fName: agFullName f_lastname valid
+2015-03-18 01:21:24 INFO  payAgoda:221 - Mail: f_email valid
+2015-03-18 01:21:24 INFO  payAgoda:223 - Cmail: f_emailconfirm valid
+2015-03-18 01:21:24 INFO  payAgoda:225 - Phone: f_phone valid
+2015-03-18 01:21:24 INFO  payAgoda:227 - Country: agSelectCountryOne required f_passport valid
+2015-03-18 01:21:24 INFO  payAgoda:230 - secondstep: step-success
+2015-03-18 01:21:24 INFO  payAgoda:53 - get agoda.com again
+2015-03-18 01:21:24 INFO  payAgoda:55 - complete :Wed Mar 18 01:21:24 ICT 2015
+2015-04-02 10:18:41 INFO  AbstractHotelWorker:25 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 10:18:41 INFO  AbstractHotelWorker:25 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 10:18:41 INFO  RabbitMqHotelServiceMaster:76 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 10:24:17 INFO  AbstractHotelWorker:25 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 10:24:17 INFO  AbstractHotelWorker:25 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 10:25:07 INFO  AbstractHotelWorker:25 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 10:25:07 INFO  AbstractHotelWorker:25 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 10:26:05 INFO  AbstractHotelWorker:25 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 10:26:05 INFO  AbstractHotelWorker:25 - {} started Actor[akka://HotelService/user/Master/Agoda2]
+2015-04-02 10:26:05 INFO  AbstractHotelWorker:25 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 10:26:05 INFO  AbstractHotelWorker:25 - {} started Actor[akka://HotelService/user/Master/Agoda3]
+2015-04-02 10:27:54 INFO  AbstractHotelWorker:25 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 10:27:54 INFO  AbstractHotelWorker:25 - {} started Actor[akka://HotelService/user/Master/Agoda2]
+2015-04-02 10:27:54 INFO  AbstractHotelWorker:25 - {} started Actor[akka://HotelService/user/Master/Agoda3]
+2015-04-02 10:27:54 INFO  AbstractHotelWorker:25 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 10:28:32 INFO  AbstractHotelWorker:25 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 10:28:32 INFO  AbstractHotelWorker:25 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 10:29:35 INFO  RabbitMqHotelServiceMaster:78 - dispatchWorker: akka://HotelService/user/Master/Agoda1
+2015-04-02 10:32:00 INFO  AbstractHotelWorker:25 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 10:32:00 INFO  AbstractHotelWorker:25 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 10:44:04 INFO  AbstractHotelWorker:25 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 10:44:04 INFO  AbstractHotelWorker:25 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 10:49:57 INFO  RabbitMqHotelServiceMaster:78 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 10:51:28 INFO  RabbitMqHotelServiceMaster:78 - dispatchWorker: akka://HotelService/user/Master/Agoda1
+2015-04-02 11:09:50 INFO  RabbitMqHotelServiceMaster:38 - RabbitMQ Hotel Service Master pre started
+2015-04-02 11:09:50 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 11:09:50 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 11:09:50 INFO  RabbitMqHotelServiceMaster:76 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 13:57:27 INFO  RabbitMqHotelServiceMaster:38 - RabbitMQ Hotel Service Master pre started
+2015-04-02 13:57:27 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 13:57:27 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 13:57:27 INFO  RabbitMqHotelServiceMaster:76 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 13:57:27 INFO  RabbitMqHotelServiceMaster:76 - dispatchWorker: akka://HotelService/user/Master/Agoda1
+2015-04-02 13:57:27 INFO  RabbitMqHotelServiceMaster:76 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 13:57:27 INFO  RabbitMqHotelServiceMaster:76 - dispatchWorker: akka://HotelService/user/Master/Agoda1
+2015-04-02 13:57:27 INFO  RabbitMqHotelServiceMaster:76 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 14:07:25 INFO  RabbitMqHotelServiceMaster:76 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 14:07:39 INFO  RabbitMqHotelServiceMaster:76 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 14:10:38 INFO  RabbitMqHotelServiceMaster:38 - RabbitMQ Hotel Service Master pre started
+2015-04-02 14:10:38 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 14:10:38 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 14:10:58 INFO  RabbitMqHotelServiceMaster:76 - dispatchWorker: akka://HotelService/user/Master/Agoda1
+2015-04-02 14:10:58 INFO  RabbitMqHotelServiceMaster:77 - message:[B@19085daa
+2015-04-02 14:12:18 INFO  RabbitMqHotelServiceMaster:38 - RabbitMQ Hotel Service Master pre started
+2015-04-02 14:12:18 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 14:12:18 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 14:12:24 INFO  RabbitMqHotelServiceMaster:76 - dispatchWorker: akka://HotelService/user/Master/Agoda1
+2015-04-02 14:12:24 INFO  AbstractHotelWorker:30 - Message:"eyJib29raW5nSW5mbyI6eyJib29raW5nSWQiOiI1NTExMWEwYWZhNWQ4MDI0NDMwMDAwMDMiLCJjaGVja0luIjoiMjAxNS0wNC0yOCIsImNoZWNrT3V0IjoiMjAxNS0wNC0zMCIsInRvdGFsIjoxMDAwMDAwLCJndWVzdHMiOlt7ImZpcnN0TmFtZSI6IlR1eWVuIiwibGFzdE5hbWUiOiJQaGFtIiwiZW1haWwiOiJ2YW50dXllbi5waGFtQGdtYWlsLmNvbSIsIm1vYmlsZSI6IjAxMjY0MTQzMDEiLCJuYXRpb25hbElkIjoiMzgifV0sInF1YW50aXR5IjoxLCJleHRyYWJlZHMiOjAsImhvdGVsSWQiOiI1Njg3MDAiLCJyb29tSWQiOiIyNjY2NDY0Iiwib2NjdXBhbmN5IjoyLCJjaXR5TmFtZSI6Ikhhbm9pIn0sInVybCI6Imh0dHA6Ly93d3cuYWdvZGEuY29tL3ZpLXZuL3BhZ2VzL2Fnb2RhL2RlZmF1bHQvUHJlQm9vay5hc3B4P2JhcmdzPWVrcExNOExWNHpETGVLUnZnYlRaNUlKdm1jcFcwR3NCZFdmOWZVRnU5dUxDcGRpR3MxT29iTlRPRkkzYTdwMGpTUWw5Z2dzS3N4RTh6TU9DVDUxcFFmZ2taNWtmYndCT0lISTZQOUMxT3dObkM1TWolMmY1aTFTNXVNQnJFYVpxaTlsM0p5VkJJdEVLenF2QTFXdUxHekhhU2xKQk9oSTRXRHN3VktIck1wVDdaMmZqeCUyYjB4alpzc2VFJTJmWkpDMk5TT0NLWG5qMmdwbUx3R2wwQ0FKRmpyY1h5WXElMmZYbW1ISFBnbjBDWHFpVkdEVWg1NnJ3dXpCQnhjRlY0eG95TFBFaDZSTWRmUzRiJTJicE9NMlVzeTR5OEVBcnhpSlpKR1JEeDBHcCUyYmdKcUNLclIwSks4ZDNQbnU3OFFYdDdFS1JyRHNLTHdqeUxhVngwTm01ODZXODZJUU9CcFdiVkZCZTBEMEw3WTZaJTJmOWxLRDFmaXhGdXRjVFdMZUx4aWJ1anphbmtlRyUyYkNuMyUyZkpLRGZYRmNGQWh3ZUhLeWtQM2htQSUyYk4yVVh0bUZxJTJiSDlzRGd6UGM0bnRydzZjS3JzJTJiNzZGZUJBR3lNaENidUxwbG9icVZLcGh2S0tpdWt4SHolMmI3cDdQS0FKcUVZd08lMmJLT29MUlgxTmNWajN6NkJUbXpJaW9QNjB0M011VDI5emU2bHVjelNFVzlLTjBIdU5NenIwRWZuYm1jTVJQbkNyZkYxWGxJeXVVemVYQXdicUM5UzZkdmRxaUZaTU5GZEgxaFNkeFhVZDZVZEIxTTd5WGJuWFBmaER6MHh1SEJZZnVGZFhQdWJsJTJiVW1SJTJiUDlhREJNVWxaaG5ERUpkdWRjOSUyYkVQUFRHNGNGaCUyYjRWMWN4cmZKRENLMEdPNCUyYlJRNHhQS1RWTldOaWMlMmYwWUxzenc5QXlCWWhSVzhiUWxEOWNnSzVjNkFkcU5oRjJaSElETTVKNUlCWElCMW0lMmJjekp2QzJHeGQxWHRTSmduSEIyV2dtZ20wbnBjWVpGclpPUXVMWiUyYlp4WmFrbzNzeFFEWXFFQTZTajlmeWt1QnRQamZxZ0w3bHVhS1RadVhFQ3pZSkI4VGxCUm5EQlcwbXpqaXElMmJQd3RMRzZld3MxJTJmdVVUQ3JDYmhBM3c4Mmd0akk2TlZTR3RacFNJejBOZkE0bUYxS3Rpa0ZwV2IwZGl1T3NHc0ZyJTJiaVk0ODFucjlReXFpSyUyZldrY3RkbkRwSGN1S0VsSjRuUmhDcGdCZnJQcjFXa250dmdsciUyYmRrWHpvUnBjZGs1N1RYek0wZkRMVlJEaXh1YUVMbiUyZmJSMnFxN0k3b3BtRWswJTJiZmNCN3lyVTBDZVIlMmY4RENqMXl2ZXlyTkM4WEFwYUw4bFMxdzZIJTJmZVVVNjglMmZ6SDFRdzdmc25RU24xcklLVEQ0ZkFQWjVVajdDSzFaTHVlcWIwJTJmQ3R5VVZlMiUyYml1ZjlWd01YZkJReCUyZlkxQ0FTb3clM2QlM2Qmcm9vbT0xJmV4YmVkPTAmYXNxPXZsM0hMdDFhd3ZaTlRMMUNTYmJCaXBJY05oV3pvaFp5blA0U1BBdkQ0R0tVZ2VMU2lhSlcySDc2eEtDUCUyZlg2bVp5TiUyZjZQT01KSlJTJTJiWFlUaXNLTDN6VWxYQ2FhdkJOSkNKWlZEbHZQZ1d0WEVVJTJiMXhHVW5qMk8ydUFFSHdSZFJzdXN1Nm1YbGRxdjlXcUw2NTl1UmJpRGFrVUluTkhTYkhLJTJiaUVUMXQ5TlclMmJYVW9ENFhEbjk0R3NWViUyZjRRM25TUkFuM3RQM0hEUTNxdVlJJTJmcERPM0h2ZERoVFQlMmZvNFRCckN4Wk5kUTJ5aUp2ak9NdXBhWGI2ZCUyYkIlMmJuQlIzWDhac0dzRW9ZNFNJcm1zTEQwaXBVQmdPYSUyYnJPaVEydlRNcmo2QmZHM2t1eG9NR1hKUXluNE16RkJzVlRsWXFUeUpNcUpTJTJmY29aN2tiTSUyZml0Q3J5VXY5RmclM2QlM2Qmb2NzcGFyYW09MCZvZnJlc3VsdD0wIn0NCg=="
+2015-04-02 14:13:13 INFO  RabbitMqHotelServiceMaster:76 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 14:13:13 INFO  AbstractHotelWorker:30 - Message:"ew0KDQoiYSI6IDEyNDMNCg0KfQ=="
+2015-04-02 14:14:21 INFO  RabbitMqHotelServiceMaster:39 - RabbitMQ Hotel Service Master pre started
+2015-04-02 14:14:21 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 14:14:21 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 14:14:51 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 14:14:52 INFO  RabbitMqHotelServiceMaster:78 - {"messageProperties":{"headers":{},"timestamp":null,"messageId":null,"userId":null,"appId":null,"clusterId":null,"type":null,"correlationId":null,"replyTo":null,"contentType":null,"contentEncoding":null,"contentLength":0,"deliveryMode":"NON_PERSISTENT","expiration":null,"priority":null,"redelivered":false,"receivedExchange":"","receivedRoutingKey":"Agoda","deliveryTag":1,"messageCount":0,"replyToAddress":null},"body":"ew0KDQoiYSI6IDEyNDMNCg0KfQ=="}
+2015-04-02 14:14:52 INFO  AbstractHotelWorker:30 - Message:"ew0KDQoiYSI6IDEyNDMNCg0KfQ=="
+2015-04-02 14:15:43 INFO  RabbitMqHotelServiceMaster:39 - RabbitMQ Hotel Service Master pre started
+2015-04-02 14:15:43 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 14:15:43 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 14:15:47 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 14:15:47 INFO  RabbitMqHotelServiceMaster:78 - {"messageProperties":{"headers":{},"timestamp":null,"messageId":null,"userId":null,"appId":null,"clusterId":null,"type":null,"correlationId":null,"replyTo":null,"contentType":null,"contentEncoding":null,"contentLength":0,"deliveryMode":"NON_PERSISTENT","expiration":null,"priority":null,"redelivered":false,"receivedExchange":"","receivedRoutingKey":"Agoda","deliveryTag":1,"messageCount":0,"replyToAddress":null},"body":"ew0KDQoiYSI6IDEyNDMNCg0KfQ=="}
+2015-04-02 14:15:47 INFO  RabbitMqHotelServiceMaster:80 - body:"ew0KDQoiYSI6IDEyNDMNCg0KfQ=="
+2015-04-02 14:15:47 INFO  AbstractHotelWorker:30 - Message:"ew0KDQoiYSI6IDEyNDMNCg0KfQ=="
+2015-04-02 14:38:15 INFO  RabbitMqHotelServiceMaster:39 - RabbitMQ Hotel Service Master pre started
+2015-04-02 14:38:15 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 14:38:15 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 14:38:15 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda1
+2015-04-02 14:38:16 INFO  RabbitMqHotelServiceMaster:78 - {"messageProperties":{"headers":{},"timestamp":null,"messageId":null,"userId":null,"appId":null,"clusterId":null,"type":null,"correlationId":null,"replyTo":null,"contentType":null,"contentEncoding":null,"contentLength":0,"deliveryMode":"NON_PERSISTENT","expiration":null,"priority":null,"redelivered":true,"receivedExchange":"","receivedRoutingKey":"Agoda","deliveryTag":1,"messageCount":0,"replyToAddress":null},"body":""}
+2015-04-02 14:38:16 INFO  RabbitMqHotelServiceMaster:80 - body:""
+2015-04-02 14:38:16 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 14:38:16 INFO  AbstractHotelWorker:30 - Message:""
+2015-04-02 14:38:16 INFO  RabbitMqHotelServiceMaster:78 - {"messageProperties":{"headers":{},"timestamp":null,"messageId":null,"userId":null,"appId":null,"clusterId":null,"type":null,"correlationId":null,"replyTo":null,"contentType":null,"contentEncoding":null,"contentLength":0,"deliveryMode":"NON_PERSISTENT","expiration":null,"priority":null,"redelivered":true,"receivedExchange":"","receivedRoutingKey":"Agoda","deliveryTag":2,"messageCount":0,"replyToAddress":null},"body":""}
+2015-04-02 14:38:16 INFO  RabbitMqHotelServiceMaster:80 - body:""
+2015-04-02 14:38:16 INFO  AbstractHotelWorker:30 - Message:""
+2015-04-02 14:41:09 INFO  RabbitMqHotelServiceMaster:39 - RabbitMQ Hotel Service Master pre started
+2015-04-02 14:41:09 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 14:41:09 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 14:41:09 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 14:41:09 INFO  RabbitMqHotelServiceMaster:78 - {"messageProperties":{"headers":{},"timestamp":null,"messageId":null,"userId":null,"appId":null,"clusterId":null,"type":null,"correlationId":null,"replyTo":null,"contentType":null,"contentEncoding":null,"contentLength":0,"deliveryMode":"NON_PERSISTENT","expiration":null,"priority":null,"redelivered":true,"receivedExchange":"","receivedRoutingKey":"Agoda","deliveryTag":1,"messageCount":0,"replyToAddress":null},"body":"ew0KICAgICJfaWQiIDogT2JqZWN0SWQoIjU1MTExYTBhZmE1ZDgwMjQ0MzAwMDAwMyIpLA0KICAgICJhZ2VudCIgOiB7DQogICAgICAgICJpZCIgOiAibW9iaXZpIiwNCiAgICAgICAgIm1vYmlsZSIgOiAiMDkwNjg2NTI1MCIsDQogICAgICAgICJlbWFpbCIgOiAic3VwcG9ydEBtb2JpdmkuY29tIg0KICAgIH0sDQogICAgImNoZWNrSW4iIDogIjIwMTUtMDQtMjgiLA0KICAgICJjaGVja091dCIgOiAiMjAxNS0wNC0zMCIsDQogICAgImd1ZXN0cyIgOiBbIA0KICAgICAgICB7DQogICAgICAgICAgICAiZmlyc3ROYW1lIiA6ICJUdXllbiIsDQogICAgICAgICAgICAibGFzdE5hbWUiIDogIlBoYW0iLA0KICAgICAgICAgICAgIm1vYmlsZSIgOiAiMDEyNjQxNDMwMSIsDQogICAgICAgICAgICAiZW1haWwiIDogInZhbnR1eWVuLnBoYW1AZ21haWwuY29tIiwNCiAgICAgICAgICAgICJuYXRpb25hbGl0eSIgOiAiVk4iDQogICAgICAgIH0NCiAgICBdLA0KICAgICJob3RlbElkIiA6ICI1MzE0MjkzMzNlMDE1MjAyMDAwMDAwNDciLA0KICAgICJtZXJjaGFudCIgOiAiQWdvZGEiLA0KICAgICJyb29tcyIgOiBbIA0KICAgICAgICB7DQogICAgICAgICAgICAicXVhbnRpdHkiIDogMSwNCiAgICAgICAgICAgICJyb29tSWQiIDogIjUzMTQyYjhjM2UwMTUyMDIwMDAwMDA0OSIsDQogICAgICAgICAgICAib2NjdXBhbmN5IiA6IDIsDQogICAgICAgICAgICAiZXh0cmFiZWRzIiA6IDAsDQogICAgICAgICAgICAiaW5jbHVkZWQiIDogIiIsDQogICAgICAgICAgICAiY2FuY2VsbGF0aW9uIiA6IHsNCiAgICAgICAgICAgICAgICAiY2hhcmdlcyIgOiBbIA0KICAgICAgICAgICAgICAgICAgICB7DQogICAgICAgICAgICAgICAgICAgICAgICAiYmVmb3JlIiA6ICIyMDE1LTA0LTI3IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJhbW91bnQiIDogMA0KICAgICAgICAgICAgICAgICAgICB9LCANCiAgICAgICAgICAgICAgICAgICAgew0KICAgICAgICAgICAgICAgICAgICAgICAgImFmdGVyIiA6ICIyMDE1LTA0LTI3IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJiZWZvcmUiIDogIjIwMTUtMDQtMjgiLA0KICAgICAgICAgICAgICAgICAgICAgICAgImFtb3VudCIgOiA1MDAwMDANCiAgICAgICAgICAgICAgICAgICAgfSwgDQogICAgICAgICAgICAgICAgICAgIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICJhZnRlciIgOiAiMjAxNS0wNC0yOCIsDQogICAgICAgICAgICAgICAgICAgICAgICAiYW1vdW50IiA6IDUwMDAwMA0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgXSwNCiAgICAgICAgICAgICAgICAic3VtbWFyeSIgOiB7DQogICAgICAgICAgICAgICAgICAgICJlbiIgOiAiQW55IGNhbmNlbGxhdGlvbiByZWNlaXZlZCB3aXRoaW4gMSBkYXkgcHJpb3IgdG8gYXJyaXZhbCBkYXRlIHdpbGwgaW5jdXIgdGhlIGZpcnN0IG5pZ2h0IGNoYXJnZS4gRmFpbHVyZSB0byBhcnJpdmUgYXQgeW91ciBob3RlbCB3aWxsIGJlIHRyZWF0ZWQgYXMgYSBOby1TaG93IGFuZCB3aWxsIGluY3VyIHRoZSBmaXJzdCBuaWdodCBjaGFyZ2UgKEhvdGVsIHBvbGljeSkuIiwNCiAgICAgICAgICAgICAgICAgICAgInZpIiA6ICJM4buHbmggaOG7p3kgcGjDsm5nIG5o4bqtbiDEkcaw4bujYyB0cm9uZyB2w7JuZyAxIG5nw6B5IHRyxrDhu5tjIG5nw6B5IMSR4bq/biBz4bq9IGLhu4sgdMOtbmggcGjDrSDEkcOqbSDEkeG6p3UgdGnDqm4uIEtow7RuZyB04bubaSBraMOhY2ggc+G6oW4gY+G7p2EgYuG6oW4gc+G6vSDEkcaw4bujYyBjb2kgbMOgIEtow7RuZyBOaOG6rW4gUGjDsm5nIHbDoCBz4bq9IGLhu4sgdMOtbmggcGjDrSDEkcOqbSDEkeG6p3UgdGnDqm4gKENow61uaCBzw6FjaCBraMOhY2ggc+G6oW4pLiINCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICB9LA0KICAgICAgICAgICAgInJhdGUiIDogew0KICAgICAgICAgICAgICAgICJ0b3RhbCIgOiAxMDAwMDAwLjAwMDAwMDAwMDAwMDAwMDAsDQogICAgICAgICAgICAgICAgImRhaWx5IiA6IFsgDQogICAgICAgICAgICAgICAgICAgIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICJkYXRlIiA6ICIyMDE1LTA0LTI4IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJleGNsdXNpdmUiIDogNDMyOTAwLA0KICAgICAgICAgICAgICAgICAgICAgICAgInRheCIgOiA0OTc4NCwNCiAgICAgICAgICAgICAgICAgICAgICAgICJmZWUiIDogMTczMTYsDQogICAgICAgICAgICAgICAgICAgICAgICAiaW5jbHVzaXZlIiA6IDUwMDAwMA0KICAgICAgICAgICAgICAgICAgICB9LCANCiAgICAgICAgICAgICAgICAgICAgew0KICAgICAgICAgICAgICAgICAgICAgICAgImRhdGUiIDogIjIwMTUtMDQtMjkiLA0KICAgICAgICAgICAgICAgICAgICAgICAgImV4Y2x1c2l2ZSIgOiA0MzI5MDAsDQogICAgICAgICAgICAgICAgICAgICAgICAidGF4IiA6IDQ5Nzg0LA0KICAgICAgICAgICAgICAgICAgICAgICAgImZlZSIgOiAxNzMxNiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJpbmNsdXNpdmUiIDogNTAwMDAwDQogICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICBdDQogICAgICAgICAgICB9DQogICAgICAgIH0NCiAgICBdLA0KICAgICJzdGF0dXMiIDogew0KICAgICAgICAiY29kZSIgOiAiQlVZX09OTFkiLA0KICAgICAgICAiY3JlYXRlZCIgOiBJU09EYXRlKCIyMDE1LTA0LTAxVDA4OjAyOjE4LjI3MloiKSwNCiAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJSb29tIE5vdCBGb3VuZCIsDQogICAgICAgICJ1cGRhdGVkIiA6IElTT0RhdGUoIjIwMTUtMDQtMDJUMDY6NDg6MDguMzkxWiIpDQogICAgfSwNCiAgICAidG90YWwiIDogMTAwMDAwMC4wMDAwMDAwMDAwMDAwMDAwDQp9"}
+2015-04-02 14:41:09 INFO  RabbitMqHotelServiceMaster:80 - body:"ew0KICAgICJfaWQiIDogT2JqZWN0SWQoIjU1MTExYTBhZmE1ZDgwMjQ0MzAwMDAwMyIpLA0KICAgICJhZ2VudCIgOiB7DQogICAgICAgICJpZCIgOiAibW9iaXZpIiwNCiAgICAgICAgIm1vYmlsZSIgOiAiMDkwNjg2NTI1MCIsDQogICAgICAgICJlbWFpbCIgOiAic3VwcG9ydEBtb2JpdmkuY29tIg0KICAgIH0sDQogICAgImNoZWNrSW4iIDogIjIwMTUtMDQtMjgiLA0KICAgICJjaGVja091dCIgOiAiMjAxNS0wNC0zMCIsDQogICAgImd1ZXN0cyIgOiBbIA0KICAgICAgICB7DQogICAgICAgICAgICAiZmlyc3ROYW1lIiA6ICJUdXllbiIsDQogICAgICAgICAgICAibGFzdE5hbWUiIDogIlBoYW0iLA0KICAgICAgICAgICAgIm1vYmlsZSIgOiAiMDEyNjQxNDMwMSIsDQogICAgICAgICAgICAiZW1haWwiIDogInZhbnR1eWVuLnBoYW1AZ21haWwuY29tIiwNCiAgICAgICAgICAgICJuYXRpb25hbGl0eSIgOiAiVk4iDQogICAgICAgIH0NCiAgICBdLA0KICAgICJob3RlbElkIiA6ICI1MzE0MjkzMzNlMDE1MjAyMDAwMDAwNDciLA0KICAgICJtZXJjaGFudCIgOiAiQWdvZGEiLA0KICAgICJyb29tcyIgOiBbIA0KICAgICAgICB7DQogICAgICAgICAgICAicXVhbnRpdHkiIDogMSwNCiAgICAgICAgICAgICJyb29tSWQiIDogIjUzMTQyYjhjM2UwMTUyMDIwMDAwMDA0OSIsDQogICAgICAgICAgICAib2NjdXBhbmN5IiA6IDIsDQogICAgICAgICAgICAiZXh0cmFiZWRzIiA6IDAsDQogICAgICAgICAgICAiaW5jbHVkZWQiIDogIiIsDQogICAgICAgICAgICAiY2FuY2VsbGF0aW9uIiA6IHsNCiAgICAgICAgICAgICAgICAiY2hhcmdlcyIgOiBbIA0KICAgICAgICAgICAgICAgICAgICB7DQogICAgICAgICAgICAgICAgICAgICAgICAiYmVmb3JlIiA6ICIyMDE1LTA0LTI3IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJhbW91bnQiIDogMA0KICAgICAgICAgICAgICAgICAgICB9LCANCiAgICAgICAgICAgICAgICAgICAgew0KICAgICAgICAgICAgICAgICAgICAgICAgImFmdGVyIiA6ICIyMDE1LTA0LTI3IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJiZWZvcmUiIDogIjIwMTUtMDQtMjgiLA0KICAgICAgICAgICAgICAgICAgICAgICAgImFtb3VudCIgOiA1MDAwMDANCiAgICAgICAgICAgICAgICAgICAgfSwgDQogICAgICAgICAgICAgICAgICAgIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICJhZnRlciIgOiAiMjAxNS0wNC0yOCIsDQogICAgICAgICAgICAgICAgICAgICAgICAiYW1vdW50IiA6IDUwMDAwMA0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgXSwNCiAgICAgICAgICAgICAgICAic3VtbWFyeSIgOiB7DQogICAgICAgICAgICAgICAgICAgICJlbiIgOiAiQW55IGNhbmNlbGxhdGlvbiByZWNlaXZlZCB3aXRoaW4gMSBkYXkgcHJpb3IgdG8gYXJyaXZhbCBkYXRlIHdpbGwgaW5jdXIgdGhlIGZpcnN0IG5pZ2h0IGNoYXJnZS4gRmFpbHVyZSB0byBhcnJpdmUgYXQgeW91ciBob3RlbCB3aWxsIGJlIHRyZWF0ZWQgYXMgYSBOby1TaG93IGFuZCB3aWxsIGluY3VyIHRoZSBmaXJzdCBuaWdodCBjaGFyZ2UgKEhvdGVsIHBvbGljeSkuIiwNCiAgICAgICAgICAgICAgICAgICAgInZpIiA6ICJM4buHbmggaOG7p3kgcGjDsm5nIG5o4bqtbiDEkcaw4bujYyB0cm9uZyB2w7JuZyAxIG5nw6B5IHRyxrDhu5tjIG5nw6B5IMSR4bq/biBz4bq9IGLhu4sgdMOtbmggcGjDrSDEkcOqbSDEkeG6p3UgdGnDqm4uIEtow7RuZyB04bubaSBraMOhY2ggc+G6oW4gY+G7p2EgYuG6oW4gc+G6vSDEkcaw4bujYyBjb2kgbMOgIEtow7RuZyBOaOG6rW4gUGjDsm5nIHbDoCBz4bq9IGLhu4sgdMOtbmggcGjDrSDEkcOqbSDEkeG6p3UgdGnDqm4gKENow61uaCBzw6FjaCBraMOhY2ggc+G6oW4pLiINCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICB9LA0KICAgICAgICAgICAgInJhdGUiIDogew0KICAgICAgICAgICAgICAgICJ0b3RhbCIgOiAxMDAwMDAwLjAwMDAwMDAwMDAwMDAwMDAsDQogICAgICAgICAgICAgICAgImRhaWx5IiA6IFsgDQogICAgICAgICAgICAgICAgICAgIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICJkYXRlIiA6ICIyMDE1LTA0LTI4IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJleGNsdXNpdmUiIDogNDMyOTAwLA0KICAgICAgICAgICAgICAgICAgICAgICAgInRheCIgOiA0OTc4NCwNCiAgICAgICAgICAgICAgICAgICAgICAgICJmZWUiIDogMTczMTYsDQogICAgICAgICAgICAgICAgICAgICAgICAiaW5jbHVzaXZlIiA6IDUwMDAwMA0KICAgICAgICAgICAgICAgICAgICB9LCANCiAgICAgICAgICAgICAgICAgICAgew0KICAgICAgICAgICAgICAgICAgICAgICAgImRhdGUiIDogIjIwMTUtMDQtMjkiLA0KICAgICAgICAgICAgICAgICAgICAgICAgImV4Y2x1c2l2ZSIgOiA0MzI5MDAsDQogICAgICAgICAgICAgICAgICAgICAgICAidGF4IiA6IDQ5Nzg0LA0KICAgICAgICAgICAgICAgICAgICAgICAgImZlZSIgOiAxNzMxNiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJpbmNsdXNpdmUiIDogNTAwMDAwDQogICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICBdDQogICAgICAgICAgICB9DQogICAgICAgIH0NCiAgICBdLA0KICAgICJzdGF0dXMiIDogew0KICAgICAgICAiY29kZSIgOiAiQlVZX09OTFkiLA0KICAgICAgICAiY3JlYXRlZCIgOiBJU09EYXRlKCIyMDE1LTA0LTAxVDA4OjAyOjE4LjI3MloiKSwNCiAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJSb29tIE5vdCBGb3VuZCIsDQogICAgICAgICJ1cGRhdGVkIiA6IElTT0RhdGUoIjIwMTUtMDQtMDJUMDY6NDg6MDguMzkxWiIpDQogICAgfSwNCiAgICAidG90YWwiIDogMTAwMDAwMC4wMDAwMDAwMDAwMDAwMDAwDQp9"
+2015-04-02 14:41:09 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda1
+2015-04-02 14:41:09 INFO  AbstractHotelWorker:30 - Message:"ew0KICAgICJfaWQiIDogT2JqZWN0SWQoIjU1MTExYTBhZmE1ZDgwMjQ0MzAwMDAwMyIpLA0KICAgICJhZ2VudCIgOiB7DQogICAgICAgICJpZCIgOiAibW9iaXZpIiwNCiAgICAgICAgIm1vYmlsZSIgOiAiMDkwNjg2NTI1MCIsDQogICAgICAgICJlbWFpbCIgOiAic3VwcG9ydEBtb2JpdmkuY29tIg0KICAgIH0sDQogICAgImNoZWNrSW4iIDogIjIwMTUtMDQtMjgiLA0KICAgICJjaGVja091dCIgOiAiMjAxNS0wNC0zMCIsDQogICAgImd1ZXN0cyIgOiBbIA0KICAgICAgICB7DQogICAgICAgICAgICAiZmlyc3ROYW1lIiA6ICJUdXllbiIsDQogICAgICAgICAgICAibGFzdE5hbWUiIDogIlBoYW0iLA0KICAgICAgICAgICAgIm1vYmlsZSIgOiAiMDEyNjQxNDMwMSIsDQogICAgICAgICAgICAiZW1haWwiIDogInZhbnR1eWVuLnBoYW1AZ21haWwuY29tIiwNCiAgICAgICAgICAgICJuYXRpb25hbGl0eSIgOiAiVk4iDQogICAgICAgIH0NCiAgICBdLA0KICAgICJob3RlbElkIiA6ICI1MzE0MjkzMzNlMDE1MjAyMDAwMDAwNDciLA0KICAgICJtZXJjaGFudCIgOiAiQWdvZGEiLA0KICAgICJyb29tcyIgOiBbIA0KICAgICAgICB7DQogICAgICAgICAgICAicXVhbnRpdHkiIDogMSwNCiAgICAgICAgICAgICJyb29tSWQiIDogIjUzMTQyYjhjM2UwMTUyMDIwMDAwMDA0OSIsDQogICAgICAgICAgICAib2NjdXBhbmN5IiA6IDIsDQogICAgICAgICAgICAiZXh0cmFiZWRzIiA6IDAsDQogICAgICAgICAgICAiaW5jbHVkZWQiIDogIiIsDQogICAgICAgICAgICAiY2FuY2VsbGF0aW9uIiA6IHsNCiAgICAgICAgICAgICAgICAiY2hhcmdlcyIgOiBbIA0KICAgICAgICAgICAgICAgICAgICB7DQogICAgICAgICAgICAgICAgICAgICAgICAiYmVmb3JlIiA6ICIyMDE1LTA0LTI3IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJhbW91bnQiIDogMA0KICAgICAgICAgICAgICAgICAgICB9LCANCiAgICAgICAgICAgICAgICAgICAgew0KICAgICAgICAgICAgICAgICAgICAgICAgImFmdGVyIiA6ICIyMDE1LTA0LTI3IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJiZWZvcmUiIDogIjIwMTUtMDQtMjgiLA0KICAgICAgICAgICAgICAgICAgICAgICAgImFtb3VudCIgOiA1MDAwMDANCiAgICAgICAgICAgICAgICAgICAgfSwgDQogICAgICAgICAgICAgICAgICAgIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICJhZnRlciIgOiAiMjAxNS0wNC0yOCIsDQogICAgICAgICAgICAgICAgICAgICAgICAiYW1vdW50IiA6IDUwMDAwMA0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgXSwNCiAgICAgICAgICAgICAgICAic3VtbWFyeSIgOiB7DQogICAgICAgICAgICAgICAgICAgICJlbiIgOiAiQW55IGNhbmNlbGxhdGlvbiByZWNlaXZlZCB3aXRoaW4gMSBkYXkgcHJpb3IgdG8gYXJyaXZhbCBkYXRlIHdpbGwgaW5jdXIgdGhlIGZpcnN0IG5pZ2h0IGNoYXJnZS4gRmFpbHVyZSB0byBhcnJpdmUgYXQgeW91ciBob3RlbCB3aWxsIGJlIHRyZWF0ZWQgYXMgYSBOby1TaG93IGFuZCB3aWxsIGluY3VyIHRoZSBmaXJzdCBuaWdodCBjaGFyZ2UgKEhvdGVsIHBvbGljeSkuIiwNCiAgICAgICAgICAgICAgICAgICAgInZpIiA6ICJM4buHbmggaOG7p3kgcGjDsm5nIG5o4bqtbiDEkcaw4bujYyB0cm9uZyB2w7JuZyAxIG5nw6B5IHRyxrDhu5tjIG5nw6B5IMSR4bq/biBz4bq9IGLhu4sgdMOtbmggcGjDrSDEkcOqbSDEkeG6p3UgdGnDqm4uIEtow7RuZyB04bubaSBraMOhY2ggc+G6oW4gY+G7p2EgYuG6oW4gc+G6vSDEkcaw4bujYyBjb2kgbMOgIEtow7RuZyBOaOG6rW4gUGjDsm5nIHbDoCBz4bq9IGLhu4sgdMOtbmggcGjDrSDEkcOqbSDEkeG6p3UgdGnDqm4gKENow61uaCBzw6FjaCBraMOhY2ggc+G6oW4pLiINCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICB9LA0KICAgICAgICAgICAgInJhdGUiIDogew0KICAgICAgICAgICAgICAgICJ0b3RhbCIgOiAxMDAwMDAwLjAwMDAwMDAwMDAwMDAwMDAsDQogICAgICAgICAgICAgICAgImRhaWx5IiA6IFsgDQogICAgICAgICAgICAgICAgICAgIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICJkYXRlIiA6ICIyMDE1LTA0LTI4IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJleGNsdXNpdmUiIDogNDMyOTAwLA0KICAgICAgICAgICAgICAgICAgICAgICAgInRheCIgOiA0OTc4NCwNCiAgICAgICAgICAgICAgICAgICAgICAgICJmZWUiIDogMTczMTYsDQogICAgICAgICAgICAgICAgICAgICAgICAiaW5jbHVzaXZlIiA6IDUwMDAwMA0KICAgICAgICAgICAgICAgICAgICB9LCANCiAgICAgICAgICAgICAgICAgICAgew0KICAgICAgICAgICAgICAgICAgICAgICAgImRhdGUiIDogIjIwMTUtMDQtMjkiLA0KICAgICAgICAgICAgICAgICAgICAgICAgImV4Y2x1c2l2ZSIgOiA0MzI5MDAsDQogICAgICAgICAgICAgICAgICAgICAgICAidGF4IiA6IDQ5Nzg0LA0KICAgICAgICAgICAgICAgICAgICAgICAgImZlZSIgOiAxNzMxNiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJpbmNsdXNpdmUiIDogNTAwMDAwDQogICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICBdDQogICAgICAgICAgICB9DQogICAgICAgIH0NCiAgICBdLA0KICAgICJzdGF0dXMiIDogew0KICAgICAgICAiY29kZSIgOiAiQlVZX09OTFkiLA0KICAgICAgICAiY3JlYXRlZCIgOiBJU09EYXRlKCIyMDE1LTA0LTAxVDA4OjAyOjE4LjI3MloiKSwNCiAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJSb29tIE5vdCBGb3VuZCIsDQogICAgICAgICJ1cGRhdGVkIiA6IElTT0RhdGUoIjIwMTUtMDQtMDJUMDY6NDg6MDguMzkxWiIpDQogICAgfSwNCiAgICAidG90YWwiIDogMTAwMDAwMC4wMDAwMDAwMDAwMDAwMDAwDQp9"
+2015-04-02 14:41:09 INFO  RabbitMqHotelServiceMaster:78 - {"messageProperties":{"headers":{},"timestamp":null,"messageId":null,"userId":null,"appId":null,"clusterId":null,"type":null,"correlationId":null,"replyTo":null,"contentType":null,"contentEncoding":null,"contentLength":0,"deliveryMode":"NON_PERSISTENT","expiration":null,"priority":null,"redelivered":false,"receivedExchange":"","receivedRoutingKey":"Agoda","deliveryTag":2,"messageCount":0,"replyToAddress":null},"body":"ew0KICAgICJfaWQiIDogT2JqZWN0SWQoIjU1MTExYTBhZmE1ZDgwMjQ0MzAwMDAwMyIpLA0KICAgICJhZ2VudCIgOiB7DQogICAgICAgICJpZCIgOiAibW9iaXZpIiwNCiAgICAgICAgIm1vYmlsZSIgOiAiMDkwNjg2NTI1MCIsDQogICAgICAgICJlbWFpbCIgOiAic3VwcG9ydEBtb2JpdmkuY29tIg0KICAgIH0sDQogICAgImNoZWNrSW4iIDogIjIwMTUtMDQtMjgiLA0KICAgICJjaGVja091dCIgOiAiMjAxNS0wNC0zMCIsDQogICAgImd1ZXN0cyIgOiBbIA0KICAgICAgICB7DQogICAgICAgICAgICAiZmlyc3ROYW1lIiA6ICJUdXllbiIsDQogICAgICAgICAgICAibGFzdE5hbWUiIDogIlBoYW0iLA0KICAgICAgICAgICAgIm1vYmlsZSIgOiAiMDEyNjQxNDMwMSIsDQogICAgICAgICAgICAiZW1haWwiIDogInZhbnR1eWVuLnBoYW1AZ21haWwuY29tIiwNCiAgICAgICAgICAgICJuYXRpb25hbGl0eSIgOiAiVk4iDQogICAgICAgIH0NCiAgICBdLA0KICAgICJob3RlbElkIiA6ICI1MzE0MjkzMzNlMDE1MjAyMDAwMDAwNDciLA0KICAgICJtZXJjaGFudCIgOiAiQWdvZGEiLA0KICAgICJyb29tcyIgOiBbIA0KICAgICAgICB7DQogICAgICAgICAgICAicXVhbnRpdHkiIDogMSwNCiAgICAgICAgICAgICJyb29tSWQiIDogIjUzMTQyYjhjM2UwMTUyMDIwMDAwMDA0OSIsDQogICAgICAgICAgICAib2NjdXBhbmN5IiA6IDIsDQogICAgICAgICAgICAiZXh0cmFiZWRzIiA6IDAsDQogICAgICAgICAgICAiaW5jbHVkZWQiIDogIiIsDQogICAgICAgICAgICAiY2FuY2VsbGF0aW9uIiA6IHsNCiAgICAgICAgICAgICAgICAiY2hhcmdlcyIgOiBbIA0KICAgICAgICAgICAgICAgICAgICB7DQogICAgICAgICAgICAgICAgICAgICAgICAiYmVmb3JlIiA6ICIyMDE1LTA0LTI3IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJhbW91bnQiIDogMA0KICAgICAgICAgICAgICAgICAgICB9LCANCiAgICAgICAgICAgICAgICAgICAgew0KICAgICAgICAgICAgICAgICAgICAgICAgImFmdGVyIiA6ICIyMDE1LTA0LTI3IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJiZWZvcmUiIDogIjIwMTUtMDQtMjgiLA0KICAgICAgICAgICAgICAgICAgICAgICAgImFtb3VudCIgOiA1MDAwMDANCiAgICAgICAgICAgICAgICAgICAgfSwgDQogICAgICAgICAgICAgICAgICAgIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICJhZnRlciIgOiAiMjAxNS0wNC0yOCIsDQogICAgICAgICAgICAgICAgICAgICAgICAiYW1vdW50IiA6IDUwMDAwMA0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgXSwNCiAgICAgICAgICAgICAgICAic3VtbWFyeSIgOiB7DQogICAgICAgICAgICAgICAgICAgICJlbiIgOiAiQW55IGNhbmNlbGxhdGlvbiByZWNlaXZlZCB3aXRoaW4gMSBkYXkgcHJpb3IgdG8gYXJyaXZhbCBkYXRlIHdpbGwgaW5jdXIgdGhlIGZpcnN0IG5pZ2h0IGNoYXJnZS4gRmFpbHVyZSB0byBhcnJpdmUgYXQgeW91ciBob3RlbCB3aWxsIGJlIHRyZWF0ZWQgYXMgYSBOby1TaG93IGFuZCB3aWxsIGluY3VyIHRoZSBmaXJzdCBuaWdodCBjaGFyZ2UgKEhvdGVsIHBvbGljeSkuIiwNCiAgICAgICAgICAgICAgICAgICAgInZpIiA6ICJM4buHbmggaOG7p3kgcGjDsm5nIG5o4bqtbiDEkcaw4bujYyB0cm9uZyB2w7JuZyAxIG5nw6B5IHRyxrDhu5tjIG5nw6B5IMSR4bq/biBz4bq9IGLhu4sgdMOtbmggcGjDrSDEkcOqbSDEkeG6p3UgdGnDqm4uIEtow7RuZyB04bubaSBraMOhY2ggc+G6oW4gY+G7p2EgYuG6oW4gc+G6vSDEkcaw4bujYyBjb2kgbMOgIEtow7RuZyBOaOG6rW4gUGjDsm5nIHbDoCBz4bq9IGLhu4sgdMOtbmggcGjDrSDEkcOqbSDEkeG6p3UgdGnDqm4gKENow61uaCBzw6FjaCBraMOhY2ggc+G6oW4pLiINCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICB9LA0KICAgICAgICAgICAgInJhdGUiIDogew0KICAgICAgICAgICAgICAgICJ0b3RhbCIgOiAxMDAwMDAwLjAwMDAwMDAwMDAwMDAwMDAsDQogICAgICAgICAgICAgICAgImRhaWx5IiA6IFsgDQogICAgICAgICAgICAgICAgICAgIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICJkYXRlIiA6ICIyMDE1LTA0LTI4IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJleGNsdXNpdmUiIDogNDMyOTAwLA0KICAgICAgICAgICAgICAgICAgICAgICAgInRheCIgOiA0OTc4NCwNCiAgICAgICAgICAgICAgICAgICAgICAgICJmZWUiIDogMTczMTYsDQogICAgICAgICAgICAgICAgICAgICAgICAiaW5jbHVzaXZlIiA6IDUwMDAwMA0KICAgICAgICAgICAgICAgICAgICB9LCANCiAgICAgICAgICAgICAgICAgICAgew0KICAgICAgICAgICAgICAgICAgICAgICAgImRhdGUiIDogIjIwMTUtMDQtMjkiLA0KICAgICAgICAgICAgICAgICAgICAgICAgImV4Y2x1c2l2ZSIgOiA0MzI5MDAsDQogICAgICAgICAgICAgICAgICAgICAgICAidGF4IiA6IDQ5Nzg0LA0KICAgICAgICAgICAgICAgICAgICAgICAgImZlZSIgOiAxNzMxNiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJpbmNsdXNpdmUiIDogNTAwMDAwDQogICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICBdDQogICAgICAgICAgICB9DQogICAgICAgIH0NCiAgICBdLA0KICAgICJzdGF0dXMiIDogew0KICAgICAgICAiY29kZSIgOiAiQlVZX09OTFkiLA0KICAgICAgICAiY3JlYXRlZCIgOiBJU09EYXRlKCIyMDE1LTA0LTAxVDA4OjAyOjE4LjI3MloiKSwNCiAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJSb29tIE5vdCBGb3VuZCIsDQogICAgICAgICJ1cGRhdGVkIiA6IElTT0RhdGUoIjIwMTUtMDQtMDJUMDY6NDg6MDguMzkxWiIpDQogICAgfSwNCiAgICAidG90YWwiIDogMTAwMDAwMC4wMDAwMDAwMDAwMDAwMDAwDQp9"}
+2015-04-02 14:41:09 INFO  RabbitMqHotelServiceMaster:80 - body:"ew0KICAgICJfaWQiIDogT2JqZWN0SWQoIjU1MTExYTBhZmE1ZDgwMjQ0MzAwMDAwMyIpLA0KICAgICJhZ2VudCIgOiB7DQogICAgICAgICJpZCIgOiAibW9iaXZpIiwNCiAgICAgICAgIm1vYmlsZSIgOiAiMDkwNjg2NTI1MCIsDQogICAgICAgICJlbWFpbCIgOiAic3VwcG9ydEBtb2JpdmkuY29tIg0KICAgIH0sDQogICAgImNoZWNrSW4iIDogIjIwMTUtMDQtMjgiLA0KICAgICJjaGVja091dCIgOiAiMjAxNS0wNC0zMCIsDQogICAgImd1ZXN0cyIgOiBbIA0KICAgICAgICB7DQogICAgICAgICAgICAiZmlyc3ROYW1lIiA6ICJUdXllbiIsDQogICAgICAgICAgICAibGFzdE5hbWUiIDogIlBoYW0iLA0KICAgICAgICAgICAgIm1vYmlsZSIgOiAiMDEyNjQxNDMwMSIsDQogICAgICAgICAgICAiZW1haWwiIDogInZhbnR1eWVuLnBoYW1AZ21haWwuY29tIiwNCiAgICAgICAgICAgICJuYXRpb25hbGl0eSIgOiAiVk4iDQogICAgICAgIH0NCiAgICBdLA0KICAgICJob3RlbElkIiA6ICI1MzE0MjkzMzNlMDE1MjAyMDAwMDAwNDciLA0KICAgICJtZXJjaGFudCIgOiAiQWdvZGEiLA0KICAgICJyb29tcyIgOiBbIA0KICAgICAgICB7DQogICAgICAgICAgICAicXVhbnRpdHkiIDogMSwNCiAgICAgICAgICAgICJyb29tSWQiIDogIjUzMTQyYjhjM2UwMTUyMDIwMDAwMDA0OSIsDQogICAgICAgICAgICAib2NjdXBhbmN5IiA6IDIsDQogICAgICAgICAgICAiZXh0cmFiZWRzIiA6IDAsDQogICAgICAgICAgICAiaW5jbHVkZWQiIDogIiIsDQogICAgICAgICAgICAiY2FuY2VsbGF0aW9uIiA6IHsNCiAgICAgICAgICAgICAgICAiY2hhcmdlcyIgOiBbIA0KICAgICAgICAgICAgICAgICAgICB7DQogICAgICAgICAgICAgICAgICAgICAgICAiYmVmb3JlIiA6ICIyMDE1LTA0LTI3IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJhbW91bnQiIDogMA0KICAgICAgICAgICAgICAgICAgICB9LCANCiAgICAgICAgICAgICAgICAgICAgew0KICAgICAgICAgICAgICAgICAgICAgICAgImFmdGVyIiA6ICIyMDE1LTA0LTI3IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJiZWZvcmUiIDogIjIwMTUtMDQtMjgiLA0KICAgICAgICAgICAgICAgICAgICAgICAgImFtb3VudCIgOiA1MDAwMDANCiAgICAgICAgICAgICAgICAgICAgfSwgDQogICAgICAgICAgICAgICAgICAgIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICJhZnRlciIgOiAiMjAxNS0wNC0yOCIsDQogICAgICAgICAgICAgICAgICAgICAgICAiYW1vdW50IiA6IDUwMDAwMA0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgXSwNCiAgICAgICAgICAgICAgICAic3VtbWFyeSIgOiB7DQogICAgICAgICAgICAgICAgICAgICJlbiIgOiAiQW55IGNhbmNlbGxhdGlvbiByZWNlaXZlZCB3aXRoaW4gMSBkYXkgcHJpb3IgdG8gYXJyaXZhbCBkYXRlIHdpbGwgaW5jdXIgdGhlIGZpcnN0IG5pZ2h0IGNoYXJnZS4gRmFpbHVyZSB0byBhcnJpdmUgYXQgeW91ciBob3RlbCB3aWxsIGJlIHRyZWF0ZWQgYXMgYSBOby1TaG93IGFuZCB3aWxsIGluY3VyIHRoZSBmaXJzdCBuaWdodCBjaGFyZ2UgKEhvdGVsIHBvbGljeSkuIiwNCiAgICAgICAgICAgICAgICAgICAgInZpIiA6ICJM4buHbmggaOG7p3kgcGjDsm5nIG5o4bqtbiDEkcaw4bujYyB0cm9uZyB2w7JuZyAxIG5nw6B5IHRyxrDhu5tjIG5nw6B5IMSR4bq/biBz4bq9IGLhu4sgdMOtbmggcGjDrSDEkcOqbSDEkeG6p3UgdGnDqm4uIEtow7RuZyB04bubaSBraMOhY2ggc+G6oW4gY+G7p2EgYuG6oW4gc+G6vSDEkcaw4bujYyBjb2kgbMOgIEtow7RuZyBOaOG6rW4gUGjDsm5nIHbDoCBz4bq9IGLhu4sgdMOtbmggcGjDrSDEkcOqbSDEkeG6p3UgdGnDqm4gKENow61uaCBzw6FjaCBraMOhY2ggc+G6oW4pLiINCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICB9LA0KICAgICAgICAgICAgInJhdGUiIDogew0KICAgICAgICAgICAgICAgICJ0b3RhbCIgOiAxMDAwMDAwLjAwMDAwMDAwMDAwMDAwMDAsDQogICAgICAgICAgICAgICAgImRhaWx5IiA6IFsgDQogICAgICAgICAgICAgICAgICAgIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICJkYXRlIiA6ICIyMDE1LTA0LTI4IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJleGNsdXNpdmUiIDogNDMyOTAwLA0KICAgICAgICAgICAgICAgICAgICAgICAgInRheCIgOiA0OTc4NCwNCiAgICAgICAgICAgICAgICAgICAgICAgICJmZWUiIDogMTczMTYsDQogICAgICAgICAgICAgICAgICAgICAgICAiaW5jbHVzaXZlIiA6IDUwMDAwMA0KICAgICAgICAgICAgICAgICAgICB9LCANCiAgICAgICAgICAgICAgICAgICAgew0KICAgICAgICAgICAgICAgICAgICAgICAgImRhdGUiIDogIjIwMTUtMDQtMjkiLA0KICAgICAgICAgICAgICAgICAgICAgICAgImV4Y2x1c2l2ZSIgOiA0MzI5MDAsDQogICAgICAgICAgICAgICAgICAgICAgICAidGF4IiA6IDQ5Nzg0LA0KICAgICAgICAgICAgICAgICAgICAgICAgImZlZSIgOiAxNzMxNiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJpbmNsdXNpdmUiIDogNTAwMDAwDQogICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICBdDQogICAgICAgICAgICB9DQogICAgICAgIH0NCiAgICBdLA0KICAgICJzdGF0dXMiIDogew0KICAgICAgICAiY29kZSIgOiAiQlVZX09OTFkiLA0KICAgICAgICAiY3JlYXRlZCIgOiBJU09EYXRlKCIyMDE1LTA0LTAxVDA4OjAyOjE4LjI3MloiKSwNCiAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJSb29tIE5vdCBGb3VuZCIsDQogICAgICAgICJ1cGRhdGVkIiA6IElTT0RhdGUoIjIwMTUtMDQtMDJUMDY6NDg6MDguMzkxWiIpDQogICAgfSwNCiAgICAidG90YWwiIDogMTAwMDAwMC4wMDAwMDAwMDAwMDAwMDAwDQp9"
+2015-04-02 14:41:09 INFO  AbstractHotelWorker:30 - Message:"ew0KICAgICJfaWQiIDogT2JqZWN0SWQoIjU1MTExYTBhZmE1ZDgwMjQ0MzAwMDAwMyIpLA0KICAgICJhZ2VudCIgOiB7DQogICAgICAgICJpZCIgOiAibW9iaXZpIiwNCiAgICAgICAgIm1vYmlsZSIgOiAiMDkwNjg2NTI1MCIsDQogICAgICAgICJlbWFpbCIgOiAic3VwcG9ydEBtb2JpdmkuY29tIg0KICAgIH0sDQogICAgImNoZWNrSW4iIDogIjIwMTUtMDQtMjgiLA0KICAgICJjaGVja091dCIgOiAiMjAxNS0wNC0zMCIsDQogICAgImd1ZXN0cyIgOiBbIA0KICAgICAgICB7DQogICAgICAgICAgICAiZmlyc3ROYW1lIiA6ICJUdXllbiIsDQogICAgICAgICAgICAibGFzdE5hbWUiIDogIlBoYW0iLA0KICAgICAgICAgICAgIm1vYmlsZSIgOiAiMDEyNjQxNDMwMSIsDQogICAgICAgICAgICAiZW1haWwiIDogInZhbnR1eWVuLnBoYW1AZ21haWwuY29tIiwNCiAgICAgICAgICAgICJuYXRpb25hbGl0eSIgOiAiVk4iDQogICAgICAgIH0NCiAgICBdLA0KICAgICJob3RlbElkIiA6ICI1MzE0MjkzMzNlMDE1MjAyMDAwMDAwNDciLA0KICAgICJtZXJjaGFudCIgOiAiQWdvZGEiLA0KICAgICJyb29tcyIgOiBbIA0KICAgICAgICB7DQogICAgICAgICAgICAicXVhbnRpdHkiIDogMSwNCiAgICAgICAgICAgICJyb29tSWQiIDogIjUzMTQyYjhjM2UwMTUyMDIwMDAwMDA0OSIsDQogICAgICAgICAgICAib2NjdXBhbmN5IiA6IDIsDQogICAgICAgICAgICAiZXh0cmFiZWRzIiA6IDAsDQogICAgICAgICAgICAiaW5jbHVkZWQiIDogIiIsDQogICAgICAgICAgICAiY2FuY2VsbGF0aW9uIiA6IHsNCiAgICAgICAgICAgICAgICAiY2hhcmdlcyIgOiBbIA0KICAgICAgICAgICAgICAgICAgICB7DQogICAgICAgICAgICAgICAgICAgICAgICAiYmVmb3JlIiA6ICIyMDE1LTA0LTI3IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJhbW91bnQiIDogMA0KICAgICAgICAgICAgICAgICAgICB9LCANCiAgICAgICAgICAgICAgICAgICAgew0KICAgICAgICAgICAgICAgICAgICAgICAgImFmdGVyIiA6ICIyMDE1LTA0LTI3IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJiZWZvcmUiIDogIjIwMTUtMDQtMjgiLA0KICAgICAgICAgICAgICAgICAgICAgICAgImFtb3VudCIgOiA1MDAwMDANCiAgICAgICAgICAgICAgICAgICAgfSwgDQogICAgICAgICAgICAgICAgICAgIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICJhZnRlciIgOiAiMjAxNS0wNC0yOCIsDQogICAgICAgICAgICAgICAgICAgICAgICAiYW1vdW50IiA6IDUwMDAwMA0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgXSwNCiAgICAgICAgICAgICAgICAic3VtbWFyeSIgOiB7DQogICAgICAgICAgICAgICAgICAgICJlbiIgOiAiQW55IGNhbmNlbGxhdGlvbiByZWNlaXZlZCB3aXRoaW4gMSBkYXkgcHJpb3IgdG8gYXJyaXZhbCBkYXRlIHdpbGwgaW5jdXIgdGhlIGZpcnN0IG5pZ2h0IGNoYXJnZS4gRmFpbHVyZSB0byBhcnJpdmUgYXQgeW91ciBob3RlbCB3aWxsIGJlIHRyZWF0ZWQgYXMgYSBOby1TaG93IGFuZCB3aWxsIGluY3VyIHRoZSBmaXJzdCBuaWdodCBjaGFyZ2UgKEhvdGVsIHBvbGljeSkuIiwNCiAgICAgICAgICAgICAgICAgICAgInZpIiA6ICJM4buHbmggaOG7p3kgcGjDsm5nIG5o4bqtbiDEkcaw4bujYyB0cm9uZyB2w7JuZyAxIG5nw6B5IHRyxrDhu5tjIG5nw6B5IMSR4bq/biBz4bq9IGLhu4sgdMOtbmggcGjDrSDEkcOqbSDEkeG6p3UgdGnDqm4uIEtow7RuZyB04bubaSBraMOhY2ggc+G6oW4gY+G7p2EgYuG6oW4gc+G6vSDEkcaw4bujYyBjb2kgbMOgIEtow7RuZyBOaOG6rW4gUGjDsm5nIHbDoCBz4bq9IGLhu4sgdMOtbmggcGjDrSDEkcOqbSDEkeG6p3UgdGnDqm4gKENow61uaCBzw6FjaCBraMOhY2ggc+G6oW4pLiINCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICB9LA0KICAgICAgICAgICAgInJhdGUiIDogew0KICAgICAgICAgICAgICAgICJ0b3RhbCIgOiAxMDAwMDAwLjAwMDAwMDAwMDAwMDAwMDAsDQogICAgICAgICAgICAgICAgImRhaWx5IiA6IFsgDQogICAgICAgICAgICAgICAgICAgIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICJkYXRlIiA6ICIyMDE1LTA0LTI4IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJleGNsdXNpdmUiIDogNDMyOTAwLA0KICAgICAgICAgICAgICAgICAgICAgICAgInRheCIgOiA0OTc4NCwNCiAgICAgICAgICAgICAgICAgICAgICAgICJmZWUiIDogMTczMTYsDQogICAgICAgICAgICAgICAgICAgICAgICAiaW5jbHVzaXZlIiA6IDUwMDAwMA0KICAgICAgICAgICAgICAgICAgICB9LCANCiAgICAgICAgICAgICAgICAgICAgew0KICAgICAgICAgICAgICAgICAgICAgICAgImRhdGUiIDogIjIwMTUtMDQtMjkiLA0KICAgICAgICAgICAgICAgICAgICAgICAgImV4Y2x1c2l2ZSIgOiA0MzI5MDAsDQogICAgICAgICAgICAgICAgICAgICAgICAidGF4IiA6IDQ5Nzg0LA0KICAgICAgICAgICAgICAgICAgICAgICAgImZlZSIgOiAxNzMxNiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJpbmNsdXNpdmUiIDogNTAwMDAwDQogICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICBdDQogICAgICAgICAgICB9DQogICAgICAgIH0NCiAgICBdLA0KICAgICJzdGF0dXMiIDogew0KICAgICAgICAiY29kZSIgOiAiQlVZX09OTFkiLA0KICAgICAgICAiY3JlYXRlZCIgOiBJU09EYXRlKCIyMDE1LTA0LTAxVDA4OjAyOjE4LjI3MloiKSwNCiAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJSb29tIE5vdCBGb3VuZCIsDQogICAgICAgICJ1cGRhdGVkIiA6IElTT0RhdGUoIjIwMTUtMDQtMDJUMDY6NDg6MDguMzkxWiIpDQogICAgfSwNCiAgICAidG90YWwiIDogMTAwMDAwMC4wMDAwMDAwMDAwMDAwMDAwDQp9"
+2015-04-02 14:42:46 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 14:42:46 INFO  RabbitMqHotelServiceMaster:78 - {"messageProperties":{"headers":{},"timestamp":null,"messageId":null,"userId":null,"appId":null,"clusterId":null,"type":null,"correlationId":null,"replyTo":null,"contentType":null,"contentEncoding":null,"contentLength":0,"deliveryMode":"NON_PERSISTENT","expiration":null,"priority":null,"redelivered":false,"receivedExchange":"","receivedRoutingKey":"Agoda","deliveryTag":3,"messageCount":0,"replyToAddress":null},"body":"ew0KICAgICJfaWQiIDogT2JqZWN0SWQoIjU1MTExYTBhZmE1ZDgwMjQ0MzAwMDAwMyIpLA0KICAgICJhZ2VudCIgOiB7DQogICAgICAgICJpZCIgOiAibW9iaXZpIiwNCiAgICAgICAgIm1vYmlsZSIgOiAiMDkwNjg2NTI1MCIsDQogICAgICAgICJlbWFpbCIgOiAic3VwcG9ydEBtb2JpdmkuY29tIg0KICAgIH0sDQogICAgImNoZWNrSW4iIDogIjIwMTUtMDQtMjgiLA0KICAgICJjaGVja091dCIgOiAiMjAxNS0wNC0zMCIsDQogICAgImd1ZXN0cyIgOiBbIA0KICAgICAgICB7DQogICAgICAgICAgICAiZmlyc3ROYW1lIiA6ICJUdXllbiIsDQogICAgICAgICAgICAibGFzdE5hbWUiIDogIlBoYW0iLA0KICAgICAgICAgICAgIm1vYmlsZSIgOiAiMDEyNjQxNDMwMSIsDQogICAgICAgICAgICAiZW1haWwiIDogInZhbnR1eWVuLnBoYW1AZ21haWwuY29tIiwNCiAgICAgICAgICAgICJuYXRpb25hbGl0eSIgOiAiVk4iDQogICAgICAgIH0NCiAgICBdLA0KICAgICJob3RlbElkIiA6ICI1MzE0MjkzMzNlMDE1MjAyMDAwMDAwNDciLA0KICAgICJtZXJjaGFudCIgOiAiQWdvZGEiLA0KICAgICJyb29tcyIgOiBbIA0KICAgICAgICB7DQogICAgICAgICAgICAicXVhbnRpdHkiIDogMSwNCiAgICAgICAgICAgICJyb29tSWQiIDogIjUzMTQyYjhjM2UwMTUyMDIwMDAwMDA0OSIsDQogICAgICAgICAgICAib2NjdXBhbmN5IiA6IDIsDQogICAgICAgICAgICAiZXh0cmFiZWRzIiA6IDAsDQogICAgICAgICAgICAiaW5jbHVkZWQiIDogIiIsDQogICAgICAgICAgICAiY2FuY2VsbGF0aW9uIiA6IHsNCiAgICAgICAgICAgICAgICAiY2hhcmdlcyIgOiBbIA0KICAgICAgICAgICAgICAgICAgICB7DQogICAgICAgICAgICAgICAgICAgICAgICAiYmVmb3JlIiA6ICIyMDE1LTA0LTI3IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJhbW91bnQiIDogMA0KICAgICAgICAgICAgICAgICAgICB9LCANCiAgICAgICAgICAgICAgICAgICAgew0KICAgICAgICAgICAgICAgICAgICAgICAgImFmdGVyIiA6ICIyMDE1LTA0LTI3IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJiZWZvcmUiIDogIjIwMTUtMDQtMjgiLA0KICAgICAgICAgICAgICAgICAgICAgICAgImFtb3VudCIgOiA1MDAwMDANCiAgICAgICAgICAgICAgICAgICAgfSwgDQogICAgICAgICAgICAgICAgICAgIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICJhZnRlciIgOiAiMjAxNS0wNC0yOCIsDQogICAgICAgICAgICAgICAgICAgICAgICAiYW1vdW50IiA6IDUwMDAwMA0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgXSwNCiAgICAgICAgICAgICAgICAic3VtbWFyeSIgOiB7DQogICAgICAgICAgICAgICAgICAgICJlbiIgOiAiQW55IGNhbmNlbGxhdGlvbiByZWNlaXZlZCB3aXRoaW4gMSBkYXkgcHJpb3IgdG8gYXJyaXZhbCBkYXRlIHdpbGwgaW5jdXIgdGhlIGZpcnN0IG5pZ2h0IGNoYXJnZS4gRmFpbHVyZSB0byBhcnJpdmUgYXQgeW91ciBob3RlbCB3aWxsIGJlIHRyZWF0ZWQgYXMgYSBOby1TaG93IGFuZCB3aWxsIGluY3VyIHRoZSBmaXJzdCBuaWdodCBjaGFyZ2UgKEhvdGVsIHBvbGljeSkuIiwNCiAgICAgICAgICAgICAgICAgICAgInZpIiA6ICJM4buHbmggaOG7p3kgcGjDsm5nIG5o4bqtbiDEkcaw4bujYyB0cm9uZyB2w7JuZyAxIG5nw6B5IHRyxrDhu5tjIG5nw6B5IMSR4bq/biBz4bq9IGLhu4sgdMOtbmggcGjDrSDEkcOqbSDEkeG6p3UgdGnDqm4uIEtow7RuZyB04bubaSBraMOhY2ggc+G6oW4gY+G7p2EgYuG6oW4gc+G6vSDEkcaw4bujYyBjb2kgbMOgIEtow7RuZyBOaOG6rW4gUGjDsm5nIHbDoCBz4bq9IGLhu4sgdMOtbmggcGjDrSDEkcOqbSDEkeG6p3UgdGnDqm4gKENow61uaCBzw6FjaCBraMOhY2ggc+G6oW4pLiINCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICB9LA0KICAgICAgICAgICAgInJhdGUiIDogew0KICAgICAgICAgICAgICAgICJ0b3RhbCIgOiAxMDAwMDAwLjAwMDAwMDAwMDAwMDAwMDAsDQogICAgICAgICAgICAgICAgImRhaWx5IiA6IFsgDQogICAgICAgICAgICAgICAgICAgIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICJkYXRlIiA6ICIyMDE1LTA0LTI4IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJleGNsdXNpdmUiIDogNDMyOTAwLA0KICAgICAgICAgICAgICAgICAgICAgICAgInRheCIgOiA0OTc4NCwNCiAgICAgICAgICAgICAgICAgICAgICAgICJmZWUiIDogMTczMTYsDQogICAgICAgICAgICAgICAgICAgICAgICAiaW5jbHVzaXZlIiA6IDUwMDAwMA0KICAgICAgICAgICAgICAgICAgICB9LCANCiAgICAgICAgICAgICAgICAgICAgew0KICAgICAgICAgICAgICAgICAgICAgICAgImRhdGUiIDogIjIwMTUtMDQtMjkiLA0KICAgICAgICAgICAgICAgICAgICAgICAgImV4Y2x1c2l2ZSIgOiA0MzI5MDAsDQogICAgICAgICAgICAgICAgICAgICAgICAidGF4IiA6IDQ5Nzg0LA0KICAgICAgICAgICAgICAgICAgICAgICAgImZlZSIgOiAxNzMxNiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJpbmNsdXNpdmUiIDogNTAwMDAwDQogICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICBdDQogICAgICAgICAgICB9DQogICAgICAgIH0NCiAgICBdLA0KICAgICJzdGF0dXMiIDogew0KICAgICAgICAiY29kZSIgOiAiQlVZX09OTFkiLA0KICAgICAgICAiY3JlYXRlZCIgOiBJU09EYXRlKCIyMDE1LTA0LTAxVDA4OjAyOjE4LjI3MloiKSwNCiAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJSb29tIE5vdCBGb3VuZCIsDQogICAgICAgICJ1cGRhdGVkIiA6IElTT0RhdGUoIjIwMTUtMDQtMDJUMDY6NDg6MDguMzkxWiIpDQogICAgfSwNCiAgICAidG90YWwiIDogMTAwMDAwMC4wMDAwMDAwMDAwMDAwMDAwDQp9"}
+2015-04-02 14:42:46 INFO  RabbitMqHotelServiceMaster:80 - body:"ew0KICAgICJfaWQiIDogT2JqZWN0SWQoIjU1MTExYTBhZmE1ZDgwMjQ0MzAwMDAwMyIpLA0KICAgICJhZ2VudCIgOiB7DQogICAgICAgICJpZCIgOiAibW9iaXZpIiwNCiAgICAgICAgIm1vYmlsZSIgOiAiMDkwNjg2NTI1MCIsDQogICAgICAgICJlbWFpbCIgOiAic3VwcG9ydEBtb2JpdmkuY29tIg0KICAgIH0sDQogICAgImNoZWNrSW4iIDogIjIwMTUtMDQtMjgiLA0KICAgICJjaGVja091dCIgOiAiMjAxNS0wNC0zMCIsDQogICAgImd1ZXN0cyIgOiBbIA0KICAgICAgICB7DQogICAgICAgICAgICAiZmlyc3ROYW1lIiA6ICJUdXllbiIsDQogICAgICAgICAgICAibGFzdE5hbWUiIDogIlBoYW0iLA0KICAgICAgICAgICAgIm1vYmlsZSIgOiAiMDEyNjQxNDMwMSIsDQogICAgICAgICAgICAiZW1haWwiIDogInZhbnR1eWVuLnBoYW1AZ21haWwuY29tIiwNCiAgICAgICAgICAgICJuYXRpb25hbGl0eSIgOiAiVk4iDQogICAgICAgIH0NCiAgICBdLA0KICAgICJob3RlbElkIiA6ICI1MzE0MjkzMzNlMDE1MjAyMDAwMDAwNDciLA0KICAgICJtZXJjaGFudCIgOiAiQWdvZGEiLA0KICAgICJyb29tcyIgOiBbIA0KICAgICAgICB7DQogICAgICAgICAgICAicXVhbnRpdHkiIDogMSwNCiAgICAgICAgICAgICJyb29tSWQiIDogIjUzMTQyYjhjM2UwMTUyMDIwMDAwMDA0OSIsDQogICAgICAgICAgICAib2NjdXBhbmN5IiA6IDIsDQogICAgICAgICAgICAiZXh0cmFiZWRzIiA6IDAsDQogICAgICAgICAgICAiaW5jbHVkZWQiIDogIiIsDQogICAgICAgICAgICAiY2FuY2VsbGF0aW9uIiA6IHsNCiAgICAgICAgICAgICAgICAiY2hhcmdlcyIgOiBbIA0KICAgICAgICAgICAgICAgICAgICB7DQogICAgICAgICAgICAgICAgICAgICAgICAiYmVmb3JlIiA6ICIyMDE1LTA0LTI3IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJhbW91bnQiIDogMA0KICAgICAgICAgICAgICAgICAgICB9LCANCiAgICAgICAgICAgICAgICAgICAgew0KICAgICAgICAgICAgICAgICAgICAgICAgImFmdGVyIiA6ICIyMDE1LTA0LTI3IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJiZWZvcmUiIDogIjIwMTUtMDQtMjgiLA0KICAgICAgICAgICAgICAgICAgICAgICAgImFtb3VudCIgOiA1MDAwMDANCiAgICAgICAgICAgICAgICAgICAgfSwgDQogICAgICAgICAgICAgICAgICAgIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICJhZnRlciIgOiAiMjAxNS0wNC0yOCIsDQogICAgICAgICAgICAgICAgICAgICAgICAiYW1vdW50IiA6IDUwMDAwMA0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgXSwNCiAgICAgICAgICAgICAgICAic3VtbWFyeSIgOiB7DQogICAgICAgICAgICAgICAgICAgICJlbiIgOiAiQW55IGNhbmNlbGxhdGlvbiByZWNlaXZlZCB3aXRoaW4gMSBkYXkgcHJpb3IgdG8gYXJyaXZhbCBkYXRlIHdpbGwgaW5jdXIgdGhlIGZpcnN0IG5pZ2h0IGNoYXJnZS4gRmFpbHVyZSB0byBhcnJpdmUgYXQgeW91ciBob3RlbCB3aWxsIGJlIHRyZWF0ZWQgYXMgYSBOby1TaG93IGFuZCB3aWxsIGluY3VyIHRoZSBmaXJzdCBuaWdodCBjaGFyZ2UgKEhvdGVsIHBvbGljeSkuIiwNCiAgICAgICAgICAgICAgICAgICAgInZpIiA6ICJM4buHbmggaOG7p3kgcGjDsm5nIG5o4bqtbiDEkcaw4bujYyB0cm9uZyB2w7JuZyAxIG5nw6B5IHRyxrDhu5tjIG5nw6B5IMSR4bq/biBz4bq9IGLhu4sgdMOtbmggcGjDrSDEkcOqbSDEkeG6p3UgdGnDqm4uIEtow7RuZyB04bubaSBraMOhY2ggc+G6oW4gY+G7p2EgYuG6oW4gc+G6vSDEkcaw4bujYyBjb2kgbMOgIEtow7RuZyBOaOG6rW4gUGjDsm5nIHbDoCBz4bq9IGLhu4sgdMOtbmggcGjDrSDEkcOqbSDEkeG6p3UgdGnDqm4gKENow61uaCBzw6FjaCBraMOhY2ggc+G6oW4pLiINCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICB9LA0KICAgICAgICAgICAgInJhdGUiIDogew0KICAgICAgICAgICAgICAgICJ0b3RhbCIgOiAxMDAwMDAwLjAwMDAwMDAwMDAwMDAwMDAsDQogICAgICAgICAgICAgICAgImRhaWx5IiA6IFsgDQogICAgICAgICAgICAgICAgICAgIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICJkYXRlIiA6ICIyMDE1LTA0LTI4IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJleGNsdXNpdmUiIDogNDMyOTAwLA0KICAgICAgICAgICAgICAgICAgICAgICAgInRheCIgOiA0OTc4NCwNCiAgICAgICAgICAgICAgICAgICAgICAgICJmZWUiIDogMTczMTYsDQogICAgICAgICAgICAgICAgICAgICAgICAiaW5jbHVzaXZlIiA6IDUwMDAwMA0KICAgICAgICAgICAgICAgICAgICB9LCANCiAgICAgICAgICAgICAgICAgICAgew0KICAgICAgICAgICAgICAgICAgICAgICAgImRhdGUiIDogIjIwMTUtMDQtMjkiLA0KICAgICAgICAgICAgICAgICAgICAgICAgImV4Y2x1c2l2ZSIgOiA0MzI5MDAsDQogICAgICAgICAgICAgICAgICAgICAgICAidGF4IiA6IDQ5Nzg0LA0KICAgICAgICAgICAgICAgICAgICAgICAgImZlZSIgOiAxNzMxNiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJpbmNsdXNpdmUiIDogNTAwMDAwDQogICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICBdDQogICAgICAgICAgICB9DQogICAgICAgIH0NCiAgICBdLA0KICAgICJzdGF0dXMiIDogew0KICAgICAgICAiY29kZSIgOiAiQlVZX09OTFkiLA0KICAgICAgICAiY3JlYXRlZCIgOiBJU09EYXRlKCIyMDE1LTA0LTAxVDA4OjAyOjE4LjI3MloiKSwNCiAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJSb29tIE5vdCBGb3VuZCIsDQogICAgICAgICJ1cGRhdGVkIiA6IElTT0RhdGUoIjIwMTUtMDQtMDJUMDY6NDg6MDguMzkxWiIpDQogICAgfSwNCiAgICAidG90YWwiIDogMTAwMDAwMC4wMDAwMDAwMDAwMDAwMDAwDQp9"
+2015-04-02 14:42:46 INFO  AbstractHotelWorker:30 - Message:"ew0KICAgICJfaWQiIDogT2JqZWN0SWQoIjU1MTExYTBhZmE1ZDgwMjQ0MzAwMDAwMyIpLA0KICAgICJhZ2VudCIgOiB7DQogICAgICAgICJpZCIgOiAibW9iaXZpIiwNCiAgICAgICAgIm1vYmlsZSIgOiAiMDkwNjg2NTI1MCIsDQogICAgICAgICJlbWFpbCIgOiAic3VwcG9ydEBtb2JpdmkuY29tIg0KICAgIH0sDQogICAgImNoZWNrSW4iIDogIjIwMTUtMDQtMjgiLA0KICAgICJjaGVja091dCIgOiAiMjAxNS0wNC0zMCIsDQogICAgImd1ZXN0cyIgOiBbIA0KICAgICAgICB7DQogICAgICAgICAgICAiZmlyc3ROYW1lIiA6ICJUdXllbiIsDQogICAgICAgICAgICAibGFzdE5hbWUiIDogIlBoYW0iLA0KICAgICAgICAgICAgIm1vYmlsZSIgOiAiMDEyNjQxNDMwMSIsDQogICAgICAgICAgICAiZW1haWwiIDogInZhbnR1eWVuLnBoYW1AZ21haWwuY29tIiwNCiAgICAgICAgICAgICJuYXRpb25hbGl0eSIgOiAiVk4iDQogICAgICAgIH0NCiAgICBdLA0KICAgICJob3RlbElkIiA6ICI1MzE0MjkzMzNlMDE1MjAyMDAwMDAwNDciLA0KICAgICJtZXJjaGFudCIgOiAiQWdvZGEiLA0KICAgICJyb29tcyIgOiBbIA0KICAgICAgICB7DQogICAgICAgICAgICAicXVhbnRpdHkiIDogMSwNCiAgICAgICAgICAgICJyb29tSWQiIDogIjUzMTQyYjhjM2UwMTUyMDIwMDAwMDA0OSIsDQogICAgICAgICAgICAib2NjdXBhbmN5IiA6IDIsDQogICAgICAgICAgICAiZXh0cmFiZWRzIiA6IDAsDQogICAgICAgICAgICAiaW5jbHVkZWQiIDogIiIsDQogICAgICAgICAgICAiY2FuY2VsbGF0aW9uIiA6IHsNCiAgICAgICAgICAgICAgICAiY2hhcmdlcyIgOiBbIA0KICAgICAgICAgICAgICAgICAgICB7DQogICAgICAgICAgICAgICAgICAgICAgICAiYmVmb3JlIiA6ICIyMDE1LTA0LTI3IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJhbW91bnQiIDogMA0KICAgICAgICAgICAgICAgICAgICB9LCANCiAgICAgICAgICAgICAgICAgICAgew0KICAgICAgICAgICAgICAgICAgICAgICAgImFmdGVyIiA6ICIyMDE1LTA0LTI3IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJiZWZvcmUiIDogIjIwMTUtMDQtMjgiLA0KICAgICAgICAgICAgICAgICAgICAgICAgImFtb3VudCIgOiA1MDAwMDANCiAgICAgICAgICAgICAgICAgICAgfSwgDQogICAgICAgICAgICAgICAgICAgIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICJhZnRlciIgOiAiMjAxNS0wNC0yOCIsDQogICAgICAgICAgICAgICAgICAgICAgICAiYW1vdW50IiA6IDUwMDAwMA0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgXSwNCiAgICAgICAgICAgICAgICAic3VtbWFyeSIgOiB7DQogICAgICAgICAgICAgICAgICAgICJlbiIgOiAiQW55IGNhbmNlbGxhdGlvbiByZWNlaXZlZCB3aXRoaW4gMSBkYXkgcHJpb3IgdG8gYXJyaXZhbCBkYXRlIHdpbGwgaW5jdXIgdGhlIGZpcnN0IG5pZ2h0IGNoYXJnZS4gRmFpbHVyZSB0byBhcnJpdmUgYXQgeW91ciBob3RlbCB3aWxsIGJlIHRyZWF0ZWQgYXMgYSBOby1TaG93IGFuZCB3aWxsIGluY3VyIHRoZSBmaXJzdCBuaWdodCBjaGFyZ2UgKEhvdGVsIHBvbGljeSkuIiwNCiAgICAgICAgICAgICAgICAgICAgInZpIiA6ICJM4buHbmggaOG7p3kgcGjDsm5nIG5o4bqtbiDEkcaw4bujYyB0cm9uZyB2w7JuZyAxIG5nw6B5IHRyxrDhu5tjIG5nw6B5IMSR4bq/biBz4bq9IGLhu4sgdMOtbmggcGjDrSDEkcOqbSDEkeG6p3UgdGnDqm4uIEtow7RuZyB04bubaSBraMOhY2ggc+G6oW4gY+G7p2EgYuG6oW4gc+G6vSDEkcaw4bujYyBjb2kgbMOgIEtow7RuZyBOaOG6rW4gUGjDsm5nIHbDoCBz4bq9IGLhu4sgdMOtbmggcGjDrSDEkcOqbSDEkeG6p3UgdGnDqm4gKENow61uaCBzw6FjaCBraMOhY2ggc+G6oW4pLiINCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICB9LA0KICAgICAgICAgICAgInJhdGUiIDogew0KICAgICAgICAgICAgICAgICJ0b3RhbCIgOiAxMDAwMDAwLjAwMDAwMDAwMDAwMDAwMDAsDQogICAgICAgICAgICAgICAgImRhaWx5IiA6IFsgDQogICAgICAgICAgICAgICAgICAgIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICJkYXRlIiA6ICIyMDE1LTA0LTI4IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJleGNsdXNpdmUiIDogNDMyOTAwLA0KICAgICAgICAgICAgICAgICAgICAgICAgInRheCIgOiA0OTc4NCwNCiAgICAgICAgICAgICAgICAgICAgICAgICJmZWUiIDogMTczMTYsDQogICAgICAgICAgICAgICAgICAgICAgICAiaW5jbHVzaXZlIiA6IDUwMDAwMA0KICAgICAgICAgICAgICAgICAgICB9LCANCiAgICAgICAgICAgICAgICAgICAgew0KICAgICAgICAgICAgICAgICAgICAgICAgImRhdGUiIDogIjIwMTUtMDQtMjkiLA0KICAgICAgICAgICAgICAgICAgICAgICAgImV4Y2x1c2l2ZSIgOiA0MzI5MDAsDQogICAgICAgICAgICAgICAgICAgICAgICAidGF4IiA6IDQ5Nzg0LA0KICAgICAgICAgICAgICAgICAgICAgICAgImZlZSIgOiAxNzMxNiwNCiAgICAgICAgICAgICAgICAgICAgICAgICJpbmNsdXNpdmUiIDogNTAwMDAwDQogICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICBdDQogICAgICAgICAgICB9DQogICAgICAgIH0NCiAgICBdLA0KICAgICJzdGF0dXMiIDogew0KICAgICAgICAiY29kZSIgOiAiQlVZX09OTFkiLA0KICAgICAgICAiY3JlYXRlZCIgOiBJU09EYXRlKCIyMDE1LTA0LTAxVDA4OjAyOjE4LjI3MloiKSwNCiAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJSb29tIE5vdCBGb3VuZCIsDQogICAgICAgICJ1cGRhdGVkIiA6IElTT0RhdGUoIjIwMTUtMDQtMDJUMDY6NDg6MDguMzkxWiIpDQogICAgfSwNCiAgICAidG90YWwiIDogMTAwMDAwMC4wMDAwMDAwMDAwMDAwMDAwDQp9"
+2015-04-02 14:43:25 INFO  RabbitMqHotelServiceMaster:39 - RabbitMQ Hotel Service Master pre started
+2015-04-02 14:43:25 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 14:43:25 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 14:43:35 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 14:43:35 INFO  AbstractHotelWorker:30 - Message:"aGU7bGxv"
+2015-04-02 15:03:12 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda1
+2015-04-02 15:04:24 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 15:06:14 INFO  RabbitMqHotelServiceMaster:39 - RabbitMQ Hotel Service Master pre started
+2015-04-02 15:06:14 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 15:06:14 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 15:06:51 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda1
+2015-04-02 15:14:02 INFO  RabbitMqHotelServiceMaster:39 - RabbitMQ Hotel Service Master pre started
+2015-04-02 15:14:02 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 15:14:02 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 15:14:02 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda1
+2015-04-02 15:21:15 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 15:43:59 INFO  RabbitMqHotelServiceMaster:39 - RabbitMQ Hotel Service Master pre started
+2015-04-02 15:43:59 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 15:43:59 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 15:43:59 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda1
+2015-04-02 15:43:59 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 15:56:25 INFO  RabbitMqHotelServiceMaster:39 - RabbitMQ Hotel Service Master pre started
+2015-04-02 15:56:26 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 15:56:26 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 15:56:26 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 15:56:26 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda1
+2015-04-02 16:09:15 INFO  RabbitMqHotelServiceMaster:39 - RabbitMQ Hotel Service Master pre started
+2015-04-02 16:09:15 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 16:09:15 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 16:09:15 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 16:09:15 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda1
+2015-04-02 16:09:15 INFO  AbstractHotelWorker:30 - Message:"eyJib29raW5nSW5mbyI6eyJib29raW5nSWQiOiI1NTExMWEwYWZhNWQ4MDI0NDMwMDAwMDMiLCJjaGVja0luIjoiMjAxNS0wNC0yOCIsImNoZWNrT3V0IjoiMjAxNS0wNC0zMCIsInRvdGFsIjoxMDAwMDAwLCJndWVzdHMiOlt7ImZpcnN0TmFtZSI6IlR1eWVuIiwibGFzdE5hbWUiOiJQaGFtIiwiZW1haWwiOiJ2YW50dXllbi5waGFtQGdtYWlsLmNvbSIsIm1vYmlsZSI6IjAxMjY0MTQzMDEiLCJuYXRpb25hbElkIjoiMzgifV0sInF1YW50aXR5IjoxLCJleHRyYWJlZHMiOjAsImhvdGVsSWQiOiI1Njg3MDAiLCJyb29tSWQiOiIyNjY2NDY0Iiwib2NjdXBhbmN5IjoyLCJjaXR5TmFtZSI6Ikhhbm9pIn0sInVybCI6Imh0dHA6Ly93d3cuYWdvZGEuY29tL3ZpLXZuLzMyNS1naWFuZy12by1ob3RlbC9ob3RlbC9oYW5vaS12bi5odG1sP2FzcT12bDNITHQxYXd2Wk5UTDFDU2JiQmlwSWNOaFd6b2haeW5QNFNQQXZENEdLVWdlTFNpYUpXMkg3NnhLQ1AlMmZYNm1nN2pnVG1UWW5PWFFGRlJMTVl3SVFjTUZyMmxHdlBaSjhVSGZUTDNYVDRNakxqU0JPQXdaeVM2SkFjTTQyeE1yaFF2dXQ3S05pUUNRenNHVWtIeDBVbGltZCUyZnhmaWlxV1Y2dFhkbms2R2RweGFNempFMEpPelNZazV1cXZSUjI0cUpTJTJmY29aN2tiTSUyZml0Q3J5VXY5RmclM2QlM2Qmc2V0Y29va2llbmV3PTEifQ=="
+2015-04-02 16:09:15 INFO  AbstractHotelWorker:30 - Message:"eyJib29raW5nSW5mbyI6eyJib29raW5nSWQiOiI1NTExMWEwYWZhNWQ4MDI0NDMwMDAwMDMiLCJjaGVja0luIjoiMjAxNS0wNC0yOCIsImNoZWNrT3V0IjoiMjAxNS0wNC0zMCIsInRvdGFsIjoxMDAwMDAwLCJndWVzdHMiOlt7ImZpcnN0TmFtZSI6IlR1eWVuIiwibGFzdE5hbWUiOiJQaGFtIiwiZW1haWwiOiJ2YW50dXllbi5waGFtQGdtYWlsLmNvbSIsIm1vYmlsZSI6IjAxMjY0MTQzMDEiLCJuYXRpb25hbElkIjoiMzgifV0sInF1YW50aXR5IjoxLCJleHRyYWJlZHMiOjAsImhvdGVsSWQiOiI1Njg3MDAiLCJyb29tSWQiOiIyNjY2NDY0Iiwib2NjdXBhbmN5IjoyLCJjaXR5TmFtZSI6Ikhhbm9pIn0sInVybCI6Imh0dHA6Ly93d3cuYWdvZGEuY29tL3ZpLXZuLzMyNS1naWFuZy12by1ob3RlbC9ob3RlbC9oYW5vaS12bi5odG1sP2FzcT12bDNITHQxYXd2Wk5UTDFDU2JiQmlwSWNOaFd6b2haeW5QNFNQQXZENEdLVWdlTFNpYUpXMkg3NnhLQ1AlMmZYNm1nN2pnVG1UWW5PWFFGRlJMTVl3SVFjTUZyMmxHdlBaSjhVSGZUTDNYVDRNakxqU0JPQXdaeVM2SkFjTTQyeE1yaFF2dXQ3S05pUUNRenNHVWtIeDBVbGltZCUyZnhmaWlxV1Y2dFhkbms2R2RwTGhGN1dJa2t5NDloZkUzMSUyYlVnZzBxSlMlMmZjb1o3a2JNJTJmaXRDcnlVdjlGZyUzZCUzZCZjaWQ9MTYwNjk5MCZzZXRjb29raWVuZXc9MSJ9"
+2015-04-02 16:09:15 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 16:09:15 INFO  AbstractHotelWorker:30 - Message:"eyJib29raW5nSW5mbyI6eyJib29raW5nSWQiOiI1NTExMWEwYWZhNWQ4MDI0NDMwMDAwMDMiLCJjaGVja0luIjoiMjAxNS0wNC0yOCIsImNoZWNrT3V0IjoiMjAxNS0wNC0zMCIsInRvdGFsIjoxMDAwMDAwLCJndWVzdHMiOlt7ImZpcnN0TmFtZSI6IlR1eWVuIiwibGFzdE5hbWUiOiJQaGFtIiwiZW1haWwiOiJ2YW50dXllbi5waGFtQGdtYWlsLmNvbSIsIm1vYmlsZSI6IjAxMjY0MTQzMDEiLCJuYXRpb25hbElkIjoiMzgifV0sInF1YW50aXR5IjoxLCJleHRyYWJlZHMiOjAsImhvdGVsSWQiOiI1Njg3MDAiLCJyb29tSWQiOiIyNjY2NDY0Iiwib2NjdXBhbmN5IjoyLCJjaXR5TmFtZSI6Ikhhbm9pIn0sInVybCI6Imh0dHA6Ly93d3cuYWdvZGEuY29tL3ZpLXZuLzMyNS1naWFuZy12by1ob3RlbC9ob3RlbC9oYW5vaS12bi5odG1sP2FzcT12bDNITHQxYXd2Wk5UTDFDU2JiQmlwSWNOaFd6b2haeW5QNFNQQXZENEdLVWdlTFNpYUpXMkg3NnhLQ1AlMmZYNm1nN2pnVG1UWW5PWFFGRlJMTVl3SVFjTUZyMmxHdlBaSjhVSGZUTDNYVDRNakxqU0JPQXdaeVM2SkFjTTQyeE1yaFF2dXQ3S05pUUNRenNHVWtIeDBVbGltZCUyZnhmaWlxV1Y2dFhkbms2R2Rwdk1VMVpJbE1JTXVIMTZhNGt5JTJmNWxxSlMlMmZjb1o3a2JNJTJmaXRDcnlVdjlGZyUzZCUzZCZjaWQ9MTYwNjk5MCZzZXRjb29raWVuZXc9MSJ9"
+2015-04-02 16:09:15 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda1
+2015-04-02 16:09:15 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 16:09:15 INFO  AbstractHotelWorker:30 - Message:"eyJib29raW5nSW5mbyI6eyJib29raW5nSWQiOiI1NTExMWEwYWZhNWQ4MDI0NDMwMDAwMDMiLCJjaGVja0luIjoiMjAxNS0wNC0yOCIsImNoZWNrT3V0IjoiMjAxNS0wNC0zMCIsInRvdGFsIjoxMDAwMDAwLCJndWVzdHMiOlt7ImZpcnN0TmFtZSI6IlR1eWVuIiwibGFzdE5hbWUiOiJQaGFtIiwiZW1haWwiOiJ2YW50dXllbi5waGFtQGdtYWlsLmNvbSIsIm1vYmlsZSI6IjAxMjY0MTQzMDEiLCJuYXRpb25hbElkIjoiMzgifV0sInF1YW50aXR5IjoxLCJleHRyYWJlZHMiOjAsImhvdGVsSWQiOiI1Njg3MDAiLCJyb29tSWQiOiIyNjY2NDY0Iiwib2NjdXBhbmN5IjoyLCJjaXR5TmFtZSI6Ikhhbm9pIn0sInVybCI6Imh0dHA6Ly93d3cuYWdvZGEuY29tL3ZpLXZuLzMyNS1naWFuZy12by1ob3RlbC9ob3RlbC9oYW5vaS12bi5odG1sP2FzcT12bDNITHQxYXd2Wk5UTDFDU2JiQmlwSWNOaFd6b2haeW5QNFNQQXZENEdLVWdlTFNpYUpXMkg3NnhLQ1AlMmZYNm1nN2pnVG1UWW5PWFFGRlJMTVl3SVFjTUZyMmxHdlBaSjhVSGZUTDNYVDRNakxqU0JPQXdaeVM2SkFjTTQyeE1yaFF2dXQ3S05pUUNRenNHVWtIeDBVbGltZCUyZnhmaWlxV1Y2dFhkbms2R2RwM2dKMkFLRGNFWG02RkRZUTllc0lJcUpTJTJmY29aN2tiTSUyZml0Q3J5VXY5RmclM2QlM2QmY2lkPTE2MDY5OTAmc2V0Y29va2llbmV3PTEifQ=="
+2015-04-02 16:09:15 INFO  AbstractHotelWorker:30 - Message:"eyJib29raW5nSW5mbyI6eyJib29raW5nSWQiOiI1NTExMWEwYWZhNWQ4MDI0NDMwMDAwMDMiLCJjaGVja0luIjoiMjAxNS0wNC0yOCIsImNoZWNrT3V0IjoiMjAxNS0wNC0zMCIsInRvdGFsIjoxMDAwMDAwLCJndWVzdHMiOlt7ImZpcnN0TmFtZSI6IlR1eWVuIiwibGFzdE5hbWUiOiJQaGFtIiwiZW1haWwiOiJ2YW50dXllbi5waGFtQGdtYWlsLmNvbSIsIm1vYmlsZSI6IjAxMjY0MTQzMDEiLCJuYXRpb25hbElkIjoiMzgifV0sInF1YW50aXR5IjoxLCJleHRyYWJlZHMiOjAsImhvdGVsSWQiOiI1Njg3MDAiLCJyb29tSWQiOiIyNjY2NDY0Iiwib2NjdXBhbmN5IjoyLCJjaXR5TmFtZSI6Ikhhbm9pIn0sInVybCI6Imh0dHA6Ly93d3cuYWdvZGEuY29tL3ZpLXZuLzMyNS1naWFuZy12by1ob3RlbC9ob3RlbC9oYW5vaS12bi5odG1sP2FzcT12bDNITHQxYXd2Wk5UTDFDU2JiQmlwSWNOaFd6b2haeW5QNFNQQXZENEdLVWdlTFNpYUpXMkg3NnhLQ1AlMmZYNm1nN2pnVG1UWW5PWFFGRlJMTVl3SVFjTUZyMmxHdlBaSjhVSGZUTDNYVDRNakxqU0JPQXdaeVM2SkFjTTQyeE1yaFF2dXQ3S05pUUNRenNHVWtIeDBVbGltZCUyZnhmaWlxV1Y2dFhkbms2R2RyNlZCVThCN3ZlWXBENDdQdml4cmtDcUpTJTJmY29aN2tiTSUyZml0Q3J5VXY5RmclM2QlM2QmY2lkPTE2MDY5OTAmc2V0Y29va2llbmV3PTEifQ=="
+2015-04-02 16:09:15 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda1
+2015-04-02 16:09:15 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 16:09:15 INFO  AbstractHotelWorker:30 - Message:"eyJib29raW5nSW5mbyI6eyJib29raW5nSWQiOiI1NTExMWEwYWZhNWQ4MDI0NDMwMDAwMDMiLCJjaGVja0luIjoiMjAxNS0wNC0yOCIsImNoZWNrT3V0IjoiMjAxNS0wNC0zMCIsInRvdGFsIjoxMDAwMDAwLCJndWVzdHMiOlt7ImZpcnN0TmFtZSI6IlR1eWVuIiwibGFzdE5hbWUiOiJQaGFtIiwiZW1haWwiOiJ2YW50dXllbi5waGFtQGdtYWlsLmNvbSIsIm1vYmlsZSI6IjAxMjY0MTQzMDEiLCJuYXRpb25hbElkIjoiMzgifV0sInF1YW50aXR5IjoxLCJleHRyYWJlZHMiOjAsImhvdGVsSWQiOiI1Njg3MDAiLCJyb29tSWQiOiIyNjY2NDY0Iiwib2NjdXBhbmN5IjoyLCJjaXR5TmFtZSI6Ikhhbm9pIn0sInVybCI6Imh0dHA6Ly93d3cuYWdvZGEuY29tL3ZpLXZuLzMyNS1naWFuZy12by1ob3RlbC9ob3RlbC9oYW5vaS12bi5odG1sP2FzcT12bDNITHQxYXd2Wk5UTDFDU2JiQmlwSWNOaFd6b2haeW5QNFNQQXZENEdLVWdlTFNpYUpXMkg3NnhLQ1AlMmZYNm1nN2pnVG1UWW5PWFFGRlJMTVl3SVFjTUZyMmxHdlBaSjhVSGZUTDNYVDRNakxqU0JPQXdaeVM2SkFjTTQyeE1yaFF2dXQ3S05pUUNRenNHVWtIeDBVbGltZCUyZnhmaWlxV1Y2dFhkbms2R2RyOTJPQVZ1S3MwTzRiQ1UxYmlTc1F3cUpTJTJmY29aN2tiTSUyZml0Q3J5VXY5RmclM2QlM2Qmc2V0Y29va2llbmV3PTEifQ=="
+2015-04-02 16:09:15 INFO  AbstractHotelWorker:30 - Message:"eyJib29raW5nSW5mbyI6eyJib29raW5nSWQiOiI1NTExMWEwYWZhNWQ4MDI0NDMwMDAwMDMiLCJjaGVja0luIjoiMjAxNS0wNC0yOCIsImNoZWNrT3V0IjoiMjAxNS0wNC0zMCIsInRvdGFsIjoxMDAwMDAwLCJndWVzdHMiOlt7ImZpcnN0TmFtZSI6IlR1eWVuIiwibGFzdE5hbWUiOiJQaGFtIiwiZW1haWwiOiJ2YW50dXllbi5waGFtQGdtYWlsLmNvbSIsIm1vYmlsZSI6IjAxMjY0MTQzMDEiLCJuYXRpb25hbElkIjoiMzgifV0sInF1YW50aXR5IjoxLCJleHRyYWJlZHMiOjAsImhvdGVsSWQiOiI1Njg3MDAiLCJyb29tSWQiOiIyNjY2NDY0Iiwib2NjdXBhbmN5IjoyLCJjaXR5TmFtZSI6Ikhhbm9pIn0sInVybCI6Imh0dHA6Ly93d3cuYWdvZGEuY29tL3ZpLXZuLzMyNS1naWFuZy12by1ob3RlbC9ob3RlbC9oYW5vaS12bi5odG1sP2FzcT12bDNITHQxYXd2Wk5UTDFDU2JiQmlwSWNOaFd6b2haeW5QNFNQQXZENEdLVWdlTFNpYUpXMkg3NnhLQ1AlMmZYNm1nN2pnVG1UWW5PWFFGRlJMTVl3SVFjTUZyMmxHdlBaSjhVSGZUTDNYVDRNakxqU0JPQXdaeVM2SkFjTTQyeE1yaFF2dXQ3S05pUUNRenNHVWtIeDBVbGltZCUyZnhmaWlxV1Y2dFhkbms2R2RxT3RSTE03MFlKRmRrOUtyQjBZNFU1cUpTJTJmY29aN2tiTSUyZml0Q3J5VXY5RmclM2QlM2Qmc2V0Y29va2llbmV3PTEifQ=="
+2015-04-02 16:09:15 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda1
+2015-04-02 16:09:15 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 16:09:15 INFO  AbstractHotelWorker:30 - Message:"eyJib29raW5nSW5mbyI6eyJib29raW5nSWQiOiI1NTExMWEwYWZhNWQ4MDI0NDMwMDAwMDMiLCJjaGVja0luIjoiMjAxNS0wNC0yOCIsImNoZWNrT3V0IjoiMjAxNS0wNC0zMCIsInRvdGFsIjoxMDAwMDAwLCJndWVzdHMiOlt7ImZpcnN0TmFtZSI6IlR1eWVuIiwibGFzdE5hbWUiOiJQaGFtIiwiZW1haWwiOiJ2YW50dXllbi5waGFtQGdtYWlsLmNvbSIsIm1vYmlsZSI6IjAxMjY0MTQzMDEiLCJuYXRpb25hbElkIjoiMzgifV0sInF1YW50aXR5IjoxLCJleHRyYWJlZHMiOjAsImhvdGVsSWQiOiI1Njg3MDAiLCJyb29tSWQiOiIyNjY2NDY0Iiwib2NjdXBhbmN5IjoyLCJjaXR5TmFtZSI6Ikhhbm9pIn0sInVybCI6Imh0dHA6Ly93d3cuYWdvZGEuY29tL3ZpLXZuLzMyNS1naWFuZy12by1ob3RlbC9ob3RlbC9oYW5vaS12bi5odG1sP2FzcT12bDNITHQxYXd2Wk5UTDFDU2JiQmlwSWNOaFd6b2haeW5QNFNQQXZENEdLVWdlTFNpYUpXMkg3NnhLQ1AlMmZYNm1nN2pnVG1UWW5PWFFGRlJMTVl3SVFjTUZyMmxHdlBaSjhVSGZUTDNYVDRNakxqU0JPQXdaeVM2SkFjTTQyeE1yaFF2dXQ3S05pUUNRenNHVWtIeDBVbGltZCUyZnhmaWlxV1Y2dFhkbms2R2RwJTJiTTR6Wmc5amx2c2E2d2RiTThpWEdxSlMlMmZjb1o3a2JNJTJmaXRDcnlVdjlGZyUzZCUzZCZzZXRjb29raWVuZXc9MSJ9"
+2015-04-02 16:09:15 INFO  AbstractHotelWorker:30 - Message:"eyJib29raW5nSW5mbyI6eyJib29raW5nSWQiOiI1NTExMWEwYWZhNWQ4MDI0NDMwMDAwMDMiLCJjaGVja0luIjoiMjAxNS0wNC0yOCIsImNoZWNrT3V0IjoiMjAxNS0wNC0zMCIsInRvdGFsIjoxMDAwMDAwLCJndWVzdHMiOlt7ImZpcnN0TmFtZSI6IlR1eWVuIiwibGFzdE5hbWUiOiJQaGFtIiwiZW1haWwiOiJ2YW50dXllbi5waGFtQGdtYWlsLmNvbSIsIm1vYmlsZSI6IjAxMjY0MTQzMDEiLCJuYXRpb25hbElkIjoiMzgifV0sInF1YW50aXR5IjoxLCJleHRyYWJlZHMiOjAsImhvdGVsSWQiOiI1Njg3MDAiLCJyb29tSWQiOiIyNjY2NDY0Iiwib2NjdXBhbmN5IjoyLCJjaXR5TmFtZSI6Ikhhbm9pIn0sInVybCI6Imh0dHA6Ly93d3cuYWdvZGEuY29tL3ZpLXZuLzMyNS1naWFuZy12by1ob3RlbC9ob3RlbC9oYW5vaS12bi5odG1sP2FzcT12bDNITHQxYXd2Wk5UTDFDU2JiQmlwSWNOaFd6b2haeW5QNFNQQXZENEdLVWdlTFNpYUpXMkg3NnhLQ1AlMmZYNm1nN2pnVG1UWW5PWFFGRlJMTVl3SVFjTUZyMmxHdlBaSjhVSGZUTDNYVDRNakxqU0JPQXdaeVM2SkFjTTQyeE1yaFF2dXQ3S05pUUNRenNHVWtIeDBVbGltZCUyZnhmaWlxV1Y2dFhkbms2R2RvV2tHWXliZUx1UXozVDVHaEJoSHltcUpTJTJmY29aN2tiTSUyZml0Q3J5VXY5RmclM2QlM2Qmc2V0Y29va2llbmV3PTEifQ=="
+2015-04-02 16:09:15 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda1
+2015-04-02 16:09:15 INFO  AbstractHotelWorker:30 - Message:"eyJib29raW5nSW5mbyI6eyJib29raW5nSWQiOiI1NTExMWEwYWZhNWQ4MDI0NDMwMDAwMDMiLCJjaGVja0luIjoiMjAxNS0wNC0yOCIsImNoZWNrT3V0IjoiMjAxNS0wNC0zMCIsInRvdGFsIjoxMDAwMDAwLCJndWVzdHMiOlt7ImZpcnN0TmFtZSI6IlR1eWVuIiwibGFzdE5hbWUiOiJQaGFtIiwiZW1haWwiOiJ2YW50dXllbi5waGFtQGdtYWlsLmNvbSIsIm1vYmlsZSI6IjAxMjY0MTQzMDEiLCJuYXRpb25hbElkIjoiMzgifV0sInF1YW50aXR5IjoxLCJleHRyYWJlZHMiOjAsImhvdGVsSWQiOiI1Njg3MDAiLCJyb29tSWQiOiIyNjY2NDY0Iiwib2NjdXBhbmN5IjoyLCJjaXR5TmFtZSI6Ikhhbm9pIn0sInVybCI6Imh0dHA6Ly93d3cuYWdvZGEuY29tL3ZpLXZuLzMyNS1naWFuZy12by1ob3RlbC9ob3RlbC9oYW5vaS12bi5odG1sP2FzcT12bDNITHQxYXd2Wk5UTDFDU2JiQmlwSWNOaFd6b2haeW5QNFNQQXZENEdLVWdlTFNpYUpXMkg3NnhLQ1AlMmZYNm1nN2pnVG1UWW5PWFFGRlJMTVl3SVFjTUZyMmxHdlBaSjhVSGZUTDNYVDRNakxqU0JPQXdaeVM2SkFjTTQyeE1yaFF2dXQ3S05pUUNRenNHVWtIeDBVbGltZCUyZnhmaWlxV1Y2dFhkbms2R2RvdnQ5V0xxOFByZEh5TTZlSkcyaG0xcUpTJTJmY29aN2tiTSUyZml0Q3J5VXY5RmclM2QlM2Qmc2V0Y29va2llbmV3PTEifQ=="
+2015-04-02 16:09:49 INFO  RabbitMqHotelServiceMaster:39 - RabbitMQ Hotel Service Master pre started
+2015-04-02 16:09:49 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 16:09:49 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 16:15:20 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 16:15:25 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda1
+2015-04-02 16:26:36 INFO  RabbitMqHotelServiceMaster:39 - RabbitMQ Hotel Service Master pre started
+2015-04-02 16:26:36 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 16:26:36 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 16:26:36 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 16:26:36 INFO  RabbitMqHotelServiceMaster:78 - {"messageProperties":{"headers":{},"timestamp":null,"messageId":null,"userId":null,"appId":null,"clusterId":null,"type":null,"correlationId":null,"replyTo":null,"contentType":"application/json","contentEncoding":null,"contentLength":0,"deliveryMode":"PERSISTENT","expiration":null,"priority":null,"redelivered":true,"receivedExchange":"","receivedRoutingKey":"Agoda","deliveryTag":1,"messageCount":0,"replyToAddress":null},"body":"eyJib29raW5nSW5mbyI6eyJib29raW5nSWQiOiI1NTExMWEwYWZhNWQ4MDI0NDMwMDAwMDMiLCJjaGVja0luIjoiMjAxNS0wNC0yOCIsImNoZWNrT3V0IjoiMjAxNS0wNC0zMCIsInRvdGFsIjoxMDAwMDAwLCJndWVzdHMiOlt7ImZpcnN0TmFtZSI6IlR1eWVuIiwibGFzdE5hbWUiOiJQaGFtIiwiZW1haWwiOiJ2YW50dXllbi5waGFtQGdtYWlsLmNvbSIsIm1vYmlsZSI6IjAxMjY0MTQzMDEiLCJuYXRpb25hbElkIjoiMzgifV0sInF1YW50aXR5IjoxLCJleHRyYWJlZHMiOjAsImhvdGVsSWQiOiI1Njg3MDAiLCJyb29tSWQiOiIyNjY2NDY0Iiwib2NjdXBhbmN5IjoyLCJjaXR5TmFtZSI6Ikhhbm9pIn0sInVybCI6Imh0dHA6Ly93d3cuYWdvZGEuY29tL3ZpLXZuLzMyNS1naWFuZy12by1ob3RlbC9ob3RlbC9oYW5vaS12bi5odG1sP2FzcT12bDNITHQxYXd2Wk5UTDFDU2JiQmlwSWNOaFd6b2haeW5QNFNQQXZENEdLVWdlTFNpYUpXMkg3NnhLQ1AlMmZYNm1nN2pnVG1UWW5PWFFGRlJMTVl3SVFjTUZyMmxHdlBaSjhVSGZUTDNYVDRNakxqU0JPQXdaeVM2SkFjTTQyeE1yaFF2dXQ3S05pUUNRenNHVWtIeDBVbGltZCUyZnhmaWlxV1Y2dFhkbms2R2RybDdFdGJmdk5kaiUyZndHaDlKRndiZmJxSlMlMmZjb1o3a2JNJTJmaXRDcnlVdjlGZyUzZCUzZCZzZXRjb29raWVuZXc9MSJ9"}
+2015-04-02 16:29:12 INFO  RabbitMqHotelServiceMaster:39 - RabbitMQ Hotel Service Master pre started
+2015-04-02 16:29:12 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 16:29:12 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 16:29:36 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda1
+2015-04-02 16:31:14 INFO  RabbitMqHotelServiceMaster:39 - RabbitMQ Hotel Service Master pre started
+2015-04-02 16:31:14 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 16:31:14 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 16:31:30 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 16:31:42 INFO  AbstractHotelWorker:30 - Message:"{\"bookingInfo\":{\"bookingId\":\"55111a0afa5d802443000003\",\"checkIn\":\"2015-04-28\",\"checkOut\":\"2015-04-30\",\"total\":1000000,\"guests\":[{\"firstName\":\"Tuyen\",\"lastName\":\"Pham\",\"email\":\"vantuyen.pham@gmail.com\",\"mobile\":\"0126414301\",\"nationalId\":\"38\"}],\"quantity\":1,\"extrabeds\":0,\"hotelId\":\"568700\",\"roomId\":\"2666464\",\"occupancy\":2,\"cityName\":\"Hanoi\"},\"url\":\"http://www.agoda.com/vi-vn/325-giang-vo-hotel/hotel/hanoi-vn.html?asq=vl3HLt1awvZNTL1CSbbBipIcNhWzohZynP4SPAvD4GKUgeLSiaJW2H76xKCP%2fX6mg7jgTmTYnOXQFFRLMYwIQcMFr2lGvPZJ8UHfTL3XT4MjLjSBOAwZyS6JAcM42xMrhQvut7KNiQCQzsGUkHx0Ulimd%2fxfiiqWV6tXdnk6GdowPSdSu9GZSM3%2fmfe8%2bTT0qJS%2fcoZ7kbM%2fitCryUv9Fg%3d%3d&cid=1606990&setcookienew=1\"}"
+2015-04-02 16:50:40 INFO  RabbitMqHotelServiceMaster:39 - RabbitMQ Hotel Service Master pre started
+2015-04-02 16:50:40 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-02 16:50:40 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-02 16:50:40 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda0
+2015-04-02 16:50:40 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda1
+2015-04-02 16:50:41 INFO  AbstractHotelWorker:30 - Received msg(buy):{"url":"http://www.agoda.com/vi-vn/325-giang-vo-hotel/hotel/hanoi-vn.html?asq=vl3HLt1awvZNTL1CSbbBipIcNhWzohZynP4SPAvD4GKUgeLSiaJW2H76xKCP%2fX6mg7jgTmTYnOXQFFRLMYwIQcMFr2lGvPZJ8UHfTL3XT4MjLjSBOAwZyS6JAcM42xMrhQvut7KNiQCQzsGUkHx0Ulimd%2fxfiiqWV6tXdnk6GdqcMmNFkVFo6laPpuCU7dMJqJS%2fcoZ7kbM%2fitCryUv9Fg%3d%3d&setcookienew=1","bookingInfo":{"bookingId":"55111a0afa5d802443000003","checkIn":"2015-04-28","checkOut":"2015-04-30","total":1000000.0,"quantity":1,"extrabeds":0,"hotelId":"568700","roomId":"2666464","occupancy":"2","cityName":"Hanoi","guests":[{"lastName":"Pham","firstName":"Tuyen","email":"vantuyen.pham@gmail.com","mobile":"0126414301","nationalId":"38"}]}}
+2015-04-02 16:50:41 INFO  AbstractHotelWorker:30 - Received msg(buy):{"url":"http://www.agoda.com/vi-vn/325-giang-vo-hotel/hotel/hanoi-vn.html?asq=vl3HLt1awvZNTL1CSbbBipIcNhWzohZynP4SPAvD4GKUgeLSiaJW2H76xKCP%2fX6mg7jgTmTYnOXQFFRLMYwIQcMFr2lGvPZJ8UHfTL3XT4MjLjSBOAwZyS6JAcM42xMrhQvut7KNiQCQzsGUkHx0Ulimd%2fxfiiqWV6tXdnk6Gdpabsn2FJDEOQJ1eed2LEhTqJS%2fcoZ7kbM%2fitCryUv9Fg%3d%3d&setcookienew=1","bookingInfo":{"bookingId":"55111a0afa5d802443000003","checkIn":"2015-04-28","checkOut":"2015-04-30","total":1000000.0,"quantity":1,"extrabeds":0,"hotelId":"568700","roomId":"2666464","occupancy":"2","cityName":"Hanoi","guests":[{"lastName":"Pham","firstName":"Tuyen","email":"vantuyen.pham@gmail.com","mobile":"0126414301","nationalId":"38"}]}}
+2015-04-02 16:50:41 INFO  RabbitMqHotelServiceMaster:77 - dispatchWorker: akka://HotelService/user/Master/Agoda1
+2015-04-02 16:50:41 INFO  AbstractHotelWorker:30 - Received msg(buy):{"url":"http://www.agoda.com/vi-vn/325-giang-vo-hotel/hotel/hanoi-vn.html?asq=vl3HLt1awvZNTL1CSbbBipIcNhWzohZynP4SPAvD4GKUgeLSiaJW2H76xKCP%2fX6mg7jgTmTYnOXQFFRLMYwIQcMFr2lGvPZJ8UHfTL3XT4MjLjSBOAwZyS6JAcM42xMrhQvut7KNiQCQzsGUkHx0Ulimd%2fxfiiqWV6tXdnk6GdpFwtAKSdjLp%2b0Z4YCJLeD1qJS%2fcoZ7kbM%2fitCryUv9Fg%3d%3d&setcookienew=1","bookingInfo":{"bookingId":"55111a0afa5d802443000003","checkIn":"2015-04-28","checkOut":"2015-04-30","total":1000000.0,"quantity":1,"extrabeds":0,"hotelId":"568700","roomId":"2666464","occupancy":"2","cityName":"Hanoi","guests":[{"lastName":"Pham","firstName":"Tuyen","email":"vantuyen.pham@gmail.com","mobile":"0126414301","nationalId":"38"}]}}
+2015-04-03 18:18:04 ERROR AgodaStub:98 - pay with error:org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"table.rgt-room-info > td > a"}
+Command duration or timeout: 128 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+*** Element info: {Using=css selector, value=table.rgt-room-info > td > a}
+Session ID: 650944d1-2aca-4010-a03f-b798afcc6154
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-03 18:18:48 ERROR AgodaStub:98 - pay with error:org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"table.rgt-room-info > td > a"}
+Command duration or timeout: 116 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+*** Element info: {Using=css selector, value=table.rgt-room-info > td > a}
+Session ID: 78dd005b-3cb3-46be-97a7-19d662479493
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-03 18:19:26 ERROR AgodaStub:98 - pay with error:org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"table.rgt-room-info > td > a"}
+Command duration or timeout: 127 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+*** Element info: {Using=css selector, value=table.rgt-room-info > td > a}
+Session ID: 3218405f-cc0a-4c65-b118-3e285e156c42
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-06 15:18:46 INFO  RabbitMqHotelServiceMaster:38 - RabbitMQ Hotel Service Master pre started
+2015-04-06 15:18:51 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda0]
+2015-04-06 15:18:54 INFO  AbstractHotelWorker:22 - {} started Actor[akka://HotelService/user/Master/Agoda1]
+2015-04-06 15:54:41 ERROR AgodaStub:99 - pay with error:java.lang.UnsupportedOperationException: You may only deselect all options of a multi-select
+2015-04-06 16:11:19 ERROR AgodaStub:99 - pay with error:java.lang.UnsupportedOperationException: You may only deselect all options of a multi-select
+2015-04-06 16:56:19 ERROR AgodaStub:100 - pay with error:org.openqa.selenium.WebDriverException: java.net.SocketException: Connection reset
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Driver info: driver.version: HtmlUnitDriver
+2015-04-06 18:16:18 ERROR AgodaStub:99 - pay with error:org.openqa.selenium.InvalidSelectorException: The given selector a[roomtypeid=2666464] is either invalid or does not result in a WebElement. The following error occurred:
+InvalidSelectorError: An invalid or illegal selector was specified
+Command duration or timeout: 108 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+*** Element info: {Using=css selector, value=a[roomtypeid=2666464]}
+Session ID: d4ae1703-d3e2-453c-a927-d48a3b77803e
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-06 18:24:33 ERROR AgodaStub:99 - pay with error:org.openqa.selenium.InvalidSelectorException: The given selector a[roomtypeid=2666464] is either invalid or does not result in a WebElement. The following error occurred:
+InvalidSelectorError: An invalid or illegal selector was specified
+Command duration or timeout: 368 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+*** Element info: {Using=css selector, value=a[roomtypeid=2666464]}
+Session ID: 36138fbe-2e99-4f7d-b042-3fa5f1cdec73
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-06 22:35:59 ERROR AgodaStub:98 - pay with error:org.openqa.selenium.InvalidSelectorException: The given selector a[roomtypeid=2666464] is either invalid or does not result in a WebElement. The following error occurred:
+InvalidSelectorError: An invalid or illegal selector was specified
+Command duration or timeout: 81 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+*** Element info: {Using=css selector, value=a[roomtypeid=2666464]}
+Session ID: bffc7dba-ce99-4c2e-9f0c-6f07cec29658
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 09:18:14 ERROR AgodaStub:99 - pay with error:org.openqa.selenium.NoSuchElementException: Cannot locate element with text: 38
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Driver info: driver.version: unknown
+2015-04-07 09:23:45 ERROR AgodaStub:99 - pay with error:org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Driver info: driver.version: RemoteWebDriver
+2015-04-07 09:24:47 ERROR AgodaStub:99 - pay with error:org.openqa.selenium.NoSuchElementException: Cannot locate element with text: 38
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Driver info: driver.version: unknown
+2015-04-07 09:29:55 ERROR AgodaStub:99 - pay with error:org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Driver info: driver.version: RemoteWebDriver
+2015-04-07 09:30:32 ERROR AgodaStub:99 - pay with error:org.openqa.selenium.NoSuchElementException: Cannot locate element with text: 38
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Driver info: driver.version: unknown
+2015-04-07 09:35:45 ERROR AgodaStub:99 - pay with error:org.openqa.selenium.NoSuchElementException: Cannot locate element with text: 38
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Driver info: driver.version: unknown
+2015-04-07 09:38:44 ERROR AgodaStub:99 - pay with error:org.openqa.selenium.NoSuchElementException: Cannot locate element with text: 38
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Driver info: driver.version: unknown
+2015-04-07 10:44:29 ERROR AgodaStub:99 - pay with error:org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 107 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: 41cbd106-70fd-4ff2-8ae1-3fbc53b48ce0
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 10:52:22 ERROR AgodaStub:99 - pay with error:org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 80 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: 90618c13-8249-49ab-95c3-23b56d6bb423
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 10:59:27 ERROR AgodaStub:96 - pay with error:org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 95 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: f13846c7-69fd-4876-a321-4f5a34d06d63
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 11:01:46 ERROR AgodaStub:96 - pay with error:org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 51 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: 2650453a-4acc-4ecf-bc09-274ae0c4043e
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 11:06:56 ERROR AgodaStub:96 - pay with error:org.openqa.selenium.WebDriverException: Element must be user-editable in order to clear it.
+Command duration or timeout: 98 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: 7b37ce9e-0154-45cb-aa16-bb79c7c0963c
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 11:11:07 ERROR AgodaStub:96 - pay with error:org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 75 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: a82098b4-ed00-4569-a469-5a41bfcc1634
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 11:56:40 ERROR AgodaStub:96 - pay with error:org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 80 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: 7f978349-b05b-4db9-a468-d862940b4765
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 12:00:57 ERROR AgodaStub:96 - pay with error:org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Driver info: driver.version: RemoteWebDriver
+2015-04-07 12:03:50 ERROR AgodaStub:96 - pay with error:org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 92 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: da5b9954-ffdf-4d09-99a6-512cbab12566
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 12:05:30 ERROR AgodaStub:96 - pay with error:org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 81 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: f668b202-b638-4e92-8c0f-dd5a870f5664
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 12:07:07 ERROR AgodaStub:96 - pay with error:org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Driver info: driver.version: RemoteWebDriver
+2015-04-07 12:07:52 ERROR AgodaStub:96 - pay with error:org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 80 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: 0ac014ea-4e89-48bb-b289-143a7c58a219
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 12:13:29 ERROR AgodaStub:96 - pay with error:org.openqa.selenium.WebDriverException: Element must be user-editable in order to clear it.
+Command duration or timeout: 117 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: 09aa027a-061f-4f70-817f-900b1e9a7ee7
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 13:29:27 ERROR AgodaStub:96 - pay with error:org.openqa.selenium.WebDriverException: Element must be user-editable in order to clear it.
+Command duration or timeout: 100 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: b4fecf73-984d-4893-88cb-f3a3c683a3c7
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 13:34:46 ERROR AgodaStub:96 - pay with error:org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 101 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: f4694798-286a-4a2d-b90f-aaebf3ea67dc
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 13:38:15 ERROR AgodaStub:96 - pay with error:org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 82 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: bee3fe92-2ac6-42b3-a4a5-e0f609859d3a
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 13:49:58 ERROR AgodaStub:96 - pay with error:org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 102 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: 9737d23c-f164-4339-a5c2-1fe52112e87d
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 13:52:51 ERROR AgodaStub:96 - pay with error:org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 79 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: 40af47fd-a692-47fc-ba9b-a223329413fb
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 13:55:32 ERROR AgodaStub:96 - pay with error:org.openqa.selenium.WebDriverException: Element must be user-editable in order to clear it.
+Command duration or timeout: 220 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: 04530e10-6d7e-4c4b-86e4-bae9e37da8d3
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 14:07:16 ERROR AgodaStub:96 - pay with error:org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 88 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: 3fa028a4-49aa-42a7-972f-f13f1f5fd255
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 14:09:29 INFO  AgodaStub:84 - [Begining]-select room
+2015-04-07 14:09:34 INFO  AgodaStub:87 - [End]-select room
+2015-04-07 14:09:34 INFO  AgodaStub:89 - [Begining]-fill contact detail
+2015-04-07 14:10:11 INFO  AgodaStub:93 - [End]-fill contact detail
+2015-04-07 14:10:11 INFO  AgodaStub:95 - [Begining]-fill payment detail
+2015-04-07 14:10:11 ERROR AgodaStub:103 - pay with error:org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 102 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: 43a4ab15-45f3-46ed-8470-9e207bbc228f
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 14:29:11 INFO  AgodaStub:84 - [Begining]-select room
+2015-04-07 14:29:18 INFO  AgodaStub:87 - [End]-select room
+2015-04-07 14:29:18 INFO  AgodaStub:89 - [Begining]-fill contact detail
+2015-04-07 14:30:15 INFO  AgodaStub:93 - [End]-fill contact detail
+2015-04-07 14:30:15 INFO  AgodaStub:95 - [Begining]-fill payment detail
+2015-04-07 14:30:24 ERROR AgodaStub:103 - pay with error:org.openqa.selenium.WebDriverException: Element must be user-editable in order to clear it.
+Command duration or timeout: 125 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: 0d6a4992-f563-4c39-9a9c-9b3350d4d806
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 14:31:56 INFO  AgodaStub:84 - [Begining]-select room
+2015-04-07 14:32:02 INFO  AgodaStub:87 - [End]-select room
+2015-04-07 14:32:02 INFO  AgodaStub:89 - [Begining]-fill contact detail
+2015-04-07 14:33:05 INFO  AgodaStub:93 - [End]-fill contact detail
+2015-04-07 14:33:05 INFO  AgodaStub:95 - [Begining]-fill payment detail
+2015-04-07 14:33:16 ERROR AgodaStub:103 - pay with error:org.openqa.selenium.WebDriverException: Element must be user-editable in order to clear it.
+Command duration or timeout: 108 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: 8f2e5879-e1bc-495e-abfd-a528285d1ca2
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 14:35:10 INFO  AgodaStub:84 - [Begining]-select room
+2015-04-07 14:35:14 INFO  AgodaStub:87 - [End]-select room
+2015-04-07 14:35:14 INFO  AgodaStub:89 - [Begining]-fill contact detail
+2015-04-07 14:35:56 INFO  AgodaStub:93 - [End]-fill contact detail
+2015-04-07 14:35:56 INFO  AgodaStub:95 - [Begining]-fill payment detail
+2015-04-07 14:36:07 ERROR AgodaStub:103 - pay with error:org.openqa.selenium.WebDriverException: Element must be user-editable in order to clear it.
+Command duration or timeout: 107 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: f77f5dfa-0bff-4f42-9e65-d44e4389d96f
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 14:38:38 INFO  AgodaStub:84 - [Begining]-select room
+2015-04-07 14:38:43 INFO  AgodaStub:87 - [End]-select room
+2015-04-07 14:38:43 INFO  AgodaStub:89 - [Begining]-fill contact detail
+2015-04-07 14:40:15 INFO  AgodaStub:93 - [End]-fill contact detail
+2015-04-07 14:40:15 INFO  AgodaStub:95 - [Begining]-fill payment detail
+2015-04-07 14:41:13 ERROR AgodaStub:103 - pay with error:org.openqa.selenium.WebDriverException: Element must be user-editable in order to clear it.
+Command duration or timeout: 91 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: 15dd99c7-8554-4d3f-b941-52bbd280095f
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 14:43:40 INFO  AgodaStub:84 - [Begining]-select room
+2015-04-07 14:43:46 INFO  AgodaStub:87 - [End]-select room
+2015-04-07 14:43:46 INFO  AgodaStub:89 - [Begining]-fill contact detail
+2015-04-07 14:44:26 INFO  AgodaStub:93 - [End]-fill contact detail
+2015-04-07 14:44:26 INFO  AgodaStub:95 - [Begining]-fill payment detail
+2015-04-07 14:44:36 ERROR AgodaStub:103 - pay with error:org.openqa.selenium.WebDriverException: Element must be user-editable in order to clear it.
+Command duration or timeout: 113 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: e74fab4d-a3d4-4210-a5ea-9be7aedc2c90
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 14:46:48 INFO  AgodaStub:82 - [Begining]-paying
+2015-04-07 14:48:00 INFO  AgodaStub:86 - [Begining]-select room
+2015-04-07 14:49:01 INFO  AgodaStub:89 - [End]-select room
+2015-04-07 14:49:01 INFO  AgodaStub:91 - [Begining]-fill contact detail
+2015-04-07 14:49:19 INFO  AgodaStub:95 - [End]-fill contact detail
+2015-04-07 14:49:19 INFO  AgodaStub:97 - [Begining]-fill payment detail
+2015-04-07 14:49:19 ERROR AgodaStub:105 - pay with error:org.openqa.selenium.ElementNotVisibleException: You may only interact with visible elements
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Driver info: driver.version: unknown
+2015-04-07 14:53:22 INFO  AgodaStub:82 - [Begining]-paying
+2015-04-07 14:53:32 INFO  AgodaStub:86 - [Begining]-select room
+2015-04-07 14:53:35 ERROR AgodaStub:105 - pay with error:org.openqa.selenium.WebDriverException: Element must be user-editable in order to clear it.
+Command duration or timeout: 119 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: 42d3a87f-1047-4201-8c4f-1b5620269773
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 14:55:36 INFO  AgodaStub:82 - [Begining]-paying
+2015-04-07 14:55:52 INFO  AgodaStub:86 - [Begining]-select room
+2015-04-07 14:55:57 INFO  AgodaStub:89 - [End]-select room
+2015-04-07 14:55:57 INFO  AgodaStub:91 - [Begining]-fill contact detail
+2015-04-07 14:56:41 INFO  AgodaStub:95 - [End]-fill contact detail
+2015-04-07 14:56:41 INFO  AgodaStub:97 - [Begining]-fill payment detail
+2015-04-07 14:56:41 ERROR AgodaStub:105 - pay with error:org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 78 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: 8849050f-bde2-4f1e-a933-c33f45c08f21
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 15:00:43 INFO  AgodaStub:82 - [Begining]-paying
+2015-04-07 15:00:51 INFO  AgodaStub:86 - [Begining]-select room
+2015-04-07 15:00:55 INFO  AgodaStub:89 - [End]-select room
+2015-04-07 15:00:55 INFO  AgodaStub:91 - [Begining]-fill contact detail
+2015-04-07 15:01:36 INFO  AgodaStub:95 - [End]-fill contact detail
+2015-04-07 15:01:36 INFO  AgodaStub:97 - [Begining]-fill payment detail
+2015-04-07 15:01:37 ERROR AgodaStub:105 - pay with error:org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 89 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: d9cb28a4-6bcc-4108-bf8a-aa481c178373
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 15:02:18 INFO  AgodaStub:82 - [Begining]-paying
+2015-04-07 15:02:38 INFO  AgodaStub:86 - [Begining]-select room
+2015-04-07 15:02:43 INFO  AgodaStub:89 - [End]-select room
+2015-04-07 15:02:43 INFO  AgodaStub:91 - [Begining]-fill contact detail
+2015-04-07 15:03:25 INFO  AgodaStub:95 - [End]-fill contact detail
+2015-04-07 15:03:25 INFO  AgodaStub:97 - [Begining]-fill payment detail
+2015-04-07 15:03:25 ERROR AgodaStub:105 - pay with error:org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 85 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: 33e7e24e-ff77-4b0b-ba83-74b330721977
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 15:08:47 INFO  AgodaStub:82 - [Begining]-paying
+2015-04-07 15:09:00 INFO  AgodaStub:86 - [Begining]-select room
+2015-04-07 15:09:04 INFO  AgodaStub:89 - [End]-select room
+2015-04-07 15:09:04 INFO  AgodaStub:91 - [Begining]-fill contact detail
+2015-04-07 15:09:31 INFO  AgodaStub:95 - [End]-fill contact detail
+2015-04-07 15:09:31 INFO  AgodaStub:97 - [Begining]-fill payment detail
+2015-04-07 15:09:31 ERROR AgodaStub:105 - pay with error:org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 77 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: f8c374b7-fe8c-4c64-ad30-4057218e0fd6
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 15:12:24 INFO  AgodaStub:82 - [Begining]-paying
+2015-04-07 15:12:35 INFO  AgodaStub:86 - [Begining]-select room
+2015-04-07 15:12:37 INFO  AgodaStub:89 - [End]-select room
+2015-04-07 15:12:37 INFO  AgodaStub:91 - [Begining]-fill contact detail
+2015-04-07 15:12:59 INFO  AgodaStub:95 - [End]-fill contact detail
+2015-04-07 15:12:59 INFO  AgodaStub:97 - [Begining]-fill payment detail
+2015-04-07 15:13:08 ERROR AgodaStub:105 - pay with error:org.openqa.selenium.WebDriverException: Element must be user-editable in order to clear it.
+Command duration or timeout: 108 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: be717b8b-98bb-4dd0-a458-532f42ba1523
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 15:14:50 INFO  AgodaStub:82 - [Begining]-paying
+2015-04-07 15:15:07 INFO  AgodaStub:86 - [Begining]-select room
+2015-04-07 15:15:11 INFO  AgodaStub:89 - [End]-select room
+2015-04-07 15:15:11 INFO  AgodaStub:91 - [Begining]-fill contact detail
+2015-04-07 15:15:35 INFO  AgodaStub:95 - [End]-fill contact detail
+2015-04-07 15:15:35 INFO  AgodaStub:97 - [Begining]-fill payment detail
+2015-04-07 15:15:43 ERROR AgodaStub:105 - pay with error:org.openqa.selenium.WebDriverException: Element must be user-editable in order to clear it.
+Command duration or timeout: 103 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: 2d47b885-2878-49dd-a154-5668664150f9
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 15:19:01 INFO  AgodaStub:82 - [Begining]-paying
+2015-04-07 15:19:20 INFO  AgodaStub:86 - [Begining]-select room
+2015-04-07 15:19:23 INFO  AgodaStub:89 - [End]-select room
+2015-04-07 15:19:23 INFO  AgodaStub:91 - [Begining]-fill contact detail
+2015-04-07 15:19:45 INFO  AgodaStub:95 - [End]-fill contact detail
+2015-04-07 15:19:45 INFO  AgodaStub:97 - [Begining]-fill payment detail
+2015-04-07 15:19:54 ERROR AgodaStub:105 - pay with error:org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Vietnam
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Driver info: driver.version: unknown
+2015-04-07 15:22:55 INFO  AgodaStub:82 - [Begining]-paying
+2015-04-07 15:23:10 INFO  AgodaStub:86 - [Begining]-select room
+2015-04-07 15:23:15 INFO  AgodaStub:89 - [End]-select room
+2015-04-07 15:23:15 INFO  AgodaStub:91 - [Begining]-fill contact detail
+2015-04-07 15:23:42 INFO  AgodaStub:95 - [End]-fill contact detail
+2015-04-07 15:23:42 INFO  AgodaStub:97 - [Begining]-fill payment detail
+2015-04-07 15:23:55 INFO  AgodaStub:101 - [End]-fill payment detail
+2015-04-07 15:25:38 INFO  AgodaStub:85 - [Begining]-paying
+2015-04-07 15:25:53 INFO  AgodaStub:89 - [Begining]-select room
+2015-04-07 15:25:56 INFO  AgodaStub:92 - [End]-select room
+2015-04-07 15:25:56 INFO  AgodaStub:94 - [Begining]-fill contact detail
+2015-04-07 15:26:13 INFO  AgodaStub:98 - [End]-fill contact detail
+2015-04-07 15:26:13 INFO  AgodaStub:100 - [Begining]-fill payment detail
+2015-04-07 15:26:22 INFO  AgodaStub:104 - [End]-fill payment detail
+2015-04-07 15:28:25 INFO  AgodaStub:86 - [Begining]-paying
+2015-04-07 15:28:32 INFO  AgodaStub:90 - [Begining]-select room
+2015-04-07 15:28:34 INFO  AgodaStub:93 - [End]-select room
+2015-04-07 15:28:34 INFO  AgodaStub:95 - [Begining]-fill contact detail
+2015-04-07 15:28:41 ERROR AgodaStub:109 - pay with error:org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Driver info: driver.version: RemoteWebDriver
+2015-04-07 15:29:25 INFO  AgodaStub:86 - [Begining]-paying
+2015-04-07 15:29:46 INFO  AgodaStub:90 - [Begining]-select room
+2015-04-07 15:29:52 INFO  AgodaStub:93 - [End]-select room
+2015-04-07 15:29:52 INFO  AgodaStub:95 - [Begining]-fill contact detail
+2015-04-07 15:30:20 INFO  AgodaStub:99 - [End]-fill contact detail
+2015-04-07 15:30:20 INFO  AgodaStub:101 - [Begining]-fill payment detail
+2015-04-07 15:30:30 INFO  AgodaStub:105 - [End]-fill payment detail
+2015-04-07 15:31:54 INFO  AgodaStub:86 - [Begining]-paying
+2015-04-07 15:32:14 INFO  AgodaStub:90 - [Begining]-select room
+2015-04-07 15:32:17 INFO  AgodaStub:93 - [End]-select room
+2015-04-07 15:32:17 INFO  AgodaStub:95 - [Begining]-fill contact detail
+2015-04-07 15:32:40 INFO  AgodaStub:99 - [End]-fill contact detail
+2015-04-07 15:32:40 INFO  AgodaStub:101 - [Begining]-fill payment detail
+2015-04-07 15:32:40 ERROR AgodaStub:109 - pay with error:org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 80 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: 8e7d219e-625a-4554-a647-83da4792192f
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 15:34:56 INFO  AgodaStub:88 - [Begining]-select room
+2015-04-07 15:35:01 INFO  AgodaStub:91 - [End]-select room
+2015-04-07 15:35:01 INFO  AgodaStub:93 - [Begining]-fill contact detail
+2015-04-07 15:35:22 INFO  AgodaStub:97 - [End]-fill contact detail
+2015-04-07 15:35:22 INFO  AgodaStub:99 - [Begining]-fill payment detail
+2015-04-07 15:35:34 INFO  AgodaStub:103 - [End]-fill payment detail
+2015-04-07 15:37:05 INFO  AgodaStub:88 - [Begining]-select room
+2015-04-07 15:37:07 INFO  AgodaStub:91 - [End]-select room
+2015-04-07 15:37:07 INFO  AgodaStub:93 - [Begining]-fill contact detail
+2015-04-07 15:37:36 INFO  AgodaStub:97 - [End]-fill contact detail
+2015-04-07 15:37:36 INFO  AgodaStub:99 - [Begining]-fill payment detail
+2015-04-07 15:37:36 ERROR AgodaStub:107 - pay with error:org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 74 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Session ID: e9af7809-c52a-431f-afae-c6cc187f9534
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=36.0.4}]
+2015-04-07 15:38:44 INFO  AgodaStub:88 - [Begining]-select room
+2015-04-07 15:38:48 INFO  AgodaStub:91 - [End]-select room
+2015-04-07 15:38:48 INFO  AgodaStub:93 - [Begining]-fill contact detail
+2015-04-07 15:39:10 INFO  AgodaStub:97 - [End]-fill contact detail
+2015-04-07 15:39:10 INFO  AgodaStub:99 - [Begining]-fill payment detail
+2015-04-07 15:39:24 INFO  AgodaStub:103 - [End]-fill payment detail
+2015-04-07 15:42:29 INFO  AgodaStub:90 - [Begining]-select room
+2015-04-07 15:43:21 INFO  AgodaStub:93 - [End]-select room
+2015-04-07 15:43:21 INFO  AgodaStub:95 - [Begining]-fill contact detail
+2015-04-07 15:43:38 INFO  AgodaStub:99 - [End]-fill contact detail
+2015-04-07 15:43:38 INFO  AgodaStub:101 - [Begining]-fill payment detail
+2015-04-07 15:43:38 ERROR AgodaStub:109 - pay with error:org.openqa.selenium.ElementNotVisibleException: You may only interact with visible elements
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Driver info: driver.version: unknown
+2015-04-07 15:48:27 INFO  AgodaStub:90 - [Begining]-select room
+2015-04-07 15:49:50 INFO  AgodaStub:90 - [Begining]-select room
+2015-04-07 15:50:34 INFO  AgodaStub:93 - [End]-select room
+2015-04-07 15:50:34 INFO  AgodaStub:95 - [Begining]-fill contact detail
+2015-04-07 15:50:43 INFO  AgodaStub:99 - [End]-fill contact detail
+2015-04-07 15:50:43 INFO  AgodaStub:101 - [Begining]-fill payment detail
+2015-04-07 15:50:43 ERROR AgodaStub:109 - pay with error:org.openqa.selenium.ElementNotVisibleException: You may only interact with visible elements
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Driver info: driver.version: unknown
+2015-04-07 15:52:17 INFO  AgodaStub:90 - [Begining]-select room
+2015-04-07 15:53:15 INFO  AgodaStub:93 - [End]-select room
+2015-04-07 15:53:15 INFO  AgodaStub:95 - [Begining]-fill contact detail
+2015-04-07 15:53:24 INFO  AgodaStub:99 - [End]-fill contact detail
+2015-04-07 15:53:24 INFO  AgodaStub:101 - [Begining]-fill payment detail
+2015-04-07 15:53:24 ERROR AgodaStub:109 - pay with error:org.openqa.selenium.ElementNotVisibleException: You may only interact with visible elements
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-48-generic', java.version: '1.7.0_60'
+Driver info: driver.version: unknown
+2015-04-07 15:59:28 INFO  AgodaStub:90 - [Begining]-select room

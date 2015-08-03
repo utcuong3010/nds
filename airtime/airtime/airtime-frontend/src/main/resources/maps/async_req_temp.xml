@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="async_req_temp" >
+  <resultMap id="AsyncReqTempResult" class="com.mbv.bp.common.vo.airtime.AsyncReqTemp" >
+    <result column="at_txn_id" property="atTxnId" jdbcType="BIGINT" />
+    <result column="operator_type" property="operatorType" jdbcType="VARCHAR" />
+    <result column="value" property="value" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="txn_date" property="txnDate" jdbcType="TIMESTAMP" />
+    <result column="error_code" property="errorCode" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <select id="AsyncReqTemp_Select" resultMap="AsyncReqTempResult" parameterClass="com.mbv.bp.common.vo.airtime.AsyncReqTemp" >
+    select at_txn_id, operator_type, value, status, txn_date, error_code
+    from async_req_temp
+    where at_txn_id = #atTxnId:BIGINT#
+  </select>
+  
+  <select id="AsyncReqTemp_SelectByOperationType" resultMap="AsyncReqTempResult" parameterClass="com.mbv.bp.common.vo.airtime.AsyncReqTemp" >
+    select at_txn_id, operator_type, value, status, txn_date, error_code
+    from async_req_temp
+    where 
+    	operator_type = #operatorType:VARCHAR#
+    	and status='SUCCESS' 
+    order by txn_date DESC
+  </select>
+  
+  <insert id="AsyncReqTemp_Insert" parameterClass="com.mbv.bp.common.vo.airtime.AsyncReqTemp" >
+    insert into async_req_temp (at_txn_id, operator_type, value, status, txn_date, error_code)
+    values (#atTxnId:BIGINT#, #operatorType:VARCHAR#, #value:VARCHAR#, #status:VARCHAR#,
+      #txnDate:TIMESTAMP#, #errorCode:VARCHAR#)
+  </insert>
+  <update id="AsyncReqTemp_Update" parameterClass="com.mbv.bp.common.vo.airtime.AsyncReqTemp" >
+    update async_req_temp
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="operatorType" >
+        operator_type = #operatorType:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="value" >
+        value = #value:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="status" >
+        status = #status:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="txnDate" >
+        txn_date = #txnDate:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="errorCode" >
+        error_code = #errorCode:VARCHAR#
+      </isNotNull>
+    </dynamic>
+    where at_txn_id = #atTxnId:BIGINT#
+  </update>
+  
+ <select id="AsyncReqTemp_SearchByFilter" resultMap="AsyncReqTempResult" parameterClass="com.mbv.bp.common.vo.airtime.AsyncReqTempFilter" >
+  	 select at_txn_id, operator_type, value, status, txn_date, error_code
+    from async_req_temp  where (status='SUCCESS')  
+  	    
+  	  <isNotNull prepend=" and " property="operatorType" >
+          operator_type = #operatorType:VARCHAR#  
+      </isNotNull>
+        
+      <isNotNull  prepend=" and " property="fromDate" >
+	      <![CDATA[
+	      		( 
+	      			txn_date>=#fromDate:TIMESTAMP# and
+	        	  	txn_date<=#toDate:TIMESTAMP#
+	        	)
+	      ]]>   	  
+       </isNotNull> 	
+      
+      order by txn_date DESC	limit $startRecord$,$recordSize$	
+      	
+  </select>
+  
+  <select id="AsyncReqTemp_SearchByFilterCount" resultClass="int" parameterClass="com.mbv.bp.common.vo.airtime.AsyncReqTempFilter" >
+  	select count(at_txn_id) from async_req_temp  where (status='SUCCESS')  
+  	  <isNotNull prepend=" and " property="operatorType" >
+       	  operator_type = #operatorType:VARCHAR#  
+      </isNotNull>
+      <isNotNull  prepend=" and " property="fromDate" >
+	      <![CDATA[
+	      		( 
+	      			txn_date>=#fromDate:TIMESTAMP# and
+	        	  	txn_date<=#toDate:TIMESTAMP#
+	        	)
+	      ]]>   	  
+       </isNotNull> 	
+  </select>
+</sqlMap>

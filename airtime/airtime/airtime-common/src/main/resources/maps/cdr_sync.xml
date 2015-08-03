@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="cdr_sync" >
+  <resultMap id="CdrSync_CdrSyncResult" class="com.mbv.bp.common.vo.airtime.CdrSync" >
+    <result column="at_txn_id" property="atTxnId" jdbcType="BIGINT" />
+    <result column="message_id" property="messageId" jdbcType="VARCHAR" />
+    <result column="p_txn_id" property="pTxnId" jdbcType="VARCHAR" />
+    <result column="provider_id" property="providerId" jdbcType="VARCHAR" />
+    <result column="txn_date" property="txnDate" jdbcType="TIMESTAMP" />
+    <result column="msisdn" property="msisdn" jdbcType="VARCHAR" />
+    <result column="amount" property="amount" jdbcType="INTEGER" />
+    <result column="error_code" property="errorCode" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="p_price" property="pPrice" jdbcType="INTEGER" />
+    <result column="p_status" property="pStatus" jdbcType="VARCHAR" />
+    <result column="p_error_code" property="pErrorCode" jdbcType="VARCHAR" />
+    <result column="ext" property="ext" jdbcType="VARCHAR" />
+  </resultMap>
+ 
+  <select id="CdrSync_selectByAtTxnIdAndProviderIdAndErrorCode" resultMap="CdrSync_CdrSyncResult" parameterClass="com.mbv.bp.common.vo.airtime.CdrSync" >
+    select *
+    from cdr_sync
+   where 
+     at_txn_id = #atTxnId:BIGINT#
+     and 
+     provider_id = #providerId:VARCHAR#
+     and
+     error_code = #errorCode:VARCHAR#
+  </select>
+
+ <select id="CdrSync_selectByAtTxnIdAndProviderId" resultMap="CdrSync_CdrSyncResult" parameterClass="com.mbv.bp.common.vo.airtime.CdrSync" >
+    select *
+    from cdr_sync
+    where 
+    	at_txn_id = #atTxnId:BIGINT#
+      and 
+      provider_id = #providerId:VARCHAR#
+  </select>	
+
+  <select id="CdrSync_selectByPTxnIdAndProviderId" resultMap="CdrSync_CdrSyncResult" parameterClass="com.mbv.bp.common.vo.airtime.CdrSync" >
+    select *
+    from cdr_sync
+    where 
+    	p_txn_id = #pTxnId:VARCHAR#
+      and 
+      provider_id = #providerId:VARCHAR#
+  </select>
+
+   	
+  <select id="CdrSync_selectByMessageIdAndProviderId" resultMap="CdrSync_CdrSyncResult" parameterClass="com.mbv.bp.common.vo.airtime.CdrSync" >
+    select *
+    from cdr_sync
+    where 
+      message_id = #messageId:VARCHAR#
+      	and 
+      provider_id = #providerId:VARCHAR#
+  </select>
+  
+  <select id="CdrSync_SearchByFilter" resultMap="CdrSync_CdrSyncResult" parameterClass="com.mbv.bp.common.vo.airtime.CdrSyncFilter" >
+    select * 
+	 from cdr_sync where ('1'='1')
+	 <isNotNull prepend=" and " property="providerId" >
+    	provider_id = #providerId:VARCHAR#
+     </isNotNull>
+     <isNotNull prepend=" and " property="atTxnId" >
+    	at_txn_id = #atTxnId:BIGINT#
+     </isNotNull>
+     <isNotNull prepend=" and " property="status" >
+    	status=#status:VARCHAR# 
+     </isNotNull>
+     <isNotNull prepend=" and " property="pTxnId" >
+    	p_txn_id = #pTxnId:VARCHAR#
+     </isNotNull>
+     <isEqual prepend=" and " property="filterOperation" compareValue="MATCHED">
+		status=p_status
+	 </isEqual> 
+     <isEqual prepend=" and " property="filterOperation" compareValue="UNMATCHED">
+		<![CDATA[
+			status<>p_status
+		]]>	
+	 </isEqual>  
+     <isNotNull prepend=" and " property="msisdn" >
+    	msisdn = #msisdn:VARCHAR#
+     </isNotNull>
+     <isNotNull  prepend=" and " property="fromDate" >
+     	<![CDATA[
+   		( 
+   			txn_date>=#fromDate:TIMESTAMP# and
+     	  	txn_date<=#toDate:TIMESTAMP#
+     	)
+   		]]>
+     </isNotNull>
+     <isNotNull  prepend=" and " property="maxAtTxnId" >
+     	<![CDATA[
+   		( 
+   			at_txn_id>=#minAtTxnId:BIGINT# and
+     	  	at_txn_id<=#maxAtTxnId:BIGINT#
+     	)
+   		]]>
+     </isNotNull>
+     order by at_txn_id desc limit $startRecord$,$recordSize$
+  </select>
+  
+  <select id="CdrSync_SearchByFilterCount" resultClass="int" parameterClass="com.mbv.bp.common.vo.airtime.CdrSyncFilter" >
+    select count(at_txn_id) 
+	 from cdr_sync where ('1'='1')
+	 <isNotNull prepend=" and " property="providerId" >
+    	provider_id = #providerId:VARCHAR#
+     </isNotNull>
+     <isNotNull prepend=" and " property="atTxnId" >
+    	at_txn_id = #atTxnId:BIGINT#
+     </isNotNull>
+     <isNotNull prepend=" and " property="status" >
+    	status=#status:VARCHAR# 
+     </isNotNull>
+     <isNotNull prepend=" and " property="pTxnId" >
+    	p_txn_id = #pTxnId:VARCHAR#
+     </isNotNull>
+     <isEqual prepend=" and " property="filterOperation" compareValue="MATCHED">
+		status=p_status
+	 </isEqual> 
+     <isEqual prepend=" and " property="filterOperation" compareValue="UNMATCHED">
+		<![CDATA[
+			status<>p_status
+		]]>	
+	 </isEqual> 
+     <isNotNull prepend=" and " property="msisdn" >
+    	msisdn = #msisdn:VARCHAR#
+     </isNotNull>
+     <isNotNull  prepend=" and " property="fromDate" >
+     	<![CDATA[
+   		( 
+   			txn_date>=#fromDate:TIMESTAMP# and
+     	  	txn_date<=#toDate:TIMESTAMP#
+     	)
+   		]]>
+     </isNotNull>
+     <isNotNull  prepend=" and " property="maxAtTxnId" >
+     	<![CDATA[
+   		( 
+   			at_txn_id>=#minAtTxnId:BIGINT# and
+     	  	at_txn_id<=#maxAtTxnId:BIGINT#
+     	)
+   		]]>
+     </isNotNull>
+   </select>
+  
+  <insert id="CdrSync_insert" parameterClass="com.mbv.bp.common.vo.airtime.CdrSync" >
+    insert into cdr_sync (at_txn_id, message_id, p_txn_id, provider_id, txn_date, msisdn, amount,
+      error_code, status, p_price, p_status, p_error_code, ext)
+    values (#atTxnId:BIGINT#, #messageId:VARCHAR#, #pTxnId:VARCHAR#, #providerId:VARCHAR#,
+      #txnDate:TIMESTAMP#, #msisdn:VARCHAR#, #amount:INTEGER#, #errorCode:VARCHAR#,
+      #status:VARCHAR#, #pPrice:INTEGER#, #pStatus:VARCHAR#, #pErrorCode:VARCHAR#, #ext:VARCHAR#)
+  </insert>
+  
+   <update id="CdrSync_updateStatusByAtTxnIdAndProviderId" parameterClass="com.mbv.bp.common.vo.airtime.CdrSync" >
+    update cdr_sync
+    set status=#status:VARCHAR#
+    where 
+     at_txn_id = #atTxnId:BIGINT#
+     and 
+     provider_id = #providerId:VARCHAR#
+   </update>
+   
+   <update id="CdrSync_updateStatusByMessageIdAndProviderId" parameterClass="com.mbv.bp.common.vo.airtime.CdrSync" >
+    update cdr_sync
+    set status=#status:VARCHAR# 
+    where 
+		provider_id = #providerId:VARCHAR#
+		and
+		message_id = #messageId:VARCHAR#
+   </update>
+   
+   <update id="CdrSync_updateProviderDataByAtTxnIdAndProviderIdAndErrorCode" parameterClass="com.mbv.bp.common.vo.airtime.CdrSync" >
+    update cdr_sync
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="messageId" >
+        message_id = #messageId:VARCHAR#
+      </isNotNull>		
+      <isNotNull prepend="," property="pPrice" >
+        p_txn_id = #pTxnId:VARCHAR#
+      </isNotNull>	
+      <isNotNull prepend="," property="pPrice" >
+        p_price = #pPrice:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="pStatus" >
+        p_status = #pStatus:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="pErrorCode" >
+        p_error_code = #pErrorCode:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="ext" >
+        ext = #ext:VARCHAR#
+      </isNotNull>
+    </dynamic>
+    where 
+     at_txn_id = #atTxnId:BIGINT#
+     and 
+     provider_id = #providerId:VARCHAR#
+     and
+     error_code = #errorCode:VARCHAR#
+   </update>
+   <update id="CdrSync_updateProviderDataByAtTxnIdAndProviderId" parameterClass="com.mbv.bp.common.vo.airtime.CdrSync" >
+    update cdr_sync
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="pPrice" >
+        p_txn_id = #pTxnId:VARCHAR#
+      </isNotNull>	
+      <isNotNull prepend="," property="pPrice" >
+        p_price = #pPrice:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="pStatus" >
+        p_status = #pStatus:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="pErrorCode" >
+        p_error_code = #pErrorCode:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="ext" >
+        ext = #ext:VARCHAR#
+      </isNotNull>
+    </dynamic>
+     where 
+      at_txn_id = #atTxnId:BIGINT#
+      and 
+      provider_id = #providerId:VARCHAR#
+  </update>
+  
+  <update id="CdrSync_updateProviderDataByMessageIdAndProviderId" parameterClass="com.mbv.bp.common.vo.airtime.CdrSync" >
+   update cdr_sync
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="pPrice" >
+        p_txn_id = #pTxnId:VARCHAR#
+      </isNotNull>	
+      <isNotNull prepend="," property="pPrice" >
+        p_price = #pPrice:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="pStatus" >
+        p_status = #pStatus:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="pErrorCode" >
+        p_error_code = #pErrorCode:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="ext" >
+        ext = #ext:VARCHAR#
+      </isNotNull>
+    </dynamic>
+    where 
+		provider_id = #providerId:VARCHAR#
+		and
+		message_id = #messageId:VARCHAR#
+  </update>
+  
+  
+</sqlMap>

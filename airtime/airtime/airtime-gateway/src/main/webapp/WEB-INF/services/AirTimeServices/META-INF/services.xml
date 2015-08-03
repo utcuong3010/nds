@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was auto-generated from WSDL -->
+<!-- by the Apache Axis2 version: 1.5.4  Built on : Dec 19, 2010 (08:18:42 CET) -->
+<serviceGroup>
+    <service name="AirTimeServices">
+        <messageReceivers>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-out" class="com.mbv.airtime.gateway.AirTimeServicesMessageReceiverInOut"/>
+        </messageReceivers>
+        <parameter name="ServiceClass">com.mbv.airtime.gateway.services.AirTimeServices</parameter>
+        <parameter name="useOriginalwsdl">true</parameter>
+        <parameter name="modifyUserWSDLPortAddress">true</parameter>
+        
+        <operation name="createTxnId" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://gateway.airtime.mbv.com">
+            <actionMapping>urn:createTxnId</actionMapping>
+            <outputActionMapping>urn:createTxnIdResponse</outputActionMapping>
+        </operation>
+        <operation name="debitLockAccount" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://gateway.airtime.mbv.com">
+            <actionMapping>urn:debitLockAccount</actionMapping>
+            <outputActionMapping>urn:debitLockAccountResponse</outputActionMapping>
+        </operation>
+        <operation name="createLockAccount" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://gateway.airtime.mbv.com">
+            <actionMapping>urn:createLockAccount</actionMapping>
+            <outputActionMapping>urn:createLockAccountResponse</outputActionMapping>
+        </operation>
+        <operation name="reservedTopup" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://gateway.airtime.mbv.com">
+            <actionMapping>urn:reservedTopup</actionMapping>
+            <outputActionMapping>urn:reservedTopupResponse</outputActionMapping>
+        </operation>
+        <operation name="lockAccountTxnQuery" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://gateway.airtime.mbv.com">
+            <actionMapping>urn:lockAccountTxnQuery</actionMapping>
+            <outputActionMapping>urn:lockAccountTxnQueryResponse</outputActionMapping>
+        </operation>
+        <operation name="inquiry" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://gateway.airtime.mbv.com">
+            <actionMapping>urn:inquiry</actionMapping>
+            <outputActionMapping>urn:inquiryResponse</outputActionMapping>
+        </operation>
+        <operation name="lockAccountQuery" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://gateway.airtime.mbv.com">
+            <actionMapping>urn:lockAccountQuery</actionMapping>
+            <outputActionMapping>urn:lockAccountQueryResponse</outputActionMapping>
+        </operation>
+        <operation name="creditLockAccount" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://gateway.airtime.mbv.com">
+            <actionMapping>urn:creditLockAccount</actionMapping>
+            <outputActionMapping>urn:creditLockAccountResponse</outputActionMapping>
+        </operation>
+        <operation name="topup" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://gateway.airtime.mbv.com">
+            <actionMapping>urn:topup</actionMapping>
+            <outputActionMapping>urn:topupResponse</outputActionMapping>
+        </operation>
+        <operation name="txnRequest" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://gateway.airtime.mbv.com">
+            <actionMapping>urn:txnRequest</actionMapping>
+            <outputActionMapping>urn:txnResponse</outputActionMapping>
+        </operation>
+    </service>
+</serviceGroup>

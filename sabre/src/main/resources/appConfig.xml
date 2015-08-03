@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<import resource="services.xml" />
+
+	<!-- Crash -->
+	<bean class="org.crsh.spring.SpringBootstrap">
+		<property name="config">
+			<props>
+				<!-- VFS configuration -->
+				<prop key="crash.vfs.refresh_period">${crash.refresh.interval}</prop>
+
+				<!-- Telnet configuration -->
+				<prop key="crash.telnet.port">${crash.telnet.port}</prop>
+
+				<!-- Authentication configuration -->
+				<prop key="crash.auth">${crash.auth}</prop>
+				<prop key="${crash.auth.username.key}">${crash.auth.username.value}</prop>
+				<prop key="${crash.auth.password.value}">${crash.auth.password.value}</prop>
+			</props>
+		</property>
+	</bean>
+
+
+
+	<!-- Filgth Class Map -->
+	<bean id="bookingClassMap" class="java.util.LinkedHashMap">
+		<constructor-arg>
+			<map>
+				<entry key="J" value="Business Flex" />
+				<entry key="C" value="Business Standard" />
+				<entry key="D" value="Business Save" />
+				
+				<entry key="M" value="Economy Flex" />
+				
+				<entry key="K" value="Economy Standard" />
+				<entry key="L" value="Economy Standard" />
+				
+				<entry key="Q" value="Economy Save" />
+				<entry key="N" value="Economy Save" />
+				<entry key="R" value="Economy Save" />
+				
+				<!--<entry key="T" value="Special Deal" />-->
+				 
+				<!-- <entry key="E" value="Special Deal" />
+				<entry key="U" value="Special Deal" />
+				
+				<entry key="P" value="Super Deal" /> -->
+			</map>
+		</constructor-arg>
+	</bean>
+
+	<!-- Pricing Booking Class Map -->
+	<bean id="pricingClassUtil" class="com.mbv.airline.sabre.utils.PricingClassUtil">
+		<property name="pricingClassMap" ref="pricingClassMap" />
+	</bean>
+
+	<bean id="pricingClassMap" class="java.util.LinkedHashMap">
+		<constructor-arg>
+			<map>
+				<entry key="JH" value="Group1" />
+				<entry key="MH" value="Group2" />
+				<entry key="J|J[^H]+.*|JH.+|M|M[^H]+.*|MH.+|C.*" value="Group3" />
+				<entry key="K.*|L.*|Q.*|N.*|R.*" value="Group4" />
+				<entry key="E.*|P.*|A.*" value="Group5" />
+			</map>
+		</constructor-arg>
+	</bean>
+
+</beans>

@@ -1,0 +1,14 @@
+<binding xmlns:ns1="http://mbv.com/bp/common/model" name="airtime_result_binding" package="com.mbv.bp.common.model">
+  <namespace uri="http://mbv.com/bp/common/model" default="elements"/>
+  <mapping abstract="true" type-name="ns1:airtimeResultFwd" class="com.mbv.bp.common.model.AirtimeResultFwd">
+    <collection field="result" usage="optional" create-type="java.util.ArrayList">
+      <structure type="com.mbv.bp.common.model.PropertyModel" name="propertyModel">
+        <value style="element" name="key" field="key" usage="optional"/>
+        <value style="element" name="value" field="value" usage="optional"/>
+      </structure>
+    </collection>
+  </mapping>
+  <mapping class="com.mbv.bp.common.model.AirtimeResultFwd" name="airtimeResultFwd">
+    <structure map-as="ns1:airtimeResultFwd"/>
+  </mapping>
+</binding>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="sim_transaction" >
+  
+  <resultMap id="SimTransactionResult" class="com.mbv.bp.common.vo.airtime.SimTransaction" >
+    <result column="txn_id" property="txnId" jdbcType="BIGINT" />
+    <result column="msisdn" property="msisdn" jdbcType="VARCHAR" />
+    <result column="amount" property="amount" jdbcType="BIGINT" />
+    <result column="txn_type" property="txnType" jdbcType="VARCHAR" />
+    <result column="txn_status" property="txnStatus" jdbcType="VARCHAR" />
+    <result column="txn_date" property="txnDate" jdbcType="TIMESTAMP" />
+    <result column="error_code" property="errorCode" jdbcType="VARCHAR" />
+    <result column="message_id" property="messageId" jdbcType="VARCHAR" />
+    <result column="sim_amount" property="simAmount" jdbcType="BIGINT" />
+    <result column="lock_amount" property="lockAmount" jdbcType="BIGINT" />
+    <result column="billing" property="billing" jdbcType="VARCHAR" />
+    <result column="sim_id" property="simId" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <select id="SimTransaction_SelectByTxnId" resultMap="SimTransactionResult" parameterClass="com.mbv.bp.common.vo.airtime.SimTransaction" >
+    select *
+    from sim_transaction
+    where txn_id = #txnId:BIGINT#
+  </select>
+ 
+ 
+ <select id="SimTransaction_SelectPendingStatusBySimIdTxnType" resultMap="SimTransactionResult" parameterClass="com.mbv.bp.common.vo.airtime.SimTransaction" >
+    select *
+    from sim_transaction
+    where 
+    	txn_status ='PENDING' 
+    	and
+    	sim_id = #simId:VARCHAR#
+    	and 
+    	txn_type=#txnType:VARCHAR#
+  </select>
+ 
+  <select id="SimTransaction_SelectPDStatusByMsisdnSimIdTxnType" resultMap="SimTransactionResult" parameterClass="com.mbv.bp.common.vo.airtime.SimTransaction" >
+    select *
+    from sim_transaction
+    where 
+    	msisdn = #msisdn:VARCHAR#
+    	and 
+    	(txn_status ='PENDING' or txn_status='DELIVERING')
+    	and
+    	sim_id = #simId:VARCHAR#
+    	and 
+    	txn_type=#txnType:VARCHAR#
+  </select>
+  	
+  <insert id="SimTransaction_Insert" parameterClass="com.mbv.bp.common.vo.airtime.SimTransaction" >
+    insert into sim_transaction (txn_id, msisdn, amount, txn_type, txn_status, txn_date, error_code,
+      message_id,sim_amount,lock_amount,billing,sim_id)
+    values (#txnId:BIGINT#, #msisdn:VARCHAR#, #amount:BIGINT#, #txnType:VARCHAR#,
+      #txnStatus:VARCHAR#, #txnDate:TIMESTAMP#, #errorCode:VARCHAR#, #messageId:VARCHAR#, #simAmount:BIGINT#, #lockAmount:BIGINT#,'N', #simId:VARCHAR#)
+  </insert>
+  
+  <update id="SimTransaction_UpdateByTxnId" >
+    update sim_transaction
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="txnId" >
+        txn_id = #txnId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="msisdn" >
+        msisdn = #msisdn:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="amount" >
+        amount = #amount:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="txnType" >
+        txn_type = #txnType:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="txnStatus" >
+        txn_status = #txnStatus:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="txnDate" >
+        txn_date = #txnDate:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="errorCode" >
+        error_code = #errorCode:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="messageId" >
+        message_id = #messageId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="simAmount" >
+        sim_amount = #simAmount:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="lockAmount" >
+        lock_amount = #lockAmount:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="billing" >
+        billing = #billing:VARCHAR#
+      </isNotNull>
+    </dynamic>
+   	where txn_id = #txnId:BIGINT#
+  </update>
+  
+   <select id="SimTransaction_SearchByFilter" resultMap="SimTransactionResult" parameterClass="com.mbv.bp.common.vo.airtime.SimTransactionFilter" >
+  	select * from  sim_transaction where 1 = 1
+  	  	
+  	  <isNotNull prepend=" and " property="txnId"  >
+        txn_id = #txnId:BIGINT#
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="msisdn"  >
+        msisdn = #msisdn:VARCHAR#
+      </isNotNull> 
+      
+      <isNotNull prepend=" and " property="amount"  >
+         amount = #amount:BIGINT#
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="txnType"  >
+     	 txn_type = #txnType:VARCHAR#
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="txnStatus" >
+        txn_status = #txnStatus:VARCHAR#
+      </isNotNull>
+      
+  	  <isNotNull prepend=" and " property="simId" >
+        sim_id = #simId:VARCHAR#
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="messageId" >
+         message_id = #messageId:VARCHAR#
+      </isNotNull>
+      
+      <isNotNull  prepend=" and " property="fromDate" >
+      <![CDATA[
+      		( 
+      			txn_date>=#fromDate:TIMESTAMP# and
+        	  	txn_date<=#toDate:TIMESTAMP#
+        	)
+      ]]>   	  
+       </isNotNull> 	
+      	
+      order by txn_id desc limit $startRecord$,$recordSize$	
+      	
+  </select>
+  
+  <select id="SimTransaction_SearchByFilterCount" resultClass="int" parameterClass="com.mbv.bp.common.vo.airtime.SimTransactionFilter" >
+  	select count(txn_id) from  sim_transaction where 	1 = 1
+  	
+  	  <isNotNull prepend=" and " property="txnId"  >
+        txn_id = #txnId:BIGINT#
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="msisdn"  >
+        msisdn = #msisdn:VARCHAR#
+      </isNotNull> 
+      
+      <isNotNull prepend=" and " property="amount"  >
+         amount = #amount:BIGINT#
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="txnType"  >
+     	 txn_type = #txnType:VARCHAR#
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="txnStatus" >
+        txn_status = #txnStatus:VARCHAR#
+      </isNotNull>
+      
+  	  <isNotNull prepend=" and " property="simId" >
+        sim_id = #simId:VARCHAR#
+      </isNotNull>
+      
+      <isNotNull prepend=" and " property="messageId" >
+         message_id = #messageId:VARCHAR#
+      </isNotNull>
+      
+      <isNotNull  prepend=" and " property="fromDate" >
+        	<![CDATA[
+      		( 
+      			txn_date>=#fromDate:TIMESTAMP# and
+        	  	txn_date<=#toDate:TIMESTAMP#
+        	)
+      		]]>   	  
+        </isNotNull> 
+      		
+  </select>
+  
+  
+</sqlMap>

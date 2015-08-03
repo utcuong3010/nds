@@ -1,0 +1,38 @@
+###### Steps to integrate Xpay with airtime2 service #############
+
+1.add file xpay-0.0.1.jar to folder airtime2/bin
+
+2.backup old files: AppContext.xml, IntegrationContext.xml in folder airtime2/configs
+
+3.add new files: AppContext.xml, IntegrationContext.xml to folder airtime2/configs
+
+4.add following line into file airtime2.properties in folder airtime2/configs 
+
+# Xpay Service #
+xpay.url=http://test.simso888.com:2024/PartnerServices/PartnerService.asmx
+xpay.partner_code = 9040a955c699df1bb894e41fb18a0a9d
+xpay.username = simpay
+xpay.password=12345
+xpay.version= 3.0.1.5
+xpay.appid= partner
+
+xpay.numberOfChildren = 5
+xpay.numberOfConsicutiveRequests = 5
+xpay.pendingTransactionCheckingInterval = 300 
+xpay.balanceCheckingInterval = 300
+xpay.postpaidSuffix=P2
+# Codes for success, codes for pending. Separate by ',' 
+xpay.successCodes=0
+xpay.pendingCodes=2,6,7,16,20,23,24,25,29,98
+xpay.unknownCodes=1,15,80,81,99
+
+5.restart service (launcher.sh stop|start)
+
+
+###### Steps to add Xpay to airtime-launcher service #############
+
+1.backup old file airtime-core-0.1.0.jar in folder airtime-launcher/lib
+
+2.add new file airtime-core-0.1.0.jar to folder airtime-launcher/lib
+
+3.restart service (bin/airtime_launcher.sh stop|start)
